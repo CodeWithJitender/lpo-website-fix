@@ -4,16 +4,11 @@ import { StaticRouter } from 'react-router-dom/server';
 import App from '../src/App';
 
 export default (req, res) => {
-  const context = {};
   const content = renderToString(
-    <StaticRouter location={req.url} context={context}>
+    <StaticRouter location={req.url}>
       <App />
     </StaticRouter>
   );
-
-  if (context.url) {
-    return res.redirect(301, context.url);
-  }
 
   const html = `
     <!DOCTYPE html>
@@ -22,6 +17,7 @@ export default (req, res) => {
         <title>React SSR Boilerplate</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="/styles.css">
       </head>
       <body>
         <div id="root">${content}</div>
