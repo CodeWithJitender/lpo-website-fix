@@ -12,7 +12,7 @@ const Header = () => {
 		<AppBar position="fixed">
 			<Grid container maxWidth="xl">
 				<Grid size={2}>
-					<img src={logo} width="100%" height="100%" />
+					<img src={logo} className={styles.logo} alt="GlocalLPO" />
 				</Grid>
 				<Grid
 					size={7}

@@ -34,9 +34,26 @@ const Home = () => {
 						size={4}
 						className={styles.handleDetail}
 					>
-						<img src={layerLady} width="100%" height="100%" />
+						<img className={styles.ladyImage} src={layerLady} />
+						<div className={styles.detailCard}>
+							<h2 className={styles.detailHeading}>
+								We Handle <br/>
+								the Details. <br/>
+								You Win <br/>
+								the Cases.
+							</h2>
+							<div className={styles.detail}>
+								We are a premier paralegal support powerhouse, built to amplify efficiency, precision, and strategy for attorneys and law firms.<br />
+								<br />
+								From high-stakes litigation to meticulous contract drafting, we handle the complex, time-consuming documentation so that attorneys can focus on strategy, advocacy, and winning cases.
+							</div>
+							<div className={styles.detailLink}>
+								there’s more to us
+							</div>
+						</div>
 					</Grid>
 				</Grid>
+				Hemant
 			</Container>
     </div>
   );
