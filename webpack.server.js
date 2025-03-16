@@ -5,7 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
   mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
   target: 'node',
-  entry: './src/server.js',
+  entry: './server.js',
   externals: [nodeExternals()],
   output: {
     filename: 'server.js',
@@ -66,7 +66,12 @@ module.exports = {
           },
           'sass-loader'
         ]
-      }
+      },
+			{
+        /* Fonts and Images */
+        test: /\.(png|gif|jpg|jpeg|svg|ttf|eot|svg|otf|woff(2)?)(\?[a-z0-9]+)?$/,
+        type: 'asset/resource',
+			},
     ]
   },
   plugins: [
