@@ -1,0 +1,66 @@
+.serviceInfoSection {
+	background-color: #dec4a5;
+	margin-top: 100px;
+	padding-bottom: 100px;
+}
+
+.usFlagBox {
+	text-align: center;
+
+	img {
+		width: 100%;
+		margin-top: -5%;
+	}
+}
+
+.carouselSection {
+	margin-top: -100px;
+}
+
+.tableImage {
+	width: 100%;
+	box-shadow: 5px 5px 15px 2px rgba(0, 0, 0, 0.3);
+	border-radius: 35px;
+}
+
+.carouselItem {
+	text-align: center;
+	margin-bottom: 32px;
+}
+
+.itemsubHeading {
+	font-family: Poppins, sans-serif;
+	font-size: 16px;
+	color: #8e6954;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+	margin-top: 8px;
+}
+
+.itemHeading {
+	font-family: Antonio, sans-serif;
+	font-size: 40px;
+	color: #070c1e;
+	font-weight: 600;
+}
+
+.itemDescription {
+	font-family: Poppins, sans-serif;
+	font-size: 16px;
+	color: #070c1e;
+}
+
+.lensIcon,
+.leftArrowIcon,
+.rightArrowIcon {
+	width: 50px;
+	cursor: pointer;
+}
+
+.lensIcon {
+	margin: 0 20px;
+}
+
+.leftArrowIcon {
+	transform: rotate(180deg);
+}

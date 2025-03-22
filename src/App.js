@@ -6,6 +6,7 @@ import About from './containers/About';
 import NotFound from './containers/NotFound';
 
 import Header from './components/common/Header';
+import Footer from './components/common/Footer';
 
 import './styles/main.scss';
 
@@ -18,6 +19,7 @@ const App = () => {
 				<Route path="/about" element={<About />} />
 				<Route path="*" element={<NotFound />} />
 			</Routes>
+			<Footer />
 		</>
   );
 };

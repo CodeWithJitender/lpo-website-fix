@@ -9,10 +9,18 @@ import iconPractice from "@/assets/images/icon-practice.png";
 import iconTarget from "@/assets/images/icon-target.png";
 import iconClock from "@/assets/images/icon-clock.png";
 import iconSave from "@/assets/images/icon-save.png";
-import usFlagImage from "@/assets/images/us-flag-image.png";
-import areaOfExpertiese from '@/assets/images/area-of-expertise.png';
+
+import uspIcon1 from "@/assets/images/usp-icon-1.png";
+import uspIcon2 from "@/assets/images/usp-icon-2.png";
+import uspIcon3 from "@/assets/images/usp-icon-3.png";
+import uspIcon4 from "@/assets/images/usp-icon-4.png";
+
+import winButtonIcon from "@/assets/images/win-button-icon.png";
 
 import ServiceBox from '@/components/Home/ServiceBox';
+import AreaOfExpertise from "@/components/Home/AreaOfExpertise";
+import FlexibleFirePower from '@/components/Home/FlexibleFirepower';
+import ServiceInfo from '@/components/Home/ServiceInfo';
 
 import * as styles from './Home.module.scss';
 
@@ -59,7 +67,7 @@ const Home = () => {
 									From high-stakes litigation to meticulous contract drafting, we handle the complex, time-consuming documentation so that attorneys can focus on strategy, advocacy, and winning cases.
 								</div>
 								<div className={styles.detailLink}>
-									there’s more to us
+									there's more to us
 								</div>
 							</div>
 						</Grid>
@@ -79,6 +87,10 @@ const Home = () => {
 							</h1>
 							<div className={styles.serviceText}>
 								We are not just paper pushers—we are the backbone of every well-prepared case, ensuring airtight filings, seamless compliance, and ironclad legal groundwork.
+							</div>
+							<div className={styles.serviceLink}>
+								<a href="#" className={styles.serviceButton}>Our services</a>
+								<a href="#" className={styles.serviceButton}>consult with us</a>
 							</div>
 						</Grid>
 						<Grid
@@ -153,35 +165,8 @@ const Home = () => {
 					</Grid>
 				</Grid>
 			</section>
-			<section className={styles.serviceInfoSection}>
-				<Grid container size={12} justifyContent="center">
-					<Grid size={3} className={styles.usFlagBox}>
-						<img src={usFlagImage} alt="" />
-					</Grid>
-					<Grid size={6}>
-						
-					</Grid>
-					<Grid size={3} className={styles.usFlagBox}>
-						<img src={usFlagImage} alt="" />
-					</Grid>
-				</Grid>
-			</section>
-			<section className={styles.areaOfExpertiseSection}>
-				<Grid container size={12}>
-					<img src={areaOfExpertiese} alt="" className={styles.expertiseAreaImage} />
-				</Grid>
-				<Grid container size={12} justifyContent="center">
-					<Grid size={6} className={styles.areaOfExpertieseBox}>
-						<div className={styles.legalSupportHeading}>
-							<div className={styles.headingSection1}>We Work Behind the Scenes,</div>
-							<div>So You Can Own the Courtroom.</div>
-						</div>
-						<div className={styles.legalSupportText}>
-							With expertise spanning civil litigation, real estate, business law, employment law, family law, and more, we anticipate challenges before they arise, delivering documents that hold up under scrutiny and strategies that keep attorneys ahead of the curve.
-						</div>
-					</Grid>
-				</Grid>
-			</section>
+			<ServiceInfo />
+			<AreaOfExpertise />
 			<section className={styles.serviceWeOfferContainer}>
 				<Grid container>
 					<ServiceBox />
@@ -196,6 +181,136 @@ const Home = () => {
 					<ServiceBox />
 					<ServiceBox />
 					<ServiceBox />
+				</Grid>
+			</section>
+			<section className={styles.uspSection}>
+				<Grid container size={12}>
+					<Grid
+						container
+						size={3}
+						className={`${styles.uspItem} ${styles.uspItem1}`}
+						display="flex"
+						alignItems="flex-end"
+					>
+						<Grid size={10}>
+							<div className={styles.uspItemHeading}>
+								Teams Trained By
+								US Law Firms
+							</div>
+							<div className={styles.uspItemInfo}>
+								Trained by the Best. 
+								Built for the Rest.
+							</div>
+						</Grid>
+						<Grid
+							size={2}
+							display="flex"
+							justifyContent="flex-end"
+							className={styles.uspItemImage}
+						>
+							<img src={uspIcon1} alt="" />
+						</Grid>
+					</Grid>
+					<Grid
+						container
+						size={3}
+						className={`${styles.uspItem} ${styles.uspItem2}`}
+						display="flex"
+						alignItems="flex-end"
+					>
+						<Grid size={10}>
+							<div className={styles.uspItemHeading}>
+								Dedicated Sales
+								Manager and CRM
+							</div>
+							<div className={styles.uspItemInfo}>
+								One Point of Contact. 
+								Zero Room for Errors.
+							</div>
+						</Grid>
+						<Grid
+							size={2}
+							display="flex"
+							justifyContent="flex-end"
+							className={styles.uspItemImage}
+						>
+							<img src={uspIcon2} alt="" />
+						</Grid>
+					</Grid>
+					<Grid
+						container
+						size={3}
+						className={`${styles.uspItem} ${styles.uspItem3}`}
+						display="flex"
+						alignItems="flex-end"
+					>
+						<Grid size={10}>
+							<div className={styles.uspItemHeading}>
+								Expertise in Managing
+								Entire Case Lifecycle
+							</div>
+							<div className={styles.uspItemInfo}>
+								From First Filing to Final 
+								Verdict—We've Got It Covered.
+							</div>
+						</Grid>
+						<Grid
+							size={2}
+							display="flex"
+							justifyContent="flex-end"
+							className={styles.uspItemImage}
+						>
+							<img src={uspIcon3} alt="" />
+						</Grid>
+					</Grid>
+					<Grid
+						container
+						size={3}
+						className={`${styles.uspItem} ${styles.uspItem4}`}
+						display="flex"
+						alignItems="flex-end"
+					>
+						<Grid size={10}>
+							<div className={styles.uspItemHeading}>
+								Technology and Data
+								Security Driven
+							</div>
+							<div className={styles.uspItemInfo}>
+								Ironclad Security. 
+								Bulletproof Precision.
+							</div>
+						</Grid>
+						<Grid
+							size={2}
+							display="flex"
+							justifyContent="flex-end"
+							className={styles.uspItemImage}
+						>
+							<img src={uspIcon4} alt="" />
+						</Grid>
+					</Grid>
+				</Grid>
+			</section>
+			<FlexibleFirePower />
+			<section className={styles.letsWinTogetherSection}>
+				<Grid container size={12} justifyContent="center">
+						<Grid container size={9} alignItems="center">
+							<Grid size={3}>
+								<div className={styles.infoSmallSection}>
+									Let's get our A game to the court.
+								</div>
+								<div className={styles.infoBigSection}>
+									<div className={styles.infoHeading1}>Let's win—</div>
+									<div className={styles.infoHeading2}>together.</div>
+								</div>
+							</Grid>
+							<Grid size={8} className={styles.infoTextSection}>
+								Pick a time, choose a platform—Zoom, Teams, or a good old-fashioned call. Schedule a meeting and we'll make things happen.
+							</Grid>
+							<Grid size={1} className={styles.winButton}>
+								<img src={winButtonIcon} alt="" />
+							</Grid>
+						</Grid>
 				</Grid>
 			</section>
 		</>

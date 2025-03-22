@@ -1,0 +1,122 @@
+.infoContainer {
+	background-color: #DEC4A5;
+}
+
+.infoHeadingSection {
+	padding: 80px 40px 120px;
+	background-color: #070C1E;
+}
+
+.infoMainHeading {
+	font-size: 80px;
+	line-height: 1.2;
+	font-family: Antonio, sans-serif;
+	color: #f7f5f3;
+}
+
+.infoSubHeading {
+	font-family: Antonio, sans-serif;
+	font-size: 40px;
+	color: #8e6954;
+}
+
+.infoImage {
+	background: url("../../assets/images/flexi-chevron-bg.png"), linear-gradient(#070C1E, #070C1E);
+	background-size: 80px 80px, 100% 92px;
+	background-repeat: no-repeat;
+	background-position: top 12px right, top left;
+
+	img {
+		width: 100%;
+	}
+}
+
+.infoDetailSection {
+	padding: 80px 40px; 
+}
+
+.infoDetail {
+	font-size: Poppins, sans-serif;
+	font-size: 16px;
+	margin-bottom: 40px;
+	color: #070c1e;
+}
+
+.smallHeading {
+	font-family: Antonio, sans-serif;
+	font-size: 28px;
+	color: #070c1e;
+	margin-bottom: 12px;
+	line-height: 1.2;
+}
+
+.perMonthHours {
+	font-family: Antonio, sans-serif;
+	font-size: 20px;
+	color: #8e6954;
+	line-height: 1.2;
+	margin-bottom: 20px;
+}
+
+.perWeekSection {
+	padding-bottom: 40px;
+	margin-bottom: 40px;
+	border-bottom: 5px solid #8e6954;
+}
+
+.perWeekHours {
+	font-family: Antonio, sans-serif;
+	font-size: 50px;
+	color: #070c1e;
+	line-height: 1.2;
+}
+
+.perWeek {
+	font-size: 120px;
+	line-height: 1;
+}
+
+.weekDescription {
+	font-size: 26px;
+	font-family: Poppins, sans-serif;
+	font-weight: 500;
+	color: #070c1e;
+	letter-spacing: 0.8;
+}
+
+.weekBulletPoints {
+	font-family: Poppins, sans-serif;
+	font-size: 16px;
+	list-style: none;
+	padding-left: 0;
+	margin-left: 0;
+
+	li {
+		background-image: url("../../assets/images/bullet.png");
+		background-repeat: no-repeat;
+		background-position: top 8px left;
+		background-size: 30px;
+		padding-left: 40px;
+		margin-bottom: 20px;
+	}
+}
+
+.consultWithUs {
+	padding: 20px 40px;
+	text-align: center;
+	border: 1px solid #8e6954;
+	color: #070c1e;
+	font-family: Poppins, sans-serif;
+	font-size: 16px;
+	cursor: pointer;
+	font-weight: 600;
+	border-radius: 6px;
+	text-decoration: none;
+	text-transform: uppercase;
+	margin-top: 8px;
+	display: inline-block;
+}
+
+.perWeekDescriptionSection {
+	margin-bottom: 40px;
+}
