@@ -4,10 +4,10 @@ import Grid from "@mui/material/Grid2";
 
 import logo from "@/assets/images/logo.png";
 
-import instagramIcon from "@/assets/images/instagram.png";
-import facebookIcon from "@/assets/images/facebook.png";
-import twitterIcon from "@/assets/images/twitter.png";
-import linkedinIcon from "@/assets/images/linkedin.png";
+import instagramIcon from "@/assets/icons/instagram.png";
+import facebookIcon from "@/assets/icons/facebook.png";
+import twitterIcon from "@/assets/icons/twitter.png";
+import linkedinIcon from "@/assets/icons/linkedin.png";
 
 import * as styles from "./Footer.module.scss";
 

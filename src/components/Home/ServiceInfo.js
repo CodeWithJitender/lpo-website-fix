@@ -4,9 +4,8 @@ import Grid from '@mui/material/Grid2';
 import usFlagImage from "@/assets/images/us-flag-image.png";
 import tableImage from "@/assets/images/tablet-bg.png";
 
-import lensIcon from "@/assets/images/lens-icon.png";
-import arrowIcon from "@/assets/images/arrow-right.png";
-
+import lensIcon from "@/assets/icons/lens-icon.png";
+import arrowIcon from "@/assets/icons/arrow-right.png";
 
 import * as styles from "./ServiceInfo.module.scss";
 

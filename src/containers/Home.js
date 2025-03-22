@@ -5,15 +5,17 @@ import Grid from '@mui/material/Grid2';
 import layerLady from "@/assets/images/layer-lady.png";
 import stampIcon from "@/assets/images/layer-stamp.png";
 
-import iconPractice from "@/assets/images/icon-practice.png";
-import iconTarget from "@/assets/images/icon-target.png";
-import iconClock from "@/assets/images/icon-clock.png";
-import iconSave from "@/assets/images/icon-save.png";
+import iconPractice from "@/assets/icons/icon-practice.png";
+import iconTarget from "@/assets/icons/icon-target.png";
+import iconClock from "@/assets/icons/icon-clock.png";
+import iconSave from "@/assets/icons/icon-save.png";
 
-import uspIcon1 from "@/assets/images/usp-icon-1.png";
-import uspIcon2 from "@/assets/images/usp-icon-2.png";
-import uspIcon3 from "@/assets/images/usp-icon-3.png";
-import uspIcon4 from "@/assets/images/usp-icon-4.png";
+import uspIcon1 from "@/assets/icons/usp-icon-1.png";
+import uspIcon2 from "@/assets/icons/usp-icon-2.png";
+import uspIcon3 from "@/assets/icons/usp-icon-3.png";
+import uspIcon4 from "@/assets/icons/usp-icon-4.png";
+
+import arrowBig from "@/assets/icons/arrow-big.png";
 
 import winButtonIcon from "@/assets/images/win-button-icon.png";
 
@@ -68,6 +70,7 @@ const Home = () => {
 								</div>
 								<div className={styles.detailLink}>
 									there's more to us
+									<img src={arrowBig} alt="" className={styles.arrowIcon} />
 								</div>
 							</div>
 						</Grid>
