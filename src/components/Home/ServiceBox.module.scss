@@ -1,0 +1,47 @@
+.container {
+	padding: 20px;
+	padding-bottom: 16px;
+	border: 1px solid #5d4d4a;
+
+	&:nth-child(1n) {
+		border-left: 0;
+	}
+
+	&:nth-child(4n) {
+		border-right: 0;
+	}
+}
+
+.box {
+	padding-bottom: 20px;
+	// border-bottom: 5px solid #dec4a5;
+}
+
+.count {
+	font-family: Poppins, sans-serif;
+	font-size: 14px;
+	color: #dec4a5;
+	padding: 0 8px 0 8px;
+}
+
+.heading {
+	font-family: Antonio, sans-serif;
+	font-size: 26px;
+	color: #f7f5f3;
+	padding-left: 8px;
+}
+
+.image {
+	margin: 20px 0;
+	img {
+		width: 100%;
+		border-radius: 4px;
+	}
+}
+
+.serviceText {
+	font-family: Poppins, sans-serif;
+	font-size: 16px;
+	color: #c9b9b0;
+	padding: 0 8px;
+}
