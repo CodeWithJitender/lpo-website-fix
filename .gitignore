@@ -137,3 +137,4 @@ build
 .pnp.*
 
 .DS_Store
+.vercel
