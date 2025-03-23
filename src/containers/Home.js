@@ -55,7 +55,7 @@ const Home = () => {
 							size={4}
 							className={styles.handleDetail}
 						>
-							<img className={styles.ladyImage} src={layerLady} />
+							<img src={layerLady} className={styles.ladyImage} />
 							<div className={styles.detailCard}>
 								<h2 className={styles.detailHeading}>
 									We Handle <br/>

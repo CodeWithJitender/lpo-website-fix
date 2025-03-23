@@ -7,7 +7,7 @@ module.exports = {
   output: {
     filename: 'client.js',
     path: path.resolve(__dirname, 'build/public'),
-    publicPath: '/'
+    publicPath: '/assets/'
   },
   module: {
     rules: [
@@ -56,6 +56,9 @@ module.exports = {
         /* Fonts and Images */
         test: /\.(png|gif|jpg|jpeg|svg|ttf|eot|svg|otf|woff(2)?)(\?[a-z0-9]+)?$/,
         type: 'asset/resource',
+				generator: {
+          filename: '[name]-[contenthash:8][ext]', // Keep original filenames
+        },
 			},
     ]
   },

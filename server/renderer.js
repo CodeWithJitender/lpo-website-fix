@@ -28,7 +28,7 @@ export default (req, res) => {
   );
 
 	// Grab the CSS from emotion
-  const emotionChunks = extractCriticalToChunks(html);
+  const emotionChunks = extractCriticalToChunks(content);
   const emotionCss = constructStyleTagsFromChunks(emotionChunks);
 
   const html = `
@@ -42,11 +42,11 @@ export default (req, res) => {
 				<link href="https://fonts.googleapis.com/css2?family=Antonio:wght@700&family=Poppins:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
 				<title>GlocalLPO</title>
 				${emotionCss}
-        <link rel="stylesheet" type="text/css" href="/styles.css">
+        <link rel="stylesheet" type="text/css" href="/assets/styles.css">
       </head>
       <body>
         <div id="root">${content}</div>
-        <script src="/client.js"></script>
+        <script src="/assets/client.js"></script>
       </body>
     </html>
   `;

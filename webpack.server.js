@@ -9,8 +9,9 @@ module.exports = {
   externals: [nodeExternals()],
   output: {
     filename: 'server.js',
-    path: path.resolve(__dirname, 'build'),
-    libraryTarget: 'commonjs2'
+    path: path.resolve(__dirname, 'build/public'),
+    libraryTarget: 'commonjs2',
+		publicPath: '/assets/'
   },
   module: {
     rules: [
@@ -71,6 +72,9 @@ module.exports = {
         /* Fonts and Images */
         test: /\.(png|gif|jpg|jpeg|svg|ttf|eot|svg|otf|woff(2)?)(\?[a-z0-9]+)?$/,
         type: 'asset/resource',
+				generator: {
+          filename: '[name]-[contenthash:8][ext]', // Keep original filenames
+        },
 			},
     ]
   },
