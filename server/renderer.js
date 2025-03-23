@@ -18,8 +18,7 @@ export default (req, res) => {
 	const { extractCriticalToChunks, constructStyleTagsFromChunks } =
     createEmotionServer(cache);
 
-	console.log("dsffsfsdfdsf: ", path.resolve(__dirname, 'assets-manifest.json'));
-	const manifestPath = path.resolve(__dirname, 'assets-manifest.json');
+	const manifestPath = path.join(process.cwd(), 'build/assets-manifest.json');
   const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
 
   const clientJs = manifest['main.js'];

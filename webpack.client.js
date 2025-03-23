@@ -68,7 +68,7 @@ module.exports = {
       filename: 'styles.[contenthash:8].css'
     }),
 		new WebpackManifestPlugin({
-      fileName: 'assets-manifest.json', // Generates a JSON file with mappings
+      fileName: path.resolve(__dirname, 'build/assets-manifest.json'), // Generates a JSON file with mappings
     }),
   ],
   resolve: {
