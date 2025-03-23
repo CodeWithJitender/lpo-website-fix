@@ -1,13 +1,15 @@
 {
   "version": 2,
+	"buildCommand": "npm run build",
+	"installCommand": "npm ci",
   "builds": [
     {
       "src": "build/public/server.js",
       "use": "@vercel/node"
     },
 		{
-				"src": "build/public/**",
-				"use": "@vercel/static"
+			"src": "build/public/**",
+			"use": "@vercel/static"
 		}
   ],
   "routes": [
