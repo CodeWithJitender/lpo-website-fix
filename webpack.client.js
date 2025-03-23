@@ -1,11 +1,12 @@
 const path = require('path');
+const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
   entry: './client.js',
   output: {
-    filename: 'client.js',
+    filename: 'client.[contenthash:8].js',
     path: path.resolve(__dirname, 'build/public'),
     publicPath: '/assets/'
   },
@@ -64,8 +65,11 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'styles.css'
-    })
+      filename: 'styles.[contenthash:8].css'
+    }),
+		new WebpackManifestPlugin({
+      fileName: 'assets-manifest.json', // Generates a JSON file with mappings
+    }),
   ],
   resolve: {
     extensions: ['.js', '.jsx']

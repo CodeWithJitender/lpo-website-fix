@@ -7,9 +7,7 @@ const app = express();
 app.use('/assets', express.static(path.join(__dirname, '')));
 
 // Handle all other requests with SSR
-app.get('*', (req, res) => {
-  renderer(req, res);
-});
+app.use(renderer);
 
 // Don't start the server manually if running in Vercel
 if (!process.env.VERCEL) {

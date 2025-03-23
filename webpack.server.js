@@ -80,7 +80,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'styles.css'
+      filename: 'styles.[contenthash:8].css'
     })
   ],
   resolve: {

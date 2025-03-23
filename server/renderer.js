@@ -1,3 +1,5 @@
+import fs from 'fs';
+import path from 'path';
 import React from 'react';
 import createEmotionServer from '@emotion/server/create-instance';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -15,6 +17,12 @@ export default (req, res) => {
 	const cache = createEmotionCache();
 	const { extractCriticalToChunks, constructStyleTagsFromChunks } =
     createEmotionServer(cache);
+
+	const manifestPath = path.resolve(__dirname, 'assets-manifest.json');
+  const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
+
+  const clientJs = manifest['main.js'];
+  const stylesCss = manifest['main.css'];
 
   const content = renderToString(
 		<CacheProvider value={cache}>
@@ -42,11 +50,11 @@ export default (req, res) => {
 				<link href="https://fonts.googleapis.com/css2?family=Antonio:wght@700&family=Poppins:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
 				<title>GlocalLPO</title>
 				${emotionCss}
-        <link rel="stylesheet" type="text/css" href="/assets/styles.css">
+				<link rel="stylesheet" type="text/css" href="${stylesCss}">
       </head>
       <body>
         <div id="root">${content}</div>
-        <script src="/assets/client.js"></script>
+				<script src="${clientJs}"></script>
       </body>
     </html>
   `;
