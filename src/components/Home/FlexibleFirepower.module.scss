@@ -104,7 +104,7 @@
 .consultWithUs {
 	padding: 20px 40px;
 	text-align: center;
-	border: 1px solid rgba(142, 105, 84, 50%);
+	border: 2px solid rgba(142, 105, 84, 50%);
   color: #8e6954;
 	font-family: Poppins, sans-serif;
 	font-size: 16px;
@@ -115,10 +115,10 @@
 	text-transform: uppercase;
 	margin-top: 8px;
 	display: inline-block;
-	transition: all 0.3 ease;
+	transition: all ease-in-out 0.3s;
 
 	&:hover {
-		border: 1px solid rgba(142, 105, 84, 1);
+		border-color: rgba(142, 105, 84, 1);
     color: #070C1E;
 	}
 }

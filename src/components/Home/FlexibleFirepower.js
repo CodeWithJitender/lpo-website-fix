@@ -54,7 +54,6 @@ const FlexibleFirePower = () => {
 								<li>Consistency & full integration into your legal team</li>
 								<li>Proactive case management with deep involvement</li>
 							</ul>
-							<a href="#" className={styles.consultWithUs}>Consult with us</a>
 						</Grid>
 					</Grid>
 					<Grid container size={12} spacing={4} alignItems="flex-start">
