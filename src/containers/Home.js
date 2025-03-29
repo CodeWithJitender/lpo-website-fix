@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid2';
 
@@ -19,6 +19,8 @@ import arrowBig from "@/assets/icons/arrow-big.png";
 
 import winButtonIcon from "@/assets/images/win-button-icon.png";
 
+import TextHighlight from '@/components/common/TextHighlight';
+
 import ServiceBox from '@/components/Home/ServiceBox';
 import AreaOfExpertise from "@/components/Home/AreaOfExpertise";
 import FlexibleFirePower from '@/components/Home/FlexibleFirepower';
@@ -27,18 +29,25 @@ import ServiceInfo from '@/components/Home/ServiceInfo';
 import * as styles from './Home.module.scss';
 
 const Home = () => {
+	const textRef = useRef(null);
+  const crowdsRef = useRef(null);
+
   return (
 		<>
 			<section className={styles.masterHead}>
 				<Container maxWidth="xl">  
-					<Grid container spacing={2}>
+					<Grid
+						container
+						spacing={2}
+						className={styles.commonContainer}
+					>
 						<Grid container size={8}>
 							<Grid size={8}>
 								<h2 className={styles.thinkOnUs}>Think of us as</h2>
 								<h1 className={styles.lpoTitle}>
-									The Power <br/>
-									Behind your <br/>
-									Legal Prowess.
+									<TextHighlight text="The Power" /> <br/>
+									<TextHighlight text="Behind your" /> <br/>
+									<TextHighlight text="Legal Prowess." />
 								</h1>
 							</Grid>
 							<Grid
@@ -79,14 +88,20 @@ const Home = () => {
 			</section>
 			<section className={styles.serviceSection}>
 				<Container maxWidth="xl">
-					<Grid container spacing={2}>
-						<Grid container size={6} style={{
+					<Grid
+						container
+						columnSpacing={12}
+						alignItems="flex-start"
+						className={styles.commonContainer}
+					>
+						<Grid container size={6} spacing={0} style={{
 							alignSelf: "flex-start",
 						}}>
-							<h2 className={styles.thinkOnUs}>Precision. Power. Partnership.</h2>
-							<h1 className={styles.lpoTitle}>
-								The Right Hands Behind 
-								Every Legal Move.
+							<h2 className={styles.thinkOnUs} ref={textRef}>
+								Precision. Power. Partnership.
+							</h2>
+							<h1 className={`${styles.lpoTitle} ${styles.lpoTitleSmall}`}>
+								<TextHighlight text="The Right Hands Behind Every Legal Move." />
 							</h1>
 							<div className={styles.serviceText}>
 								We are not just paper pushers—we are the backbone of every well-prepared case, ensuring airtight filings, seamless compliance, and ironclad legal groundwork.
@@ -151,16 +166,20 @@ const Home = () => {
 			</section>
 			<section className={styles.legalSupportSection}>
 				<Grid container size={12} justifyContent="center">
-					<Grid size={6} className={styles.legalSupportItem}>
+					<Grid size={8} className={styles.legalSupportItem}>
 						<div className={styles.legalSupportHeading}>
-							<div className={styles.headingSection1}>Legal Support That's</div>
-							<div>Sharp, Seamless, and Smart.</div>
+							<div className={styles.headingSection1}>
+								<TextHighlight text="Legal Support That's" />
+							</div>
+							<div>
+								<TextHighlight text="Sharp, Seamless, and Smart." />
+							</div>
 						</div>
 						<div className={styles.legalSupportText}>
 							Whether it's a high-stakes litigation or an airtight contract, we handle it like a grandmaster plays chess—three moves ahead, with a checkmate always in sight.
 						</div>
 						<div>
-							<img src={stampIcon} alt="" />
+							<img src={stampIcon} className={styles.stampIcon} alt="" />
 						</div>
 						<div className={styles.legalSupportLink}>
 							Here's what we do best!

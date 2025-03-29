@@ -31,7 +31,6 @@ const Footer = () => {
 			</Grid>
 			<Grid
 				size={12}
-				maxWidth="xl"
 				container
 				className={styles.copyrightContainer}
 				alignItems="center"

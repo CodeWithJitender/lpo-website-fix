@@ -27,8 +27,10 @@ const ServiceInfo = () => {
 						<Grid size={12} className={styles.itemHeading}>
 							Secretarial Services
 						</Grid>
-						<Grid size={12} className={styles.itemDescription}>
-							From case intakes to calendaring, we streamline your workflow so you can focus on winning.
+						<Grid size={12}>
+							<div className={styles.itemDescription}>
+								From case intakes to calendaring, we streamline your workflow so you can focus on winning.
+							</div>
 						</Grid>
 					</Grid>
 					<Grid size={12} display="flex" justifyContent="center" alignItems="center">

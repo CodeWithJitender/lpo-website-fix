@@ -19,11 +19,14 @@
     "@emotion/react": "^11.14.0",
     "@emotion/server": "^11.11.0",
     "@emotion/styled": "^11.14.0",
+    "@gsap/react": "^2.1.2",
     "@mui/material": "^6.4.7",
     "express": "^4.18.2",
+    "gsap": "^3.12.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.21.1"
+    "react-router-dom": "^6.21.1",
+    "splitting": "^1.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.26.10",

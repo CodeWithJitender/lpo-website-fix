@@ -10,7 +10,7 @@ import * as styles from "./Header.module.scss";
 const Header = () => {
 	return (
 		<AppBar position="fixed">
-			<Grid container maxWidth="xl">
+			<Grid container size={12}>
 				<Grid size={2}>
 					<img src={logo} className={styles.logo} alt="GlocalLPO" />
 				</Grid>

@@ -3,7 +3,7 @@
 }
 
 .infoHeadingSection {
-	padding: 80px 40px 120px;
+	padding: 80px 100px 120px;
 	background-color: #070C1E;
 }
 
@@ -16,7 +16,7 @@
 
 .infoSubHeading {
 	font-family: Antonio, sans-serif;
-	font-size: 40px;
+	font-size: 50px;
 	color: #8e6954;
 }
 
@@ -32,7 +32,7 @@
 }
 
 .infoDetailSection {
-	padding: 80px 40px; 
+	padding: 80px 100px; 
 }
 
 .infoDetail {
@@ -77,25 +77,25 @@
 }
 
 .weekDescription {
-	font-size: 26px;
+	font-size: 20px;
 	font-family: Poppins, sans-serif;
 	font-weight: 500;
 	color: #070c1e;
-	letter-spacing: 0.8;
+	line-height: 1.2;
 }
 
 .weekBulletPoints {
 	font-family: Poppins, sans-serif;
-	font-size: 16px;
+	font-size: 14px;
 	list-style: none;
 	padding-left: 0;
-	margin-left: 0;
+	margin: 32px 0;
 
 	li {
 		background-image: url("../../assets/icons/bullet.png");
 		background-repeat: no-repeat;
 		background-position: top 8px left;
-		background-size: 30px;
+		background-size: 24px;
 		padding-left: 40px;
 		margin-bottom: 20px;
 	}
@@ -104,8 +104,8 @@
 .consultWithUs {
 	padding: 20px 40px;
 	text-align: center;
-	border: 1px solid #8e6954;
-	color: #070c1e;
+	border: 1px solid rgba(142, 105, 84, 50%);
+  color: #8e6954;
 	font-family: Poppins, sans-serif;
 	font-size: 16px;
 	cursor: pointer;
@@ -115,6 +115,12 @@
 	text-transform: uppercase;
 	margin-top: 8px;
 	display: inline-block;
+	transition: all 0.3 ease;
+
+	&:hover {
+		border: 1px solid rgba(142, 105, 84, 1);
+    color: #070C1E;
+	}
 }
 
 .perWeekDescriptionSection {
