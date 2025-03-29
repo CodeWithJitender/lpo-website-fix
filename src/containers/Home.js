@@ -19,6 +19,8 @@ import arrowBig from "@/assets/icons/arrow-big.png";
 
 import winButtonIcon from "@/assets/images/win-button-icon.png";
 
+import precisionSectionBg from "@/assets/images/supreme-court-building.png";
+
 import TextHighlight from '@/components/common/TextHighlight';
 
 import ServiceBox from '@/components/Home/ServiceBox';
@@ -87,7 +89,10 @@ const Home = () => {
 				</Container>
 			</section>
 			<section className={styles.serviceSection}>
-				<Container maxWidth="xl">
+				<div className={styles.sectionBackground}>
+					<img src={precisionSectionBg} alt="" />
+				</div>
+				<Container maxWidth="xl" className={styles.precisionSection}>
 					<Grid
 						container
 						columnSpacing={12}
