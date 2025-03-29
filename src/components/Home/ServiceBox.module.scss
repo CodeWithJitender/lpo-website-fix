@@ -26,17 +26,40 @@
 
 .heading {
 	font-family: Antonio, sans-serif;
-	font-size: 26px;
+	font-size: 24px;
 	color: #f7f5f3;
 	padding-left: 8px;
 }
 
 .image {
 	margin: 20px 0;
+	border-radius: 4px;
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	height: 180px;
+
 	img {
 		width: 100%;
-		border-radius: 4px;
 	}
+}
+
+.overlay {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #554645;
+	padding: 24px;
+	transform: translate3d(0, 100%, 0);
+}
+
+.quote {
+	font-family: Antonio, sans-serif;
+	font-size: 18px;
+	color: #c9b9b0;
+	text-align: center;
 }
 
 .serviceText {
@@ -44,4 +67,26 @@
 	font-size: 16px;
 	color: #c9b9b0;
 	padding: 0 8px;
+}
+
+.button {
+	color: #fff8f2;
+	font-family: Poppins, sans-serif;
+	font-size: 12px;
+	font-weight: 600;
+	text-transform: uppercase;
+	text-decoration: none;
+	position: absolute;
+	bottom: 24px;
+	width: 100%;
+	text-align: center;
+	left: 0;
+}
+
+.serviceImage {
+	transform: "matrix(1, 0, 0, 1, 0, 0)"
+}
+
+.arrow.arrow {
+	width: 79px;
 }

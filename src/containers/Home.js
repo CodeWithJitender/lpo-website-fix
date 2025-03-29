@@ -1,6 +1,5 @@
-import React, { useEffect, useRef } from 'react';
-import Container from '@mui/material/Container';
-import Grid from '@mui/material/Grid2';
+import React from 'react';
+import { Container, Grid2 as Grid } from '@mui/material';
 
 import layerLady from "@/assets/images/layer-lady.png";
 import stampIcon from "@/assets/images/layer-stamp.png";
@@ -23,7 +22,7 @@ import precisionSectionBg from "@/assets/images/supreme-court-building.png";
 
 import TextHighlight from '@/components/common/TextHighlight';
 
-import ServiceBox from '@/components/Home/ServiceBox';
+import ServiceBoxContainer from '@/components/Home/ServiceBoxContainer';
 import AreaOfExpertise from "@/components/Home/AreaOfExpertise";
 import FlexibleFirePower from '@/components/Home/FlexibleFirepower';
 import ServiceInfo from '@/components/Home/ServiceInfo';
@@ -31,9 +30,6 @@ import ServiceInfo from '@/components/Home/ServiceInfo';
 import * as styles from './Home.module.scss';
 
 const Home = () => {
-	const textRef = useRef(null);
-  const crowdsRef = useRef(null);
-
   return (
 		<>
 			<section className={styles.masterHead}>
@@ -102,7 +98,7 @@ const Home = () => {
 						<Grid container size={6} spacing={0} style={{
 							alignSelf: "flex-start",
 						}}>
-							<h2 className={styles.thinkOnUs} ref={textRef}>
+							<h2 className={styles.thinkOnUs}>
 								Precision. Power. Partnership.
 							</h2>
 							<h1 className={`${styles.lpoTitle} ${styles.lpoTitleSmall}`}>
@@ -196,6 +192,8 @@ const Home = () => {
 			<AreaOfExpertise />
 			<section className={styles.serviceWeOfferContainer}>
 				<Grid container>
+					<ServiceBoxContainer />
+					{/* <ServiceBox />
 					<ServiceBox />
 					<ServiceBox />
 					<ServiceBox />
@@ -205,9 +203,7 @@ const Home = () => {
 					<ServiceBox />
 					<ServiceBox />
 					<ServiceBox />
-					<ServiceBox />
-					<ServiceBox />
-					<ServiceBox />
+					<ServiceBox /> */}
 				</Grid>
 			</section>
 			<section className={styles.uspSection}>
