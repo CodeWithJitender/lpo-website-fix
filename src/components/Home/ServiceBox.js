@@ -9,6 +9,8 @@ import * as styles from "./ServiceBox.module.scss";
 const ServiceBox = (props) => {
 	const { id, title, description, contentBoxTitle, image } = props;
 
+	const filterId = `distortionFilter${id}`;
+
 	const thumbRef = useRef(null);
 	const thumbSVGRef = useRef(null);
   const SVGFilterRef = useRef(null);
@@ -210,7 +212,7 @@ const ServiceBox = (props) => {
 						ref={thumbSVGRef}
 					>
 						<filter
-							id="distortionFilter5"
+							id={filterId}
 							data-type="displacementMap"
 							ref={SVGFilterRef}
 						>
@@ -233,7 +235,7 @@ const ServiceBox = (props) => {
 							/>
 						</filter>
 						<image
-							filter="url(#distortionFilter5)"
+							filter={`url(#${filterId})`}
 							x="0"
 							y="0"
 							xlinkHref={image}
