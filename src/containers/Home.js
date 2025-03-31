@@ -9,14 +9,7 @@ import iconTarget from "@/assets/icons/icon-target.png";
 import iconClock from "@/assets/icons/icon-clock.png";
 import iconSave from "@/assets/icons/icon-save.png";
 
-import uspIcon1 from "@/assets/icons/usp-icon-1.png";
-import uspIcon2 from "@/assets/icons/usp-icon-2.png";
-import uspIcon3 from "@/assets/icons/usp-icon-3.png";
-import uspIcon4 from "@/assets/icons/usp-icon-4.png";
-
 import arrowBig from "@/assets/icons/arrow-big.png";
-
-import winButtonIcon from "@/assets/images/win-button-icon.png";
 
 import precisionSectionBg from "@/assets/images/supreme-court-building.png";
 
@@ -26,6 +19,7 @@ import ServiceBoxContainer from '@/components/Home/ServiceBoxContainer';
 import AreaOfExpertise from "@/components/Home/AreaOfExpertise";
 import FlexibleFirePower from '@/components/Home/FlexibleFirepower';
 import ServiceInfo from '@/components/Home/ServiceInfo';
+import UspSectionCards from '@/components/Home/UspSectionCards';
 
 import * as styles from './Home.module.scss';
 import NaturalLanguageForm from '../components/Home/NaturalLanguageForm';
@@ -194,127 +188,11 @@ const Home = () => {
 			<section className={styles.serviceWeOfferContainer}>
 				<Grid container>
 					<ServiceBoxContainer />
-					{/* <ServiceBox />
-					<ServiceBox />
-					<ServiceBox />
-					<ServiceBox />
-					<ServiceBox />
-					<ServiceBox />
-					<ServiceBox />
-					<ServiceBox />
-					<ServiceBox />
-					<ServiceBox />
-					<ServiceBox /> */}
 				</Grid>
 			</section>
-			<section className={styles.uspSection}>
-				<Grid container size={12}>
-					<Grid
-						container
-						size={3}
-						className={`${styles.uspItem} ${styles.uspItem1}`}
-						display="flex"
-						alignItems="flex-end"
-					>
-						<Grid size={10}>
-							<div className={styles.uspItemHeading}>
-								Teams Trained By
-								US Law Firms
-							</div>
-							<div className={styles.uspItemInfo}>
-								Trained by the Best. 
-								Built for the Rest.
-							</div>
-						</Grid>
-						<Grid
-							size={2}
-							display="flex"
-							justifyContent="flex-end"
-							className={styles.uspItemImage}
-						>
-							<img src={uspIcon1} alt="" />
-						</Grid>
-					</Grid>
-					<Grid
-						container
-						size={3}
-						className={`${styles.uspItem} ${styles.uspItem2}`}
-						display="flex"
-						alignItems="flex-end"
-					>
-						<Grid size={10}>
-							<div className={styles.uspItemHeading}>
-								Dedicated Sales
-								Manager and CRM
-							</div>
-							<div className={styles.uspItemInfo}>
-								One Point of Contact. 
-								Zero Room for Errors.
-							</div>
-						</Grid>
-						<Grid
-							size={2}
-							display="flex"
-							justifyContent="flex-end"
-							className={styles.uspItemImage}
-						>
-							<img src={uspIcon2} alt="" />
-						</Grid>
-					</Grid>
-					<Grid
-						container
-						size={3}
-						className={`${styles.uspItem} ${styles.uspItem3}`}
-						display="flex"
-						alignItems="flex-end"
-					>
-						<Grid size={10}>
-							<div className={styles.uspItemHeading}>
-								Expertise in Managing
-								Entire Case Lifecycle
-							</div>
-							<div className={styles.uspItemInfo}>
-								From First Filing to Final 
-								Verdict—We've Got It Covered.
-							</div>
-						</Grid>
-						<Grid
-							size={2}
-							display="flex"
-							justifyContent="flex-end"
-							className={styles.uspItemImage}
-						>
-							<img src={uspIcon3} alt="" />
-						</Grid>
-					</Grid>
-					<Grid
-						container
-						size={3}
-						className={`${styles.uspItem} ${styles.uspItem4}`}
-						display="flex"
-						alignItems="flex-end"
-					>
-						<Grid size={10}>
-							<div className={styles.uspItemHeading}>
-								Technology and Data
-								Security Driven
-							</div>
-							<div className={styles.uspItemInfo}>
-								Ironclad Security. 
-								Bulletproof Precision.
-							</div>
-						</Grid>
-						<Grid
-							size={2}
-							display="flex"
-							justifyContent="flex-end"
-							className={styles.uspItemImage}
-						>
-							<img src={uspIcon4} alt="" />
-						</Grid>
-					</Grid>
-				</Grid>
-			</section>
+			<scrtion className={styles.uspSection}>
+				<UspSectionCards />
+			</scrtion>
 			<FlexibleFirePower />
 			<section className={styles.letsWinTogetherSection}>
 				<Grid container size={12} justifyContent="center">
@@ -329,12 +207,6 @@ const Home = () => {
 								</div>
 							</Grid>
 							<NaturalLanguageForm />
-							{/* <Grid size={8} className={styles.infoTextSection}>
-								Pick a time, choose a platform—Zoom, Teams, or a good old-fashioned call. Schedule a meeting and we'll make things happen.
-							</Grid>
-							<Grid size={1} className={styles.winButton}>
-								<img src={winButtonIcon} alt="" />
-							</Grid> */}
 						</Grid>
 				</Grid>
 			</section>
