@@ -28,6 +28,7 @@ import FlexibleFirePower from '@/components/Home/FlexibleFirepower';
 import ServiceInfo from '@/components/Home/ServiceInfo';
 
 import * as styles from './Home.module.scss';
+import NaturalLanguageForm from '../components/Home/NaturalLanguageForm';
 
 const Home = () => {
   return (
@@ -327,12 +328,13 @@ const Home = () => {
 									<div className={styles.infoHeading2}>together.</div>
 								</div>
 							</Grid>
-							<Grid size={8} className={styles.infoTextSection}>
+							<NaturalLanguageForm />
+							{/* <Grid size={8} className={styles.infoTextSection}>
 								Pick a time, choose a platform—Zoom, Teams, or a good old-fashioned call. Schedule a meeting and we'll make things happen.
 							</Grid>
 							<Grid size={1} className={styles.winButton}>
 								<img src={winButtonIcon} alt="" />
-							</Grid>
+							</Grid> */}
 						</Grid>
 				</Grid>
 			</section>
