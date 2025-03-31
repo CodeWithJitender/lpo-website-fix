@@ -1,10 +1,10 @@
 import React, { useState, useRef, useEffect } from "react";
-import dynamics from "dynamics.js";
-import cx from "classnames";
+import { motion, AnimatePresence } from "framer-motion";
+import classNames from "classnames";
 
 import "./ZoomSlider.scss";
 
-const sliderItems = [				
+const slides = [				
 	{
 		id: 1,
 		smallImage: "https://tympanus.net/Blueprints/ZoomSlider/images/iphone.png",
@@ -69,332 +69,284 @@ const sliderItems = [
 ];
 
 const ZoomSlider = () => {
-	const sliderEl = useRef(null);
-	const contentEl = useRef(null);
+	const [currentSlide, setCurrentSlide] = useState(0);
+  const [isOpen, setIsOpen] = useState(false);
+  const containerRef = useRef(null);
 	const slideRefs = useRef([]);
-	const contentRefs = useRef([]);
-
-	const bodyScale = 3;
-	const transEndEventName = "transitionend";
-
-	let current = 0;
-
-	const [currentItem, setCurrentItem] = useState(0);
-	const [isOpen, setIsOpen] = useState(false);
-	const [windowDimensions, setWindowDimensions] = useState({
-		width: 0,
-		height: 0
-	});
+  const [windowSize, setWindowSize] = useState({
+    width: typeof window !== "undefined" ? window.innerWidth : 0,
+    height: typeof window !== "undefined" ? window.innerHeight : 0,
+  });
 
 	useEffect(() => {
-		if (typeof window !== 'undefined') {
-			setWindowDimensions({
-				width: window.innerWidth,
-				height: window.innerHeight
-			});
-		}
-	}, []);
+    const handleResize = () => {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    };
 
-	const onEndTransition = ( el, callback ) => {
-		const onEndCallbackFn = (ev) => {
-			if( ev.target != this ) return;
-			if( callback && typeof callback === 'function' ) { callback.call(this); }
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // Disable scrolling when content is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add("noscroll");
+    } else {
+      document.body.classList.remove("noscroll");
+    }
+    return () => {
+      document.body.classList.remove("noscroll");
+    };
+  }, [isOpen]);
+
+  const navigate = (direction) => {
+    if (isOpen) return;
+
+    if (direction === "right") {
+      setCurrentSlide((prev) => (prev < slides.length - 1 ? prev + 1 : 0));
+    } else {
+      setCurrentSlide((prev) => (prev > 0 ? prev - 1 : slides.length - 1));
+    }
+  };
+
+  const openItem = () => {
+    if (isOpen) return;
+    setIsOpen(true);
+  };
+
+  const closeContent = () => {
+    setIsOpen(false);
+  };
+
+  // Handle keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (isOpen) return;
+
+      if (e.key === "ArrowRight") {
+        navigate("right");
+      } else if (e.key === "ArrowLeft") {
+        navigate("left");
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [isOpen]);
+
+  // Animation variants for image and content
+  const imageVariants = {
+    hidden: { x: "-120%" },
+    visible: {
+      x: "-10px",
+      transition: {
+        duration: 1,
+        ease: [0.2, 1, 0.3, 1], // cubic-bezier(0.2,1,0.3,1)
+      },
+    },
+    exit: {
+      x: "100%",
+      transition: {
+        duration: 0.4,
+        ease: [0.7, 1, 0.8, 1], // cubic-bezier(0.7,1,0.8,1)
+      },
+    },
+  };
+
+  const contentVariants = {
+    hidden: { y: 50, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 1.7,
+        ease: [0.2, 1, 0.3, 1], // cubic-bezier(0.2,1,0.3,1)
+      },
+    },
+    exit: {
+      y: 100,
+      opacity: 0,
+      transition: {
+        duration: 0.6,
+        ease: [0.7, 1, 0.8, 1], // cubic-bezier(0.7,1,0.8,1)
+      },
+    },
+  };
+
+	const getAnimationValues = () => {
+		const zoomerArea = slideRefs.current[currentSlide].querySelector('.zoomer__area');
+		const zoomerAreaSize = {
+			width: zoomerArea.offsetWidth,
+			height: zoomerArea.offsetHeight
 		};
-		el.addEventListener(transEndEventName, onEndCallbackFn );
-	};
+		const zoomerOffset = zoomerArea.getBoundingClientRect();
+		let scaleVal = zoomerAreaSize.width / zoomerAreaSize.height < windowSize.width / windowSize.height ? windowSize.width / zoomerAreaSize.width : windowSize.height / zoomerAreaSize.height;
+		scaleVal /= 3;
 
-	const applyTransforms = (el, nobodyscale) => {
-		// zoomer area and scale value
-		var zoomerArea = el.querySelector('.zoomer__area'), 
-			zoomerAreaSize = {width: zoomerArea.offsetWidth, height: zoomerArea.offsetHeight},
-			zoomerOffset = zoomerArea.getBoundingClientRect(),
-			scaleVal = zoomerAreaSize.width/zoomerAreaSize.height < windowDimensions.width / windowDimensions.height ? windowDimensions.width / zoomerAreaSize.width : windowDimensions.height / zoomerAreaSize.height;
-
-		if( bodyScale && !nobodyscale ) {
-			scaleVal /= bodyScale; 
-		}
-
-		// apply transform
-		el.style.WebkitTransform = 'translate3d(' + Number(windowDimensions.width/2 - (zoomerOffset.left+zoomerAreaSize.width/2)) + 'px,' + Number(windowDimensions.height/2 - (zoomerOffset.top+zoomerAreaSize.height/2)) + 'px,0) scale3d(' + scaleVal + ',' + scaleVal + ',1)';
-		el.style.transform = 'translate3d(' + Number(windowDimensions.width/2 - (zoomerOffset.left+zoomerAreaSize.width/2)) + 'px,' + Number(windowDimensions.height/2 - (zoomerOffset.top+zoomerAreaSize.height/2)) + 'px,0) scale3d(' + scaleVal + ',' + scaleVal + ',1)';
-	};
-
-	const noscroll = () => {
-		contentEl.current.scrollTop = contentEl.current.scrollTop;
-		contentEl.current.scrollLeft = contentEl.current.scrollLeft;
-	}
-
-	const openItem = (item) => {
-		if( isOpen ) return;
-		const bodyEl = document.body;
-
-		// the element that will be transformed
-		var zoomer = item.querySelector('.zoomer');
-		// slide screen preview
-		// disallow scroll
-		contentEl.current.addEventListener('scroll', noscroll);
-		// apply transforms
-		applyTransforms(zoomer);
-		// also scale the body so it looks the camera moves to the item.
-		if (bodyScale) {
-			dynamics.animate(
-				bodyEl, {
-					scale: bodyScale
-				}, {
-					type: dynamics.easeInOut,
-					duration: 500
-				}
-			);
-		}
-		// after the transition is finished:
-		onEndTransition(zoomer, function() {
-			// reset body transform
-			if (bodyScale) {
-				dynamics.stop(bodyEl);
-				dynamics.css(bodyEl, { scale: 1 });
-				
-				// fix for safari (allowing fixed children to keep position)
-				bodyEl.style.WebkitTransform = 'none';
-				bodyEl.style.transform = 'none';
+		return {
+			transform: 'translate3d(100%, 100%, 0px) scale3d(100, 100, 1)',
+			transition: {
+				duration: 1,
 			}
-			// no scrolling
-			classie.add(bodyEl, 'noscroll');
-			classie.add(contentEl, 'content--open');
-			var contentItem = document.getElementById(item.getAttribute('data-content'))
-			classie.add(contentItem, 'content__item--current');
-			classie.add(contentItem, 'content__item--reset');
-
-
-			// reset zoomer transform - back to its original position/transform without a transition
-			classie.add(zoomer, 'zoomer--notrans');
-			zoomer.style.WebkitTransform = 'translate3d(0,0,0) scale3d(1,1,1)';
-			zoomer.style.transform = 'translate3d(0,0,0) scale3d(1,1,1)';
-		});
-		setIsOpen(true);
+		};
 	};
-
-	const navigate = (dir) => {
-		const itemsTotal = sliderItems.length;
-		const itemCurrent = slideRefs.current[currentItem];
-		const currentEl = itemCurrent.querySelector('.slide__mover');
-		const currentTitleEl = itemCurrent.querySelector('.slide__title');
-
-		let current = 0;
-		// update new current value
-		if (dir === 'right' ) {
-			current = current < itemsTotal-1 ? current + 1 : 0;
-		} else {
-			current = current > 0 ? current - 1 : itemsTotal-1;
-		}
-
-		const itemNext = slideRefs.current[current];
-		const nextEl = itemNext.querySelector('.slide__mover');
-		const nextTitleEl = itemNext.querySelector('.slide__title');
-		console.log("itemCurrent: ", itemCurrent);
-		
-		// animate the current element out
-		dynamics.animate(currentEl, {
-			opacity: 0,
-			translateX: dir === 'right' ? -1 * currentEl.offsetWidth / 2 : currentEl.offsetWidth / 2,
-			rotateZ: dir === 'right' ? -10 : 10
-		}, {
-			type: dynamics.spring,
-			duration: 2000,
-			friction: 600,
-			complete: (itemCurrent) => {
-				console.log("itemCurrent: ", itemCurrent);
-				dynamics.css(itemCurrent, { opacity: 0, visibility: 'hidden' });
-			}
-		});
-
-		// animate the current title out
-		dynamics.animate(currentTitleEl, {
-			translateX: dir === 'right' ? -250 : 250,
-			opacity: 0
-		}, {
-			type: dynamics.bezier,
-			points: [{"x":0,"y":0,"cp":[{"x":0.2,"y":1}]},{"x":1,"y":1,"cp":[{"x":0.3,"y":1}]}],
-			duration: 450
-		});
-
-		// set the right properties for the next element to come in
-		dynamics.css(itemNext, {
-			opacity: 1,
-			visibility: 'visible'
-		});
-		dynamics.css(nextEl, {
-			opacity: 0,
-			translateX: dir === 'right' ? nextEl.offsetWidth / 2 : -1 * nextEl.offsetWidth / 2,
-			rotateZ: dir === 'right' ? 10 : -10
-		});
-
-		// animate the next element in
-		dynamics.animate(nextEl, {
-			opacity: 1,
-			translateX: 0
-		}, {
-			type: dynamics.spring,
-			duration: 2000,
-			friction: 600,
-		});
-
-		// set the right properties for the next title to come in
-		dynamics.css(nextTitleEl, {
-			translateX: dir === 'right' ? 250 : -250,
-			opacity: 0
-		});
-		// animate the next title in
-		dynamics.animate(nextTitleEl, {
-			translateX: 0,
-			opacity: 1
-		}, {
-			type: dynamics.bezier,
-			points: [{"x":0,"y":0,"cp":[{"x":0.2,"y":1}]},{"x":1,"y":1,"cp":[{"x":0.3,"y":1}]}],
-			duration: 650
-		});
-		setCurrentItem((current) => {
-			if (dir === 'right') {
-				return current < itemsTotal - 1 ? current + 1 : 0;
-			} else {
-				return current > 0 ? current - 1 : itemsTotal - 1;
-			}
-		});
-	};
-
-	const closeContent = () => {
-		var contentItem = contentEl.current.querySelector('.content__item--current'),
-			zoomer = items[current].querySelector('.zoomer');
-
-		classie.remove(contentEl, 'content--open');
-		classie.remove(contentItem, 'content__item--current');
-		classie.remove(bodyEl, 'noscroll');
-				
-		if( bodyScale ) {
-			// reset fix for safari (allowing fixed children to keep position)
-			bodyEl.style.WebkitTransform = '';
-			bodyEl.style.transform = '';
-		}
-
-		/* fix for safari flickering */
-		var nobodyscale = true;
-		applyTransforms(zoomer, nobodyscale);
-		/* fix for safari flickering */
-
-		// wait for the inner content to finish the transition
-		onEndTransition(contentItem, function(ev) {
-			classie.remove(this, 'content__item--reset');
-			
-			// reset scrolling permission
-			lockScroll = false;
-			scrollContainer.removeEventListener('scroll', noscroll);
-
-			/* fix for safari flickering */
-			zoomer.style.WebkitTransform = 'translate3d(0,0,0) scale3d(1,1,1)';
-			zoomer.style.transform = 'translate3d(0,0,0) scale3d(1,1,1)';
-			/* fix for safari flickering */
-			
-			// scale up - behind the scenes - the item again (without transition)
-			applyTransforms(zoomer);
-			
-			// animate/scale down the item
-			setTimeout(function() {	
-				classie.remove(zoomer, 'zoomer--notrans');
-				classie.remove(zoomer, 'zoomer--active');
-				zoomer.style.WebkitTransform = 'translate3d(0,0,0) scale3d(1,1,1)';
-				zoomer.style.transform = 'translate3d(0,0,0) scale3d(1,1,1)';
-			}, 25);
-
-			if( bodyScale ) {
-				dynamics.css(bodyEl, { scale: bodyScale });
-				dynamics.animate(bodyEl, { scale: 1 }, {
-					type: dynamics.easeInOut,
-					duration: 500
-				});
-			}
-
-			isOpen = false;
-		});
-	};
-
-	const initEvents = () => {
-		const zoomCtrl = sliderEl?.current?.querySelector('.button--zoom');
-		// open items
-		zoomCtrl.addEventListener('click', function() {
-			// const itemsTotal = sliderItems.length;
-			const itemCurrent = slideRefs.current[currentItem];
-			openItem(itemCurrent);
-		});
-
-		// close content
-		const closeContentCtrl = contentEl.current.querySelector('button.button--close')
-		closeContentCtrl.addEventListener('click', closeContent);
-	};
-
-	useEffect(() => {
-		initEvents();
-	});
 
   return (
-		<div className="container" ref={contentEl}>
-			<section className="slider" ref={sliderEl}>
-				{sliderItems.map((slider, index) => (
-					<div
-						className={cx("slide", {
-							"slide--current": index === currentItem
-						})}
-						data-content={`content-${slider.id}`}
+    <>
+      <section className="slider">
+        {slides.map((slide, index) => (
+          <div
+            key={slide.id}
+            className={classNames("slide", {
+              "slide--current": currentSlide === index && !isOpen,
+            })}
 						ref={(el) => (slideRefs.current[index] = el)}
-						key={slider.id}
-					>
-						<div className="slide__mover">
-							<div
-								className={
-									cx("zoomer flex-center",
-										{
-											"zoomer--active": isOpen && index === currentItem,
-										}
-									)
-									
+            data-content={slide.id}
+            style={{
+              opacity: currentSlide === index ? 1 : 0,
+              visibility: currentSlide === index ? "visible" : "hidden",
+            }}
+          >
+            <motion.div className="slide__mover">
+              <motion.div
+                className={classNames("zoomer", "flex-center", {
+                  "zoomer--active": isOpen && currentSlide === index,
+                  "zoomer--notrans": isOpen && currentSlide === index,
+                })}
+                animate={
+                  isOpen && currentSlide === index
+                    ? getAnimationValues()
+                    : {
+											transform: "translate3d(0px, 0px, 0px) scale3d(1, 1, 1)"
+                    }
+                }
+                transition={{
+                  duration: 0.5,
+                  ease: [0.7, 0, 0.3, 1], // cubic-bezier(0.7,0,0.3,1)
+                }}
+              >
+                <img
+                  className="zoomer__image"
+                  src={slide.smallImage}
+                  alt={slide.title}
+                />
+                <div className="preview">
+                  <img
+                    src={slide.previewImage}
+                    alt={`${slide.title} preview`}
+                  />
+                  <div className="zoomer__area zoomer__area--size-2"></div>
+                </div>
+              </motion.div>
+            </motion.div>
+            <motion.h2
+              className="slide__title"
+              initial={{ opacity: 0, x: index === 0 ? -250 : 250 }}
+              animate={{
+                opacity: currentSlide === index ? 1 : 0,
+                x:
+                  currentSlide === index
+                    ? 0
+                    : index < currentSlide
+                    ? -250
+                    : 250,
+              }}
+              transition={{
+                duration: 0.65,
+                ease: [0.2, 1, 0.3, 1], // cubic-bezier(0.2,1,0.3,1)
+              }}
+            >
+              {slide.title}
+            </motion.h2>
+          </div>
+        ))}
+
+        <nav className="slider__nav">
+          <button
+            className="button button--nav-prev"
+            onClick={() => navigate("left")}
+          >
+            &lt;
+            <span className="text-hidden">Previous product</span>
+          </button>
+          <button className="button button--zoom" onClick={openItem}>
+            Lens
+            <span className="text-hidden">View details</span>
+          </button>
+          <button
+            className="button button--nav-next"
+            onClick={() => navigate("right")}
+          >
+            &gt;
+            <span className="text-hidden">Next product</span>
+          </button>
+        </nav>
+      </section>
+
+      <AnimatePresence>
+        {isOpen && (
+          <motion.section
+            className={classNames("content", { "content--open": isOpen })}
+            initial={{ left: "-100%" }}
+            animate={{
+							left: 0,
+							transition: {
+								left: {
+									delay: 0.2,
 								}
-							>
-								<img className="zoomer__image" src={slider.smallImage} alt="iPhone" />
-								<div className="preview">
-									<img src={slider.previewImage} alt="iPhone app preview" />
-									<div className="zoomer__area zoomer__area--size-2"></div>
-								</div>
-							</div>
-						</div>
-						<h2 className="slide__title">{slider.title}</h2>
-					</div>
-				))}
-				<nav className="slider__nav">
-					<button className="button button--nav-prev" onClick={() => navigate('left')}>
-						<i className="icon icon--arrow-left"></i><span className="text-hidden">Previous product</span>
-					</button>
-					<button className="button button--zoom"><i className="icon icon--zoom"></i><span className="text-hidden">View details</span></button>
-					<button className="button button--nav-next"  onClick={() => navigate('right')}>
-						<i className="icon icon--arrow-right"></i><span className="text-hidden">Next product</span>
-					</button>
-				</nav>
-			</section>
-			<section className="content">
-				{sliderItems.map((slider, index) => (
-					<div
-						className="content__item"
-						id={`content-${slider.id}`}
-						ref={(el) => (contentRefs.current[index] = el)}
-						key={slider.id}
-					>
-						<img className="content__item-img rounded-right" src={slider.contentImage} alt="Apple Watch Content" />
-						<div className="content__item-inner">
-							{slider.content}
-						</div>
-					</div>
-				))}
-				<button className="button button--close"><i className="icon icon--circle-cross"></i><span className="text-hidden">Close content</span></button>
-			</section>
-		</div>
-	);
+							}
+						}}
+            exit={{ left: "-100%" }}
+            transition={{
+							duration: 0.3,
+						}}
+          >
+            {slides.map((slide, index) => (
+              <div
+                key={slide.id}
+                id={slide.id}
+                className={classNames("content__item", {
+                  "content__item--current": currentSlide === index,
+                  "content__item--reset": isOpen && currentSlide === index,
+                })}
+                style={{
+                  opacity: currentSlide === index ? 1 : 0,
+                  pointerEvents: currentSlide === index ? "auto" : "none",
+                }}
+              >
+                <motion.img
+                  className="content__item-img rounded-right"
+                  src={slide.contentImage}
+                  alt={`${slide.title} Content`}
+                  variants={imageVariants}
+                  initial="hidden"
+                  animate={currentSlide === index ? "visible" : "hidden"}
+                  exit="exit"
+                />
+
+                <motion.div
+                  className="content__item-inner"
+                  variants={contentVariants}
+                  initial="hidden"
+                  animate={currentSlide === index ? "visible" : "hidden"}
+                  exit="exit"
+                >
+                  {slide.content}
+                </motion.div>
+              </div>
+            ))}
+            <button className="button button--close" onClick={closeContent}>
+              close
+              <span className="text-hidden">Close content</span>
+            </button>
+          </motion.section>
+        )}
+      </AnimatePresence>
+    </>
+  );
 };
 
 export default ZoomSlider;
