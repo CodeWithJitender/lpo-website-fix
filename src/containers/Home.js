@@ -22,7 +22,6 @@ import ServiceInfo from '@/components/Home/ServiceInfo';
 import UspSectionCards from '@/components/Home/UspSectionCards';
 
 import * as styles from './Home.module.scss';
-import NaturalLanguageForm from '../components/Home/NaturalLanguageForm';
 
 const Home = () => {
   return (
@@ -90,9 +89,17 @@ const Home = () => {
 						alignItems="flex-start"
 						className={styles.commonContainer}
 					>
-						<Grid container size={6} spacing={0} style={{
-							alignSelf: "flex-start",
-						}}>
+						<Grid
+							container
+							size={{
+								xs: 12,
+								sm: 12,
+								md: 12,
+								lg: 6,
+							}}
+							spacing={0}
+							alignSelf="flex-start"
+						>
 							<h2 className={styles.thinkOnUs}>
 								Precision. Power. Partnership.
 							</h2>
@@ -108,7 +115,12 @@ const Home = () => {
 							</div>
 						</Grid>
 						<Grid
-							size={6}
+							size={{
+								xs: 12,
+								sm: 12,
+								md: 12,
+								lg: 6,
+							}}
 							spacing={0}
 							container
 						>
@@ -194,22 +206,6 @@ const Home = () => {
 				<UspSectionCards />
 			</scrtion>
 			<FlexibleFirePower />
-			<section className={styles.letsWinTogetherSection}>
-				<Grid container size={12} justifyContent="center">
-						<Grid container size={9} alignItems="center">
-							<Grid size={3}>
-								<div className={styles.infoSmallSection}>
-									Let's get our A game to the court.
-								</div>
-								<div className={styles.infoBigSection}>
-									<div className={styles.infoHeading1}>Let's win—</div>
-									<div className={styles.infoHeading2}>together.</div>
-								</div>
-							</Grid>
-							<NaturalLanguageForm />
-						</Grid>
-				</Grid>
-			</section>
 		</>
   );
 };

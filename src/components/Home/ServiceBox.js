@@ -199,7 +199,15 @@ const ServiceBox = (props) => {
   }, []); // Empty dependency array to run once on mount
 
   return (
-		<Grid size={3} className={styles.container}>
+		<Grid
+			size={{
+				xs: 12,
+				sm: 12,
+				md: 12,
+				lg: 3,
+			}}
+			className={styles.container}
+		>
 			<div className={styles.box} ref={boxRef}>
 				<div className={styles.count} ref={countRef}>{id}.</div>
 				<div className={styles.heading} ref={titleRef}>{title}</div>

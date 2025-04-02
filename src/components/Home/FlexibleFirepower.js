@@ -11,7 +11,17 @@ const FlexibleFirePower = () => {
 	return (
 		<section className={styles.infoContainer}>
 			<Grid container size={12}>
-				<Grid container size={6} display="flex" direction="row">
+				<Grid
+					container
+					size={{
+						xs: 12,
+						sm: 12,
+						md: 12,
+						lg: 6,
+					}}
+					display="flex"
+					direction="row"
+				>
 					<Grid size={12} className={styles.infoHeadingSection}>
 						<div className={styles.infoMainHeading}>
 							<TextHighlight text="Flexible Firepower for Your Cases" />
@@ -29,7 +39,15 @@ const FlexibleFirePower = () => {
 						<img src={flexibleSectionImg} alt="" />
 					</Grid>
 				</Grid>
-				<Grid size={6} className={styles.infoDetailSection}>
+				<Grid
+					size={{
+						xs: 12,
+						sm: 12,
+						md: 12,
+						lg: 6,
+					}}
+					className={styles.infoDetailSection}
+				>
 					<Grid size={12} className={styles.infoDetail}>
 						Whether you need a dedicated paralegal or 
 						strategic on-demand support, we provide the 

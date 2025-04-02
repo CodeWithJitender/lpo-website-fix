@@ -164,7 +164,15 @@ export default function NaturalLanguageForm() {
 
   return (
 		<>
-			<Grid size={8} className={styles.infoTextSection}>
+			<Grid
+				size={{
+					xs: 12,
+					sm: 12,
+					md: 12,
+					lg: 8,
+				}}
+				className={styles.infoTextSection}
+			>
 				<form
 					ref={formRef}
 					id="nl-form"
@@ -194,7 +202,15 @@ export default function NaturalLanguageForm() {
 					/>
 				</form>
 			</Grid>
-			<Grid size={1} className={styles.winButton}>
+			<Grid
+				size={{
+					xs: 12,
+					sm: 12,
+					md: 12,
+					lg: 1,
+				}}
+				className={styles.winButton}
+			>
 				<img src={winButtonIcon} alt="" />
 			</Grid>
 		</>
