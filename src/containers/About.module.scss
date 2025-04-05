@@ -1,5 +1,7 @@
 .masterHead {
-	padding-top: 300px;
+	padding-top: 600px;
+	background: url("../assets/images/about-materhead-bg.jpg") no-repeat top center;
+	background-size: cover;
 }
 
 .commonContainer {
@@ -38,6 +40,7 @@
 
 .aboutLPO {
 	padding: 0 50px;
+	margin-bottom: 300px;
 }
 
 .aboutHeading {
@@ -53,8 +56,24 @@
 }
 
 .newEraSection {
-	padding: 0 50px;
-	margin-bottom: 100px;
+	padding: 600px 50px 0;
+	margin-bottom: 200px;
+	background: url("../assets/images/new-era-section-bg.jpg") no-repeat top center;
+	background-size: cover;
+	position: relative;
+}
+
+.aboutStamp {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	top: 0;
+	width: 200px;
+	height: 200px;
+
+	img {
+		width: 100%;
+	}
 }
 
 .newEraText {
@@ -67,7 +86,28 @@
 	margin: 20px 0 40px;
 }
 
+.metricsContainer {
+	background: #0a0c1f;
+}
+
+.metricsSectionImage {
+	width: 100%;
+}
+
+.metricsContentContainer {
+	background: url("../assets/images/metrics-section-second-bg.jpg") no-repeat top center;
+	background-size: cover;
+	padding-top: 20px;
+}
+
+.metricsItem {
+	background: url("../assets/images/metrics-tile-bg.png") no-repeat top left;
+	background-size: contain;
+	padding: 0px 75px;
+}
+
 .metricsHeading {
+	text-align: center;
 	font-family: Antonio, sans-serif;
 	font-size: 50px;
 	color: #fff8f2;
@@ -78,16 +118,49 @@
 	font-family: Antonio, sans-serif;
 	font-size: 22px;
 	color: #a4836f;
+	margin-bottom: 72px;
 }
 
 .metricsText {
 	color: #c9b9b0;
 	text-align: center;
+	margin-top: 12px;
+}
+
+.precisionText {
+	text-transform: uppercase;
+	font-family: Antonio, sans-serif;
+	color: #927464;
+	font-size: 4.59vw;
 }
 
 .aboutFounder {
-	background-color: #DEC4A5;
+	background: #DEC4A5 url("../assets/images/founder-section-bg.jpg") no-repeat top center;
+	background-size: cover;
 	padding-bottom: 100px;
+	position: relative;
+	padding-top: 17%;
+}
+
+.founderLaptopImage {
+	width: 60%;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	top: 0;
+
+	img {
+		width: 100%;
+	}
+}
+
+.playIcon {
+	position: absolute;
+	width: 75px;
+	height: 75px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 .founderTitle {
@@ -121,4 +194,18 @@
 	margin-top: 20px;
 	text-align: center;
 	color: #423635;
+}
+
+.precisionTextContainer {
+	overflow: hidden;
+	padding-top: 250px;
+}
+
+.socialFootprint {
+	text-align: center;
+	margin-top: 20px;
+}
+
+.linkedinIcon {
+	width: 40px;
 }

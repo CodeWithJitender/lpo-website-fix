@@ -7,10 +7,16 @@ import {
 	QualityBox
 } from '@/components/common';
 
-import iconPractice from "@/assets/icons/icon-practice.png";
-import iconTarget from "@/assets/icons/icon-target.png";
-import iconClock from "@/assets/icons/icon-clock.png";
-import iconSave from "@/assets/icons/icon-save.png";
+import eliteExpert from "@/assets/icons/elite-expert.png";
+import dataSecurity from "@/assets/icons/data-security.png";
+import techDrivenEfficency from "@/assets/icons/tech-driven-efficency.png";
+import costAdvantage from "@/assets/icons/cost-advantage.png";
+import linkedIcon from "@/assets/icons/about-linkedin-icon.png";
+import playIcon from "@/assets/icons/play-icon.png";
+
+import legalStamp from "@/assets/images/about-legal-stamp.png";
+import metricsSectionImage from "@/assets/images/metrics-bg.jpg";
+import founderLaptopImage from "@/assets/images/kunal-in-laptop.png";
 
 import * as styles from "./About.module.scss";
 
@@ -59,8 +65,11 @@ const About = () => {
 				</Grid>
 			</section>
 			<section className={styles.newEraSection}>
+				<div className={styles.aboutStamp}>
+					<img src={legalStamp} alt="" />
+				</div>
 				<Container maxWidth="xl">
-					<Grid container columnSpacing={12}>
+					<Grid container columnSpacing={10} alignItems="flex-start">
 						<Grid
 							container
 							size={{
@@ -102,22 +111,22 @@ const About = () => {
 							container
 						>
 							<QualityBox
-								icon={iconSave}
+								icon={eliteExpert}
 								heading="Elite Expertise, Global Reach"
 								text="Teams trained by top US, UK, and Canadian law firms, delivering precision-driven legal support."
 							/>
 							<QualityBox
-								icon={iconClock}
+								icon={dataSecurity}
 								heading="Ironclad Data Security"
 								text="End-to-end encryption, strict compliance protocols, and airtight confidentiality—your data stays protected, always."
 							/>
 							<QualityBox
-								icon={iconTarget}
+								icon={techDrivenEfficency}
 								heading="Tech-Driven Efficiency"
 								text="We leverage cutting-edge legal tech, AI-powered research, and secure cloud solutions for seamless execution."
 							/>
 							<QualityBox
-								icon={iconPractice}
+								icon={costAdvantage}
 								heading="Versatile Practices"
 								text="From litigation to compliance, we cover every legal need with precision."
 							/>
@@ -126,56 +135,98 @@ const About = () => {
 				</Container>
 			</section>
 			<section className={styles.metricsContainer}>
-				<Grid container justifyContent="center">
+				<Grid size={12}>
+					<img src={metricsSectionImage} className={styles.metricsSectionImage} alt="" />
+				</Grid>
+				<Grid
+					container
+					justifyContent="center"
+					className={styles.metricsContentContainer}
+				>
 					<Grid container size={11} columnSpacing={4}>
-						<Grid size={3} container justifyContent="center" alignItems="flex-start">
-							<div className={styles.metricsHeading}>99%</div>
-							<div className={styles.metricsTitle}>
-								Accuracy in Legal 
-								Documentation & Case 
-								Support
+						<Grid
+							size={3}
+							container
+							justifyContent="center"
+						>
+							<div className={styles.metricsItem}>
+								<div className={styles.metricsHeading}>99%</div>
+								<div className={styles.metricsTitle}>
+									Accuracy in Legal 
+									Documentation & Case 
+									Support
+								</div>
 							</div>
 							<div className={styles.metricsText}>
 								Precision-driven processes to keep your cases airtight.
 							</div>
 						</Grid>
-						<Grid size={3} container justifyContent="center">
-							<div className={styles.metricsHeading}>24/7</div>
-							<div className={styles.metricsTitle}>
-								Operational Support
-								Across Time 
-								Zones
+						<Grid
+							size={3}
+							container
+							justifyContent="center"
+						>
+							<div className={styles.metricsItem}>
+								<div className={styles.metricsHeading}>24/7</div>
+								<div className={styles.metricsTitle}>
+									Operational Support
+									Across Time 
+									Zones
+								</div>
 							</div>
 							<div className={styles.metricsText}>
 								Because legal deadlines don't wait. Neither do we.
 							</div>
 						</Grid>
-						<Grid size={3} container justifyContent="center">
-							<div className={styles.metricsHeading}>50+</div>
-							<div className={styles.metricsTitle}>
-								Expert Paralegals & 
-								Legal 
-								Professionals
+						<Grid
+							size={3}
+							container
+							justifyContent="center"
+						>
+							<div className={styles.metricsItem}>
+								<div className={styles.metricsHeading}>50+</div>
+								<div className={styles.metricsTitle}>
+									Expert Paralegals & 
+									Legal 
+									Professionals
+								</div>
 							</div>
 							<div className={styles.metricsText}>
 								Trained by top law firms, delivering unmatched expertise.
 							</div>
 						</Grid>
-						<Grid size={3} container justifyContent="center">
-							<div className={styles.metricsHeading}>100%</div>
-							<div className={styles.metricsTitle}>
-								Data Security & 
-								Confidentiality 
-								Compliance
+						<Grid
+							size={3}
+							container
+							justifyContent="center"
+						>
+							<div className={styles.metricsItem}>
+								<div className={styles.metricsHeading}>100%</div>
+								<div className={styles.metricsTitle}>
+									Data Security & 
+									Confidentiality 
+									Compliance
+								</div>
 							</div>
 							<div className={styles.metricsText}>
 								Your sensitive information stays protected, no exceptions.
 							</div>
 						</Grid>
 					</Grid>
+					<Grid size={12} className={styles.precisionTextContainer}>
+						<div className={styles.precisionText}>
+							Powering Law Firms with Smart, Scalable Legal Support
+						</div>
+					</Grid>
 				</Grid>
 			</section>
 			<section className={styles.aboutFounder}>
+				<div className={styles.founderLaptopImage}>
+					<img src={founderLaptopImage} alt="" />
+					<div className={styles.playIcon}>
+						<img src={playIcon} alt="" />
+					</div>
+				</div>
 				<Grid size={12} container justifyContent="center">
 					<Grid size={7}>
 						<div className={styles.founderTitle}>
@@ -191,7 +242,7 @@ const About = () => {
 							Kunal Jaggi, Founder & CEO of Glocal LPO, is a visionary leader with 15+ years in outsourcing, sales, and operations. He also heads Head Field Solutions, a market leader in recruitment, digital, and virtual assistant services across the US and Canada. With a people-first approach, he has built Glocal LPO into a trusted legal outsourcing partner for global law firms and corporations.
 						</div>
 						<div className={styles.socialFootprint}>
-							Linkedin
+							<img src={linkedIcon} alt="" className={styles.linkedinIcon} />
 						</div>
 					</Grid>
 				</Grid>

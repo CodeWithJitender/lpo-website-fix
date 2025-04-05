@@ -11,7 +11,8 @@ module.exports = {
     filename: 'server.js',
     path: path.resolve(__dirname, 'build/public'),
     libraryTarget: 'commonjs2',
-		publicPath: '/assets/'
+		publicPath: '/assets/',
+		clean: true
   },
   module: {
     rules: [
