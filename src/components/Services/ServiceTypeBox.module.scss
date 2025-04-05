@@ -1,0 +1,43 @@
+.serviceBox {
+	border-radius: 10px;
+	padding: 20px;
+	border: solid 2px #564847;
+	color: #dec4a5;
+	transition: all 0.3s ease;
+
+	&:hover {
+		background-color: #dec4a5;
+		color: #070c1e;
+		border-color: #dec4a5;
+	}
+}
+
+.serviceImage {
+	border-radius: 50%;
+	width: 100%;
+}
+
+.serviceBoxHeading {
+	font-family: Antonio, sans-serif;
+	font-size: 30px;
+	line-height: 1.2;
+	margin-bottom: 20px;
+}
+
+.serviceBoxNumber {
+	text-align: right;
+}
+
+.connectWithUsButton {
+	border-radius: 6px;
+	background: #564847;
+	color: #dec4a5;
+	padding: 8px;
+	display: flex;
+	align-items: center;
+  justify-content: center;
+
+	img {
+		width: 30px;
+	}
+}

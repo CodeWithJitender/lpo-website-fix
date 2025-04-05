@@ -1,0 +1,93 @@
+.masterHead {
+	padding-top: 600px;
+	background: url("../assets/images/service-masterhead-bg.jpg") no-repeat top center;
+	background-size: cover;
+}
+
+.commonContainer {
+	padding: 0 50px;
+}
+
+.breadcrumb {
+	padding: 0;
+	margin: 0;
+	text-transform: uppercase;
+	color: #a4836f;
+	font-family: Poppins, sans-serif;
+	font-size: 16px;
+	list-style: none;
+	display: block;
+
+	li {
+		&::after {
+			content: "/";
+			margin: 0 8px;
+		}
+	}
+}
+
+.lpoTitle {
+	font-size: 100px;
+}
+
+.plusIcon {
+	font-family: Poppins, sans-serif;
+	font-size: 200px;
+	color: #a4836f;
+	margin: 60px 0 12px;
+	line-height: 0.55;
+}
+
+.aboutLPO {
+	padding: 0 50px;
+	margin-bottom: 300px;
+}
+
+.aboutHeading {
+	font-family: Poppins, sans-serif;
+	font-size: 20px;
+	color: #fff8f2;
+	margin-bottom: 20px;
+}
+
+.aboutText {
+	color: #c9b9b0;
+	margin: 28px 0;
+}
+
+.typeOfServiceBoxContainer {
+	margin: 60px 0 160px;
+}
+
+.accordionContainer {
+	padding: 20px;
+	border: 1px solid #564847;
+	background: #070C1E;
+	margin: 60px 0 100px;
+	border-radius: 4px;
+}
+
+.accordianHeader.accordianHeader {
+	border: solid 2px #564847;
+	border-radius: 4px;
+	background: transparent;
+	color: #dec4a5;
+	font-family: Antonio, sans-serif;
+	font-size: 20px;
+	line-height: 1.2;
+	padding: 0 20px;
+}
+
+.accordionRoot.accordionRoot {
+	background: transparent;
+	color: #dec4a5;
+}
+
+.accordionExpended.accordionExpended {
+	background: #564847;
+	color: #fff8f2;
+}
+
+.accordianDetail.accordianDetail {
+	padding: 40px 40px;
+}
