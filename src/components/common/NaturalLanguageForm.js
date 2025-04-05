@@ -3,6 +3,8 @@ import Grid from "@mui/material/Grid2";
 
 import winButtonIcon from "@/assets/images/win-button-icon.png";
 
+import Animate from "./Animate";
+
 import * as styles from "./NaturalLanguageForm.module.scss";
 
 export default function NaturalLanguageForm() {
@@ -173,34 +175,36 @@ export default function NaturalLanguageForm() {
 				}}
 				className={styles.infoTextSection}
 			>
-				<form
-					ref={formRef}
-					id="nl-form"
-					className={styles["nl-form"]}
-					onSubmit={handleSubmit}
-				>
-					Pick a {" "}
-					<DropdownField
-						options={["7 pm", "8 pm", "9 pm", "10 pm", "11 pm"]}
-						defaultValue="time"
-						index={0}
-						valueKey="time"
-					/>, 
-					choose a platform—
-					<DropdownField
-						options={["zoom", "google meet", "teams", "or a good old-fashioned call"]}
-						defaultValue="zoom"
-						index={1}
-						valueKey="platform"
-					/>. Schedule a meeting and we'll make things happen.
-					<div
-						ref={overlayRef}
-						className={`${styles["nl-overlay"]} ${
-							openFieldIndex !== -1 ? styles["nl-field-open"] : ""
-						}`}
-						onClick={handleOverlayClick}
-					/>
-				</form>
+				<Animate.FadeUp direction="up">
+					<form
+						ref={formRef}
+						id="nl-form"
+						className={styles["nl-form"]}
+						onSubmit={handleSubmit}
+					>
+						Pick a {" "}
+						<DropdownField
+							options={["7 pm", "8 pm", "9 pm", "10 pm", "11 pm"]}
+							defaultValue="time"
+							index={0}
+							valueKey="time"
+						/>, 
+						choose a platform—
+						<DropdownField
+							options={["zoom", "google meet", "teams", "or a good old-fashioned call"]}
+							defaultValue="zoom"
+							index={1}
+							valueKey="platform"
+						/>. Schedule a meeting and we'll make things happen.
+						<div
+							ref={overlayRef}
+							className={`${styles["nl-overlay"]} ${
+								openFieldIndex !== -1 ? styles["nl-field-open"] : ""
+							}`}
+							onClick={handleOverlayClick}
+						/>
+					</form>
+				</Animate.FadeUp>
 			</Grid>
 			<Grid
 				size={{
@@ -211,7 +215,9 @@ export default function NaturalLanguageForm() {
 				}}
 				className={styles.winButton}
 			>
-				<img src={winButtonIcon} alt="" />
+				<Animate.FadeUp direction="up" delay="100ms">
+					<img src={winButtonIcon} alt="" />
+				</Animate.FadeUp>
 			</Grid>
 		</>
   );

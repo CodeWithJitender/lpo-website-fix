@@ -4,3 +4,4 @@ export { default as Heading } from "./Heading";
 export { default as Header } from "./Header";
 export { default as TextHighlight } from "./TextHighlight";
 export { default as QualityBox } from "./QualityBox";
+export { default as Animate } from "./Animate";

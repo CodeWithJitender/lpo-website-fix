@@ -58,8 +58,8 @@ const About = () => {
 						</div>
 
 						<div>
-							<LinkButton to="#">Explore services</LinkButton>
-							<LinkButton to="#">consult with us</LinkButton>
+							<LinkButton to="#" delay="100ms">Explore services</LinkButton>
+							<LinkButton to="#" delay="200ms">consult with us</LinkButton>
 						</div>
 					</Grid>
 				</Grid>
@@ -114,21 +114,29 @@ const About = () => {
 								icon={eliteExpert}
 								heading="Elite Expertise, Global Reach"
 								text="Teams trained by top US, UK, and Canadian law firms, delivering precision-driven legal support."
+								direction="right"
+								delay="100ms"
 							/>
 							<QualityBox
 								icon={dataSecurity}
 								heading="Ironclad Data Security"
 								text="End-to-end encryption, strict compliance protocols, and airtight confidentiality—your data stays protected, always."
+								direction="left"
+								delay="200ms"
 							/>
 							<QualityBox
 								icon={techDrivenEfficency}
 								heading="Tech-Driven Efficiency"
 								text="We leverage cutting-edge legal tech, AI-powered research, and secure cloud solutions for seamless execution."
+								direction="right"
+								delay="300ms"
 							/>
 							<QualityBox
 								icon={costAdvantage}
 								heading="Versatile Practices"
 								text="From litigation to compliance, we cover every legal need with precision."
+								direction="left"
+								delay="400ms"
 							/>
 						</Grid>
 					</Grid>

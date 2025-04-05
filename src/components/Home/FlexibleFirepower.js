@@ -3,7 +3,7 @@ import Grid from '@mui/material/Grid2';
 
 import {
 	Heading,
-	TextHighlight
+	Animate
 } from "@/components/common";
 
 import flexibleSectionImg from "@/assets/images/flexible-section-img.png";
@@ -26,10 +26,10 @@ const FlexibleFirePower = () => {
 					direction="row"
 				>
 					<Grid size={12} className={styles.infoHeadingSection}>
-						<Heading>
-							<TextHighlight text="Flexible Firepower for Your Cases" />
+						<Heading direction="down">
+							Flexible Firepower for Your Cases
 						</Heading>
-						<Heading variant="secondary" className={styles.infoSubHeading}>
+						<Heading variant="secondary" className={styles.infoSubHeading} direction="up">
 							Scale. Adapt. Conquer. Repeat.
 						</Heading>
 					</Grid>
@@ -52,48 +52,70 @@ const FlexibleFirePower = () => {
 					className={styles.infoDetailSection}
 				>
 					<Grid size={12} className={styles.infoDetail}>
-						Whether you need a dedicated paralegal or 
-						strategic on-demand support, we provide the 
-						flexibility to scale with your practice—because 
-						in law, adaptability is power.
+						<Animate.FadeUp direction="down">
+							Whether you need a dedicated paralegal or 
+							strategic on-demand support, we provide the 
+							flexibility to scale with your practice—because 
+							in law, adaptability is power.
+						</Animate.FadeUp>
 					</Grid>
 					<Grid container size={12} spacing={4} alignItems="flex-start">
 						<Grid size={6} className={styles.perWeekSection}>
-							<div className={styles.smallHeading}>Full-Time Paralegal</div>
-							<div className={styles.perMonthHours}>160 hrs/month</div>
-							<div className={styles.perWeekHours}>
-								<div className={styles.perWeek}>40</div>
-								hrs/week
-							</div>
+							<Animate.FadeUp direction="right">
+								<div className={styles.smallHeading}>Full-Time Paralegal</div>
+								<div className={styles.perMonthHours}>160 hrs/month</div>
+								<div className={styles.perWeekHours}>
+									<div className={styles.perWeek}>40</div>
+									hrs/week
+								</div>
+							</Animate.FadeUp>
 						</Grid>
 						<Grid size={6} className={styles.perWeekDescriptionSection}>
-							<div className={styles.weekDescription}>
-								Full-Throttle Paralegal Power - For When Every Second Counts.
-							</div>
+							<Animate.FadeUp direction="left">
+								<div className={styles.weekDescription}>
+									Full-Throttle Paralegal Power - For When Every Second Counts.
+								</div>
+							</Animate.FadeUp>
 							<ul className={styles.weekBulletPoints}>
-								<li>Best for heavy caseloads & long-term engagements</li>
-								<li>Consistency & full integration into your legal team</li>
-								<li>Proactive case management with deep involvement</li>
+								<Animate.FadeUp direction="left" delay="100ms">
+									<li>Best for heavy caseloads & long-term engagements</li>
+								</Animate.FadeUp>
+								<Animate.FadeUp direction="left" delay="200ms">
+									<li>Consistency & full integration into your legal team</li>
+								</Animate.FadeUp>
+								<Animate.FadeUp direction="left" delay="300ms">
+									<li>Proactive case management with deep involvement</li>
+								</Animate.FadeUp>
 							</ul>
 						</Grid>
 					</Grid>
 					<Grid container size={12} spacing={4} alignItems="flex-start">
 						<Grid size={6} className={styles.perWeekSection}>
-							<div className={styles.smallHeading}>Part-Time Paralegal</div>
-							<div className={styles.perMonthHours}>80 hrs/month</div>
-							<div className={styles.perWeekHours}>
-								<div className={styles.perWeek}>20</div>
-								hrs/week
-							</div>
+							<Animate.FadeUp direction="right">
+								<div className={styles.smallHeading}>Part-Time Paralegal</div>
+								<div className={styles.perMonthHours}>80 hrs/month</div>
+								<div className={styles.perWeekHours}>
+									<div className={styles.perWeek}>20</div>
+									hrs/week
+								</div>
+							</Animate.FadeUp>
 						</Grid>
 						<Grid size={6} className={styles.perWeekDescriptionSection}>
-							<div className={styles.weekDescription}>
-								Lean, Mean, Legal Machine - On-demand Assistance.
-							</div>
+							<Animate.FadeUp direction="left">
+								<div className={styles.weekDescription}>
+									Lean, Mean, Legal Machine - On-demand Assistance.
+								</div>
+							</Animate.FadeUp>
 							<ul className={styles.weekBulletPoints}>
-								<li>Ideal for boutique firms and case-specific needs.</li>
-								<li>Scalable—adjust hours as your caseload grows</li>
-								<li>High-impact support without long-term constraints</li>
+								<Animate.FadeUp direction="left" delay="100ms">
+									<li>Ideal for boutique firms and case-specific needs.</li>
+								</Animate.FadeUp>
+								<Animate.FadeUp direction="left" delay="200ms">
+									<li>Scalable—adjust hours as your caseload grows</li>
+								</Animate.FadeUp>
+								<Animate.FadeUp direction="left" delay="300ms">
+									<li>High-impact support without long-term constraints</li>
+								</Animate.FadeUp>
 							</ul>
 							<a href="#" className={styles.consultWithUs}>Consult with us</a>
 						</Grid>

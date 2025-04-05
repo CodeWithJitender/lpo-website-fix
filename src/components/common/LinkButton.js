@@ -1,18 +1,23 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import Animate from "./Animate";
+
 import * as styles from "./LinkButton.module.scss";
 
 const LinkButton = (props) => {
 	const {
 		to,
+		delay,
 		children
 	} = props;
 
 	return (
-		<Link to={to} className={styles.button}>
-			{children}
-		</Link>
+		<Animate.FadeUp direction="up" delay={delay}>
+			<Link to={to} className={styles.button}>
+				{children}
+			</Link>
+		</Animate.FadeUp>
 	)
 };
 

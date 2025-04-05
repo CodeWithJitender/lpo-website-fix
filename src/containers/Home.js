@@ -15,9 +15,9 @@ import precisionSectionBg from "@/assets/images/supreme-court-building.png";
 
 import {
 	Heading,
-	TextHighlight,
 	LinkButton,
-	QualityBox
+	QualityBox,
+	Animate
 } from '@/components/common';
 
 import ServiceBoxContainer from '@/components/Home/ServiceBoxContainer';
@@ -40,23 +40,25 @@ const Home = () => {
 					>
 						<Grid container size={8}>
 							<Grid size={8}>
-								<Heading variant="secondary">
+								<Heading variant="secondary" direction="down">
 									Think of us as
 								</Heading>
-								<Heading className={styles.lpoTitleBig}>
-									<TextHighlight text="The Power" /> <br/>
-									<TextHighlight text="Behind your" /> <br/>
-									<TextHighlight text="Legal Prowess." />
+								<Heading className={styles.lpoTitleBig} direction="up">
+									The Power <br/>
+									Behind your <br/>
+									Legal Prowess.
 								</Heading>
 							</Grid>
 							<Grid
 								size={4}
 								className={styles.lpoSubtitle}
 							>
-								Every motion. <br/>
-								Every clause. <br/>
-								Every precedent — airtight, <br/>
-								because we wrote it.
+								<Animate.FadeUp>
+									Every motion. <br/>
+									Every clause. <br/>
+									Every precedent — airtight, <br/>
+									because we wrote it.
+								</Animate.FadeUp>
 							</Grid>
 						</Grid>
 						<Grid
@@ -65,21 +67,27 @@ const Home = () => {
 						>
 							<img src={layerLady} className={styles.ladyImage} />
 							<div className={styles.detailCard}>
-								<h2 className={styles.detailHeading}>
-									We Handle <br/>
-									the Details. <br/>
-									You Win <br/>
-									the Cases.
-								</h2>
-								<div className={styles.detail}>
-									We are a premier paralegal support powerhouse, built to amplify efficiency, precision, and strategy for attorneys and law firms.<br />
-									<br />
-									From high-stakes litigation to meticulous contract drafting, we handle the complex, time-consuming documentation so that attorneys can focus on strategy, advocacy, and winning cases.
-								</div>
-								<div className={styles.detailLink}>
-									there's more to us
-									<img src={arrowBig} alt="" className={styles.arrowIcon} />
-								</div>
+								<Animate.FadeUp direction="down">
+									<h2 className={styles.detailHeading}>
+										We Handle <br/>
+										the Details. <br/>
+										You Win <br/>
+										the Cases.
+									</h2>
+								</Animate.FadeUp>
+								<Animate.FadeUp direction="up">
+									<div className={styles.detail}>
+										We are a premier paralegal support powerhouse, built to amplify efficiency, precision, and strategy for attorneys and law firms.<br />
+										<br />
+										From high-stakes litigation to meticulous contract drafting, we handle the complex, time-consuming documentation so that attorneys can focus on strategy, advocacy, and winning cases.
+									</div>
+								</Animate.FadeUp>
+								<Animate.FadeUp direction="up">
+									<div className={styles.detailLink}>
+										there's more to us
+										<img src={arrowBig} alt="" className={styles.arrowIcon} />
+									</div>
+								</Animate.FadeUp>
 							</div>
 						</Grid>
 					</Grid>
@@ -107,18 +115,20 @@ const Home = () => {
 							spacing={0}
 							alignSelf="flex-start"
 						>
-							<Heading variant="secondary">
+							<Heading variant="secondary" direction="down">
 								Precision. Power. Partnership.
 							</Heading>
-							<Heading>
-								<TextHighlight text="The Right Hands Behind Every Legal Move." />
+							<Heading direction="up">
+								The Right Hands Behind Every Legal Move.
 							</Heading>
-							<div className={styles.serviceText}>
-								We are not just paper pushers—we are the backbone of every well-prepared case, ensuring airtight filings, seamless compliance, and ironclad legal groundwork.
-							</div>
+							<Animate.FadeUp direction="up">
+								<div className={styles.serviceText}>
+									We are not just paper pushers—we are the backbone of every well-prepared case, ensuring airtight filings, seamless compliance, and ironclad legal groundwork.
+								</div>	
+							</Animate.FadeUp>				
 							<div className={styles.serviceLink}>
-								<LinkButton to="#">Our services</LinkButton>
-								<LinkButton to="#">consult with us</LinkButton>
+								<LinkButton to="#" delay="100ms">Our services</LinkButton>
+								<LinkButton to="#" delay="200ms">consult with us</LinkButton>
 							</div>
 						</Grid>
 						<Grid
@@ -135,21 +145,29 @@ const Home = () => {
 								icon={iconSave}
 								heading="Bulletproof Documentation"
 								text="Every document is drafted, reviewed, and refined to perfection."
+								direction="right"
+								delay="100ms"
 							/>
 							<QualityBox
 								icon={iconClock}
 								heading="Time-Saving Efficiency"
 								text="We handle the heavy lifting, so attorneys can focus on strategy and advocacy."
+								direction="left"
+								delay="200ms"
 							/>
 							<QualityBox
 								icon={iconTarget}
 								heading="Unmatched Accuracy"
 								text="No loopholes. No errors. Just seamless legal support."
+								direction="right"
+								delay="300ms"
 							/>
 							<QualityBox
 								icon={iconPractice}
 								heading="Versatile Practices"
 								text="From litigation to compliance, we cover every legal need with precision."
+								direction="left"
+								delay="400ms"
 							/>
 						</Grid>
 					</Grid>
@@ -159,22 +177,28 @@ const Home = () => {
 				<Grid container size={12} justifyContent="center">
 					<Grid size={8} className={styles.legalSupportItem}>
 						<div className={styles.legalSupportHeading}>
-							<Heading className={styles.headingSection1}>
-								<TextHighlight text="Legal Support That's" />
+							<Heading className={styles.headingSection1} direction="down">
+								Legal Support That's
 							</Heading>
-							<Heading>
-								<TextHighlight text="Sharp, Seamless, and Smart." />
+							<Heading direction="up">
+								Sharp, Seamless, and Smart.
 							</Heading>
 						</div>
-						<div className={styles.legalSupportText}>
-							Whether it's a high-stakes litigation or an airtight contract, we handle it like a grandmaster plays chess—three moves ahead, with a checkmate always in sight.
-						</div>
-						<div>
-							<img src={stampIcon} className={styles.stampIcon} alt="" />
-						</div>
-						<div className={styles.legalSupportLink}>
-							Here's what we do best!
-						</div>
+						<Animate.FadeUp direction="up">
+							<div className={styles.legalSupportText}>
+								Whether it's a high-stakes litigation or an airtight contract, we handle it like a grandmaster plays chess—three moves ahead, with a checkmate always in sight.
+							</div>
+						</Animate.FadeUp>
+						<Animate.ScaleIn>
+							<div>
+								<img src={stampIcon} className={styles.stampIcon} alt="" />
+							</div>
+						</Animate.ScaleIn>
+						<Animate.FadeUp direction="up">
+							<div className={styles.legalSupportLink}>
+								Here's what we do best!
+							</div>
+						</Animate.FadeUp>
 					</Grid>
 				</Grid>
 			</section>

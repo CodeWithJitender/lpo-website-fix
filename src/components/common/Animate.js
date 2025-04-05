@@ -1,0 +1,94 @@
+import React, { useState, useEffect, useRef } from "react";
+
+function useElementOnScreen(ref, rootMargin = "0px") {
+  const [isIntersecting, setIsIntersecting] = useState(true);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsIntersecting(entry.isIntersecting);
+      },
+      { rootMargin }
+    );
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, []);
+  return isIntersecting;
+}
+
+const AnimateIn = ({ from, to, delay = "0", children }) => {
+  const ref = useRef(null);
+  const onScreen = useElementOnScreen(ref);
+  const defaultStyles = {
+    transition: "600ms ease-in-out"
+  };
+  return (
+    <div
+      ref={ref}
+      style={
+        onScreen
+          ? {
+              ...defaultStyles,
+							transitionDelay: delay,
+              ...to
+            }
+          : {
+              ...defaultStyles,
+							transitionDelay: "0ms",
+              ...from
+            }
+      }
+    >
+      {children}
+    </div>
+  );
+};
+
+const FadeIn = ({ children }) => (
+  <AnimateIn from={{ opacity: 0 }} to={{ opacity: 1 }}>
+    {children}
+  </AnimateIn>
+);
+
+const FadeUp = ({ direction = "up", delay = "0", children }) => {
+	const getFromTranslateValue = () => {
+		if (direction === "up") {
+			return "0 2.5rem";
+		} else if (direction === "down") {
+			return "0 -2.5rem";
+		} else if (direction === "left") {
+			return "2.5rem 0";
+		}
+
+		return "-2.5rem 0";
+	};
+
+	return (
+		<AnimateIn
+			from={{ opacity: 0, translate: getFromTranslateValue() }}
+			to={{ opacity: 1, translate: "none" }}
+			delay={delay}
+		>
+			{children}
+		</AnimateIn>
+	);
+};
+
+const ScaleIn = ({ children }) => (
+  <AnimateIn from={{ scale: "0" }} to={{ scale: "1" }}>
+    {children}
+  </AnimateIn>
+);
+
+const Animate = {
+  FadeIn,
+  FadeUp,
+  ScaleIn
+};
+
+export default Animate;

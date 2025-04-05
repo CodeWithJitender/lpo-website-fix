@@ -9,6 +9,7 @@ import facebookIcon from "@/assets/icons/facebook.png";
 import twitterIcon from "@/assets/icons/twitter.png";
 import linkedinIcon from "@/assets/icons/linkedin.png";
 
+import Animate from "./Animate";
 import NaturalLanguageForm from './NaturalLanguageForm';
 
 import * as styles from "./Footer.module.scss";
@@ -36,13 +37,17 @@ const Footer = () => {
 									lg: 3,
 								}}
 							>
-								<div className={styles.infoSmallSection}>
-									Let's get our A game to the court.
-								</div>
-								<div className={styles.infoBigSection}>
-									<div className={styles.infoHeading1}>Let's win—</div>
-									<div className={styles.infoHeading2}>together.</div>
-								</div>
+								<Animate.FadeUp direction="down">
+									<div className={styles.infoSmallSection}>
+										Let's get our A game to the court.
+									</div>
+								</Animate.FadeUp>
+								<Animate.FadeUp direction="up">
+									<div className={styles.infoBigSection}>
+										<div className={styles.infoHeading1}>Let's win—</div>
+										<div className={styles.infoHeading2}>together.</div>
+									</div>
+								</Animate.FadeUp>
 							</Grid>
 							<NaturalLanguageForm />
 						</Grid>

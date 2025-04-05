@@ -3,8 +3,8 @@ import Grid from "@mui/material/Grid2";
 
 import {
 	Heading,
-	TextHighlight,
-	LinkButton
+	LinkButton,
+	Animate
 } from "@/components/common";
 
 import areaOfExpertiese from '@/assets/images/area-of-expertise.png';
@@ -20,19 +20,21 @@ const AreaOfExpertise = () => {
 			<Grid container size={12} justifyContent="center">
 				<Grid size={8} className={styles.areaOfExpertieseBox}>
 					<div className={styles.legalSupportHeading}>
-						<Heading className={styles.headingSection1}>
-							<TextHighlight text="We Work Behind the Scenes," />
+						<Heading className={styles.headingSection1} direction="down">
+							We Work Behind the Scenes,
 						</Heading>
-						<Heading>
-							<TextHighlight text="So You Can Own the Courtroom." />
+						<Heading direction="up">
+							So You Can Own the Courtroom.
 						</Heading>
 					</div>
-					<div className={styles.legalSupportText}>
-						With expertise spanning civil litigation, real estate, business law, employment law, family law, and more, we anticipate challenges before they arise, delivering documents that hold up under scrutiny and strategies that keep attorneys ahead of the curve.
-					</div>
+					<Animate.FadeUp direction="up">
+						<div className={styles.legalSupportText}>
+							With expertise spanning civil litigation, real estate, business law, employment law, family law, and more, we anticipate challenges before they arise, delivering documents that hold up under scrutiny and strategies that keep attorneys ahead of the curve.
+						</div>
+					</Animate.FadeUp>
 					<div className={styles.legalSupportLink}>
-						<LinkButton to="#">explore services</LinkButton>
-						<LinkButton to="#">consult with us</LinkButton>
+						<LinkButton to="#" delay="100ms">explore services</LinkButton>
+						<LinkButton to="#" delay="200ms">consult with us</LinkButton>
 					</div>
 				</Grid>
 			</Grid>
