@@ -13,7 +13,12 @@ import arrowBig from "@/assets/icons/arrow-big.png";
 
 import precisionSectionBg from "@/assets/images/supreme-court-building.png";
 
-import TextHighlight from '@/components/common/TextHighlight';
+import {
+	Heading,
+	TextHighlight,
+	LinkButton,
+	QualityBox
+} from '@/components/common';
 
 import ServiceBoxContainer from '@/components/Home/ServiceBoxContainer';
 import AreaOfExpertise from "@/components/Home/AreaOfExpertise";
@@ -35,12 +40,14 @@ const Home = () => {
 					>
 						<Grid container size={8}>
 							<Grid size={8}>
-								<h2 className={styles.thinkOnUs}>Think of us as</h2>
-								<h1 className={styles.lpoTitle}>
+								<Heading variant="secondary">
+									Think of us as
+								</Heading>
+								<Heading className={styles.lpoTitleBig}>
 									<TextHighlight text="The Power" /> <br/>
 									<TextHighlight text="Behind your" /> <br/>
 									<TextHighlight text="Legal Prowess." />
-								</h1>
+								</Heading>
 							</Grid>
 							<Grid
 								size={4}
@@ -100,18 +107,18 @@ const Home = () => {
 							spacing={0}
 							alignSelf="flex-start"
 						>
-							<h2 className={styles.thinkOnUs}>
+							<Heading variant="secondary">
 								Precision. Power. Partnership.
-							</h2>
-							<h1 className={`${styles.lpoTitle} ${styles.lpoTitleSmall}`}>
+							</Heading>
+							<Heading>
 								<TextHighlight text="The Right Hands Behind Every Legal Move." />
-							</h1>
+							</Heading>
 							<div className={styles.serviceText}>
 								We are not just paper pushers—we are the backbone of every well-prepared case, ensuring airtight filings, seamless compliance, and ironclad legal groundwork.
 							</div>
 							<div className={styles.serviceLink}>
-								<a href="#" className={styles.serviceButton}>Our services</a>
-								<a href="#" className={styles.serviceButton}>consult with us</a>
+								<LinkButton to="#">Our services</LinkButton>
+								<LinkButton to="#">consult with us</LinkButton>
 							</div>
 						</Grid>
 						<Grid
@@ -124,50 +131,26 @@ const Home = () => {
 							spacing={0}
 							container
 						>
-							<Grid size={6} className={styles.serviceBox}>
-								<div className={styles.serviceIcon}>
-									<img src={iconSave} alt="" />
-								</div>
-								<div className={styles.serviceHeading}>
-									Bulletproof Documentation
-								</div>
-								<div>
-									Every document is drafted, reviewed, and refined to perfection.
-								</div>
-							</Grid>
-							<Grid size={6} className={styles.serviceBox}>
-								<div className={styles.serviceIcon}>
-									<img src={iconClock} alt="" />
-								</div>
-								<div className={styles.serviceHeading}>
-									Time-Saving Efficiency
-								</div>
-								<div>
-									We handle the heavy lifting, so attorneys can focus on strategy and advocacy.
-								</div>
-							</Grid>
-							<Grid size={6} className={styles.serviceBox}>
-								<div className={styles.serviceIcon}>
-									<img src={iconTarget} alt="" />
-								</div>
-								<div className={styles.serviceHeading}>
-									Unmatched Accuracy
-								</div>
-								<div>
-									No loopholes. No errors. Just seamless legal support.
-								</div>
-							</Grid>
-							<Grid size={6} className={styles.serviceBox}>
-								<div className={styles.serviceIcon}>
-									<img src={iconPractice} alt="" />
-								</div>
-								<div className={styles.serviceHeading}>
-									Versatile Practices
-								</div>
-								<div>
-									From litigation to compliance, we cover every legal need with precision.
-								</div>
-							</Grid>
+							<QualityBox
+								icon={iconSave}
+								heading="Bulletproof Documentation"
+								text="Every document is drafted, reviewed, and refined to perfection."
+							/>
+							<QualityBox
+								icon={iconClock}
+								heading="Time-Saving Efficiency"
+								text="We handle the heavy lifting, so attorneys can focus on strategy and advocacy."
+							/>
+							<QualityBox
+								icon={iconTarget}
+								heading="Unmatched Accuracy"
+								text="No loopholes. No errors. Just seamless legal support."
+							/>
+							<QualityBox
+								icon={iconPractice}
+								heading="Versatile Practices"
+								text="From litigation to compliance, we cover every legal need with precision."
+							/>
 						</Grid>
 					</Grid>
 				</Container>
@@ -176,12 +159,12 @@ const Home = () => {
 				<Grid container size={12} justifyContent="center">
 					<Grid size={8} className={styles.legalSupportItem}>
 						<div className={styles.legalSupportHeading}>
-							<div className={styles.headingSection1}>
+							<Heading className={styles.headingSection1}>
 								<TextHighlight text="Legal Support That's" />
-							</div>
-							<div>
+							</Heading>
+							<Heading>
 								<TextHighlight text="Sharp, Seamless, and Smart." />
-							</div>
+							</Heading>
 						</div>
 						<div className={styles.legalSupportText}>
 							Whether it's a high-stakes litigation or an airtight contract, we handle it like a grandmaster plays chess—three moves ahead, with a checkmate always in sight.

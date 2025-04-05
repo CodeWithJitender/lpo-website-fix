@@ -1,7 +1,10 @@
 import React from "react";
 import Grid from '@mui/material/Grid2';
 
-import TextHighlight from "@/components/common/TextHighlight";
+import {
+	Heading,
+	TextHighlight
+} from "@/components/common";
 
 import flexibleSectionImg from "@/assets/images/flexible-section-img.png";
 
@@ -23,12 +26,12 @@ const FlexibleFirePower = () => {
 					direction="row"
 				>
 					<Grid size={12} className={styles.infoHeadingSection}>
-						<div className={styles.infoMainHeading}>
+						<Heading>
 							<TextHighlight text="Flexible Firepower for Your Cases" />
-						</div>
-						<div className={styles.infoSubHeading}>
+						</Heading>
+						<Heading variant="secondary" className={styles.infoSubHeading}>
 							Scale. Adapt. Conquer. Repeat.
-						</div>
+						</Heading>
 					</Grid>
 					<Grid
 						size={12}

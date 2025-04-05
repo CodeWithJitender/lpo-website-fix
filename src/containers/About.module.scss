@@ -1,0 +1,124 @@
+.masterHead {
+	padding-top: 300px;
+}
+
+.commonContainer {
+	padding: 0 50px;
+}
+
+.breadcrumb {
+	padding: 0;
+	margin: 0;
+	text-transform: uppercase;
+	color: #a4836f;
+	font-family: Poppins, sans-serif;
+	font-size: 16px;
+	list-style: none;
+	display: block;
+
+	li {
+		&::after {
+			content: "/";
+			margin: 0 8px;
+		}
+	}
+}
+
+.lpoTitle {
+	font-size: 100px;
+}
+
+.plusIcon {
+	font-family: Poppins, sans-serif;
+	font-size: 200px;
+	color: #a4836f;
+	margin: 60px 0 12px;
+	line-height: 0.55;
+}
+
+.aboutLPO {
+	padding: 0 50px;
+}
+
+.aboutHeading {
+	font-family: Poppins, sans-serif;
+	font-size: 20px;
+	color: #fff8f2;
+	margin-bottom: 20px;
+}
+
+.aboutText {
+	color: #fff8f2;
+	margin: 28px 0;
+}
+
+.newEraSection {
+	padding: 0 50px;
+	margin-bottom: 100px;
+}
+
+.newEraText {
+	color: #c9b9b0;
+	margin-top: 20px;
+}
+
+.weAreStepIn {
+	color: #fff8f2;
+	margin: 20px 0 40px;
+}
+
+.metricsHeading {
+	font-family: Antonio, sans-serif;
+	font-size: 50px;
+	color: #fff8f2;
+}
+
+.metricsTitle {
+	text-align: center;
+	font-family: Antonio, sans-serif;
+	font-size: 22px;
+	color: #a4836f;
+}
+
+.metricsText {
+	color: #c9b9b0;
+	text-align: center;
+}
+
+.aboutFounder {
+	background-color: #DEC4A5;
+	padding-bottom: 100px;
+}
+
+.founderTitle {
+	font-family: Antonio, sans-serif;
+	font-size: 20px;
+	color: #423635;
+	text-align: center;
+}
+
+.name {
+	color: #070c1e;
+	font-family: Antonio, sans-serif;
+	font-size: 32px;
+	text-align: center;
+}
+
+.designation {
+	color: #423635;
+	text-align: center;
+
+	&::after {
+		content: "";
+		border-bottom: 3px solid #A4836F;
+		width: 110px;
+    display: block;
+    margin: 20px auto 0;
+	}
+}
+
+.description {
+	margin-top: 20px;
+	text-align: center;
+	color: #423635;
+}

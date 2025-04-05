@@ -1,7 +1,11 @@
 import React from "react";
 import Grid from "@mui/material/Grid2";
 
-import TextHighlight from "@/components/common/TextHighlight";
+import {
+	Heading,
+	TextHighlight,
+	LinkButton
+} from "@/components/common";
 
 import areaOfExpertiese from '@/assets/images/area-of-expertise.png';
 
@@ -16,19 +20,19 @@ const AreaOfExpertise = () => {
 			<Grid container size={12} justifyContent="center">
 				<Grid size={8} className={styles.areaOfExpertieseBox}>
 					<div className={styles.legalSupportHeading}>
-						<div className={styles.headingSection1}>
+						<Heading className={styles.headingSection1}>
 							<TextHighlight text="We Work Behind the Scenes," />
-						</div>
-						<div>
+						</Heading>
+						<Heading>
 							<TextHighlight text="So You Can Own the Courtroom." />
-						</div>
+						</Heading>
 					</div>
 					<div className={styles.legalSupportText}>
 						With expertise spanning civil litigation, real estate, business law, employment law, family law, and more, we anticipate challenges before they arise, delivering documents that hold up under scrutiny and strategies that keep attorneys ahead of the curve.
 					</div>
 					<div className={styles.legalSupportLink}>
-						<a href="#" className={styles.legalSupportButton}>explore services</a>
-						<a href="#" className={styles.legalSupportButton}>consult with us</a>
+						<LinkButton to="#">explore services</LinkButton>
+						<LinkButton to="#">consult with us</LinkButton>
 					</div>
 				</Grid>
 			</Grid>
