@@ -1,0 +1,81 @@
+.serviceInfoSection {
+	background-color: #dec4a5;
+	margin-top: 100px;
+	padding-bottom: 150px;
+}
+
+.usFlagBox {
+	text-align: center;
+
+	img {
+		width: 100%;
+		margin-top: -5%;
+	}
+}
+
+.carouselSection {
+	margin-top: -100px;
+}
+
+.tableImage {
+	width: 100%;
+	box-shadow: 5px 5px 15px 2px rgba(0, 0, 0, 0.3);
+	border-radius: 35px;
+}
+
+.carouselItem {
+	text-align: center;
+	margin: 0;
+	margin-bottom: 32px;
+	position: relative;
+	opacity: 0;
+}
+
+.itemsubHeading {
+	font-family: Poppins, sans-serif;
+	font-size: 14px;
+	color: #8e6954;
+	text-transform: uppercase;
+	margin: 16px 0 8px;
+}
+
+.itemHeading {
+	font-family: Antonio, sans-serif;
+	font-size: 40px;
+	color: #070c1e;
+	font-weight: 600;
+}
+
+.itemDescription {
+	font-family: Poppins, sans-serif;
+	font-size: 16px;
+	color: #070c1e;
+	padding: 0 100px;
+}
+
+.slideImgWrap {
+	width: calc(100% - 36px);
+	height: 550px;
+	max-height: 100%;
+	overflow: hidden;
+	position: relative;
+	left: 0px;
+  top: 18px;
+}
+
+.currentSlideImg {
+	opacity: 0;
+	height: 100%;
+	position: relative;
+	width: 100%;
+}
+
+.slideCurrent.slideCurrent {
+	position: relative !important;
+}
+
+.slideCurrent .slideImgWrap,
+.slideCurrent .currentSlideImg,
+.slideCurrent .carouselItem {
+	opacity: 1;
+}

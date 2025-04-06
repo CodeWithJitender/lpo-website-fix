@@ -13,7 +13,9 @@ const LinkButton = (props) => {
 	} = props;
 
 	return (
-		<Animate.FadeUp direction="up" delay={delay}>
+		<Animate.FadeUp direction="up" delay={delay} style={{
+			display: "inline-block"
+		}}>
 			<Link to={to} className={styles.button}>
 				{children}
 			</Link>

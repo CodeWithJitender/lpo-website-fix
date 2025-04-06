@@ -21,11 +21,18 @@ function useElementOnScreen(ref, rootMargin = "0px") {
   return isIntersecting;
 }
 
-const AnimateIn = ({ from, to, delay = "0", children }) => {
+const AnimateIn = ({
+	from,
+	to,
+	delay = "0",
+	style = {},
+	children
+}) => {
   const ref = useRef(null);
   const onScreen = useElementOnScreen(ref);
   const defaultStyles = {
-    transition: "600ms ease-in-out"
+    transition: "600ms ease-in-out",
+		...style
   };
   return (
     <div
@@ -55,7 +62,12 @@ const FadeIn = ({ children }) => (
   </AnimateIn>
 );
 
-const FadeUp = ({ direction = "up", delay = "0", children }) => {
+const FadeUp = ({
+	direction = "up",
+	delay = "0",
+	children,
+	style = {}
+}) => {
 	const getFromTranslateValue = () => {
 		if (direction === "up") {
 			return "0 2.5rem";
@@ -73,6 +85,7 @@ const FadeUp = ({ direction = "up", delay = "0", children }) => {
 			from={{ opacity: 0, translate: getFromTranslateValue() }}
 			to={{ opacity: 1, translate: "none" }}
 			delay={delay}
+			style={style}
 		>
 			{children}
 		</AnimateIn>
