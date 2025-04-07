@@ -75,18 +75,14 @@ const Home = () => {
 										the Cases.
 									</h2>
 								</Animate.FadeUp>
-								<Animate.FadeUp direction="up">
-									<div className={styles.detail}>
-										We are a premier paralegal support powerhouse, built to amplify efficiency, precision, and strategy for attorneys and law firms.<br />
-										<br />
-										From high-stakes litigation to meticulous contract drafting, we handle the complex, time-consuming documentation so that attorneys can focus on strategy, advocacy, and winning cases.
-									</div>
+								<Animate.FadeUp direction="up" className={styles.detail}>
+									We are a premier paralegal support powerhouse, built to amplify efficiency, precision, and strategy for attorneys and law firms.<br />
+									<br />
+									From high-stakes litigation to meticulous contract drafting, we handle the complex, time-consuming documentation so that attorneys can focus on strategy, advocacy, and winning cases.
 								</Animate.FadeUp>
-								<Animate.FadeUp direction="up">
-									<div className={styles.detailLink}>
-										there's more to us
-										<img src={arrowBig} alt="" className={styles.arrowIcon} />
-									</div>
+								<Animate.FadeUp direction="up" className={styles.detailLink}>
+									there's more to us
+									<img src={arrowBig} alt="" className={styles.arrowIcon} />
 								</Animate.FadeUp>
 							</div>
 						</Grid>
@@ -121,10 +117,8 @@ const Home = () => {
 							<Heading direction="up">
 								The Right Hands Behind Every Legal Move.
 							</Heading>
-							<Animate.FadeUp direction="up">
-								<div className={styles.serviceText}>
-									We are not just paper pushers—we are the backbone of every well-prepared case, ensuring airtight filings, seamless compliance, and ironclad legal groundwork.
-								</div>	
+							<Animate.FadeUp direction="up" className={styles.serviceText}>
+								We are not just paper pushers—we are the backbone of every well-prepared case, ensuring airtight filings, seamless compliance, and ironclad legal groundwork.
 							</Animate.FadeUp>				
 							<div className={styles.serviceLink}>
 								<LinkButton to="#" delay="100ms">Our services</LinkButton>
@@ -184,20 +178,20 @@ const Home = () => {
 								Sharp, Seamless, and Smart.
 							</Heading>
 						</div>
-						<Animate.FadeUp direction="up">
-							<div className={styles.legalSupportText}>
-								Whether it's a high-stakes litigation or an airtight contract, we handle it like a grandmaster plays chess—three moves ahead, with a checkmate always in sight.
-							</div>
+						<Animate.FadeUp
+							direction="up"
+							className={styles.legalSupportText}
+						>
+							Whether it's a high-stakes litigation or an airtight contract, we handle it like a grandmaster plays chess—three moves ahead, with a checkmate always in sight.
 						</Animate.FadeUp>
 						<Animate.ScaleIn>
-							<div>
-								<img src={stampIcon} className={styles.stampIcon} alt="" />
-							</div>
+							<img src={stampIcon} className={styles.stampIcon} alt="" />
 						</Animate.ScaleIn>
-						<Animate.FadeUp direction="up">
-							<div className={styles.legalSupportLink}>
-								Here's what we do best!
-							</div>
+						<Animate.FadeUp
+							direction="up"
+							className={styles.legalSupportLink}
+						>
+							Here's what we do best!
 						</Animate.FadeUp>
 					</Grid>
 				</Grid>
@@ -210,6 +204,24 @@ const Home = () => {
 				</Grid>
 			</section>
 			<scrtion className={styles.uspSection}>
+				<Grid container size={12} justifyContent="center">
+					<Grid size={8}>
+						<div className={styles.useSectionHeading}>
+							<Heading variant="secondary" direction="down">
+								Tailored Solutions.
+							</Heading>
+							<Heading direction="up">
+								Global Standards.
+							</Heading>
+						</div>
+						<Animate.FadeUp
+							direction="up"
+							className={styles.uspSectionText}
+						>
+							Elite expertise, seamless management, and airtight security—built to deliver, every time.
+						</Animate.FadeUp>
+					</Grid>
+				</Grid>
 				<UspSectionCards />
 			</scrtion>
 			<FlexibleFirePower />

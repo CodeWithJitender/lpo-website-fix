@@ -26,6 +26,7 @@ const AnimateIn = ({
 	to,
 	delay = "0",
 	style = {},
+	className = "",
 	children
 }) => {
   const ref = useRef(null);
@@ -50,14 +51,26 @@ const AnimateIn = ({
               ...from
             }
       }
+			className={className}
     >
       {children}
     </div>
   );
 };
 
-const FadeIn = ({ children }) => (
-  <AnimateIn from={{ opacity: 0 }} to={{ opacity: 1 }}>
+const FadeIn = ({
+	children,
+	delay = "0",
+	className,
+	style = {}
+}) => (
+  <AnimateIn
+		from={{ opacity: 0 }}
+		to={{ opacity: 1 }}
+		style={style}
+		delay={delay}
+		className={className}
+	>
     {children}
   </AnimateIn>
 );
@@ -66,6 +79,7 @@ const FadeUp = ({
 	direction = "up",
 	delay = "0",
 	children,
+	className,
 	style = {}
 }) => {
 	const getFromTranslateValue = () => {
@@ -86,14 +100,26 @@ const FadeUp = ({
 			to={{ opacity: 1, translate: "none" }}
 			delay={delay}
 			style={style}
+			className={className}
 		>
 			{children}
 		</AnimateIn>
 	);
 };
 
-const ScaleIn = ({ children }) => (
-  <AnimateIn from={{ scale: "0" }} to={{ scale: "1" }}>
+const ScaleIn = ({
+	delay = "0",
+	style = {},
+	className,
+	children
+}) => (
+  <AnimateIn
+		from={{ scale: "0" }}
+		to={{ scale: "1" }}
+		className={className}
+		style = {style}
+		delay={delay}
+	>
     {children}
   </AnimateIn>
 );

@@ -37,16 +37,12 @@ const Footer = () => {
 									lg: 3,
 								}}
 							>
-								<Animate.FadeUp direction="down">
-									<div className={styles.infoSmallSection}>
-										Let's get our A game to the court.
-									</div>
+								<Animate.FadeUp direction="down" className={styles.infoSmallSection}>
+									Let's get our A game to the court.
 								</Animate.FadeUp>
-								<Animate.FadeUp direction="up">
-									<div className={styles.infoBigSection}>
-										<div className={styles.infoHeading1}>Let's win—</div>
-										<div className={styles.infoHeading2}>together.</div>
-									</div>
+								<Animate.FadeUp direction="up" className={styles.infoBigSection}>
+									<div className={styles.infoHeading1}>Let's win—</div>
+									<div className={styles.infoHeading2}>together.</div>
 								</Animate.FadeUp>
 							</Grid>
 							<NaturalLanguageForm />

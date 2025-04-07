@@ -71,10 +71,8 @@ const FlexibleFirePower = () => {
 							</Animate.FadeUp>
 						</Grid>
 						<Grid size={6} className={styles.perWeekDescriptionSection}>
-							<Animate.FadeUp direction="left">
-								<div className={styles.weekDescription}>
-									Full-Throttle Paralegal Power - For When Every Second Counts.
-								</div>
+							<Animate.FadeUp direction="left" className={styles.weekDescription}>
+								Full-Throttle Paralegal Power - For When Every Second Counts.
 							</Animate.FadeUp>
 							<ul className={styles.weekBulletPoints}>
 								<Animate.FadeUp direction="left" delay="100ms">
@@ -101,10 +99,8 @@ const FlexibleFirePower = () => {
 							</Animate.FadeUp>
 						</Grid>
 						<Grid size={6} className={styles.perWeekDescriptionSection}>
-							<Animate.FadeUp direction="left">
-								<div className={styles.weekDescription}>
-									Lean, Mean, Legal Machine - On-demand Assistance.
-								</div>
+							<Animate.FadeUp direction="left" className={styles.weekDescription}>
+								Lean, Mean, Legal Machine - On-demand Assistance.
 							</Animate.FadeUp>
 							<ul className={styles.weekBulletPoints}>
 								<Animate.FadeUp direction="left" delay="100ms">

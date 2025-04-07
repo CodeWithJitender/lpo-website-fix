@@ -8,14 +8,18 @@ import {
 } from "@/components/common";
 
 import areaOfExpertiese from '@/assets/images/area-of-expertise.png';
+import areaOfExpertieseStamp from '@/assets/images/area-of-experties-stamp.png';
 
 import * as styles from "./AreaOfExpertise.module.scss";
 
 const AreaOfExpertise = () => {
 	return (
 		<section className={styles.areaOfExpertiseSection}>
-			<Grid container size={12}>
+			<Grid container size={12} className={styles.expertiseImage}>
 				<img src={areaOfExpertiese} alt="" className={styles.expertiseAreaImage} />
+				<Animate.ScaleIn direction="up" className={styles.stampImageContainer}>
+					<img src={areaOfExpertieseStamp} alt="" className={styles.stampImage} />
+				</Animate.ScaleIn>
 			</Grid>
 			<Grid container size={12} justifyContent="center">
 				<Grid size={8} className={styles.areaOfExpertieseBox}>
@@ -27,10 +31,8 @@ const AreaOfExpertise = () => {
 							So You Can Own the Courtroom.
 						</Heading>
 					</div>
-					<Animate.FadeUp direction="up">
-						<div className={styles.legalSupportText}>
-							With expertise spanning civil litigation, real estate, business law, employment law, family law, and more, we anticipate challenges before they arise, delivering documents that hold up under scrutiny and strategies that keep attorneys ahead of the curve.
-						</div>
+					<Animate.FadeUp direction="up" className={styles.legalSupportText}>
+						With expertise spanning civil litigation, real estate, business law, employment law, family law, and more, we anticipate challenges before they arise, delivering documents that hold up under scrutiny and strategies that keep attorneys ahead of the curve.
 					</Animate.FadeUp>
 					<div className={styles.legalSupportLink}>
 						<LinkButton to="#" delay="100ms">explore services</LinkButton>
