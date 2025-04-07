@@ -113,7 +113,7 @@ export default function App() {
   }, []);
 
   return (
-    <div ref={wrapRef}>
+    <div className={styles.uspSection} ref={wrapRef}>
       {cardData.map((card, index) => (
         <div
           key={card.id}

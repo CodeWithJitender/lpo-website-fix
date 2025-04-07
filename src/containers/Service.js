@@ -22,7 +22,6 @@ import serviceImage5 from "@/assets/images/service-5.jpg";
 import serviceImage6 from "@/assets/images/service-6.jpg";
 
 import * as styles from "./Service.module.scss";
-import Slideshow from "../components/common/Slideshow";
 
 const Service = () => {
 	const [expanded, setExpanded] = useState('panel1');

@@ -3,9 +3,8 @@ import Grid from '@mui/material/Grid2';
 
 import { Animate } from "@/components/common";
 
-import Slideshow from "../../components/common/Slideshow";
-
 import usFlagImage from "@/assets/images/us-flag-image.png";
+import cards from "@/assets/images/cards.png";
 
 import * as styles from "./ServiceInfo.module.scss";
 
@@ -19,7 +18,7 @@ const ServiceInfo = () => {
 					</Animate.FadeUp>
 				</Grid>
 				<Grid size={6} className={styles.carouselSection}>
-					<Slideshow />
+					<img src={cards} alt="" />
 				</Grid>
 				<Grid size={3} className={styles.usFlagBox}>
 					<Animate.FadeUp direction="left">
