@@ -95,6 +95,9 @@
 
 .slideCurrent.slideCurrent {
 	position: relative !important;
+	opacity: 1;
+  visibility: visible;
+  z-index: 2;
 }
 
 .slideCurrent .slideImgWrap,

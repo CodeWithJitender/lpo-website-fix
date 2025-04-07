@@ -22,6 +22,8 @@ body {
 	position: absolute;
 	align-items: center;
 	justify-items: center;
+	visibility: hidden;
+  transition: none !important;
 }
 
 .slide__img {
