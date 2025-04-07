@@ -1,8 +1,6 @@
 .slideshow {
 	overflow: hidden;
 	position: relative;
-	background: url("../../assets/images/tablet-bg.png") no-repeat top left;
-	background-size: contain;
 	margin-bottom: 20px;
 }
 
@@ -68,7 +66,6 @@
 .lensIcon {
 	margin: 0 20px;
 	position: relative;
-	z-index: 9999999;
 }
 
 .leftArrowIcon {

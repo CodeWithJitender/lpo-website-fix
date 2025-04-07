@@ -20,27 +20,6 @@ const ServiceInfo = () => {
 				</Grid>
 				<Grid size={6} className={styles.carouselSection}>
 					<Slideshow />
-					{/* <Grid size={12}>
-						<img src={tableImage} alt="" className={styles.tableImage} />
-					</Grid>
-					<Grid container size={12} className={styles.carouselItem}>
-						<Grid size={12} className={styles.itemsubHeading}>
-							The Backbone of Legal Operations
-						</Grid>
-						<Grid size={12} className={styles.itemHeading}>
-							Secretarial Services
-						</Grid>
-						<Grid size={12}>
-							<div className={styles.itemDescription}>
-								From case intakes to calendaring, we streamline your workflow so you can focus on winning.
-							</div>
-						</Grid>
-					</Grid>
-					<Grid size={12} display="flex" justifyContent="center" alignItems="center">
-						<img src={arrowIcon} className={styles.leftArrowIcon} alt="" />
-						<img src={lensIcon} className={styles.lensIcon} alt="" />
-						<img src={arrowIcon} className={styles.rightArrowIcon} alt="" />
-					</Grid> */}
 				</Grid>
 				<Grid size={3} className={styles.usFlagBox}>
 					<Animate.FadeUp direction="left">

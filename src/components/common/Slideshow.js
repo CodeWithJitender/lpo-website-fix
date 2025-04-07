@@ -2,7 +2,9 @@ import React, { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { Grid2 as Grid } from "@mui/material";
 
-import tableImage from "@/assets/images/tablet-bg.png";
+import slideImg1 from "@/assets/images/slide-1.png";
+import slideImg2 from "@/assets/images/slide-2.png";
+import slideImg3 from "@/assets/images/slide-3.png";
 
 import lensIcon from "@/assets/icons/lens-icon.png";
 import arrowIcon from "@/assets/icons/arrow-right.png";
@@ -15,34 +17,31 @@ import './Slideshow.scss';
 
 const slidesData = [
   {
-    img: "https://tympanus.net/Development/MotionRevealSlideshow/img/1.jpg",
-    title: "Secretarial Services",
-    number: "#01",
-    previewImg: "https://tympanus.net/Development/MotionRevealSlideshow/img/project1.jpg",
-    previewTitle: "Carmino Burano",
-    previewContent: "You're not your job. You're not how much money you have in the bank. You're not the car you drive. You're not the contents of your wallet. You're not your f***ing khakis. You're the all-singing, all-dancing crap of the world. What do you want? Wanna go back to the s*** job, f***in' condo world, watching sitcoms? F*** you, I won't do it. Fifth rule: one fight at a time, fellas.",
-		subTitle: "The Backbone of Legal Operations",
-		description: "From case intakes to calendaring, we streamline your workflow so you can focus on winning."
+    img: slideImg1,
+    title: "Secretarial",
+		number: "#01",
+    previewTitle: "Smart tools. Smoother workflows.",
+    previewContent: "Our team is trained in legal workflow platforms and admin precision, ensuring every document, schedule, and task is handled with speed, security, and zero oversight. We bring US law firm standards to your back office.",
+		subTitle: "Secretarial Services",
+		description: "From legal workflow tools to administrative management, we ensure smooth operations and uninterrupted productivity."
   },
   {
-    img: "https://tympanus.net/Development/MotionRevealSlideshow/img/1.jpg",
-    title: "Carmino",
+    img: slideImg2,
+    title: "Paralegal",
     number: "#02",
-    previewImg: "https://tympanus.net/Development/MotionRevealSlideshow/img/project1.jpg",
-    previewTitle: "Carmino Burano",
-    previewContent: "You're not your job. You're not how much money you have in the bank. You're not the car you drive. You're not the contents of your wallet. You're not your f***ing khakis. You're the all-singing, all-dancing crap of the world. What do you want? Wanna go back to the s*** job, f***in' condo world, watching sitcoms? F*** you, I won't do it. Fifth rule: one fight at a time, fellas.",
-		subTitle: "The Backbone of Legal Operations",
-		description: "From case intakes to calendaring, we streamline your workflow so you can focus on winning."
+    previewTitle: "The muscle behind your motion.",
+    previewContent: "With deep domain expertise across multiple practice areas, our paralegals are skilled in drafting, discovery, medical summaries, and research—powered by top tools like LexisNexis, Westlaw, and AI. Built for performance. Backed by process.",
+		subTitle: "Paralegal Services",
+		description: "We cover it all—litigation prep, compliance, drafting, and research—flawlessly executed."
   },
   {
-    img: "https://tympanus.net/Development/MotionRevealSlideshow/img/1.jpg",
-    title: "Carmino",
+    img: slideImg3,
+    title: "Legal",
     number: "#03",
-    previewImg: "https://tympanus.net/Development/MotionRevealSlideshow/img/project1.jpg",
-    previewTitle: "Carmino Burano",
-    previewContent: "You're not your job. You're not how much money you have in the bank. You're not the car you drive. You're not the contents of your wallet. You're not your f***ing khakis. You're the all-singing, all-dancing crap of the world. What do you want? Wanna go back to the s*** job, f***in' condo world, watching sitcoms? F*** you, I won't do it. Fifth rule: one fight at a time, fellas.",
-		subTitle: "The Backbone of Legal Operations",
-		description: "From case intakes to calendaring, we streamline your workflow so you can focus on winning."
+    previewTitle: "Sharp minds. Solid outcomes.",
+    previewContent: "Our legal pros bring real-world litigation support from the US and Canada, specializing in drafting, immigration, contracts, and compliance. With full-cycle support and confidentiality at the core, we’re the team behind your winning case.",
+		subTitle: "Legal Services",
+		description: "Comprehensive support across litigation, contracts, immigration, and employment law."
   },
 ];
 
@@ -62,7 +61,7 @@ const Slideshow = () => {
 
   const toggleNavCtrls = (action) => {
     const isEnter = action === 'enter';
-    gsap.to([prevCtrl.current, nextCtrl.current], {
+    gsap.to([previewCtrl.current, prevCtrl.current, nextCtrl.current], {
       duration: 0.5,
       ease: 'expo.out',
       opacity: isEnter ? 0 : 1,
@@ -70,6 +69,7 @@ const Slideshow = () => {
         const pointer = isEnter ? 'none' : 'auto';
         prevCtrl.current.style.pointerEvents = pointer;
         nextCtrl.current.style.pointerEvents = pointer;
+				previewCtrl.current.style.pointerEvents = pointer;
       },
     });
   };
@@ -115,13 +115,14 @@ const Slideshow = () => {
   return (
     <>
 			<Grid size={12} className={styles.slideshow}>
-				{/* <img src={tableImage} alt="" className={styles.tableImage} /> */}
 				{slidesData.map((slide, i) => (
 					<Slide
 						key={i}
 						ref={(el) => (slideRefs.current[i] = el)}
 						data={slide}
 						isCurrent={i === current}
+						onNavigate={navigate}
+						onClose={togglePreview}
 					/>
 				))}
 			</Grid>
