@@ -262,14 +262,15 @@ input:focus::-ms-input-placeholder {
 @media screen and (max-width: 900px) {
 
   .infoTextSection {
-    font-size: 36px;
+    // font-size: 36px;
+    font-size: clamp(1.5rem, 2.2vw, 2.2rem);
     border: 0;
   }
   .winButton{
     text-align: center;
   }
     .winButton img {
-      width: 100px;
-      margin-top: 40px;
+      width: 60px;
+      margin-top: 20px;
     }
 }

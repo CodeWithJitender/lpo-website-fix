@@ -183,7 +183,7 @@ const Home = () => {
 			</section>
 			<section className={styles.legalSupportSection}>
 				<Grid container size={12} justifyContent="center">
-					<Grid size={8} className={styles.legalSupportItem}>
+				  <Grid size={{xs: 11,sm: 8}} className={styles.legalSupportItem}>
 						<div className={styles.legalSupportHeading}>
 							<Heading className={styles.headingSection1} direction="down">
 								Legal Support That's

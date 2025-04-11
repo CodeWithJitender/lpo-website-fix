@@ -79,12 +79,12 @@ const FlexibleFirePower = () => {
 									direction={{ xs: "row", sm: "row", md: "column" }}
 									sx={{ justifyContent: { xs: "space-between", sm: "space-between" } }}
 								>
-									<Grid size={{ xs: 3, sm: 5, md: 12 }}>
+									<Grid size={{ xs: 7, sm: 5, md: 12 }}>
 										<div className={styles.smallHeading}>Full-Time Paralegal</div>
 										<div className={styles.perMonthHours}>160 hrs/month</div>
 									</Grid>
 
-									<Grid size={{ xs: 4, sm: 3, md: 12 }} >
+									<Grid size={{ xs: 4, sm: 3, md: 12 }}>
 										<div className={styles.perWeekHours}>
 											<div className={styles.perWeek}>40</div>
 											hrs/week
@@ -119,7 +119,7 @@ const FlexibleFirePower = () => {
 									direction={{ xs: "row", sm: "row", md: "column" }}
 									sx={{ justifyContent: { xs: "space-between", sm: "space-between" } }}
 								>
-									<Grid size={{ xs: 3, sm: 5, md: 12 }}>
+									<Grid size={{ xs: 7, sm: 5, md: 12 }}>
 										<div className={styles.smallHeading}>Part-Time Paralegal</div>
 										<div className={styles.perMonthHours}>80 hrs/month</div>
 									</Grid>

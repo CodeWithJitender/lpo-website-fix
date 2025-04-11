@@ -95,13 +95,15 @@
 @media screen and (max-width: 900px) {
 	.container {
 		border: 0;
+		padding: 40px 20px;
 	}
 	.box{
 		border-top: 5px solid #a68570;
 		padding: 50px 0 0;
 	}
 	.heading{
-		font-size: 48px;
+		// font-size: 48px;
+		font-size: clamp(1.8rem, 3vw, 3rem);
 	}
 	.image{
 		height: auto;

@@ -52,5 +52,17 @@
 	.legalSupportText {
 		font-size: 18px;
 	}
+	.headingSection1{
+		font-size: clamp(2rem, 5vw, 5rem);
+	}
 }
 
+@media screen and (max-width: 600px) {
+
+	.legalSupportLink{
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+	
+}
