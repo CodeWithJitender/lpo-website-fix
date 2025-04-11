@@ -1,6 +1,8 @@
 import React from "react";
 import Grid from '@mui/material/Grid2';
 
+import { isMobile } from 'react-device-detect';
+
 import {
 	Heading,
 	Animate
@@ -33,14 +35,18 @@ const FlexibleFirePower = () => {
 							Scale. Adapt. Conquer. Repeat.
 						</Heading>
 					</Grid>
-					<Grid
-						size={12}
-						className={styles.infoImage}
-						display="flex"
-						alignItems="flex-end"
-					>
-						<img src={flexibleSectionImg} alt="" />
-					</Grid>
+
+					{!isMobile &&
+						<Grid
+							size={12}
+							className={styles.infoImage}
+							display="flex"
+							alignItems="flex-end"
+						>
+							<img src={flexibleSectionImg} alt="" />
+						</Grid>
+					}
+					
 				</Grid>
 				<Grid
 					size={{
@@ -51,6 +57,7 @@ const FlexibleFirePower = () => {
 					}}
 					className={styles.infoDetailSection}
 				>
+					
 					<Grid size={12} className={styles.infoDetail}>
 						<Animate.FadeUp direction="down">
 							Whether you need a dedicated paralegal or 
@@ -59,18 +66,34 @@ const FlexibleFirePower = () => {
 							in law, adaptability is power.
 						</Animate.FadeUp>
 					</Grid>
-					<Grid container size={12} spacing={4} alignItems="flex-start">
-						<Grid size={6} className={styles.perWeekSection}>
+					<Grid container size={12} spacing={4} 
+						sx={{ flexDirection: { xs: "column", md: "row" } }}
+					>
+						<Grid 
+							size={{ sm: 12, md: 6 }}
+							className={styles.perWeekSection}
+							
+						>
 							<Animate.FadeUp direction="right">
-								<div className={styles.smallHeading}>Full-Time Paralegal</div>
-								<div className={styles.perMonthHours}>160 hrs/month</div>
-								<div className={styles.perWeekHours}>
-									<div className={styles.perWeek}>40</div>
-									hrs/week
-								</div>
+								<Grid container size={12}
+									direction={{ xs: "row", sm: "row", md: "column" }}
+									sx={{ justifyContent: { xs: "space-between", sm: "space-between" } }}
+								>
+									<Grid size={{ xs: 3, sm: 5, md: 12 }}>
+										<div className={styles.smallHeading}>Full-Time Paralegal</div>
+										<div className={styles.perMonthHours}>160 hrs/month</div>
+									</Grid>
+
+									<Grid size={{ xs: 4, sm: 3, md: 12 }} >
+										<div className={styles.perWeekHours}>
+											<div className={styles.perWeek}>40</div>
+											hrs/week
+										</div>
+									</Grid>
+								</Grid>
 							</Animate.FadeUp>
 						</Grid>
-						<Grid size={6} className={styles.perWeekDescriptionSection}>
+						<Grid size={{ sm: 12, md: 6 }} className={styles.perWeekDescriptionSection}>
 							<Animate.FadeUp direction="left" className={styles.weekDescription}>
 								Full-Throttle Paralegal Power - For When Every Second Counts.
 							</Animate.FadeUp>
@@ -87,18 +110,30 @@ const FlexibleFirePower = () => {
 							</ul>
 						</Grid>
 					</Grid>
-					<Grid container size={12} spacing={4} alignItems="flex-start">
-						<Grid size={6} className={styles.perWeekSection}>
+					<Grid container sx={{ flexDirection: { xs: "column", md: "row" } }}>
+						<Grid 
+							size={{ sm: 12, md: 6 }}
+							className={styles.perWeekSection}>
 							<Animate.FadeUp direction="right">
-								<div className={styles.smallHeading}>Part-Time Paralegal</div>
-								<div className={styles.perMonthHours}>80 hrs/month</div>
-								<div className={styles.perWeekHours}>
-									<div className={styles.perWeek}>20</div>
-									hrs/week
-								</div>
+								<Grid container size={12}
+									direction={{ xs: "row", sm: "row", md: "column" }}
+									sx={{ justifyContent: { xs: "space-between", sm: "space-between" } }}
+								>
+									<Grid size={{ xs: 3, sm: 5, md: 12 }}>
+										<div className={styles.smallHeading}>Part-Time Paralegal</div>
+										<div className={styles.perMonthHours}>80 hrs/month</div>
+									</Grid>
+
+									<Grid size={{ xs: 4, sm: 3, md: 12 }}>
+										<div className={styles.perWeekHours}>
+											<div className={styles.perWeek}>20</div>
+											hrs/week
+										</div>
+									</Grid>
+								</Grid>
 							</Animate.FadeUp>
 						</Grid>
-						<Grid size={6} className={styles.perWeekDescriptionSection}>
+						<Grid size={{ sm: 12, md: 6 }} className={styles.perWeekDescriptionSection}>
 							<Animate.FadeUp direction="left" className={styles.weekDescription}>
 								Lean, Mean, Legal Machine - On-demand Assistance.
 							</Animate.FadeUp>

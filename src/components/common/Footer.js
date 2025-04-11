@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from 'react-router-dom';
 import Grid from "@mui/material/Grid2";
 
+import { isMobile } from 'react-device-detect';
+
 import logo from "@/assets/images/logo.png";
 
 import instagramIcon from "@/assets/icons/instagram.png";
@@ -41,8 +43,9 @@ const Footer = () => {
 									Let's get our A game to the court.
 								</Animate.FadeUp>
 								<Animate.FadeUp direction="up" className={styles.infoBigSection}>
-									<div className={styles.infoHeading1}>Let's win—</div>
-									<div className={styles.infoHeading2}>together.</div>
+									
+								{!isMobile && <div className={styles.infoHeading1}>Let's win—</div>}	
+								<div className={styles.infoHeading2}>{isMobile && "Let's win—" }together.</div>
 								</Animate.FadeUp>
 							</Grid>
 							<NaturalLanguageForm />
@@ -88,6 +91,7 @@ const Footer = () => {
 							md: 12,
 							lg: 2,
 						}}
+						className={styles.socialMedia}
 					>
 						<a
 							href="https://www.instagram.com/glocallpo/"
@@ -131,7 +135,7 @@ const Footer = () => {
 						}}
 						className={styles.copyrightText}
 					>
-						&copy; 2025 Glocal LPO. All Rights Reserved.
+						<span className={styles.allRightsReserved}>&copy; 2025 Glocal LPO. All Rights Reserved.</span>
 						<Link to="/terms-of-service"> Terms of Service</Link> | 
 						<Link to="/privacy-policy"> Privacy Policy</Link> | 
 						<Link to="/cookie-settings"> Cookie Settings</Link>

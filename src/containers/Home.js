@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Grid2 as Grid } from '@mui/material';
+import { isMobile } from 'react-device-detect';
 
 import layerLady from "@/assets/images/layer-lady.png";
 import stampIcon from "@/assets/images/layer-stamp.png";
@@ -29,6 +30,7 @@ import UspSectionCards from '@/components/Home/UspSectionCards';
 import * as styles from './Home.module.scss';
 
 const Home = () => {
+	console.log("isMobile......", isMobile)
   return (
 		<>
 			<section className={styles.masterHead}>
@@ -38,8 +40,8 @@ const Home = () => {
 						spacing={2}
 						className={styles.commonContainer}
 					>
-						<Grid container size={8}>
-							<Grid size={8}>
+						<Grid container size={{md: 12, lg: 8, xl: 8}}>
+						  <Grid size={{ sm: 12, md: 8, xl: 8 }}>
 								<Heading variant="secondary" direction="down">
 									Think of us as
 								</Heading>
@@ -50,7 +52,7 @@ const Home = () => {
 								</Heading>
 							</Grid>
 							<Grid
-								size={4}
+							  size={{ sm: 12, md: 4, xl: 4 }}
 								className={styles.lpoSubtitle}
 							>
 								<Animate.FadeUp>
@@ -62,7 +64,7 @@ const Home = () => {
 							</Grid>
 						</Grid>
 						<Grid
-							size={4}
+						  size={{ md: 12, lg: 4, xl: 4 }}
 							className={styles.handleDetail}
 						>
 							<img src={layerLady} className={styles.ladyImage} />
@@ -71,8 +73,10 @@ const Home = () => {
 									<h2 className={styles.detailHeading}>
 										We Handle <br/>
 										the Details. <br/>
-										You Win <br/>
-										the Cases.
+										<span>
+										  You Win <br />
+										  the Cases.
+										</span>
 									</h2>
 								</Animate.FadeUp>
 								<Animate.FadeUp direction="up" className={styles.detail}>
@@ -119,11 +123,14 @@ const Home = () => {
 							</Heading>
 							<Animate.FadeUp direction="up" className={styles.serviceText}>
 								We are not just paper pushers—we are the backbone of every well-prepared case, ensuring airtight filings, seamless compliance, and ironclad legal groundwork.
-							</Animate.FadeUp>				
-							<div className={styles.serviceLink}>
-								<LinkButton to="#" delay="100ms">Our services</LinkButton>
-								<LinkButton to="#" delay="200ms">consult with us</LinkButton>
-							</div>
+							</Animate.FadeUp>	
+							{!isMobile &&
+								<div className={styles.serviceLink}>
+									<LinkButton to="#" delay="100ms">Our services</LinkButton>
+									<LinkButton to="#" delay="200ms">consult with us</LinkButton>
+								</div>
+							}			
+							
 						</Grid>
 						<Grid
 							size={{
@@ -165,6 +172,13 @@ const Home = () => {
 							/>
 						</Grid>
 					</Grid>
+					
+				  {isMobile &&
+					  <div className={styles.serviceLink}>
+						  <LinkButton to="#" delay="100ms">Our services</LinkButton>
+						  <LinkButton to="#" delay="200ms">consult with us</LinkButton>
+					  </div>
+				  }	
 				</Container>
 			</section>
 			<section className={styles.legalSupportSection}>
@@ -184,7 +198,7 @@ const Home = () => {
 						>
 							Whether it's a high-stakes litigation or an airtight contract, we handle it like a grandmaster plays chess—three moves ahead, with a checkmate always in sight.
 						</Animate.FadeUp>
-						<Animate.ScaleIn>
+					  <Animate.ScaleIn className={styles.legalSupportIcon}>
 							<img src={stampIcon} className={styles.stampIcon} alt="" />
 						</Animate.ScaleIn>
 						<Animate.FadeUp
