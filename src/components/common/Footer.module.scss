@@ -108,3 +108,85 @@
 	font-size: 60px;
 	color: #f7f5f3;
 }
+
+
+
+@media screen and (max-width: 900px) {
+	.letsWinTogetherSection{
+		text-align: center;
+		padding: 60px 40px;
+	}
+	.infoSmallSection{
+		font-size: 36px;
+	}
+	.infoBigSection{
+		margin: 15px 0 30px;
+		border-bottom: 5px solid #dec4a5;
+		padding-bottom: 55px;
+		margin-bottom: 55px;
+	}
+	.logo{
+		width: 277px;
+	}
+	.navBar{
+		flex-direction: column;
+		font-size: 24px;
+		line-height: 48px;
+		align-items: center;
+		color: #fff8f2;
+	}
+
+	.copyrightContainer{
+		text-align: center;
+		background: #000;
+		color: #fff;
+		font-size: 18px;
+	}
+	.copyrightContainer a{
+		color: #fff;
+	}
+	.contactInfo{
+		order: -1;
+	}
+	.telContainer{
+		background-position: center top;
+		background-size: auto;
+		display: flex;
+		justify-content: center;
+		color: #fff;
+		align-items: baseline;
+		line-height: 18px;
+		padding-top: 40px;
+	}
+	.emailContainer{
+		background-position: center top;
+			background-size: auto;
+			color: #fff;
+			display: flex;
+			text-align: center;
+			justify-content: center;
+			padding-top: 29px;
+			margin-top: 20px;
+	}
+	.socialMedia{
+		margin: 60px 0;
+		margin: 60px 0;
+			display: flex;
+			justify-content: center;
+			gap: 25px;
+	}
+	.socialIcons img{
+		height: 40px;
+	}
+	.copyrightText{
+		font-size: 16px;
+		color: #c9b9b0;
+		line-height: 24px;
+	}
+		.copyrightText  a {
+			color: #c9b9b0;
+		}
+	.allRightsReserved{
+		display: block;
+	}
+}

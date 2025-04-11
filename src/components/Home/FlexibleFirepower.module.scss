@@ -118,3 +118,62 @@
 .perWeekDescriptionSection {
 	margin-bottom: 40px;
 }
+
+
+@media screen and (max-width: 900px) {
+	.infoHeadingSection{
+		margin-right: 23px;
+		position: relative;
+	}
+	
+	.infoHeadingSection:after,
+	.infoHeadingSection:before {
+		bottom: 100%;
+		border: solid transparent;
+		content: " ";
+		height: 0;
+		width: 0;
+		position: absolute;
+	}
+	.infoHeadingSection::before {
+		border-bottom-color: #413332;
+		border-width: 35px;
+		right: 14px;
+		top: auto;
+		bottom: 14px;
+		transform: rotate(-46deg);
+	}
+
+	.infoHeadingSection::after {
+		border-bottom-color: #dfc5a7;
+		border-width: 35px;
+		right: -37px;
+		top: auto;
+		bottom: -36px;
+		transform: rotate(134deg);
+	}
+	.infoDetail{
+		font-size: 30px;
+	}
+
+	.smallHeading{
+		font-size: 60px;
+	}
+	.perMonthHours{
+		font-size: 36px;
+	}
+	.perWeek{
+		font-size: 140px;
+	}
+	.weekDescription{
+		font-size: 24px;
+	}
+	.weekBulletPoints{
+		font-size: 18px;
+	}
+	.consultWithUs{
+		display: block;
+		font-size: 22px;
+		color: #000;
+	}
+}

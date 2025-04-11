@@ -90,3 +90,24 @@
 .arrow.arrow {
 	width: 79px;
 }
+
+
+@media screen and (max-width: 900px) {
+	.container {
+		border: 0;
+	}
+	.box{
+		border-top: 5px solid #a68570;
+		padding: 50px 0 0;
+	}
+	.heading{
+		font-size: 48px;
+	}
+	.image{
+		height: auto;
+	}
+	.serviceText{
+		font-size: 18px;
+		font-weight: 600;
+	}
+}

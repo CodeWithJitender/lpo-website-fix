@@ -257,3 +257,19 @@ input:focus::-ms-input-placeholder {
   visibility: visible;
   transition-delay: 0s;
 }
+
+
+@media screen and (max-width: 900px) {
+
+  .infoTextSection {
+    font-size: 36px;
+    border: 0;
+  }
+  .winButton{
+    text-align: center;
+  }
+    .winButton img {
+      width: 100px;
+      margin-top: 40px;
+    }
+}
