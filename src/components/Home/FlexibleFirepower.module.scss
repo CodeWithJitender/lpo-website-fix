@@ -153,17 +153,22 @@
 		transform: rotate(134deg);
 	}
 	.infoDetail{
-		font-size: 30px;
+		font-size: clamp(1.2rem, 2vw, 2rem);
 	}
 
 	.smallHeading{
-		font-size: 60px;
+		// font-size: 60px;
+		font-size: clamp(2rem, 3.75vw, 3.75rem);
 	}
 	.perMonthHours{
 		font-size: 36px;
-	}
+	}	
 	.perWeek{
-		font-size: 140px;
+		// font-size: 140px;
+		font-size: clamp(4rem, 8.75vw, 8.75rem);
+	}
+	.perWeekHours{
+		font-size: clamp(1.5rem, 3.12vw, 3.12rem);
 	}
 	.weekDescription{
 		font-size: 24px;
@@ -175,5 +180,11 @@
 		display: block;
 		font-size: 22px;
 		color: #000;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.infoDetailSection{
+		padding: 80px 20px;
 	}
 }

@@ -17,3 +17,11 @@
 		color: #fff;
 	}
 }
+
+@media screen and (max-width: 600px) {
+	.button {
+		display: block;
+		margin: 0;
+		font-size: 22px;
+	}
+}

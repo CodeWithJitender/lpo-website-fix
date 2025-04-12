@@ -112,12 +112,17 @@
 
 
 @media screen and (max-width: 900px) {
+	.infoHeading2 {
+		// font-size: 60px;
+		font-size: clamp(2rem, 3.75vw, 3.75rem);
+	}
 	.letsWinTogetherSection{
 		text-align: center;
 		padding: 60px 40px;
 	}
 	.infoSmallSection{
-		font-size: 36px;
+		// font-size: 36px;
+		font-size: clamp(1.5rem, 2.2vw, 2.2rem);
 	}
 	.infoBigSection{
 		margin: 15px 0 30px;
@@ -157,6 +162,8 @@
 		align-items: baseline;
 		line-height: 18px;
 		padding-top: 40px;
+		flex-wrap: wrap;
+		gap: 10px;
 	}
 	.emailContainer{
 		background-position: center top;
@@ -171,12 +178,12 @@
 	.socialMedia{
 		margin: 60px 0;
 		margin: 60px 0;
-			display: flex;
-			justify-content: center;
-			gap: 25px;
+		display: flex;
+		justify-content: center;
+		gap: 25px;
 	}
 	.socialIcons img{
-		height: 40px;
+		height: 30px;
 	}
 	.copyrightText{
 		font-size: 16px;

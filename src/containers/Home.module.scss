@@ -10,7 +10,7 @@
 
 .lpoTitleBig {
 	// font-size: 100px;
-	font-size: clamp(4.5rem, 7vw, 7.25rem);
+	font-size: clamp(3.5rem, 7vw, 7.25rem);
 }
 
 .lpoSubtitle {
@@ -45,7 +45,8 @@
 
 .detailHeading {
 	font-family: Antonio, sans-serif;
-  font-size: 32px;
+//   font-size: 32px;
+	font-size: clamp(2rem, 1vw, 2.5rem);
 	color: #a4836f;
 	line-height: 1.15;
 	margin-top: 0;
@@ -193,14 +194,14 @@
 		width: 100%;
 		padding-top: 145px;
 	}
-	.detailHeading{
-		font-size: 48px;
-	}
+	// .detailHeading{
+	// 	font-size: 48px;
+	// }
 	.detailHeading span{
 		color: #000;
 	}
 	.ladyImage{
-		max-height: 800px;
+		max-width: 60vw;
 		width: auto;
 		right: -50px;
 		float: right;
@@ -237,4 +238,27 @@
 		width: 178px;
 	}
 	
+}
+
+
+@media screen and (max-width: 600px) {
+	.ladyImage{
+		display: none;
+	}
+	.masterHead{
+		padding-top: 300px;
+	}
+	.detail{
+		width: 100%;
+	}
+	.detailCard{
+		position: inherit;
+		padding: 30px 20px;
+	}
+	.commonContainer{
+		padding: 0px;
+	}
+	.handleDetail{
+		padding: 80px 0;
+	}
 }
