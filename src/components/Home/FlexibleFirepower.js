@@ -1,18 +1,20 @@
 import React from "react";
 import Grid from '@mui/material/Grid2';
 
-import { isMobile } from 'react-device-detect';
-
 import {
 	Heading,
 	Animate
 } from "@/components/common";
+
+import { useDevice } from '@/context/DeviceContext';
 
 import flexibleSectionImg from "@/assets/images/flexible-section-img.png";
 
 import * as styles from "./FlexibleFirepower.module.scss";
 
 const FlexibleFirePower = () => {
+	const { isMobile } = useDevice();
+
 	return (
 		<section className={styles.infoContainer}>
 			<Grid container size={12}>

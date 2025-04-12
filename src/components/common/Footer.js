@@ -2,8 +2,6 @@ import React from "react";
 import { Link } from 'react-router-dom';
 import Grid from "@mui/material/Grid2";
 
-import { isMobile } from 'react-device-detect';
-
 import logo from "@/assets/images/logo.png";
 
 import instagramIcon from "@/assets/icons/instagram.png";
@@ -11,12 +9,16 @@ import facebookIcon from "@/assets/icons/facebook.png";
 import twitterIcon from "@/assets/icons/twitter.png";
 import linkedinIcon from "@/assets/icons/linkedin.png";
 
+import { useDevice } from '@/context/DeviceContext';
+
 import Animate from "./Animate";
 import NaturalLanguageForm from './NaturalLanguageForm';
 
 import * as styles from "./Footer.module.scss";
 
 const Footer = () => {
+	const { isMobile } = useDevice();
+
 	return (
 		<>
 			<section className={styles.letsWinTogetherSection}>

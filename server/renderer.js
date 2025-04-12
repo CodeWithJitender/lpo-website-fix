@@ -7,9 +7,12 @@ import { renderToString } from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom/server';
 import { ThemeProvider } from '@mui/material/styles';
 import { CacheProvider } from '@emotion/react';
+import { getSelectorsByUserAgent } from 'react-device-detect';
 
 import theme from '@/theme';
 import App from '@/App';
+
+import { DeviceProvider } from '@/context/DeviceContext';
 
 import createEmotionCache from '../createEmotionCache';
 
@@ -18,6 +21,10 @@ export default (req, res) => {
 	const { extractCriticalToChunks, constructStyleTagsFromChunks } =
     createEmotionServer(cache);
 
+	const userAgent = req.headers['user-agent'] || '';
+
+	const deviceInfo = getSelectorsByUserAgent(userAgent)
+
 	const manifestPath = path.join(process.cwd(), 'build/assets-manifest.json');
   const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
 
@@ -25,14 +32,16 @@ export default (req, res) => {
   const stylesCss = manifest['main.css'];
 
   const content = renderToString(
-		<CacheProvider value={cache}>
-			<ThemeProvider theme={theme}>
-				<StaticRouter location={req.url}>
-					<CssBaseline />
-					<App />
-				</StaticRouter>
-			</ThemeProvider>
-		</CacheProvider>
+		<DeviceProvider value={deviceInfo}>
+			<CacheProvider value={cache}>
+				<ThemeProvider theme={theme}>
+					<StaticRouter location={req.url}>
+						<CssBaseline />
+						<App  />
+					</StaticRouter>
+				</ThemeProvider>
+			</CacheProvider>
+		</DeviceProvider>
   );
 
 	// Grab the CSS from emotion
@@ -58,6 +67,9 @@ export default (req, res) => {
       </head>
       <body>
         <div id="root">${content}</div>
+				<script>
+          window.__DEVICE_INFO__ = ${JSON.stringify(deviceInfo)};
+        </script>
 				<script src="${clientJs}"></script>
       </body>
     </html>

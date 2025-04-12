@@ -1,6 +1,5 @@
 import React from 'react';
 import { Container, Grid2 as Grid } from '@mui/material';
-import { isMobile } from 'react-device-detect';
 
 import layerLady from "@/assets/images/layer-lady.png";
 import stampIcon from "@/assets/images/layer-stamp.png";
@@ -27,10 +26,13 @@ import FlexibleFirePower from '@/components/Home/FlexibleFirepower';
 import ServiceInfo from '@/components/Home/ServiceInfo';
 import UspSectionCards from '@/components/Home/UspSectionCards';
 
+import { useDevice } from '@/context/DeviceContext';
+
 import * as styles from './Home.module.scss';
 
 const Home = () => {
-	console.log("isMobile......", isMobile)
+	const { isMobile } = useDevice();
+
   return (
 		<>
 			<section className={styles.masterHead}>
