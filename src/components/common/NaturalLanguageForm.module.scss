@@ -9,8 +9,9 @@
 .winButton {
 	text-align: right;
 
-	img {
+	svg {
 		width: 60px;
+		cursor: pointer;
 	}
 }
 
@@ -269,8 +270,8 @@ input:focus::-ms-input-placeholder {
   .winButton{
     text-align: center;
   }
-    .winButton img {
-      width: 60px;
-      margin-top: 20px;
-    }
+	.winButton svg {
+		width: 60px;
+		margin-top: 20px;
+	}
 }

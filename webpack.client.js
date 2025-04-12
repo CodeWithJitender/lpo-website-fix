@@ -10,6 +10,9 @@ module.exports = {
     path: path.resolve(__dirname, 'build/public'),
     publicPath: '/assets/'
   },
+	devServer: {
+		hot: true,
+	},
   module: {
     rules: [
       {

@@ -5,11 +5,17 @@ const theme = createTheme({
     mode: 'light',
 		background: {
 			default: "#070c1e"
+		},
+		focused: {
+			color: "#1D1916"
 		}
   },
   typography: {
     fontFamily: "'Poppins', sans-serif"
   },
+	focused: {
+		color: "#1D1916",
+	},
   components: {
 		MuiAppBar: {
 			styleOverrides: {
@@ -34,29 +40,53 @@ const theme = createTheme({
 			styleOverrides: {
 				root: {
 					border: "0",
-					borderRadius: "8px"
+					borderRadius: "8px",
+					"&.Mui-focused": {
+						color: "#1D1916"
+					}
 				},
 				input: {
-					fontSize: "12px",
+					fontSize: "16px",
 					lineHeight: "18px",
+					color: "#070c1e",
 					padding: "16px 12px"
+				},
+				inputLabel: {
+					fontSize: "16px",
+					color: "#070c1e",
+				}
+			}
+		},
+		MuiInput: {
+			styleOverrides: {
+				root: {
+					"&::after": {
+						borderColor: "#1D1916",
+					}
 				}
 			}
 		},
 		MuiInputBase: {
 			styleOverrides: {
 				root: {
-					fontSize: "12px",
+					fontSize: "16px",
 					lineHeight: "18px",
-					color: "#949494"
+					color: "#070c1e",
+					":after": {
+						borderColor: "#1D1916",
+					}
 				}
 			}			
 		},
 		MuiFormLabel: {
 			styleOverrides: {
 				root: {
-					fontSize: "12px",
-					color: "#949494"
+					fontSize: "16px",
+					color: "#070c1e",
+					fontWeight: "600",
+					"&.Mui-focused": {
+						color: "#1D1916"
+					}
 				}
 			}
 		}

@@ -22,7 +22,12 @@ hydrateRoot(
 	<DeviceProvider value={deviceInfo}>
 		<CacheProvider value={cache}>
 			<ThemeProvider theme={theme}>
-				<BrowserRouter>
+				<BrowserRouter
+					future={{
+						v7_startTransition: true,
+						v7_relativeSplatPath: true
+					}}
+				>
 					<CssBaseline />
 					<App />
 				</BrowserRouter>

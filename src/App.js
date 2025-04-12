@@ -1,5 +1,5 @@
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 
 import Home from './containers/Home';
 import About from './containers/About';
@@ -12,6 +12,16 @@ import Footer from './components/common/Footer';
 import './styles/main.scss';
 
 const App = () => {
+	const { pathname } = useLocation();
+
+	useEffect(() => {
+    window.scrollTo({
+			top: 0,
+			left: 0,
+			behavior: 'smooth'
+		});
+  }, [pathname]);
+
   return (  
 		<>
 			<Header />  

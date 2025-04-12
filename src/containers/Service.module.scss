@@ -4,6 +4,17 @@
 	background-size: cover;
 }
 
+.silhoutContainer {
+	margin-bottom: 0;
+	overflow: hidden;
+}
+
+.serviceAccordianSection {
+	background: url("../assets/images/service-accordion-bg.jpg") no-repeat top 300px center;
+	background-size: cover;
+	margin-top: 120px;
+}
+
 .commonContainer {
 	padding: 0 50px;
 }
@@ -40,7 +51,7 @@
 
 .aboutLPO {
 	padding: 0 50px;
-	margin-bottom: 300px;
+	margin-bottom: 180px;
 }
 
 .aboutHeading {
@@ -56,7 +67,7 @@
 }
 
 .typeOfServiceBoxContainer {
-	margin: 60px 0 160px;
+	margin: 60px 0 120px;
 }
 
 .accordionContainer {
@@ -67,27 +78,57 @@
 	border-radius: 4px;
 }
 
-.accordianHeader.accordianHeader {
-	border: solid 2px #564847;
-	border-radius: 4px;
-	background: transparent;
-	color: #dec4a5;
+.expertiseSection {
+	position: relative;
+	background: url("../assets/images/other-key-area-bg.jpg") no-repeat top center;
+	background-size: cover;
+	padding-bottom: 100px;
+}
+
+.expertiseStamp {
+	position: absolute;
+	top: 0;
+	left: calc(50% - 115px);
+	width: 230px;
+	transform: translateY(-50%);
+	
+	img {
+		width: 100%;
+	}
+}
+
+.expertiseHeading {
+	margin-top: 300px;
+	margin-bottom: 100px;
+}
+
+.formSection {
+	background-color: #DEC4A5;
+	padding: 100px 0 200px;
+}
+
+.formHeading {
 	font-family: Antonio, sans-serif;
-	font-size: 20px;
-	line-height: 1.2;
-	padding: 0 20px;
+	color: #070c1e;
+	font-size: 50px;
+	line-height: 1.3;
 }
 
-.accordionRoot.accordionRoot {
-	background: transparent;
-	color: #dec4a5;
+.formText {
+	color: #070c1e;
+	margin-top: 20px;
 }
 
-.accordionExpended.accordionExpended {
-	background: #564847;
-	color: #fff8f2;
+.submitWrapper {
+	text-align: right;
 }
 
-.accordianDetail.accordianDetail {
-	padding: 40px 40px;
+.formSubmitButton {
+	width: 80px;
+	cursor: pointer;
+}
+
+.carouselSection {
+	position: relative;
+	height: 550px;
 }

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Grid from "@mui/material/Grid2";
 
-import winButtonIcon from "@/assets/images/win-button-icon.png";
+import { CircleArrow } from "@/components/Icons";
 
 import Animate from "./Animate";
 
@@ -216,7 +216,7 @@ export default function NaturalLanguageForm() {
 				className={styles.winButton}
 			>
 				<Animate.FadeUp direction="up" delay="100ms">
-					<img src={winButtonIcon} alt="" />
+					<CircleArrow />
 				</Animate.FadeUp>
 			</Grid>
 		</>

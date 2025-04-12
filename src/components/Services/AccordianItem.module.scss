@@ -1,0 +1,108 @@
+.accordionRoot.accordionRoot {
+	background: transparent;
+	color: #dec4a5;
+}
+
+.accordianHeader.accordianHeader {
+	border: solid 2px #564847;
+	border-radius: 4px;
+	background: transparent;
+	color: #dec4a5;
+	font-family: Antonio, sans-serif;
+	font-size: 20px;
+	line-height: 1.2;
+	padding: 0 20px;
+}
+
+.accordionExpended.accordionExpended {
+	background: #564847;
+	color: #fff8f2;
+
+	span {
+		margin: 12px 0 !important;
+	}
+}
+
+.accordianIcon {
+	background: #DEC4A5;
+	padding: 8px;
+	border-radius: 4px;
+
+	img {
+		width: 100%
+	}
+}
+
+.chevron {
+	width: 20px;
+}
+
+.collapsed {
+	transform: rotate(180deg);
+}
+
+.accordianDetail.accordianDetail {
+	padding: 40px 40px;
+}
+
+.accordionHeading {
+	font-size: 36px;
+	color: #dec4a5;
+	font-family: Antonio, sans-serif;
+	background: url("../../assets/icons/quote-icon.png") no-repeat top left;
+	background-size: 10%;
+	line-height: 1.3;
+	padding-top: 10%;
+	font-weight: 300;
+	margin-bottom: 16px;
+}
+
+.helpTitle,
+.globalDistinctive {
+	text-transform: uppercase;
+	color: #fff8f2;
+	font-weight: 600;
+	font-size: 20px;
+}
+
+.helpBullets {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	color: #c9b9b0;
+	font-size: 16px;
+
+	li {
+		margin-bottom: 12px;
+		padding-bottom: 12px;
+		border-bottom: 1px solid #564847;
+
+		&::before {
+			content: '';
+			background: url("../../assets/icons/tick.png") no-repeat top left;
+			background-size: cover;
+			width: 16px;
+			height: 16px;
+			display: inline-block;
+			margin-right: 12px;
+			position: relative;
+			top: 3px;
+		}
+
+		&:last-child {
+			border-bottom: 0;
+		}
+	}
+}
+
+.globalDistinctive {
+	background: url("../../assets/icons/start-icon.png") no-repeat left top;
+	background-size: contain;
+	padding-left: 44px;
+}
+
+.globalText {
+	margin-top: 16px;
+	color: #c9b9b0;
+	margin-bottom: 40px;
+}

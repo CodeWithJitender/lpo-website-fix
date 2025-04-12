@@ -219,7 +219,7 @@ const Home = () => {
 					<ServiceBoxContainer />
 				</Grid>
 			</section>
-			<scrtion className={styles.uspSection}>
+			<section className={styles.uspSection}>
 				<Grid container size={12} justifyContent="center">
 					<Grid size={8}>
 						<div className={styles.useSectionHeading}>
@@ -239,7 +239,7 @@ const Home = () => {
 					</Grid>
 				</Grid>
 				<UspSectionCards />
-			</scrtion>
+			</section>
 			<FlexibleFirePower />
 		</>
   );
