@@ -50,32 +50,51 @@ const ServiceInfo = () => {
 		if (offset === -1) {
 			return {
 				...defaultAnimation,
-				left: "7%"
+				transform: "translateY(-50%) translateX(-10%) scale(0.75)",
+				left: "0"
 			};
 		}
 
 		if (offset === 1) {
 			return {
 				...defaultAnimation,
-				left: "65%"
+				transform: "translateY(-50%) translateX(100%) scale(0.75)",
+				left: "0"
 			};
 		}
 
 		return {
-			transform: "translateY(-50%) translateX(-50%) scale(1)",
-			opacity: "1"
+			transform: "translateY(-50%) translateX(45%) scale(1)",
+			opacity: "1",
+			left: "0",
 		};
 	};
 
   return (
     <section className={styles.serviceInfoSection}>
       <Grid container size={12} justifyContent="center">
-        <Grid size={3} className={styles.usFlagBox}>
+        <Grid
+					size={{
+						xs: 2,
+						sm: 2,
+						md: 2,
+						lg: 3
+					}}
+					className={styles.usFlagBox}
+				>
           <Animate.FadeUp direction="right">
             <img src={usFlagImage} alt="US Flag" />
           </Animate.FadeUp>
         </Grid>
-        <Grid size={6} className={styles.carouselSection}>
+        <Grid
+					size={{
+						xs: 8,
+						sm: 8,
+						md: 8,
+						lg: 6
+					}}
+					className={styles.carouselSection}
+				>
 					<Carousel
 						cards={slides}
 						offset={2}
@@ -83,7 +102,15 @@ const ServiceInfo = () => {
 						offsetFn={offsetFn}
 					/>
         </Grid>
-        <Grid size={3} className={styles.usFlagBox}>
+        <Grid
+					size={{
+						xs: 2,
+						sm: 2,
+						md: 2,
+						lg: 3
+					}}
+					className={styles.usFlagBox}
+				>
           <Animate.FadeUp direction="left">
             <img src={usFlagImage} alt="US Flag" />
           </Animate.FadeUp>

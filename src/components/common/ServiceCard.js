@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { Grid2 as Grid } from "@mui/material";
-import { useSpring, animated } from "react-spring";
 
 import { CircleArrow } from "@/components/Icons";
 
@@ -15,22 +14,10 @@ const ServiceCard = (props) => {
 		description
 	} = props;
 
-	const [show, setShown] = useState(false);
-
-	const props3 = useSpring({
-    transform: show ? "scale(1.03)" : "scale(1)",
-    boxShadow: show
-      ? "0 20px 25px rgb(0 0 0 / 25%)"
-      : "0 2px 10px rgb(0 0 0 / 8%)"
-  });
-
 	return (
-		<animated.div
+		<div
 			size={12}
 			className={styles.card}
-			style={props3}
-      onMouseEnter={() => setShown(true)}
-      onMouseLeave={() => setShown(false)}
 		>
 			<Grid size={12} justifyItems="flex-start">
 				<div className={styles.count}>{id}.</div>
@@ -52,7 +39,7 @@ const ServiceCard = (props) => {
 					<CircleArrow />
 				</Link>
 			</Grid>
-		</animated.div>
+		</div>
 	);
 };
 
