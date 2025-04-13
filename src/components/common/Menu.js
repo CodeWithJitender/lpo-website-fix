@@ -36,7 +36,7 @@ const containerVariants = {
     opacity: 0,
     transition: {
       when: 'afterChildren', // Wait for children to finish exiting
-      delay: 0.3,             // Delay to match children exit duration
+      delay: 0,             // Delay to match children exit duration
     },
   },
   visible: {
@@ -79,6 +79,14 @@ const Menu = () => {
 		}, 50); // same as submenu exit duration
 	};
 
+	const hideMenu = () => {
+		setSubmenuOpen(false);
+
+		setTimeout(() => {
+			setShowMenu(false);
+		}, 50);
+	};
+
 	return (
 		<>
 			<Hamburger toggled={showMenu} toggle={setShowMenu} />
@@ -93,6 +101,9 @@ const Menu = () => {
 							exit="hidden"
 							variants={containerVariants}
 						>
+							<div className={styles.burgerMenu}>
+								<Hamburger color="#fff" toggled={showMenu} toggle={hideMenu} />
+							</div>
 							{menuItems.map((item) => {
 								if (item.children) {
 									return (
