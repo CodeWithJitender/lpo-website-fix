@@ -1,0 +1,35 @@
+.menuContainer {
+	position: fixed;
+	background: rgba(7, 12, 30, 0.9);
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 99999;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.menuItems,
+.subMenuItems {
+	display: block;
+	color: #fff;
+	font-size: 30px;
+	text-decoration: none;
+	margin-bottom: 12px;
+	font-weight: 600;
+	text-align: center;
+}
+
+.subMenuItems {
+	font-size: 20px;
+	font-weight: 400;
+
+	&:last-child {
+		padding-bottom: 12px;
+	}
+}

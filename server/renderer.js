@@ -67,6 +67,7 @@ export default (req, res) => {
       </head>
       <body>
         <div id="root">${content}</div>
+				<div id="menu-root"></div>
 				<script>
           window.__DEVICE_INFO__ = ${JSON.stringify(deviceInfo)};
         </script>
