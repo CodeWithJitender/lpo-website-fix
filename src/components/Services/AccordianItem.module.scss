@@ -116,3 +116,10 @@
 	color: #c9b9b0;
 	margin-bottom: 40px;
 }
+
+
+@media screen and (max-width: 900px) {
+	.accordianDetail.accordianDetail {
+		padding: 40px 10px;
+	}
+}

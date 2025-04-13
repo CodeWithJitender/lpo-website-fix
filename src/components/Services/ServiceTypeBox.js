@@ -1,11 +1,14 @@
 import React from "react";
 import { Grid2 as Grid } from "@mui/material";
 
+import { useDevice } from '@/context/DeviceContext';
+
 import playIcon from "@/assets/icons/button-play-icon.png";
 
 import * as styles from "./ServiceTypeBox.module.scss";
 
 const ServiceTypeBox = (props) => {
+	const { isMobile } = useDevice();
 	const {
 		heading,
 		text,
@@ -13,14 +16,17 @@ const ServiceTypeBox = (props) => {
 		image
 	} = props;
 
+
+
 	return (
 		<Grid
-			size={6}
+			size={{sm: 12, lg: 6}}
 			container
 			className={styles.serviceBox}
 			columnSpacing={3}
 		>
-			<Grid size={3} alignContent="center">
+			<Grid size={{ sm: 12, md: 3 }} alignContent="center" className={styles.imageBlk}
+			>
 				<img
 					src={image}
 					alt={heading}
@@ -28,11 +34,12 @@ const ServiceTypeBox = (props) => {
 				/>
 			</Grid>
 			<Grid
-				size={6}
+				size={{ sm: 12, md: 6 }}
 				container
 				alignItems="center"
 				spacing={0}
 			>
+				{isMobile && <Grid size={12} className={styles.serviceBoxNumber}>{id}.</Grid>}
 				<Grid
 					size={12}
 					className={styles.serviceBoxHeading}
@@ -45,18 +52,18 @@ const ServiceTypeBox = (props) => {
 			</Grid>
 			<Grid
 				container
-				size={3}
+				size={{ sm: 12, md: 3 }}
 				spacing={0}
 				alignContent="space-between"
 			>
-				<Grid size={12} className={styles.serviceBoxNumber}>{id}.</Grid>
+				{!isMobile && <Grid size={12} className={styles.serviceBoxNumber}>{id}.</Grid>}
 				<Grid size={12}>
 					<div className={styles.connectWithUsButton}>
 						<span>
 							CONSULT
 							WITH US
 						</span>
-						<img src={playIcon} alt="" />
+						{!isMobile  && <img src={playIcon} alt="" />}
 					</div>
 				</Grid>
 			</Grid>

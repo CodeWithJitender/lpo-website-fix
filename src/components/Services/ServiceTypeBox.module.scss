@@ -41,3 +41,25 @@
 		width: 30px;
 	}
 }
+
+@media screen and (max-width: 900px) {
+	.serviceBox{
+		padding: 40px 30px;
+	}
+	.serviceImage{
+		max-width: 300px;
+	}
+	.imageBlk{
+		text-align: center;
+	}
+	.serviceBoxNumber{
+		text-align: left;
+		margin-bottom: 15px;
+	}
+	.connectWithUsButton{
+		max-width: 200px;
+		margin-top: 30px;
+		border: solid 2px #564847;
+		background: #070c1e;
+	}
+}

@@ -109,7 +109,8 @@ const About = () => {
 							</div>
 						  <LinkButton to="#" className={styles.bookButton}>
 								<span>BOOK AN INTERVIEW WITH A PARALEGAL</span>
-								<span><img src={playButtonIcon} alt="" /></span>
+							  {!isMobile && <span><img src={playButtonIcon} alt="" /></span>}
+								
 						  </LinkButton>
 						  {isMobile && <><br /><br /></>}
 						</Grid>

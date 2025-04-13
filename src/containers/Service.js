@@ -78,6 +78,7 @@ const slides = [
 ];
 
 const Service = () => {
+	const { isMobile } = useDevice();
 	const [expanded, setExpanded] = useState('panel1');
 
 	const { isMobile } = useDevice();
@@ -134,7 +135,7 @@ const Service = () => {
 							That Win.
 						</Heading>
 					</Grid>
-					<Grid size={12} justifyItems="center">
+					<Grid size={12} justifyItems={{xs:"left", md:'center'}}>
 						<Grid size={3} className={styles.plusIcon}>
 							+
 						</Grid>
@@ -143,7 +144,7 @@ const Service = () => {
 			</section>
 			<section className={styles.aboutLPO}>
 				<Grid container justifyContent="flex-end">
-					<Grid size={5}>
+					<Grid size={{md:12, lg:5}}>
 						<div className={styles.aboutHeading}>
 							Injury-related litigation entails exacting case analysis, exhaustive legal research, tactical document preparation and personalized support.
 						</div>
@@ -155,7 +156,7 @@ const Service = () => {
 						<div>
 							<LinkButton to="#" className={styles.bookButton}>
 								<span>BOOK AN INTERVIEW WITH A PARALEGAL</span>
-								<span><img src={playButtonIcon} alt="" /></span>
+								{!isMobile && <span><img src={playButtonIcon} alt="" /></span>}
 							</LinkButton>
 						</div>
 					</Grid>

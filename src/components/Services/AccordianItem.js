@@ -14,6 +14,7 @@ import { ChevronIcon } from "@/components/Icons";
 import playButtonIcon from "@/assets/icons/button-play-icon.png";
 
 import * as styles from "./AccordianItem.module.scss";
+import { isMobile } from "react-device-detect";
 
 const AccordianItem = (props) => {
 	const {
@@ -63,7 +64,7 @@ const AccordianItem = (props) => {
 			</AccordionSummary>
 			<AccordionDetails className={styles.accordianDetail}>
 				<Grid size={12} spacing={4} container>
-					<Grid container size={5} alignContent="flex-start">
+					<Grid container size={{sm: 12, md:5}} alignContent="flex-start">
 						<Grid size={12}>
 							<div className={styles.accordionHeading}>
 								Medical Records - 
@@ -71,6 +72,22 @@ const AccordianItem = (props) => {
 								claim's success.
 							</div>
 						</Grid>
+						{isMobile &&
+							<Grid container size={{ sm: 12, md: 7 }} alignContent="flex-start">
+								<Grid size={12} className={styles.helpTitle}>WE HELP YOU BY:</Grid>
+								<Grid size={12}>
+									<ul className={styles.helpBullets}>
+										<li>Retrieving & organizing medical records</li>
+										<li>Patient Record Extraction</li>
+										<li>Summarizing diagnosis & treatments</li>
+										<li>Creating medical chronologies & injury assessments</li>
+										<li>Medical History Compilation</li>
+										<li>Medical Billing Summarization</li>
+										<li>Privilege Logs</li>
+									</ul>
+								</Grid>
+							</Grid>
+						}
 						<Grid size={12}>
 							<div className={styles.globalDistinctive}>
 								Glocal's Distinctive Edge:
@@ -80,24 +97,26 @@ const AccordianItem = (props) => {
 							</div>
 							<LinkButton to="#" className={styles.bookButton}>
 								<span>BOOK AN INTERVIEW WITH A PARALEGAL</span>
-								<span><img src={playButtonIcon} alt="" /></span>
+								{!isMobile && <span><img src={playButtonIcon} alt="" /></span>}
 							</LinkButton>
 						</Grid>
 					</Grid>
-					<Grid container size={7} alignContent="flex-start">
-						<Grid size={12} className={styles.helpTitle}>WE HELP YOU BY:</Grid>
-						<Grid size={12}>
-							<ul className={styles.helpBullets}>
-								<li>Retrieving & organizing medical records</li>
-								<li>Patient Record Extraction</li>
-								<li>Summarizing diagnosis & treatments</li>
-								<li>Creating medical chronologies & injury assessments</li>
-								<li>Medical History Compilation</li>
-								<li>Medical Billing Summarization</li>
-								<li>Privilege Logs</li>
-							</ul>
+					{!isMobile && 
+						<Grid container size={{ sm: 12, md: 7 }} alignContent="flex-start">
+							<Grid size={12} className={styles.helpTitle}>WE HELP YOU BY:</Grid>
+							<Grid size={12}>
+								<ul className={styles.helpBullets}>
+									<li>Retrieving & organizing medical records</li>
+									<li>Patient Record Extraction</li>
+									<li>Summarizing diagnosis & treatments</li>
+									<li>Creating medical chronologies & injury assessments</li>
+									<li>Medical History Compilation</li>
+									<li>Medical Billing Summarization</li>
+									<li>Privilege Logs</li>
+								</ul>
+							</Grid>
 						</Grid>
-					</Grid>
+					}
 				</Grid>
 			</AccordionDetails>
 		</Accordion>
