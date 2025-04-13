@@ -16,3 +16,10 @@
 	letter-spacing: -1px;
 	margin: 0;
 }
+
+
+@media screen and (max-width: 900px) {
+	.secondaryHeading{
+		line-height: 1.3;
+	}
+}

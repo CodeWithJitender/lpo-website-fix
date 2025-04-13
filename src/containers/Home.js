@@ -12,7 +12,7 @@ import iconSave from "@/assets/icons/icon-save.png";
 import arrowBig from "@/assets/icons/arrow-big.png";
 
 import precisionSectionBg from "@/assets/images/supreme-court-building.png";
-import precisionSectionBgMobile from "@/assets/images/supreme-court-building-mobile.png";
+import precisionSectionBgMobile from "@/assets/images/supreme-court-building-mobile.jpg";
 
 import {
 	Heading,
@@ -186,7 +186,7 @@ const Home = () => {
 			</section>
 			<section className={styles.legalSupportSection}>
 				<Grid container size={12} justifyContent="center">
-				  <Grid size={{xs: 11,sm: 8}} className={styles.legalSupportItem}>
+				  <Grid size={{xs: 12,sm: 8}} className={styles.legalSupportItem}>
 						<div className={styles.legalSupportHeading}>
 							<Heading className={styles.headingSection1} direction="down">
 								Legal Support That's
@@ -222,7 +222,7 @@ const Home = () => {
 			</section>
 			<section className={styles.uspSection}>
 				<Grid container size={12} justifyContent="center">
-					<Grid size={8}>
+					<Grid size={{xs:11, md:8}}>
 						<div className={styles.useSectionHeading}>
 							<Heading variant="secondary" direction="down">
 								Tailored Solutions.

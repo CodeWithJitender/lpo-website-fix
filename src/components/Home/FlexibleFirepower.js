@@ -68,7 +68,7 @@ const FlexibleFirePower = () => {
 							in law, adaptability is power.
 						</Animate.FadeUp>
 					</Grid>
-					<Grid container size={12} spacing={4} 
+					<Grid container size={12}
 						sx={{ flexDirection: { xs: "column", md: "row" } }}
 					>
 						<Grid 

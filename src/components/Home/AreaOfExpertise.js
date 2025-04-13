@@ -26,7 +26,7 @@ const AreaOfExpertise = () => {
 				</Animate.ScaleIn>
 			</Grid>
 			<Grid container size={12} justifyContent="center">
-				<Grid size={{xs:11, sm:12, md:8}} className={styles.areaOfExpertieseBox}>
+				<Grid size={{xs:11, sm:12, md:8}} className={styles.areaOfExpertieseBox}>	
 					<div className={styles.legalSupportHeading}>
 						<Heading className={styles.headingSection1} direction="down">
 							We Work Behind the Scenes,

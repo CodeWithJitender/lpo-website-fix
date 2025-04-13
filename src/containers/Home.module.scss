@@ -179,8 +179,13 @@
 
 @media screen and (max-width: 900px) {
 	section{
-		padding-left: 15px;
-		padding-right: 15px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.masterHead {
+		background: #000000 url("../assets/images/master-head-bg-mobile.jpg") no-repeat bottom left;
+		background-size: cover;
+		padding-top: 65vh;
 	}
 	.detailCard {
 		left: auto;
@@ -211,9 +216,11 @@
 	}
 
 	.sectionBackground {
+		width: 100vw;
 		position: initial;
 		overflow: hidden;
 		height: auto;
+		margin: 0 -10px;
 	}
 
 	.serviceLink{
@@ -226,7 +233,6 @@
 	.serviceLink a {
 		width: 100%;
 		margin: 0;
-		font-size: 18px;
 	}
 
 	.detail {
@@ -244,9 +250,13 @@
 	}
 	.legalSupportIcon{
 		order: -1;
+		margin-bottom: 20px;
 	}
 	.stampIcon{
 		width: 130px;
+	}
+	.legalSupportLink {
+		margin-top: -10px;
 	}
 	
 }
@@ -256,9 +266,6 @@
 		top: -16%;
 		position: absolute;
 		right: 0;
-	}
-	.masterHead{
-		padding-top: 300px;
 	}
 	.detail{
 		width: 100%;
@@ -272,6 +279,6 @@
 	}
 	.handleDetail{
 		padding: 80px 0 0;
-		margin-top: 45%;
+		margin-top: 200px;
 	}
 }

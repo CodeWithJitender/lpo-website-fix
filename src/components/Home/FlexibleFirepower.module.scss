@@ -162,7 +162,9 @@
 	.infoDetail{
 		font-size: clamp(1.2rem, 2vw, 2rem);
 	}
-
+	.infoImage {
+		background: none;
+	}
 	.smallHeading{
 		// font-size: 60px;
 		font-size: clamp(2rem, 3.75vw, 3.75rem);
@@ -177,9 +179,6 @@
 	.perWeekHours{
 		font-size: clamp(1.5rem, 3.12vw, 3.12rem);
 	}
-	.weekDescription{
-		font-size: 24px;
-	}
 	.weekBulletPoints{
 		font-size: 18px;
 	}
@@ -193,7 +192,17 @@
 
 @media screen and (max-width: 600px) {
 	.infoDetailSection{
-		padding: 80px 20px;
+		padding: 80px 10px;
+	}
+	.infoHeadingSection{
+		min-height: 350px;
+		padding: 40px 30px 60px;
+	}
+	.perMonthHours{
+		margin-bottom: 0;
+	}
+	.perMonthHours{
+		font-size: 20px;
 	}
 	.perMonthHours{
 		margin-bottom: 0;

@@ -111,7 +111,7 @@
 }
 
 .metricsItem {
-	background: url("../assets/images/metrics-tile-bg.png") no-repeat top left;
+	background: url("../assets/images/metrics-tile-bg.png") no-repeat top center;
 	background-size: contain;
 	padding: 0px 75px;
 }
@@ -236,12 +236,26 @@
 	width: 40px;
 }
 
+
+@media only screen and (max-width: 1199px) and (min-width: 901px){
+	.metricsItem{
+		max-width: 300px;
+		background-size: 300px 240px;
+		min-height: 250px;
+		padding: 0px 75px;
+	}
+	.metricsText{
+		max-width: 350px;
+		margin: -15px 0 30px;
+	}
+}
+
 @media screen and (max-width: 900px) {
 	.commonContainer{
 		padding: 0;
 	}
 	.aboutLPO{
-		padding: 0 30px;
+		padding: 0 26px;
 		margin-bottom: 200px;
 	}
 	
@@ -258,11 +272,15 @@
 		gap: 20px;
 	}
 	.newEraSection{
-		padding: 120% 15px 0;
+		padding: 120% 10px 0;
 		background-size: 350%, 110%, 125%;
 		margin-bottom: 100px;
 	}
 
+	.metricsSectionImage{
+		width: 100vw;
+		margin: 0 -10px;
+	}
 	.metricsItem{
 		background-position: top center;
 		background-size: 300px;
@@ -275,7 +293,7 @@
 		width: 230px;
 	}
 	.metricsText{
-		margin: 0 0 40px;
+		margin: -15px 0 50px;
 		width: 100%;
 		display: flex;
 		justify-content: center;
@@ -292,7 +310,12 @@
 		padding-bottom: 60px;
 	}
 	.founderLaptopImage{
+		width: 100%;
+		padding: 0 16px;
 		position: relative;
 		transform: translate(-50%, -15%);
+	}
+	.description{
+		padding: 0 16px;
 	}
 }

@@ -20,9 +20,11 @@ import metricsSectionImage from "@/assets/images/metrics-bg.jpg";
 import founderLaptopImage from "@/assets/images/kunal-in-laptop.png";
 
 import * as styles from "./About.module.scss";
-import { isMobile } from 'react-device-detect';
+import { useDevice } from '@/context/DeviceContext';
 
 const About = () => {
+	const { isMobile } = useDevice();
+
   return (
     <>
 			<section className={styles.masterHead}>
@@ -36,9 +38,16 @@ const About = () => {
 							<li>ABOUT US</li>
 						</ul>
 						<Heading className={styles.lpoTitle}>
-							Where Precision <br/>
-							Meets Power in <br/>
-							Legal Outsourcing.
+						  	{isMobile ? 
+							  "Where Precision Meets Power in	Legal Outsourcing."
+								:
+								<>
+									Where Precision <br />
+									Meets Power in <br />
+									Legal Outsourcing.
+								</>
+							}
+							
 						</Heading>
 					</Grid>
 					<Grid size={12} justifyItems={{xs:"left", md:'center'}}>
@@ -50,7 +59,7 @@ const About = () => {
 			</section>
 			<section className={styles.aboutLPO}>
 			  <Grid container justifyContent={{ xs: "left", md:"flex-end"}}>
-					<Grid size={{xs:12, md:5}}>
+					<Grid size={{md:12, lg:5}}>
 						<div className={styles.aboutHeading}>
 							At Glocal LPO, we redefine legal process outsourcing—bringing efficiency, accuracy, and expertise to the forefront.
 						</div>
@@ -158,7 +167,7 @@ const About = () => {
 				  <Grid container size={11} columnSpacing={4} rowSpacing={{xs:3, sm:3}}>
 						<Grid
 							size={{
-								sm:12, md: 6
+								sm:12, md: 6, lg: 3
 							}}
 							container
 							justifyContent="center"
@@ -177,7 +186,7 @@ const About = () => {
 						</Grid>
 						<Grid
 						  size={{
-							  sm:12, md: 6
+							  sm:12, md: 6, lg: 3
 						  }}
 							container
 							justifyContent="center"
@@ -196,7 +205,7 @@ const About = () => {
 						</Grid>
 						<Grid
 						  size={{
-							  sm:12, md: 6
+							  sm:12, md: 6, lg: 3
 						  }}
 							container
 							justifyContent="center"
@@ -215,7 +224,7 @@ const About = () => {
 						</Grid>
 						<Grid
 						  size={{
-							  sm:12, md: 6
+							  sm:12, md: 6, lg: 3
 						  }}
 							container
 							justifyContent="center"
