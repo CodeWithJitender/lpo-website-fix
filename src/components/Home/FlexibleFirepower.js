@@ -154,6 +154,16 @@ const FlexibleFirePower = () => {
 						</Grid>
 					</Grid>
 				</Grid>
+				{isMobile &&
+					<Grid
+						size={12}
+						className={styles.infoImage}
+						display="flex"
+						alignItems="flex-end"
+					>
+						<img src={flexibleSectionImg} alt="" />
+					</Grid>
+				}
 			</Grid>
 		</section>
 	);

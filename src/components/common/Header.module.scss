@@ -29,3 +29,12 @@
 .phone {
 	color: #b7a397;
 }
+
+
+@media screen and (max-width: 900px) {
+	.navBar,
+	.address,
+	.phone{
+		display: none;
+	}
+}

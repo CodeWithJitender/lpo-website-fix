@@ -12,6 +12,7 @@ import iconSave from "@/assets/icons/icon-save.png";
 import arrowBig from "@/assets/icons/arrow-big.png";
 
 import precisionSectionBg from "@/assets/images/supreme-court-building.png";
+import precisionSectionBgMobile from "@/assets/images/supreme-court-building-mobile.png";
 
 import {
 	Heading,
@@ -97,7 +98,7 @@ const Home = () => {
 			</section>
 			<section className={styles.serviceSection}>
 				<div className={styles.sectionBackground}>
-					<img src={precisionSectionBg} alt="" />
+				  <img src={isMobile ? precisionSectionBgMobile : precisionSectionBg} alt="" />
 				</div>
 				<Container maxWidth="xl" className={styles.precisionSection}>
 					<Grid

@@ -112,6 +112,9 @@
 
 
 @media screen and (max-width: 900px) {
+	.footer {
+		padding: 30px 15px;
+	}
 	.infoHeading2 {
 		// font-size: 60px;
 		font-size: clamp(2rem, 3.75vw, 3.75rem);
@@ -139,13 +142,15 @@
 		line-height: 48px;
 		align-items: center;
 		color: #fff8f2;
+		gap: 10px;
 	}
 
 	.copyrightContainer{
+		padding: 20px 0 25px;
 		text-align: center;
-		background: #000;
+		background: #070c1e;
 		color: #fff;
-		font-size: 18px;
+		font-size: 16px;
 	}
 	.copyrightContainer a{
 		color: #fff;
@@ -164,6 +169,8 @@
 		padding-top: 40px;
 		flex-wrap: wrap;
 		gap: 10px;
+		padding-left: 0;
+		margin-right: 0;
 	}
 	.emailContainer{
 		background-position: center top;
@@ -190,9 +197,9 @@
 		color: #c9b9b0;
 		line-height: 24px;
 	}
-		.copyrightText  a {
-			color: #c9b9b0;
-		}
+	.copyrightText  a {
+		color: #c9b9b0;
+	}
 	.allRightsReserved{
 		display: block;
 	}

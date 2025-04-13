@@ -6,23 +6,27 @@ import {
 	LinkButton,
 	Animate
 } from "@/components/common";
+import { useDevice } from '@/context/DeviceContext';
 
 import areaOfExpertiese from '@/assets/images/area-of-expertise.png';
+import areaOfExpertieseMobile from '@/assets/images/area-of-expertise-mobile.png';
 import areaOfExpertieseStamp from '@/assets/images/area-of-experties-stamp.png';
 
 import * as styles from "./AreaOfExpertise.module.scss";
 
 const AreaOfExpertise = () => {
+	const { isMobile } = useDevice();
+
 	return (
 		<section className={styles.areaOfExpertiseSection}>
 			<Grid container size={12} className={styles.expertiseImage}>
-				<img src={areaOfExpertiese} alt="" className={styles.expertiseAreaImage} />
+				<img src={isMobile ? areaOfExpertieseMobile : areaOfExpertiese} alt="" className={styles.expertiseAreaImage} />
 				<Animate.ScaleIn direction="up" className={styles.stampImageContainer}>
 					<img src={areaOfExpertieseStamp} alt="" className={styles.stampImage} />
 				</Animate.ScaleIn>
 			</Grid>
 			<Grid container size={12} justifyContent="center">
-				<Grid size={{xs:11, sm:8}} className={styles.areaOfExpertieseBox}>
+				<Grid size={{xs:11, sm:12, md:8}} className={styles.areaOfExpertieseBox}>
 					<div className={styles.legalSupportHeading}>
 						<Heading className={styles.headingSection1} direction="down">
 							We Work Behind the Scenes,

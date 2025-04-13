@@ -122,8 +122,15 @@
 
 @media screen and (max-width: 900px) {
 	.infoHeadingSection{
+		padding: 80px 70px 120px;
 		margin-right: 23px;
+		margin-left: -15px;
 		position: relative;
+		min-height: 400px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 15px;
 	}
 	
 	.infoHeadingSection:after,
@@ -178,13 +185,23 @@
 	}
 	.consultWithUs{
 		display: block;
-		font-size: 22px;
 		color: #000;
 	}
 }
 
+
+
 @media screen and (max-width: 600px) {
 	.infoDetailSection{
 		padding: 80px 20px;
+	}
+	.perMonthHours{
+		margin-bottom: 0;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.infoImage{
+		background: none;
 	}
 }

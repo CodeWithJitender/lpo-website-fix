@@ -19,6 +19,7 @@ import metricsSectionImage from "@/assets/images/metrics-bg.jpg";
 import founderLaptopImage from "@/assets/images/kunal-in-laptop.png";
 
 import * as styles from "./About.module.scss";
+import { isMobile } from 'react-device-detect';
 
 const About = () => {
   return (
@@ -39,7 +40,7 @@ const About = () => {
 							Legal Outsourcing.
 						</Heading>
 					</Grid>
-					<Grid size={12} justifyItems="center">
+					<Grid size={12} justifyItems={{xs:"left", md:'center'}}>
 						<Grid size={3} className={styles.plusIcon}>
 							+
 						</Grid>
@@ -47,8 +48,8 @@ const About = () => {
 				</Container>
 			</section>
 			<section className={styles.aboutLPO}>
-				<Grid container justifyContent="flex-end">
-					<Grid size={5}>
+			  <Grid container justifyContent={{ xs: "left", md:"flex-end"}}>
+					<Grid size={{xs:12, md:5}}>
 						<div className={styles.aboutHeading}>
 							At Glocal LPO, we redefine legal process outsourcing—bringing efficiency, accuracy, and expertise to the forefront.
 						</div>
@@ -57,7 +58,7 @@ const About = () => {
 							We deliver end-to-end litigation and managed services, covering document review, contract management, legal research, and compliance solutions with absolute precision. We don't just support your legal operations; we optimize, streamline, and elevate them.
 						</div>
 
-						<div>
+						<div className={styles.btnGroup}>
 							<LinkButton to="#" delay="100ms">Explore services</LinkButton>
 							<LinkButton to="#" delay="200ms">consult with us</LinkButton>
 						</div>
@@ -96,9 +97,10 @@ const About = () => {
 							<div className={styles.weAreStepIn}>
 								That's where we step in.
 							</div>
-							<LinkButton to="#">
+						  <LinkButton to="#">
 								BOOK AN INTERVIEW WITH A PARALEGAL
-							</LinkButton>
+						  </LinkButton>
+						  {isMobile && <><br /><br /></>}
 						</Grid>
 						<Grid
 							size={{
@@ -151,73 +153,81 @@ const About = () => {
 					justifyContent="center"
 					className={styles.metricsContentContainer}
 				>
-					<Grid container size={11} columnSpacing={4}>
+				  <Grid container size={11} columnSpacing={4} rowSpacing={{xs:3, sm:3}}>
 						<Grid
-							size={3}
+							size={{
+								sm:12, md: 6
+							}}
 							container
 							justifyContent="center"
 						>
 							<div className={styles.metricsItem}>
 								<div className={styles.metricsHeading}>99%</div>
 								<div className={styles.metricsTitle}>
-									Accuracy in Legal 
+							  		Accuracy in Legal 
 									Documentation & Case 
-									Support
+									  Support
 								</div>
 							</div>
 							<div className={styles.metricsText}>
-								Precision-driven processes to keep your cases airtight.
+							  <span>Precision-driven processes to keep your cases airtight.</span>
 							</div>
 						</Grid>
 						<Grid
-							size={3}
+						  size={{
+							  sm:12, md: 6
+						  }}
 							container
 							justifyContent="center"
 						>
 							<div className={styles.metricsItem}>
 								<div className={styles.metricsHeading}>24/7</div>
 								<div className={styles.metricsTitle}>
-									Operational Support
+							  		Operational Support
 									Across Time 
-									Zones
+									  Zones
 								</div>
 							</div>
 							<div className={styles.metricsText}>
-								Because legal deadlines don't wait. Neither do we.
+							  	<span>Because legal deadlines don't wait. Neither do we.</span>
 							</div>
 						</Grid>
 						<Grid
-							size={3}
+						  size={{
+							  sm:12, md: 6
+						  }}
 							container
 							justifyContent="center"
 						>
 							<div className={styles.metricsItem}>
 								<div className={styles.metricsHeading}>50+</div>
 								<div className={styles.metricsTitle}>
-									Expert Paralegals & 
+									<span>Expert Paralegals & 
 									Legal 
-									Professionals
+									  Professionals</span>
 								</div>
 							</div>
 							<div className={styles.metricsText}>
-								Trained by top law firms, delivering unmatched expertise.
+							  	<span>Trained by top law firms, delivering unmatched expertise.</span>
 							</div>
 						</Grid>
 						<Grid
-							size={3}
+						  size={{
+							  sm:12, md: 6
+						  }}
 							container
 							justifyContent="center"
 						>
 							<div className={styles.metricsItem}>
 								<div className={styles.metricsHeading}>100%</div>
 								<div className={styles.metricsTitle}>
-									Data Security & 
+							 		 <span>Data Security & 
 									Confidentiality 
-									Compliance
+									  Compliance</span>
 								</div>
 							</div>
 							<div className={styles.metricsText}>
-								Your sensitive information stays protected, no exceptions.
+							  	<span>Your sensitive information stays protected, no exceptions.</span>
 							</div>
 						</Grid>
 					</Grid>
@@ -236,7 +246,7 @@ const About = () => {
 					</div>
 				</div>
 				<Grid size={12} container justifyContent="center">
-					<Grid size={7}>
+					<Grid size={{sm:12, md: 7}}>
 						<div className={styles.founderTitle}>
 							Meet the Visionary Behind Glocal LPO
 						</div>

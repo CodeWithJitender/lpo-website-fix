@@ -29,3 +29,9 @@
 .serviceIcon img {
 	width: 60px;
 }
+
+@media screen and (max-width: 900px) {
+	.serviceHeading {
+		margin: 15px 0;
+	}
+}
