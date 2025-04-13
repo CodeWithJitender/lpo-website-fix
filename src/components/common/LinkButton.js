@@ -9,6 +9,7 @@ const LinkButton = (props) => {
 	const {
 		to,
 		delay,
+		className = "",
 		children
 	} = props;
 
@@ -16,7 +17,7 @@ const LinkButton = (props) => {
 		<Animate.FadeUp direction="up" delay={delay} style={{
 			display: "inline-block"
 		}}>
-			<Link to={to} className={styles.button}>
+			<Link to={to} className={`${styles.button} ${className}`}>
 				{children}
 			</Link>
 		</Animate.FadeUp>

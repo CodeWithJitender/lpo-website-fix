@@ -11,6 +11,8 @@ import { LinkButton } from '@/components/common';
 
 import { ChevronIcon } from "@/components/Icons";
 
+import playButtonIcon from "@/assets/icons/button-play-icon.png";
+
 import * as styles from "./AccordianItem.module.scss";
 
 const AccordianItem = (props) => {
@@ -76,8 +78,9 @@ const AccordianItem = (props) => {
 							<div className={styles.globalText}>
 								Reduce overhead costs while gaining access to top-tier legal expertise and AI-powered analysis—customized to your firm's needs.
 							</div>
-							<LinkButton to="#">
-								BOOK AN INTERVIEW WITH A PARALEGAL
+							<LinkButton to="#" className={styles.bookButton}>
+								<span>BOOK AN INTERVIEW WITH A PARALEGAL</span>
+								<span><img src={playButtonIcon} alt="" /></span>
 							</LinkButton>
 						</Grid>
 					</Grid>

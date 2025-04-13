@@ -27,6 +27,7 @@ import serviceImage6 from "@/assets/images/service-6.jpg";
 import expertiseSeal from "@/assets/images/confidential-seal.png";
 
 import pencilIcon from "@/assets/icons/pencil-icon.png";
+import playButtonIcon from "@/assets/icons/button-play-icon.png";
 
 import accordianIcon1 from "@/assets/icons/accordian-icon-1.png";
 import accordianIcon2 from "@/assets/icons/accordian-icon-2.png";
@@ -144,8 +145,9 @@ const Service = () => {
 						</div>
 
 						<div>
-							<LinkButton to="#">
-								BOOK AN INTERVIEW WITH A PARALEGAL
+							<LinkButton to="#" className={styles.bookButton}>
+								<span>BOOK AN INTERVIEW WITH A PARALEGAL</span>
+								<span><img src={playButtonIcon} alt="" /></span>
 							</LinkButton>
 						</div>
 					</Grid>

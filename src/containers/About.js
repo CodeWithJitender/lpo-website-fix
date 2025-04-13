@@ -13,6 +13,7 @@ import techDrivenEfficency from "@/assets/icons/tech-driven-efficency.png";
 import costAdvantage from "@/assets/icons/cost-advantage.png";
 import linkedIcon from "@/assets/icons/about-linkedin-icon.png";
 import playIcon from "@/assets/icons/play-icon.png";
+import playButtonIcon from "@/assets/icons/button-play-icon.png";
 
 import legalStamp from "@/assets/images/about-legal-stamp.png";
 import metricsSectionImage from "@/assets/images/metrics-bg.jpg";
@@ -97,8 +98,9 @@ const About = () => {
 							<div className={styles.weAreStepIn}>
 								That's where we step in.
 							</div>
-						  <LinkButton to="#">
-								BOOK AN INTERVIEW WITH A PARALEGAL
+						  <LinkButton to="#" className={styles.bookButton}>
+								<span>BOOK AN INTERVIEW WITH A PARALEGAL</span>
+								<span><img src={playButtonIcon} alt="" /></span>
 						  </LinkButton>
 						  {isMobile && <><br /><br /></>}
 						</Grid>
@@ -233,7 +235,8 @@ const About = () => {
 					</Grid>
 					<Grid size={12} className={styles.precisionTextContainer}>
 						<div className={styles.precisionText}>
-							Powering Law Firms with Smart, Scalable Legal Support
+							<div>Powering Law Firms with Smart, Scalable Legal Support,&nbsp;</div>
+							<div>Powering Law Firms with Smart, Scalable Legal Support,&nbsp;</div>
 						</div>
 					</Grid>
 				</Grid>

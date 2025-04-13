@@ -33,6 +33,16 @@
 	}
 }
 
+.bookButton {
+	display: inline-flex;
+	justify-content: space-between;
+
+	img {
+		margin-left: 16px;
+		width: 30px;
+	}
+}
+
 .chevron {
 	width: 20px;
 }
