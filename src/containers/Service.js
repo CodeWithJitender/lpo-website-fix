@@ -78,7 +78,6 @@ const slides = [
 ];
 
 const Service = () => {
-	const { isMobile } = useDevice();
 	const [expanded, setExpanded] = useState('panel1');
 
 	const { isMobile } = useDevice();
