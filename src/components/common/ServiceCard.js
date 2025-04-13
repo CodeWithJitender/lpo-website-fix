@@ -4,6 +4,8 @@ import { Grid2 as Grid } from "@mui/material";
 
 import { CircleArrow } from "@/components/Icons";
 
+import { useDevice } from '@/context/DeviceContext';
+
 import * as styles from "./ServiceCard.module.scss";
 
 const ServiceCard = (props) => {
@@ -11,8 +13,11 @@ const ServiceCard = (props) => {
 		id,
 		title,
 		image,
-		description
+		description,
+		mobileDescription
 	} = props;
+
+	const { isMobile } = useDevice();
 
 	return (
 		<div
@@ -29,7 +34,7 @@ const ServiceCard = (props) => {
 				<img src={image} alt="" />
 			</Grid>
 			<Grid size={12} className={styles.serviceText}>
-				{description}
+				{isMobile ? mobileDescription : description}
 			</Grid>
 			<Grid size={12}>
 				<Link to="#" className={styles.howWeCanHelpLink}>

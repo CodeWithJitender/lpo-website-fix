@@ -63,8 +63,26 @@
 }
 
 @media screen and (max-width: 900px) {
+	.card{
+		width: 220px;
+		padding: 12px;
+		border-radius: 6px;
+	}
 
-	.serviceText{
-		padding: 0;
+	.heading {
+		font-size: 20px;
+		margin-bottom: 12px;
+	}
+
+	.serviceText {
+		font-size: 12px;
+	}
+
+	.howWeCanHelpLink {
+		font-size: 12px;
+
+		svg {
+			width: 20px;
+		}
 	}
 }

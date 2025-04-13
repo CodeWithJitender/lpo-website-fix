@@ -18,6 +18,8 @@ import ServiceTypeBox from "@/components/Services/ServiceTypeBox";
 import ServiceClipAnimation from "@/components/Services/ServiceClipAnimation";
 import AccordianItem from "@/components/Services/AccordianItem";
 
+import { useDevice } from '@/context/DeviceContext';
+
 import serviceImage1 from "@/assets/images/service-1.jpg";
 import serviceImage2 from "@/assets/images/service-2.jpg";
 import serviceImage3 from "@/assets/images/service-3.jpg";
@@ -50,6 +52,7 @@ const slides = [
 			title="Real Estate Litigation"
 			image={serviceCarouselImage1}
 			description="From property disputes to estate planning, we develop full proof documents that protect your client's assets and secure their future. When the stakes are high, we deliver results."
+			mobileDescription="From property disputes to estate planning, we develop full proof documents that protect your client's assets and secure their future."
 		/>
 	},
 	{
@@ -59,6 +62,7 @@ const slides = [
 			title="Employment Law"
 			image={serviceCarouselImage2}
 			description="From property disputes to estate planning, we develop full proof documents that protect your client's assets and secure their future. When the stakes are high, we deliver results."
+			mobileDescription="From property disputes to estate planning, we develop full proof documents that protect your client's assets and secure their future."
 		/>
 	},
 	{
@@ -68,6 +72,7 @@ const slides = [
 			title="Workers' Compensation"
 			image={serviceCarouselImage3}
 			description="From property disputes to estate planning, we develop full proof documents that protect your client's assets and secure their future. When the stakes are high, we deliver results."
+			mobileDescription="From property disputes to estate planning, we develop full proof documents that protect your client's assets and secure their future."
 		/>
 	}
 ];
@@ -75,19 +80,22 @@ const slides = [
 const Service = () => {
 	const [expanded, setExpanded] = useState('panel1');
 
+	const { isMobile } = useDevice();
+
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
   };
 
 	const offsetFn = (offset) => {
 		const defaultAnimation = {
-			transform: "translateY(-50%) translateX(-25%) scale(0.75)",
+			transform: `translateY(-50%) translateX(-25%) scale(0.75)`,
 			opacity: "0.6"
 		};
 
 		if (offset === -1) {
 			return {
 				...defaultAnimation,
+				transform: `translateY(-50%) translateX(${isMobile ? "-50%" : "-25%"}) scale(0.75)`,
 				left: "-10%"
 			};
 		}
