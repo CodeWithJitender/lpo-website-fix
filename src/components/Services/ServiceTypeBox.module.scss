@@ -44,7 +44,11 @@
 
 @media screen and (max-width: 900px) {
 	.serviceBox{
-		padding: 40px 30px;
+		padding: 30px 20px;
+	}
+	.imageBlk {
+		width: 100%;
+		text-align: center;
 	}
 	.serviceImage{
 		max-width: 300px;
@@ -57,9 +61,11 @@
 		margin-bottom: 15px;
 	}
 	.connectWithUsButton{
-		max-width: 200px;
+		min-width: 210px;
 		margin-top: 30px;
 		border: solid 2px #564847;
 		background: #070c1e;
+		font-size: 18px;
+		font-weight: 600;
 	}
 }

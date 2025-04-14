@@ -119,7 +119,14 @@
 
 
 @media screen and (max-width: 900px) {
+	
 	.accordianDetail.accordianDetail {
 		padding: 40px 10px;
+	}
+	.accordianHeader.accordianHeader {
+		padding: 0 15px;
+	}
+	.globalDistinctive {
+		background-size: 35px;
 	}
 }

@@ -229,7 +229,7 @@ const Service = () => {
 						className={styles.commonContainer}
 						flexDirection="column"
 					>
-						<Grid size={12}>
+						<Grid size={12} className={styles.serviceHeading}>
 							<Heading>Services We Offer in Personal Injury Cases:</Heading>
 						</Grid>
 						<Grid
@@ -292,9 +292,9 @@ const Service = () => {
 						spacing={3}
 						alignItems="flex-start"
 					>
-						<Grid size={4}>
+						<Grid size={{md:12, lg: 4}}>
 							<div>
-								<img src={pencilIcon} alt="" />
+								<img src={pencilIcon} className={styles.formPensilIcon} alt="" />
 							</div>
 							<div className={styles.formHeading}>
 								Tell us what you need, 
@@ -305,10 +305,10 @@ const Service = () => {
 								At Glocal LPO, we provide full-spectrum legal support, enabling law firms and attorneys to optimize case management with streamlined execution and process oversight.
 							</div>
 						</Grid>
-						<Grid container size={8}>
+						<Grid container size={{md: 12, lg: 8}}>
 							<Grid size={12}>All the fields marked with * are required</Grid>
 							<Grid size={12} container spacing={3}>
-								<Grid size={6}>
+								<Grid size={{xs: 12, md: 6}}>
 									<TextField
 										slotProps={{
 											inputLabel: {
@@ -320,7 +320,7 @@ const Service = () => {
 										variant="standard"
 									/>
 								</Grid>
-								<Grid size={6}>
+								<Grid size={{ xs: 12, md: 6 }}>
 									<TextField
 										slotProps={{
 											inputLabel: {
@@ -332,7 +332,7 @@ const Service = () => {
 										variant="standard"
 									/>
 								</Grid>
-								<Grid size={6}>
+								<Grid size={{ xs: 12, md: 6 }}>
 									<TextField
 										slotProps={{
 											inputLabel: {
@@ -345,7 +345,7 @@ const Service = () => {
 										variant="standard"
 									/>
 								</Grid>
-								<Grid size={6}>
+								<Grid size={{ xs: 12, md: 6 }}>
 									<TextField
 										slotProps={{
 											inputLabel: {
@@ -357,7 +357,7 @@ const Service = () => {
 										variant="standard"
 									/>
 								</Grid>
-								<Grid size={6}>
+								<Grid size={{ xs: 12, md: 6 }}>
 									<TextField
 										slotProps={{
 											inputLabel: {
@@ -369,7 +369,7 @@ const Service = () => {
 										variant="standard"
 									/>
 								</Grid>
-								<Grid size={6}>
+								<Grid size={{ xs: 12, md: 6 }}>
 									<TextField
 										slotProps={{
 											inputLabel: {

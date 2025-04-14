@@ -41,15 +41,15 @@ const AccordianItem = (props) => {
 				<Grid
 					container
 					size={12}
-					spacing={3}
+					spacing={{xs: 2, md: 3}}
 					alignItems="center"
 				>
-					<Grid size={1}>
+					<Grid size={{xs: 2, md: 1}}>
 						<div className={styles.accordianIcon}>
 							<img src={icon} alt="" />
 						</div>
 					</Grid>
-					<Grid size={9}>{heading}</Grid>
+					<Grid size={{xs: 8, md: 9}}>{heading}</Grid>
 					<Grid size={2} container justifyContent="flex-end">
 						<ChevronIcon
 							className={cx(
@@ -64,7 +64,7 @@ const AccordianItem = (props) => {
 			</AccordionSummary>
 			<AccordionDetails className={styles.accordianDetail}>
 				<Grid size={12} spacing={4} container>
-					<Grid container size={{sm: 12, md:5}} alignContent="flex-start">
+					<Grid container size={{sm: 12, md:12, lg: 5}} alignContent="flex-start">
 						<Grid size={12}>
 							<div className={styles.accordionHeading}>
 								Medical Records - 
@@ -73,7 +73,7 @@ const AccordianItem = (props) => {
 							</div>
 						</Grid>
 						{isMobile &&
-							<Grid container size={{ sm: 12, md: 7 }} alignContent="flex-start">
+							<Grid container size={{ sm: 12, md: 12, lg: 7 }} alignContent="flex-start">
 								<Grid size={12} className={styles.helpTitle}>WE HELP YOU BY:</Grid>
 								<Grid size={12}>
 									<ul className={styles.helpBullets}>
