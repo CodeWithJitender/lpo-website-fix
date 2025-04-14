@@ -63,7 +63,7 @@ const ServiceTypeBox = (props) => {
 							CONSULT
 							WITH US
 						</span>
-						{!isMobile  && <img src={playIcon} alt="" />}
+						<img src={playIcon} alt="" />
 					</div>
 				</Grid>
 			</Grid>

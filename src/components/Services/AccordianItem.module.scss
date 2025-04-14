@@ -118,10 +118,52 @@
 }
 
 
+.accordianHead {
+	display: flex;
+	gap: 15px;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.accordianIcon {
+	max-width: 80px;
+	display: flex;
+	align-items: center;
+}
+
+.accordianHeadHeading {
+	flex: 0 1 100%;
+}
+
+.accordianDetail.accordianDetail {
+	padding: 40px 10px;
+}
+
+.accordianHeader.accordianHeader {
+	padding: 0 15px;
+}
+
 @media screen and (max-width: 900px) {
-	
-	.accordianDetail.accordianDetail {
-		padding: 40px 10px;
+	.accordianIcon {
+		max-width: 50px;
+	}
+	.helpBullets li{
+		padding-left: 25px;
+		position: relative;
+		&::before {
+			position: absolute;
+			left: 0;
+		}
+	}
+	.globalDistinctive {
+		background-size: 35px;
+		background-position: left center;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.accordianHeadHeading{
+		font-size: 18px;
 	}
 	.accordianHeader.accordianHeader {
 		padding: 0 15px;

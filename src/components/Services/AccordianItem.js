@@ -38,7 +38,23 @@ const AccordianItem = (props) => {
 					expanded: styles.accordionExpended
 				}}
 			>
-				<Grid
+				<div className={styles.accordianHead}>
+					<div className={styles.accordianIcon}>
+						<img src={icon} alt="" />
+					</div>
+					<div className={styles.accordianHeadHeading}>{heading}</div>
+					<div className={styles.accordianHeadArrow}>
+						<ChevronIcon
+							className={cx(
+								styles.chevron,
+								{
+									[styles.collapsed]: expanded === id
+								}
+							)}
+						/>
+					</div>
+				</div>
+				{/* <Grid
 					container
 					size={12}
 					spacing={{xs: 2, md: 3}}
@@ -60,7 +76,7 @@ const AccordianItem = (props) => {
 							)}
 						/>
 					</Grid>
-				</Grid>
+				</Grid> */}
 			</AccordionSummary>
 			<AccordionDetails className={styles.accordianDetail}>
 				<Grid size={12} spacing={4} container>

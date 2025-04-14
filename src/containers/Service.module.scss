@@ -159,10 +159,10 @@
 		padding: 0 26px;
 	}
 	.typeOfServiceBoxContainer {
-		margin: 60px 0 100px;
+		margin: 30px 0 100px;
 	}
 	.silhoutContainer{
-		padding-bottom: 400px;
+		padding-bottom: 370px;
 	}
 	.serviceAccordianSection{
 		padding: 0 10px;
@@ -195,5 +195,11 @@
 
 	.expertiseSection{
 		padding: 0 26px 100px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.silhoutContainer {
+		padding-bottom: 330px;
 	}
 }
