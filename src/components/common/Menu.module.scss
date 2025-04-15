@@ -40,3 +40,9 @@
 	top: 31px;
 	color: #fff;
 }
+
+.menuItemsContainer {
+	max-height: 100%;
+	overflow-y: auto;
+	width: 100%;
+}

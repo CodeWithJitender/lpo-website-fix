@@ -104,88 +104,90 @@ const Menu = () => {
 							<div className={styles.burgerMenu}>
 								<Hamburger color="#fff" toggled={showMenu} toggle={hideMenu} />
 							</div>
-							{menuItems.map((item) => {
-								if (item.children) {
-									return (
-										<div key={item.label}>
-											<motion.div
-												key={item.href}
-												variants={itemVariants}
-												onClick={() => setSubmenuOpen((prev) => !prev)}
-											>
-												<Link
-													to={item.href}
-													className={styles.menuItems}
+							<div className={styles.menuItemsContainer}>
+								{menuItems.map((item) => {
+									if (item.children) {
+										return (
+											<div key={item.label}>
+												<motion.div
+													key={item.href}
+													variants={itemVariants}
+													onClick={() => setSubmenuOpen((prev) => !prev)}
 												>
-													{item.label}
-												</Link>
-											</motion.div>
-				
-											<AnimatePresence>
-												{submenuOpen && (
-													<motion.div
-														className="submenu"
-														initial={{ height: 0, opacity: 0 }}
-														animate={{ height: bounds.height, opacity: 1 }}
-														exit={{ height: 0, opacity: 0 }}
-														transition={{
-															duration: 0.4,
-															ease: 'easeInOut',
-															when: "beforeChildren",
-															staggerChildren: 0.05,
-														}}
-														style={{
-															overflow: 'hidden',
-															height: bounds.height ? bounds.height : 0,
-														}}
+													<Link
+														to={item.href}
+														className={styles.menuItems}
 													>
+														{item.label}
+													</Link>
+												</motion.div>
+					
+												<AnimatePresence>
+													{submenuOpen && (
 														<motion.div
-															initial="hidden"
-															animate="visible"
-															exit="hidden"
-															ref={ref}
-															variants={{
-																visible: { transition: { staggerChildren: 0.07, delayChildren: 0.05 } },
-																hidden: { transition: { staggerChildren: 0.05, staggerDirection: -1 } },
+															className="submenu"
+															initial={{ height: 0, opacity: 0 }}
+															animate={{ height: bounds.height, opacity: 1 }}
+															exit={{ height: 0, opacity: 0 }}
+															transition={{
+																duration: 0.4,
+																ease: 'easeInOut',
+																when: "beforeChildren",
+																staggerChildren: 0.05,
+															}}
+															style={{
+																overflow: 'hidden',
+																height: bounds.height ? bounds.height : 0,
 															}}
 														>
-															{item.children.map((subItem) => (
-																<motion.div
-																	key={subItem.href}
-																	variants={itemVariants}
-																>
-																	<Link
-																		to={subItem.href}
-																		className={styles.subMenuItems}
-																		onClick={(e) => handleLinkClick(e, subItem.href)}
+															<motion.div
+																initial="hidden"
+																animate="visible"
+																exit="hidden"
+																ref={ref}
+																variants={{
+																	visible: { transition: { staggerChildren: 0.07, delayChildren: 0.05 } },
+																	hidden: { transition: { staggerChildren: 0.05, staggerDirection: -1 } },
+																}}
+															>
+																{item.children.map((subItem) => (
+																	<motion.div
+																		key={subItem.href}
+																		variants={itemVariants}
 																	>
-																		{subItem.label}
-																	</Link>
-																</motion.div>
-															))}
+																		<Link
+																			to={subItem.href}
+																			className={styles.subMenuItems}
+																			onClick={(e) => handleLinkClick(e, subItem.href)}
+																		>
+																			{subItem.label}
+																		</Link>
+																	</motion.div>
+																))}
+															</motion.div>
 														</motion.div>
-													</motion.div>
-												)}
-											</AnimatePresence>
-										</div>
-									);
-								}
+													)}
+												</AnimatePresence>
+											</div>
+										);
+									}
 
-								return (
-									<motion.div
-										key={item.href}
-										variants={itemVariants}
-									>
-										<Link
-											to={item.href}
-											className={styles.menuItems}
-											onClick={(e) => handleLinkClick(e, item.href)}
+									return (
+										<motion.div
+											key={item.href}
+											variants={itemVariants}
 										>
-											{item.label}
-										</Link>
-									</motion.div>
-								)
-							})}
+											<Link
+												to={item.href}
+												className={styles.menuItems}
+												onClick={(e) => handleLinkClick(e, item.href)}
+											>
+												{item.label}
+											</Link>
+										</motion.div>
+									)
+								})}
+							</div>
 						</motion.nav>
 					)}
 				</AnimatePresence>
