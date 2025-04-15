@@ -43,7 +43,7 @@ const AccordianItem = (props) => {
 						<img src={icon} alt="" />
 					</div>
 					<div className={styles.accordianHeadHeading}>{heading}</div>
-					<div className={styles.accordianHeadArrow}>
+					<div>
 						<ChevronIcon
 							className={cx(
 								styles.chevron,
