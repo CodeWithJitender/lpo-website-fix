@@ -45,33 +45,73 @@ const Header = () => {
 								size={{
 									xs: 0,
 									sm: 0,
-									md: 7,
-									lg: 7
+									md: 8,
+									lg: 8
 								}}
 								sx={{
 									alignSelf: "center",
 								}}
 							>
 								<div className={styles.navBar}>
-									<Link to="/">Home</Link>
-									<Link to="/about">About Us</Link>
-									<Link to="/services">services</Link>
-									<Link to="/our-process">OUR PROCESS</Link>
-									<Link to="/contact-us">CONTACT US</Link>
-									<Link to="/faq">FAQ's</Link>
+									<Link
+										to="/"
+										data-replace="Home"
+										className={styles.headerLink}
+									>
+										<span>Home</span>
+									</Link>
+									<Link
+										to="/about"
+										data-replace="About Us"
+										className={styles.headerLink}
+									>
+										<span>About Us</span>
+									</Link>
+									<Link
+										to="/services"
+										data-replace="services"
+										className={styles.headerLink}
+									>
+										<span>services</span>
+									</Link>
+									<Link
+										to="/our-process"
+										data-replace="OUR PROCESS"
+										className={styles.headerLink}
+									>
+										<span>OUR PROCESS</span>
+									</Link>
+									<Link
+										to="/contact-us"
+										data-replace="CONTACT US"
+										className={styles.headerLink}
+									>
+										<span>CONTACT US</span>
+									</Link>
+									<Link
+										to="/faq"
+										data-replace="FAQ's"
+										className={styles.headerLink}
+									>
+										<span>FAQ's</span>
+									</Link>
 								</div>
 							</Grid>
 							<Grid
 								size={{
 									xs: 0,
 									sm: 0,
-									md: 3,
-									lg: 3
+									md: 2,
+									lg: 2
 								}}
 								sx={{ textAlign: "right", alignSelf: "center" }}
 							>
-								<div className={styles.address}>3422 Old Capitol Trail, Wilmington DE 19808, USA</div>
-								<div className={styles.phone}>+1 (732) 344 4260 / +1 (650) 407 2112 / +91 (931) 056 8481</div>
+								{/* <div className={styles.address}>3422 Old Capitol Trail, Wilmington DE 19808, USA</div> */}
+								<div className={styles.phone}>
+									<a href="tel:+1 732 344 4260">+1 (732) 344 4260</a><br/>
+									<a href="tel:+1 650 407 2112">+1 (650) 407 2112</a><br/>
+									<a href="tel:+91 931 056 8481">+91 (931) 056 8481</a>
+								</div>
 							</Grid>
 						</>
 					)

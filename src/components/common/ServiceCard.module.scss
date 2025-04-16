@@ -17,16 +17,17 @@
 }
 
 .count {
-	font-size: 14px;
+	font-size: 10px;
 	color: #dec4a5;
 	padding: 0 8px 0 8px;
 }
 
 .heading {
 	font-family: Antonio, sans-serif;
-	font-size: 24px;
+	font-size: 28px;
 	color: #f7f5f3;
 	padding-left: 8px;
+	padding-bottom: 16px;
 }
 
 .serviceImage {
@@ -40,7 +41,7 @@
 }
 
 .serviceText {
-	font-size: 16px;
+	font-size: 14px;
 	color: #c9b9b0;
 	padding: 0 8px;
 	margin: 16px 0 32px;
@@ -51,19 +52,29 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	color: #fff8f2;
+	color: #a4836f;
 	text-transform: uppercase;
 	text-decoration: none;
-	font-weight: 500;
-	font-size: 18px;
+	font-weight: 600;
+	font-size: 14px;
+	padding: 0 8px;
+	transition: color 0.3s ease, fill 0.3s ease;
 
 	svg {
 		width: 30px;
 	}
+
+	&:hover {
+		color: #fff8f2;
+
+		svg {
+			fill: #fff8f2;
+		}
+	}
 }
 
 @media screen and (max-width: 900px) {
-	.card{
+	.card {
 		width: 220px;
 		padding: 12px;
 		border-radius: 6px;
@@ -71,7 +82,6 @@
 
 	.heading {
 		font-size: 20px;
-		margin-bottom: 12px;
 	}
 
 	.serviceText {

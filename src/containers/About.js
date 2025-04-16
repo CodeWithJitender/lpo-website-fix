@@ -4,7 +4,8 @@ import { Container, Grid2 as Grid } from '@mui/material';
 import {
 	Heading,
 	LinkButton,
-	QualityBox
+	QualityBox,
+	Animate
 } from '@/components/common';
 
 import eliteExpert from "@/assets/icons/elite-expert.png";
@@ -12,11 +13,9 @@ import dataSecurity from "@/assets/icons/data-security.png";
 import techDrivenEfficency from "@/assets/icons/tech-driven-efficency.png";
 import costAdvantage from "@/assets/icons/cost-advantage.png";
 import linkedIcon from "@/assets/icons/about-linkedin-icon.png";
-import playIcon from "@/assets/icons/play-icon.png";
 import playButtonIcon from "@/assets/icons/button-play-icon.png";
 
 import legalStamp from "@/assets/images/about-legal-stamp.png";
-import metricsSectionImage from "@/assets/images/metrics-bg.jpg";
 import founderLaptopImage from "@/assets/images/kunal-in-laptop.png";
 
 import * as styles from "./About.module.scss";
@@ -157,91 +156,107 @@ const About = () => {
 				</Container>
 			</section>
 			<section className={styles.metricsContainer}>
-				<Grid size={12}>
-					<img src={metricsSectionImage} className={styles.metricsSectionImage} alt="" />
-				</Grid>
 				<Grid
 					container
 					justifyContent="center"
 					className={styles.metricsContentContainer}
 				>
 				  <Grid container size={11} columnSpacing={4} rowSpacing={{xs:3, sm:3}}>
-						<Grid
-							size={{
-								sm:12, md: 6, lg: 3
+						<Animate.FadeUp
+							direction="up"
+							element={Grid}
+							elementProps={{
+								size:{
+									sm:12, md: 6, lg: 3
+								},
+								container: true,
+								justifyContent: "center"
 							}}
-							container
-							justifyContent="center"
 						>
 							<div className={styles.metricsItem}>
 								<div className={styles.metricsHeading}>99%</div>
 								<div className={styles.metricsTitle}>
-							  		Accuracy in Legal 
+							  	Accuracy in Legal 
 									Documentation & Case 
-									  Support
+									Support
 								</div>
 							</div>
 							<div className={styles.metricsText}>
 							  <span>Precision-driven processes to keep your cases airtight.</span>
 							</div>
-						</Grid>
-						<Grid
-						  size={{
-							  sm:12, md: 6, lg: 3
-						  }}
-							container
-							justifyContent="center"
+						</Animate.FadeUp>
+						<Animate.FadeUp
+							direction="up"
+							element={Grid}
+							elementProps={{
+								size:{
+									sm:12, md: 6, lg: 3
+								},
+								container: true,
+								justifyContent: "center"
+							}}
+							delay="100ms"
 						>
 							<div className={styles.metricsItem}>
 								<div className={styles.metricsHeading}>24/7</div>
 								<div className={styles.metricsTitle}>
-							  		Operational Support
+							  	Operational Support
 									Across Time 
-									  Zones
+									Zones
 								</div>
 							</div>
 							<div className={styles.metricsText}>
-							  	<span>Because legal deadlines don't wait. Neither do we.</span>
+							  <span>Because legal deadlines don't wait. Neither do we.</span>
 							</div>
-						</Grid>
-						<Grid
-						  size={{
-							  sm:12, md: 6, lg: 3
-						  }}
-							container
-							justifyContent="center"
+						</Animate.FadeUp>
+						<Animate.FadeUp
+							direction="up"
+							element={Grid}
+							elementProps={{
+								size:{
+									sm:12, md: 6, lg: 3
+								},
+								container: true,
+								justifyContent: "center"
+							}}
+							delay="200ms"
 						>
 							<div className={styles.metricsItem}>
 								<div className={styles.metricsHeading}>50+</div>
 								<div className={styles.metricsTitle}>
-									<span>Expert Paralegals & 
+									Expert Paralegals & 
 									Legal 
-									  Professionals</span>
+									Professionals
 								</div>
 							</div>
 							<div className={styles.metricsText}>
 							  	<span>Trained by top law firms, delivering unmatched expertise.</span>
 							</div>
-						</Grid>
-						<Grid
-						  size={{
-							  sm:12, md: 6, lg: 3
-						  }}
-							container
-							justifyContent="center"
+						</Animate.FadeUp>
+						<Animate.FadeUp
+							direction="up"
+							element={Grid}
+							elementProps={{
+								size:{
+									sm:12, md: 6, lg: 3
+								},
+								container: true,
+								justifyContent: "center"
+							}}
+							delay="300ms"
 						>
 							<div className={styles.metricsItem}>
 								<div className={styles.metricsHeading}>100%</div>
 								<div className={styles.metricsTitle}>
-							 		 <span>Data Security & 
+							 		Data Security & 
 									Confidentiality 
-									  Compliance</span>
+									Compliance
 								</div>
 							</div>
 							<div className={styles.metricsText}>
 							  	<span>Your sensitive information stays protected, no exceptions.</span>
 							</div>
-						</Grid>
+						</Animate.FadeUp>
 					</Grid>
 					<Grid size={12} className={styles.precisionTextContainer}>
 						<div className={styles.precisionText}>
@@ -254,9 +269,6 @@ const About = () => {
 			<section className={styles.aboutFounder}>
 				<div className={styles.founderLaptopImage}>
 					<img src={founderLaptopImage} alt="" />
-					<div className={styles.playIcon}>
-						<img src={playIcon} alt="" />
-					</div>
 				</div>
 				<Grid size={12} container justifyContent="center">
 					<Grid size={{sm:12, md: 7}}>

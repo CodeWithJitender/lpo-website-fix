@@ -39,9 +39,9 @@ const ServiceCard = (props) => {
 			<Grid size={12}>
 				<Link to="#" className={styles.howWeCanHelpLink}>
 					<span>
-						SEE HOW WE CAN HELP YOU
+						SEE HOW WE CAN HELP
 					</span>
-					<CircleArrow />
+					<CircleArrow fill="#a4836f" />
 				</Link>
 			</Grid>
 		</div>

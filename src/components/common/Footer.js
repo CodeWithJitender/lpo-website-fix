@@ -4,10 +4,7 @@ import Grid from "@mui/material/Grid2";
 
 import logo from "@/assets/images/logo.png";
 
-import instagramIcon from "@/assets/icons/instagram.png";
-import facebookIcon from "@/assets/icons/facebook.png";
-import twitterIcon from "@/assets/icons/twitter.png";
-import linkedinIcon from "@/assets/icons/linkedin.png";
+import { Facebook, Instagram, Twitter, LinkedIn } from "@/components/Icons";
 
 import { useDevice } from '@/context/DeviceContext';
 
@@ -69,14 +66,89 @@ const Footer = () => {
 					<Grid size={12} className={styles.logoContainer}>
 						<img src={logo} className={styles.logo} alt="GlocalLPO" />
 					</Grid>
+					<Grid
+						size={12}
+						className={styles.socialMedia}
+						justifyContent="center"
+						container
+					>
+						<a
+							href="https://www.instagram.com/glocallpo/"
+							rel="noopener noreferrer nofollow"
+							className={styles.socialIcons}
+							target="_blank"
+						>
+							<Instagram />
+						</a>
+						<a
+							href="https://www.facebook.com/glocallpo/"
+							rel="noopener noreferrer nofollow"
+							className={styles.socialIcons}
+							target="_blank"
+						>
+							<Facebook />
+						</a>
+						<a
+							href="https://www.x.com/glocallpo/"
+							rel="noopener noreferrer nofollow"
+							className={styles.socialIcons}
+							target="_blank"
+						>
+							<Twitter />
+						</a>
+						<a
+							href="https://www.linkedin.com/glocallpo/"
+							rel="noopener noreferrer nofollow"
+							className={styles.socialIcons}
+							target="_blank"
+						>
+							<LinkedIn />
+						</a>
+					</Grid>
 					<Grid size={12}>
 						<div className={styles.navBar}>
-							<Link to="/">Home</Link>
-							<Link to="/about">About Us</Link>
-							<Link to="/services">services</Link>
-							<Link to="/our-process">OUR PROCESS</Link>
-							<Link to="/contact-us">CONTACT US</Link>
-							<Link to="/faq">FAQ's</Link>
+							<Link
+								data-replace="Home"
+								className={styles.footerLink}
+								to="/"
+							>
+								<span>Home</span>
+							</Link>
+							<Link
+								data-replace="About Us"
+								className={styles.footerLink}
+								to="/about"
+							>
+								<span>About Us</span>
+							</Link>
+							<Link
+								data-replace="services"
+								className={styles.footerLink}
+								to="/services"
+							>
+								<span>services</span>
+							</Link>
+							<Link
+								data-replace="OUR PROCESS"
+								className={styles.footerLink}
+								to="/our-process"
+							>
+								<span>OUR PROCESS</span>
+							</Link>
+							<Link
+								data-replace="CONTACT US"
+								className={styles.footerLink}
+								to="/contact-us"
+							>
+								<span>CONTACT US</span>
+							</Link>
+							<Link
+								data-replace="FAQ's"
+								className={styles.footerLink}
+								to="/faq"
+							>
+								<span>FAQ's</span>
+							</Link>
 						</div>
 					</Grid>
 				</Grid>
@@ -91,49 +163,7 @@ const Footer = () => {
 							xs: 12,
 							sm: 12,
 							md: 12,
-							lg: 2,
-						}}
-						className={styles.socialMedia}
-					>
-						<a
-							href="https://www.instagram.com/glocallpo/"
-							rel="noopener noreferrer nofollow"
-							className={styles.socialIcons}
-							target="_blank"
-						>
-							<img src={instagramIcon} alt="" />
-						</a>
-						<a
-							href="https://www.facebook.com/glocallpo/"
-							rel="noopener noreferrer nofollow"
-							className={styles.socialIcons}
-							target="_blank"
-						>
-							<img src={facebookIcon} alt="" />
-						</a>
-						<a
-							href="https://www.x.com/glocallpo/"
-							rel="noopener noreferrer nofollow"
-							className={styles.socialIcons}
-							target="_blank"
-						>
-							<img src={twitterIcon} alt="" />
-						</a>
-						<a
-							href="https://www.linkedin.com/glocallpo/"
-							rel="noopener noreferrer nofollow"
-							className={styles.socialIcons}
-							target="_blank"
-						>
-							<img src={linkedinIcon} alt="" />
-						</a>
-					</Grid>
-					<Grid
-						size={{
-							xs: 12,
-							sm: 12,
-							md: 12,
-							lg: 5,
+							lg: 6,
 						}}
 						className={styles.copyrightText}
 					>
@@ -147,7 +177,7 @@ const Footer = () => {
 							xs: 12,
 							sm: 12,
 							md: 12,
-							lg: 5,
+							lg: 6,
 						}}
 						className={styles.contactInfo}
 					>

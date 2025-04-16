@@ -36,10 +36,61 @@
   }
 }
 
+.footerLink {
+	overflow: hidden;
+	position: relative;
+
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		width: 100%;
+		left: 0;
+	}
+
+	&::before {
+		background-color: #a4836f;
+		height: 2px;
+		bottom: 0;
+		transform-origin: 100% 50%;
+		transform: scaleX(0);
+		transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+	}
+
+	&::after {
+		content: attr(data-replace);
+		height: 100%;
+		top: 0;
+		transform-origin: 100% 50%;
+		transform: translate3d(200%, 0, 0);
+		transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+		color: #a4836f;
+	}
+
+	&:hover::before {
+		transform-origin: 0% 50%;
+		transform: scaleX(1);
+	}
+
+	&:hover::after {
+		transform: translate3d(0, 0, 0);
+	}
+
+	span {
+		display: inline-block;
+		transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+	}
+	
+	&:hover span {
+		transform: translate3d(-200%, 0, 0);
+	}
+}
+
 .copyrightContainer {
 	background: #F7F5F3;
 	padding: 20px;
-	font-size: 12px;
+	font-size: 14px;
+	font-weight: 500;
 	color: #000;
 }
 
@@ -47,22 +98,19 @@
 	text-align: right;
 }
 
-.copyrightText {
-	text-align: center;
-}
-
 .socialIcons {
-	border-right: 1px solid #000;
 	padding-right: 8px;
 	margin-right: 8px;
 	display: inline-block;
 
-	&:last-child {
-		border-right: none;
-	}
+	svg {
+		height: 32px;
+		width: 32px;
+		fill: #DEC4A5;
 
-	img {
-		height: 20px;
+		&:hover {
+			fill: #fff8f2;
+		}
 	}
 }
 
@@ -109,7 +157,9 @@
 	color: #f7f5f3;
 }
 
-
+.socialMedia {
+	margin: 18px 0 30px;
+}
 
 @media screen and (max-width: 1199px) {
 	.footer {
@@ -174,20 +224,13 @@
 	}
 	.emailContainer{
 		background-position: center top;
-			background-size: auto;
-			color: #fff;
-			display: flex;
-			text-align: center;
-			justify-content: center;
-			padding-top: 29px;
-			margin-top: 20px;
-	}
-	.socialMedia{
-		margin: 60px 0;
-		margin: 60px 0;
+		background-size: auto;
+		color: #fff;
 		display: flex;
+		text-align: center;
 		justify-content: center;
-		gap: 25px;
+		padding-top: 29px;
+		margin-top: 20px;
 	}
 	.socialIcons img{
 		height: 30px;
@@ -197,7 +240,7 @@
 		color: #c9b9b0;
 		line-height: 24px;
 	}
-	.copyrightText  a {
+	.copyrightText a {
 		color: #c9b9b0;
 	}
 	.allRightsReserved{

@@ -3,7 +3,7 @@
 }
 
 .content {
-  position: sticky;
+  position: sticky !important;
   top: 0px;
 	display: flex;
   flex-direction: column;
@@ -38,9 +38,9 @@
 .title {
   grid-area: content-title;
   font-weight: normal;
-  font-size: clamp(2rem, 6vw, 2.2rem);
+  font-size: clamp(2rem, 6vw, 3rem);
 	color: #fff8f2;
-	width: 60%;
+	width: 70%;
 	line-height: 1.2;
 	margin-top: 12px;
 	margin-bottom: 8px;
@@ -57,12 +57,12 @@
   backface-visibility: hidden;
 	color: #c9b9b0;
 	font-family: Poppins, sans-serif;
-	font-size: 16px;
+	font-size: 18px;
 }
 
 /* Background colors - you'll need to define these */
 .bg-1 {
-	background: url("../../assets/images/usp-image-1.jpg") top center no-repeat;
+	background: url("../../assets/images/usp-image-1.jpg") top 30% center no-repeat;
 	background-size: cover;
 }
 .bg-2 {
@@ -70,11 +70,11 @@
 	background-size: cover;
 }
 .bg-3 {
-	background: url("../../assets/images/usp-image-3.png") top center no-repeat;
+	background: url("../../assets/images/usp-image-3.jpg") top 30% center no-repeat;
 	background-size: cover;
 }
 .bg-4 {
-	background: url("../../assets/images/usp-image-4.png") top center no-repeat;
+	background: url("../../assets/images/usp-image-4.jpg") top center no-repeat;
 	background-size: cover;
 }
 

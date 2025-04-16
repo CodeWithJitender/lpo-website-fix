@@ -1,6 +1,6 @@
 .masterHead {
 	padding-top: 600px;
-	background: url("../assets/images/about-materhead-bg.jpg") no-repeat top center;
+	background: url("../assets/images/about-materhead-bg.jpg") no-repeat bottom center;
 	background-size: cover;
 }
 
@@ -97,17 +97,12 @@
 }
 
 .metricsContainer {
-	background: #0a0c1f;
-}
-
-.metricsSectionImage {
-	width: 100%;
+	background: url("../assets/images/metrics-section-bg.jpg") no-repeat top center;
+	background-size: cover;
 }
 
 .metricsContentContainer {
-	background: url("../assets/images/metrics-section-second-bg.jpg") no-repeat top center;
-	background-size: cover;
-	padding-top: 20px;
+	padding-top: 700px;
 }
 
 .metricsItem {
@@ -178,15 +173,6 @@
 	img {
 		width: 100%;
 	}
-}
-
-.playIcon {
-	position: absolute;
-	width: 75px;
-	height: 75px;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
 }
 
 .founderTitle {
@@ -278,10 +264,6 @@
 	}
 
 	.metricsContentContainer{
-		margin: 0 -10px;
-	}
-	.metricsSectionImage{
-		width: 100vw;
 		margin: 0 -10px;
 	}
 	.metricsItem{
