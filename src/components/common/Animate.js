@@ -27,7 +27,9 @@ const AnimateIn = ({
 	delay = "0",
 	style = {},
 	className = "",
-	children
+	children,
+	element: Component = "div",
+	elementProps = {},
 }) => {
   const ref = useRef(null);
   const onScreen = useElementOnScreen(ref);
@@ -36,7 +38,7 @@ const AnimateIn = ({
 		...style
   };
   return (
-    <div
+    <Component
       ref={ref}
       style={
         onScreen
@@ -52,9 +54,10 @@ const AnimateIn = ({
             }
       }
 			className={className}
+			{...elementProps}
     >
       {children}
-    </div>
+    </Component>
   );
 };
 
@@ -62,7 +65,9 @@ const FadeIn = ({
 	children,
 	delay = "0",
 	className,
-	style = {}
+	style = {},
+	element,
+	elementProps,
 }) => (
   <AnimateIn
 		from={{ opacity: 0 }}
@@ -70,6 +75,8 @@ const FadeIn = ({
 		style={style}
 		delay={delay}
 		className={className}
+		element={element}
+		elementProps={elementProps}
 	>
     {children}
   </AnimateIn>
@@ -80,7 +87,9 @@ const FadeUp = ({
 	delay = "0",
 	children,
 	className,
-	style = {}
+	style = {},
+	element,
+	elementProps,
 }) => {
 	const getFromTranslateValue = () => {
 		if (direction === "up") {
@@ -101,6 +110,8 @@ const FadeUp = ({
 			delay={delay}
 			style={style}
 			className={className}
+			element={element}
+			elementProps={elementProps}
 		>
 			{children}
 		</AnimateIn>
@@ -111,7 +122,9 @@ const ScaleIn = ({
 	delay = "0",
 	style = {},
 	className,
-	children
+	children,
+	element,
+	elementProps,
 }) => (
   <AnimateIn
 		from={{ scale: "0" }}
@@ -119,6 +132,8 @@ const ScaleIn = ({
 		className={className}
 		style = {style}
 		delay={delay}
+		element={element}
+		elementProps={elementProps}
 	>
     {children}
   </AnimateIn>

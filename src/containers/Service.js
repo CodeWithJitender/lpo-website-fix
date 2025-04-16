@@ -182,36 +182,46 @@ const Service = () => {
 								heading="Motor Vehicle Accidents Accidents"
 								text="Car, truck, bicycle and motorcycle accident claims."
 								image={serviceImage1}
+								direction="right"
 							/>
 							<ServiceTypeBox
 								id="02"
 								heading="Medical Negligence & Malpractice"
 								text="Ensuring Compliance with Legal Standards."
 								image={serviceImage2}
+								direction="left"
 							/>
 							<ServiceTypeBox
 								id="03"
 								heading="Slip & Fall or Trip and Fall Cases"
 								text="Highlightin`g Maximum Injury Compensation."
 								image={serviceImage3}
+								direction="right"
+								delay="100ms"
 							/>
 							<ServiceTypeBox
 								id="04"
 								heading="Dog Bite"
 								text="Nerve damage, disfigurement, or long-term medical issues."
 								image={serviceImage4}
+								direction="left"
+								delay="100ms"
 							/>
 							<ServiceTypeBox
 								id="05"
 								heading="Brain & Spinal Cord Injuries"
 								text="Securing Justice for Those with Devastating Injuries."
 								image={serviceImage5}
+								direction="right"
+								delay="200ms"
 							/>
 							<ServiceTypeBox
 								id="06"
 								heading="Workplace & Construction Accidents"
 								text="Protecting Legal Rights for Workplace Injuries."
 								image={serviceImage6}
+								direction="left"
+								delay="200ms"
 							/>
 						</Grid>
 					</Grid>

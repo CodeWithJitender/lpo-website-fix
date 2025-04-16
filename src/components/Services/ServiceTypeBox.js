@@ -3,6 +3,8 @@ import { Grid2 as Grid } from "@mui/material";
 
 import { useDevice } from '@/context/DeviceContext';
 
+import { Animate } from "@/components/common";
+
 import playIcon from "@/assets/icons/button-play-icon.png";
 
 import * as styles from "./ServiceTypeBox.module.scss";
@@ -13,17 +15,22 @@ const ServiceTypeBox = (props) => {
 		heading,
 		text,
 		id,
-		image
+		image,
+		direction,
+		delay,
 	} = props;
 
-
-
 	return (
-		<Grid
-			size={{sm: 12, lg: 6}}
-			container
-			className={styles.serviceBox}
-			columnSpacing={3}
+		<Animate.FadeUp
+			element={Grid}
+			direction={direction}
+			delay={delay}
+			elementProps={{
+				size:{sm: 12, lg: 6},
+				container: true,
+				className: styles.serviceBox,
+				columnSpacing: 3,
+			}}
 		>
 			<Grid size={{ sm: 12, md: 3 }} alignContent="center" className={styles.imageBlk}
 			>
@@ -67,7 +74,7 @@ const ServiceTypeBox = (props) => {
 					</div>
 				</Grid>
 			</Grid>
-		</Grid>
+		</Animate.FadeUp>
 	);
 };
 
