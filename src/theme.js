@@ -93,6 +93,7 @@ const theme = createTheme({
 		MuiAccordion: {
 			styleOverrides: {
 				root: {
+					boxShadow: "none",
 					"&.Mui-expanded": {
 						margin: 0,
 					}

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Grid2 as Grid } from '@mui/material';
+import { Link } from "react-router-dom";
 
 import layerLady from "@/assets/images/layer-lady.png";
 import stampIcon from "@/assets/images/layer-stamp.png";
@@ -87,7 +88,14 @@ const Home = () => {
 									<br />
 									From high-stakes litigation to meticulous contract drafting, we handle the complex, time-consuming documentation so that attorneys can focus on strategy, advocacy, and winning cases.
 								</Animate.FadeUp>
-								<Animate.FadeUp direction="up" className={styles.detailLink}>
+								<Animate.FadeUp
+									direction="up"
+									className={styles.detailLink}
+									element={Link}
+									elementProps={{
+										to: "/about-us"
+									}}
+								>
 									there's more to us
 									<img src={arrowBig} alt="" className={styles.arrowIcon} />
 								</Animate.FadeUp>

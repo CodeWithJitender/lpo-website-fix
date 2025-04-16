@@ -12,28 +12,58 @@
 	flex-direction: column;
 	overflow-x: hidden;
 	overflow-y: auto;
+	backdrop-filter: blur(9.5px);
 }
 
 .menuItems,
 .subMenuItems {
 	display: block;
-	color: #fff;
-	font-size: 30px;
 	text-decoration: none;
 	margin-bottom: 12px;
 	font-weight: 600;
 	text-align: center;
+	transition: all 0.3s ease;
 }
 
-.subMenuItems {
-	font-size: 20px;
-	font-weight: 400;
+.menuItems {
+	font-family: Antonio, sans-serif;
+	text-transform: uppercase;
+	color: #a4836f;
+	font-size: 30px;
 
-	&:last-child {
-		padding-bottom: 12px;
+	&:hover {
+		color: #fff8f2;
 	}
 }
 
+.menuActive {
+	color: #fff8f2;
+}
+
+.subMenuItems {
+	border-bottom: 1px solid rgba(255,255,255,0.1);
+	padding-bottom: 12px;
+
+	a {
+		font-size: 14px;
+		font-weight: 400;
+		color: #a4836f;
+		text-decoration: none;
+
+		&:hover {
+			color: #fff8f2;
+		}
+	}
+
+	&:last-child {
+		padding-bottom: 12px;
+		margin-bottom: 20px;
+	}
+}
+
+.subMenu {
+	margin-bottom: 20px;
+}
 .burgerMenu {
 	position: fixed;
 	right: 24px;

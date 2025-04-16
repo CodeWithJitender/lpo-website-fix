@@ -51,10 +51,6 @@
 	transform: rotate(180deg);
 }
 
-.accordianDetail.accordianDetail {
-	padding: 40px 40px;
-}
-
 .accordionHeading {
 	font-size: 36px;
 	color: #dec4a5;
@@ -137,7 +133,7 @@
 }
 
 .accordianDetail.accordianDetail {
-	padding: 40px 10px;
+	padding: 40px 60px;
 }
 
 .accordianHeader.accordianHeader {
@@ -147,6 +143,9 @@
 @media screen and (max-width: 900px) {
 	.accordianIcon {
 		max-width: 50px;
+	}
+	.accordianDetail.accordianDetail {
+		padding: 40px 20px;
 	}
 	.helpBullets li{
 		padding-left: 25px;

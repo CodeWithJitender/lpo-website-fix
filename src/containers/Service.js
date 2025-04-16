@@ -83,7 +83,7 @@ const Service = () => {
 	const { isMobile } = useDevice();
 
   const handleChange = (panel) => (event, newExpanded) => {
-    setExpanded(newExpanded ? panel : false);
+    setExpanded(panel);
   };
 
 	const offsetFn = (offset) => {
@@ -232,7 +232,7 @@ const Service = () => {
 					<ServiceClipAnimation />
 				</Grid>
 			</section>
-			<section className={styles.serviceAccordianSection}>
+			<section className={styles.serviceAccordianHeadingSection}>
 				<Container maxWidth="xl">
 					<Grid
 						container
@@ -242,6 +242,16 @@ const Service = () => {
 						<Grid size={12} className={styles.serviceHeading}>
 							<Heading>Services We Offer in Personal Injury Cases:</Heading>
 						</Grid>
+					</Grid>
+				</Container>
+			</section>
+			<section className={styles.serviceAccordianSection}>
+				<Container maxWidth="xl">
+					<Grid
+						container
+						className={styles.commonContainer}
+						flexDirection="column"
+					>
 						<Grid
 							container
 							size={12}
@@ -316,7 +326,9 @@ const Service = () => {
 							</div>
 						</Grid>
 						<Grid container size={{md: 12, lg: 8}}>
-							<Grid size={12}>All the fields marked with * are required</Grid>
+							<Grid size={12} className={styles.requiredFieldTitle}>
+								All the fields marked with * are required
+							</Grid>
 							<Grid size={12} container spacing={3}>
 								<Grid size={{xs: 12, md: 6}}>
 									<TextField

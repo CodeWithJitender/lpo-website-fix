@@ -116,7 +116,7 @@ const Menu = () => {
 												>
 													<Link
 														to={item.href}
-														className={styles.menuItems}
+														className={`${styles.menuItems} ${submenuOpen ? styles.menuActive : ""}`}
 													>
 														{item.label}
 													</Link>
@@ -125,7 +125,7 @@ const Menu = () => {
 												<AnimatePresence>
 													{submenuOpen && (
 														<motion.div
-															className="submenu"
+															className={styles.subMenu}
 															initial={{ height: 0, opacity: 0 }}
 															animate={{ height: bounds.height, opacity: 1 }}
 															exit={{ height: 0, opacity: 0 }}
@@ -154,10 +154,10 @@ const Menu = () => {
 																	<motion.div
 																		key={subItem.href}
 																		variants={itemVariants}
+																		className={styles.subMenuItems}
 																	>
 																		<Link
 																			to={subItem.href}
-																			className={styles.subMenuItems}
 																			onClick={(e) => handleLinkClick(e, subItem.href)}
 																		>
 																			{subItem.label}

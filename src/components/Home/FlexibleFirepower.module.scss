@@ -132,6 +132,10 @@
 		justify-content: center;
 		gap: 15px;
 	}
+
+	.weekDescription {
+		font-size: 18px;
+	}
 	
 	.infoHeadingSection:after,
 	.infoHeadingSection:before {
@@ -167,7 +171,7 @@
 	}
 	.smallHeading{
 		// font-size: 60px;
-		font-size: clamp(2rem, 3.75vw, 3.75rem);
+		font-size: clamp(2.5rem, 3.75vw, 3.75rem);
 	}
 	.perMonthHours{
 		font-size: 36px;
@@ -180,7 +184,7 @@
 		font-size: clamp(1.5rem, 3.12vw, 3.12rem);
 	}
 	.weekBulletPoints{
-		font-size: 18px;
+		font-size: 16px;
 	}
 	.consultWithUs{
 		display: block;
