@@ -13,7 +13,6 @@ const Carousel = (props) => {
     return { ...element, onClick: () => setGoToSlide(index) };
   });
 
-  const [offsetRadius, setOffsetRadius] = useState(2);
   const [_showArrows, setShowArrows] = useState(false);
   const [goToSlide, setGoToSlide] = useState(null);
   const [slides] = useState(table);
@@ -31,7 +30,6 @@ const Carousel = (props) => {
 	}, []);
 
 	useEffect(() => {
-    setOffsetRadius(offset);
     setShowArrows(showArrows);
   }, [offset, showArrows]);
 
@@ -40,10 +38,10 @@ const Carousel = (props) => {
 			<CarouselComponent
 				slides={slides}
 				goToSlide={goToSlide}
-				offsetRadius={offsetRadius}
+				offsetRadius={2}
 				showNavigation={_showArrows}
 				animationConfig={config.gentle}
-				offsetFn={offsetFn}
+				// offsetFn={offsetFn}
 			/>
 		)
 	}

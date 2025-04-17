@@ -435,7 +435,14 @@ const Service = () => {
 						</Heading>
 					</Grid>
 					<Grid size={12} justifyContent="center" container>
-						<Grid size={6} className={styles.carouselSection}>
+						<Grid
+							size={{
+								xs: 12,
+								sm: 12,
+								md: 6
+							}}
+							className={styles.carouselSection}
+						>
 							<Carousel
 								cards={slides}
 								offset={2}
