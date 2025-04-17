@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Link } from 'react-router-dom';
 import { Grid2 as Grid, AppBar } from '@mui/material';
+import { gsap } from "gsap";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
 import { useDevice } from '@/context/DeviceContext';
 
@@ -10,10 +12,32 @@ import Menu from "./Menu";
 
 import * as styles from "./Header.module.scss";
 
+// Register the ScrollTrigger plugin
+gsap.registerPlugin(ScrollTrigger);
+
 const Header = () => {
 	const { isMobile } = useDevice();
+	const navBar = useRef(null);
+
+	useEffect(() => {
+		const showAnim = gsap.from(navBar.current, { 
+			yPercent: -100,
+			paused: true,
+			duration: 0.65
+		}).progress(1);
+		
+		ScrollTrigger.create({
+			start: "top top",
+			end: "max",
+			markers: true,
+			onUpdate: (self) => {
+				self.direction === -1 ? showAnim.play() : showAnim.reverse()
+			}
+		});
+	}, []);
+
 	return (
-		<AppBar position="fixed">
+		<AppBar position="fixed" ref={navBar}>
 			<Grid container size={12} alignItems="center">
 				<Grid
 					size={{
