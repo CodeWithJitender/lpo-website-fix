@@ -116,7 +116,7 @@ const Service = () => {
 	return (
 		<>
 			<section className={styles.masterHead}>
-				<Container maxWidth="xl">
+				<Container maxWidth="xl" className={styles.commonSectionContainer}>
 					<Grid
 						container
 						className={styles.commonContainer}
@@ -162,7 +162,7 @@ const Service = () => {
 				</Grid>
 			</section>
 			<section>
-				<Container maxWidth="xl">
+				<Container maxWidth="xl" className={styles.commonSectionContainer}>
 					<Grid
 						container
 						className={styles.commonContainer}
@@ -233,20 +233,20 @@ const Service = () => {
 				</Grid>
 			</section>
 			<section className={styles.serviceAccordianHeadingSection}>
-				<Container maxWidth="xl">
+				<Container maxWidth="xl" className={styles.commonSectionContainer}>
 					<Grid
 						container
 						className={styles.commonContainer}
 						flexDirection="column"
 					>
-						<Grid size={12} className={styles.serviceHeading}>
+						<Grid size={12}>
 							<Heading>Services We Offer in Personal Injury Cases:</Heading>
 						</Grid>
 					</Grid>
 				</Container>
 			</section>
 			<section className={styles.serviceAccordianSection}>
-				<Container maxWidth="xl">
+				<Container maxWidth="xl" className={styles.commonSectionContainer}>
 					<Grid
 						container
 						className={styles.commonContainer}
@@ -305,7 +305,7 @@ const Service = () => {
 				</Container>
 			</section>
 			<section className={styles.formSection}>
-				<Container maxWidth="xl">
+				<Container maxWidth="xl" className={styles.commonSectionContainer}>
 					<Grid
 						container
 						className={styles.commonContainer}

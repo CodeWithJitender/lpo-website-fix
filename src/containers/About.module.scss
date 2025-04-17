@@ -1,3 +1,7 @@
+.commonSectionContainer {
+	padding: 0 !important;
+}
+
 .masterHead {
 	padding-top: 600px;
 	background: url("../assets/images/about-materhead-bg.jpg") no-repeat bottom center;
@@ -129,7 +133,7 @@
 .metricsText {
 	color: #c9b9b0;
 	text-align: center;
-	margin-top: 12px;
+	margin-top: 12px !important;
 }
 
 .precisionText {
@@ -232,7 +236,7 @@
 	}
 	.metricsText{
 		max-width: 350px;
-		margin: -15px 0 30px;
+		margin: 0 0 30px;
 	}
 }
 
@@ -278,7 +282,7 @@
 		width: 230px;
 	}
 	.metricsText{
-		margin: -15px 0 50px;
+		margin: 0 0 50px;
 		width: 100%;
 		display: flex;
 		justify-content: center;

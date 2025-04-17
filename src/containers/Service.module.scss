@@ -1,3 +1,7 @@
+.commonSectionContainer {
+	padding: 0 !important;
+}
+
 .masterHead {
 	padding-top: 600px;
 	background: url("../assets/images/service-masterhead-bg.jpg") no-repeat bottom center;
@@ -7,6 +11,7 @@
 .silhoutContainer {
 	margin-bottom: 0;
 	overflow: hidden;
+	height: 75vh;
 }
 
 .serviceAccordianHeadingSection {
@@ -177,20 +182,14 @@
 	.typeOfServiceBoxContainer {
 		margin: 30px 0 100px;
 	}
-	.silhoutContainer{
-		padding-bottom: 370px;
-	}
 	.serviceAccordianHeadingSection {
-		padding: 0 10px;
-		margin-top: 100px;
+		margin-top: 60px;
+    margin-bottom: 150px;
 	}
 	.serviceAccordianSection{
 		padding: 0 10px;
 		margin-top: 100px;
 		background: #dec4a5;
-	}
-	.serviceHeading{
-		margin-top: -300px;
 	}
 	
 	.accordionContainer{
@@ -215,11 +214,5 @@
 
 	.expertiseSection{
 		padding: 0 26px 100px;
-	}
-}
-
-@media screen and (max-width: 600px) {
-	.silhoutContainer {
-		padding-bottom: 330px;
 	}
 }

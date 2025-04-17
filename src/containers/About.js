@@ -27,7 +27,7 @@ const About = () => {
   return (
     <>
 			<section className={styles.masterHead}>
-				<Container maxWidth="xl">
+				<Container maxWidth="xl" className={styles.commonSectionContainer}>
 					<Grid
 						container
 						className={styles.commonContainer}
@@ -78,7 +78,7 @@ const About = () => {
 				<div className={styles.aboutStamp}>
 					<img src={legalStamp} alt="" />
 				</div>
-				<Container maxWidth="xl">
+				<Container maxWidth="xl" className={styles.commonSectionContainer}>
 					<Grid container columnSpacing={10} alignItems="flex-start">
 						<Grid
 							container

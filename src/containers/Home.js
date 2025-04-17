@@ -38,7 +38,7 @@ const Home = () => {
   return (
 		<>
 			<section className={styles.masterHead}>
-				<Container maxWidth="xl">  
+				<Container maxWidth="xl" className={styles.commonSectionContainer}>  
 					<Grid
 						container
 						spacing={2}

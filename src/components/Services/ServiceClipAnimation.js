@@ -123,6 +123,30 @@ export default function ServiceClipAnimation() {
           <text x="3ch" y="2.50em" className={styles.textPath}>o</text>
           <text x="4ch" y="2.50em" className={styles.textPath}>X</text>
           <text x="5ch" y="2.50em" className={styles.textPath}>o</text>
+					<text x="0ch" y="3.35em" className={styles.textPath}>X</text>
+          <text x="1ch" y="3.35em" className={styles.textPath}>o</text>
+          <text x="2ch" y="3.35em" className={styles.textPath}>X</text>
+          <text x="3ch" y="3.35em" className={styles.textPath}>o</text>
+          <text x="4ch" y="3.35em" className={styles.textPath}>X</text>
+          <text x="5ch" y="3.35em" className={styles.textPath}>o</text>
+					<text x="0ch" y="4.20em" className={styles.textPath}>X</text>
+          <text x="1ch" y="4.20em" className={styles.textPath}>o</text>
+          <text x="2ch" y="4.20em" className={styles.textPath}>X</text>
+          <text x="3ch" y="4.20em" className={styles.textPath}>o</text>
+          <text x="4ch" y="4.20em" className={styles.textPath}>X</text>
+          <text x="5ch" y="4.20em" className={styles.textPath}>o</text>
+					<text x="0ch" y="5.05em" className={styles.textPath}>X</text>
+          <text x="1ch" y="5.05em" className={styles.textPath}>o</text>
+          <text x="2ch" y="5.05em" className={styles.textPath}>X</text>
+          <text x="3ch" y="5.05em" className={styles.textPath}>o</text>
+          <text x="4ch" y="5.05em" className={styles.textPath}>X</text>
+          <text x="5ch" y="5.05em" className={styles.textPath}>o</text>
+					<text x="0ch" y="5.90em" className={styles.textPath}>X</text>
+          <text x="1ch" y="5.90em" className={styles.textPath}>o</text>
+          <text x="2ch" y="5.90em" className={styles.textPath}>X</text>
+          <text x="3ch" y="5.90em" className={styles.textPath}>o</text>
+          <text x="4ch" y="5.90em" className={styles.textPath}>X</text>
+          <text x="5ch" y="5.90em" className={styles.textPath}>o</text>
         </clipPath>
       </svg>
       <div 
