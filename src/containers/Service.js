@@ -38,9 +38,9 @@ import accordianIcon4 from "@/assets/icons/accordian-icon-4.png";
 import accordianIcon5 from "@/assets/icons/accordian-icon-5.png";
 import accordianIcon6 from "@/assets/icons/accordian-icon-6.png";
 
-import serviceCarouselImage1 from "@/assets/images/other-key-image-1.jpg";
-import serviceCarouselImage2 from "@/assets/images/other-key-image-2.png";
-import serviceCarouselImage3 from "@/assets/images/other-key-image-3.png";
+import serviceCardImage1 from "@/assets/images/home-service-image-1.jpg";
+import serviceCardImage2 from "@/assets/images/home-service-image-2.jpg";
+import serviceCardImage3 from "@/assets/images/home-service-image-3.jpg";
 
 import * as styles from "./Service.module.scss";
 
@@ -49,30 +49,33 @@ const slides = [
 		key: 1,
 		content: <ServiceCard
 			id="01"
-			title="Real Estate Litigation"
-			image={serviceCarouselImage1}
-			description="From property disputes to estate planning, we develop full proof documents that protect your client's assets and secure their future. When the stakes are high, we deliver results."
-			mobileDescription="From property disputes to estate planning, we develop full proof documents that protect your client's assets and secure their future."
+			title="Secretarial Services"
+			image={serviceCardImage1}
+			className={styles.serviceCard}
+			description="Our team is trained in legal workflow platforms and admin precision, ensuring every document, schedule, and task is handled with speed, security, and zero oversight. We bring US law firm standards to your back office."
+			mobileDescription="We streamline legal ops with precision—calendar, docs, and admin handled the US law firm way."
 		/>
 	},
 	{
 		key: 2,
 		content: <ServiceCard
 			id="02"
-			title="Employment Law"
-			image={serviceCarouselImage2}
-			description="From property disputes to estate planning, we develop full proof documents that protect your client's assets and secure their future. When the stakes are high, we deliver results."
-			mobileDescription="From property disputes to estate planning, we develop full proof documents that protect your client's assets and secure their future."
+			title="Paralegal Services"
+			image={serviceCardImage2}
+			className={styles.serviceCard}
+			description="With deep domain expertise across multiple practice areas, our paralegals are skilled in drafting, discovery, medical summaries, and research—powered by top tools like LexisNexis, Westlaw, and AI."
+			mobileDescription="From filings to research, our expert paralegals deliver accuracy, speed, and court-ready support."
 		/>
 	},
 	{
 		key: 3,
 		content: <ServiceCard
 			id="03"
-			title="Workers' Compensation"
-			image={serviceCarouselImage3}
-			description="From property disputes to estate planning, we develop full proof documents that protect your client's assets and secure their future. When the stakes are high, we deliver results."
-			mobileDescription="From property disputes to estate planning, we develop full proof documents that protect your client's assets and secure their future."
+			title="Legal Services"
+			image={serviceCardImage3}
+			className={styles.serviceCard}
+			description="Our legal pros bring real-world litigation support from the US and Canada, specializing in drafting, immigration, contracts, and compliance. With full-cycle support and confidentiality at the core, we're the team behind your winning case."
+			mobileDescription="End-to-end legal support—from contracts to litigation—backed by global experience and airtight process."
 		/>
 	}
 ];

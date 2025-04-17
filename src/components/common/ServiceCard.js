@@ -14,7 +14,8 @@ const ServiceCard = (props) => {
 		title,
 		image,
 		description,
-		mobileDescription
+		mobileDescription,
+		className = ""
 	} = props;
 
 	const { isMobile } = useDevice();
@@ -22,7 +23,7 @@ const ServiceCard = (props) => {
 	return (
 		<div
 			size={12}
-			className={styles.card}
+			className={`${styles.card} ${className}`}
 		>
 			<Grid size={12} justifyItems="flex-start">
 				<div className={styles.count}>{id}.</div>

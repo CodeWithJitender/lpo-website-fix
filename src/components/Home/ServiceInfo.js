@@ -42,16 +42,6 @@ const slides = [
       description="Our legal pros bring real-world litigation support from the US and Canada, specializing in drafting, immigration, contracts, and compliance. With full-cycle support and confidentiality at the core, we're the team behind your winning case."
 			mobileDescription="End-to-end legal support—from contracts to litigation—backed by global experience and airtight process."
     />
-  },
-	{
-    key: 4,
-    content: <ServiceCard
-      id="03"
-      title="Legal Services 1"
-      image={serviceImage3}
-      description="Our legal pros bring real-world litigation support from the US and Canada, specializing in drafting, immigration, contracts, and compliance. With full-cycle support and confidentiality at the core, we're the team behind your winning case."
-			mobileDescription="End-to-end legal support—from contracts to litigation—backed by global experience and airtight process."
-    />
   }
 ];
 
