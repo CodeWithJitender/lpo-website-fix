@@ -8,6 +8,8 @@ import { Facebook, Instagram, Twitter, LinkedIn } from "@/components/Icons";
 
 import { useDevice } from '@/context/DeviceContext';
 
+import { routes } from "@/utils/routes";
+
 import Animate from "./Animate";
 import NaturalLanguageForm from './NaturalLanguageForm';
 
@@ -108,46 +110,46 @@ const Footer = () => {
 					<Grid size={12}>
 						<div className={styles.navBar}>
 							<Link
-								data-replace="Home"
+								to={routes.home.href}
+								data-replace={routes.home.label}
 								className={styles.footerLink}
-								to="/"
 							>
-								<span>Home</span>
+								<span>{routes.home.label}</span>
 							</Link>
 							<Link
-								data-replace="About Us"
+								to={routes.about.href}
+								data-replace={routes.about.label}
 								className={styles.footerLink}
-								to="/about"
 							>
-								<span>About Us</span>
+								<span>{routes.about.label}</span>
 							</Link>
 							<Link
-								data-replace="services"
+								to={routes.services.href}
+								data-replace={routes.services.label}
 								className={styles.footerLink}
-								to="/services"
 							>
-								<span>services</span>
+								<span>{routes.services.label}</span>
 							</Link>
 							<Link
-								data-replace="OUR PROCESS"
+								to={routes["our-process"].href}
+								data-replace={routes["our-process"].label}
 								className={styles.footerLink}
-								to="/our-process"
 							>
-								<span>OUR PROCESS</span>
+								<span>{routes["our-process"].label}</span>
 							</Link>
 							<Link
-								data-replace="CONTACT US"
+								to={routes["contact-us"].href}
+								data-replace={routes["contact-us"].label}
 								className={styles.footerLink}
-								to="/contact-us"
 							>
-								<span>CONTACT US</span>
+								<span>{routes["contact-us"].label}</span>
 							</Link>
 							<Link
-								data-replace="FAQ's"
+								to={routes.faq.href}
+								data-replace={routes.faq.label}
 								className={styles.footerLink}
-								to="/faq"
 							>
-								<span>FAQ's</span>
+								<span>{routes.faq.label}</span>
 							</Link>
 						</div>
 					</Grid>
@@ -168,9 +170,9 @@ const Footer = () => {
 						className={styles.copyrightText}
 					>
 						<span className={styles.allRightsReserved}>&copy; 2025 Glocal LPO. All Rights Reserved.</span>
-						<Link to="/terms-of-service"> Terms of Service</Link> | 
-						<Link to="/privacy-policy"> Privacy Policy</Link> | 
-						<Link to="/cookie-settings"> Cookie Settings</Link>
+						<Link to={routes["terms-of-service"].href}> {routes["cookie-settings"].label}</Link> | 
+						<Link to={routes["privacy-policy"].href}> {routes["cookie-settings"].label}</Link> | 
+						<Link to={routes["cookie-settings"].href}> {routes["cookie-settings"].label}</Link>
 					</Grid>
 					<Grid
 						size={{

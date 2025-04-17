@@ -4,10 +4,12 @@ import { gsap } from "gsap";
 
 import whiteArrow from "@/assets/icons/white-arrow.png";
 
+import { Animate } from '@/components/common';
+
 import * as styles from "./ServiceBox.module.scss";
 
 const ServiceBox = (props) => {
-	const { id, title, description, contentBoxTitle, image } = props;
+	const { id, title, description, contentBoxTitle, image, index } = props;
 
 	const filterId = `distortionFilter${id}`;
 
@@ -199,12 +201,17 @@ const ServiceBox = (props) => {
   }, []); // Empty dependency array to run once on mount
 
   return (
-		<Grid
-			size={{
-				xs: 12,
-				sm: 12,
-				md: 12,
-				lg: 3,
+		<Animate.FadeUp
+			direction="up"
+			delay={`${index * 100}ms`}
+			element={Grid}
+			elementProps={{
+				size: {
+					xs: 12,
+					sm: 12,
+					md: 12,
+					lg: 3,
+				}
 			}}
 			className={styles.container}
 		>
@@ -261,7 +268,7 @@ const ServiceBox = (props) => {
 				</figure>
 				<div className={styles.serviceText} ref={descriptionRef}>{description}</div>
 			</div>
-		</Grid>
+		</Animate.FadeUp>
   );
 };
 

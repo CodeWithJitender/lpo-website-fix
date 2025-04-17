@@ -30,6 +30,8 @@ import UspSectionCards from '@/components/Home/UspSectionCards';
 
 import { useDevice } from '@/context/DeviceContext';
 
+import { routes } from "@/utils/routes";
+
 import * as styles from './Home.module.scss';
 
 const Home = () => {
@@ -38,7 +40,7 @@ const Home = () => {
   return (
 		<>
 			<section className={styles.masterHead}>
-				<Container maxWidth="xl" className={styles.commonSectionContainer}>  
+				<Container maxWidth="xl">  
 					<Grid
 						container
 						spacing={2}
@@ -93,7 +95,7 @@ const Home = () => {
 									className={styles.detailLink}
 									element={Link}
 									elementProps={{
-										to: "/about-us"
+										to: routes.about.href
 									}}
 								>
 									there's more to us

@@ -9,7 +9,8 @@ import {
 	Heading,
 	LinkButton,
 	ServiceCard,
-	Carousel
+	Carousel,
+	Animate
 } from '@/components/common';
 
 import { CircleArrow } from "@/components/Icons";
@@ -38,9 +39,16 @@ import accordianIcon4 from "@/assets/icons/accordian-icon-4.png";
 import accordianIcon5 from "@/assets/icons/accordian-icon-5.png";
 import accordianIcon6 from "@/assets/icons/accordian-icon-6.png";
 
-import serviceCardImage1 from "@/assets/images/home-service-image-1.jpg";
-import serviceCardImage2 from "@/assets/images/home-service-image-2.jpg";
-import serviceCardImage3 from "@/assets/images/home-service-image-3.jpg";
+import serviceCardImage1 from "@/assets/images/service-image-1.jpg";
+import serviceCardImage2 from "@/assets/images/service-image-2.jpg";
+import serviceCardImage3 from "@/assets/images/service-image-3.jpg";
+import serviceCardImage4 from "@/assets/images/service-image-4.jpg";
+import serviceCardImage5 from "@/assets/images/service-image-5.jpg";
+import serviceCardImage6 from "@/assets/images/service-image-6.jpg";
+import serviceCardImage7 from "@/assets/images/service-image-7.jpg";
+import serviceCardImage8 from "@/assets/images/service-image-8.jpg";
+import serviceCardImage9 from "@/assets/images/service-image-9.jpg";
+import serviceCardImage10 from "@/assets/images/service-image-10.jpg";
 
 import * as styles from "./Service.module.scss";
 
@@ -49,33 +57,110 @@ const slides = [
 		key: 1,
 		content: <ServiceCard
 			id="01"
-			title="Secretarial Services"
+			title="Real Estate Litigation"
 			image={serviceCardImage1}
 			className={styles.serviceCard}
-			description="Our team is trained in legal workflow platforms and admin precision, ensuring every document, schedule, and task is handled with speed, security, and zero oversight. We bring US law firm standards to your back office."
-			mobileDescription="We streamline legal ops with precision—calendar, docs, and admin handled the US law firm way."
+			description="From property disputes to estate planning, we develop full proof documents that protect your client's assets and secure their future. When the stakes are high, we deliver results."
+			mobileDescription="Real estate law isn't just about property—it's about power."
 		/>
 	},
 	{
 		key: 2,
 		content: <ServiceCard
 			id="02"
-			title="Paralegal Services"
+			title="Personal Injury"
 			image={serviceCardImage2}
 			className={styles.serviceCard}
-			description="With deep domain expertise across multiple practice areas, our paralegals are skilled in drafting, discovery, medical summaries, and research—powered by top tools like LexisNexis, Westlaw, and AI."
-			mobileDescription="From filings to research, our expert paralegals deliver accuracy, speed, and court-ready support."
+			description="Accidents happen, but accountability is non-negotiable. We draft demand letters with legal precision, ensuring your clients get the maximum compensation which they deserve."
+			mobileDescription="Injury wasn't your clients' choice. Justice is."
 		/>
 	},
 	{
 		key: 3,
 		content: <ServiceCard
 			id="03"
-			title="Legal Services"
+			title="Civil Litigation Support"
 			image={serviceCardImage3}
 			className={styles.serviceCard}
-			description="Our legal pros bring real-world litigation support from the US and Canada, specializing in drafting, immigration, contracts, and compliance. With full-cycle support and confidentiality at the core, we're the team behind your winning case."
-			mobileDescription="End-to-end legal support—from contracts to litigation—backed by global experience and airtight process."
+			description="Every strong case starts with strategic documentation. From binding contracts to persuasive motions, we prepare the legal foundation that positions your clients for success."
+			mobileDescription="Lawsuits aren't just won in court—they're built on paperwork."
+		/>
+	},
+	{
+		key: 4,
+		content: <ServiceCard
+			id="04"
+			title="Employment Law"
+			image={serviceCardImage4}
+			className={styles.serviceCard}
+			description="Whether it's discrimination, retaliation, or wrongful termination, we prepare foolproof legal documentation to ensure justice is served."
+			mobileDescription="Your clients' rights aren't optional. They're enforceable."
+		/>
+	},
+	{
+		key: 5,
+		content: <ServiceCard
+			id="05"
+			title="Workers' Compensation"
+			image={serviceCardImage5}
+			className={styles.serviceCard}
+			description="From pre-trial to post-trial, we handle the documentation that ensures your claim is strong, your clients' rights are protected, and your case is bulletproof."
+			mobileDescription="Injured on the job? We make sure the law works for you."
+		/>
+	},
+	{
+		key: 6,
+		content: <ServiceCard
+			id="06"
+			title="Contracts"
+			image={serviceCardImage6}
+			className={styles.serviceCard}
+			description="From drafting to review, we ensure every contract puts your client in an advantageous position—clear, enforceable, and built to protect their interests."
+			mobileDescription="A contract is only as strong as the words that bind it."
+		/>
+	},
+	{
+		key: 7,
+		content: <ServiceCard
+			id="07"
+			title="Business Litigation Support"
+			image={serviceCardImage7}
+			className={styles.serviceCard}
+			description="When business disputes arise, the right legal support can make or break the case. We provide strategic analysis, and well-founded legal groundwork to keep you ahead in your legal practice."
+			mobileDescription="In business, the fine print is where battles are won."
+		/>
+	},
+	{
+		key: 8,
+		content: <ServiceCard
+			id="08"
+			title="Immigration"
+			image={serviceCardImage8}
+			className={styles.serviceCard}
+			description="Immigration is more than just paperwork—it's about securing the future. We prepare arguments, draft letters and fill forms with precision, ensuring a smooth, strategic path forward."
+			mobileDescription="Borders may divide, but the law unites."
+		/>
+	},
+	{
+		key: 9,
+		content: <ServiceCard
+			id="09"
+			title="Family Law"
+			image={serviceCardImage9}
+			className={styles.serviceCard}
+			description="Family law isn't just legal—it's personal. We review the documents in each case with strategy, discretion, and an unwavering commitment to securing the best outcome for you."
+			mobileDescription="Family disputes need finesse, not just force."
+		/>
+	},
+	{
+		key: 10,
+		content: <ServiceCard
+			id="10"
+			title="Bankruptcy"
+			image={serviceCardImage10}
+			className={styles.serviceCard}
+			description="Whether your client is an individual, business, or family struggling with debt, we navigate the legal pathways to financial freedom with precision and expertise."
+			mobileDescription="Bankruptcy isn't the end. It's a fresh start."
 		/>
 	}
 ];
@@ -119,7 +204,7 @@ const Service = () => {
 	return (
 		<>
 			<section className={styles.masterHead}>
-				<Container maxWidth="xl" className={styles.commonSectionContainer}>
+				<Container maxWidth="xl">
 					<Grid
 						container
 						className={styles.commonContainer}
@@ -138,22 +223,36 @@ const Service = () => {
 						</Heading>
 					</Grid>
 					<Grid size={12} justifyItems={{xs:"left", md:'center'}}>
-						<Grid size={3} className={styles.plusIcon}>
+						<Animate.ScaleIn
+							direction="up"
+							className={styles.plusIcon}
+							element={Grid}
+							elementProps={{
+								size: 3
+							}}
+						>
 							+
-						</Grid>
+						</Animate.ScaleIn>
 					</Grid>
 				</Container>
 			</section>
 			<section className={styles.aboutLPO}>
 				<Grid container justifyContent="flex-end">
 					<Grid size={{md:12, lg:5}}>
-						<div className={styles.aboutHeading}>
+						<Animate.FadeUp
+							direction="up"
+							className={styles.aboutHeading}
+						>
 							Injury-related litigation entails exacting case analysis, exhaustive legal research, tactical document preparation and personalized support.
-						</div>
+						</Animate.FadeUp>
 
-						<div className={styles.aboutText}>
+						<Animate.FadeUp
+							direction="up"
+							delay="100ms"
+							className={styles.aboutText}
+						>
 							At Glocal LPO, we provide full-spectrum legal support, enabling law firms and attorneys to optimize case management with streamlined execution and process oversight.
-						</div>
+						</Animate.FadeUp>
 
 						<div>
 							<LinkButton to="#" className={styles.bookButton}>
@@ -165,7 +264,7 @@ const Service = () => {
 				</Grid>
 			</section>
 			<section>
-				<Container maxWidth="xl" className={styles.commonSectionContainer}>
+				<Container maxWidth="xl">
 					<Grid
 						container
 						className={styles.commonContainer}
@@ -236,7 +335,7 @@ const Service = () => {
 				</Grid>
 			</section>
 			<section className={styles.serviceAccordianHeadingSection}>
-				<Container maxWidth="xl" className={styles.commonSectionContainer}>
+				<Container maxWidth="xl">
 					<Grid
 						container
 						className={styles.commonContainer}
@@ -249,7 +348,7 @@ const Service = () => {
 				</Container>
 			</section>
 			<section className={styles.serviceAccordianSection}>
-				<Container maxWidth="xl" className={styles.commonSectionContainer}>
+				<Container maxWidth="xl">
 					<Grid
 						container
 						className={styles.commonContainer}
@@ -308,7 +407,7 @@ const Service = () => {
 				</Container>
 			</section>
 			<section className={styles.formSection}>
-				<Container maxWidth="xl" className={styles.commonSectionContainer}>
+				<Container maxWidth="xl">
 					<Grid
 						container
 						className={styles.commonContainer}

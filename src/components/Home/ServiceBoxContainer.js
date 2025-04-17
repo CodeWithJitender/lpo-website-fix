@@ -79,7 +79,7 @@ const servicesArray = [
 
 const ServiceBoxContainer = () => {
   return (
-		servicesArray.map((service) => <ServiceBox key={service.id} {...service} />)
+		servicesArray.map((service, index) => <ServiceBox index={index} key={service.id} {...service} />)
   );
 };
 

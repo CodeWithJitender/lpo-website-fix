@@ -1,10 +1,12 @@
 import React, { useEffect, useRef } from "react";
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Grid2 as Grid, AppBar } from '@mui/material';
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
 import { useDevice } from '@/context/DeviceContext';
+
+import { routes } from "@/utils/routes";
 
 import logo from "@/assets/images/logo.png";
 
@@ -19,6 +21,8 @@ const Header = () => {
 	const { isMobile } = useDevice();
 	const navBar = useRef(null);
 
+	let location = useLocation();
+
 	useEffect(() => {
 		const showAnim = gsap.from(navBar.current, { 
 			yPercent: -100,
@@ -29,12 +33,16 @@ const Header = () => {
 		ScrollTrigger.create({
 			start: "top top",
 			end: "max",
-			markers: true,
+			markers: false,
 			onUpdate: (self) => {
 				self.direction === -1 ? showAnim.play() : showAnim.reverse()
 			}
 		});
 	}, []);
+
+	useEffect(() => {
+		console.log("location: ", location);
+	}, [location]);
 
 	return (
 		<AppBar position="fixed" ref={navBar}>
@@ -78,46 +86,46 @@ const Header = () => {
 							>
 								<div className={styles.navBar}>
 									<Link
-										to="/"
-										data-replace="Home"
+										to={routes.home.href}
+										data-replace={routes.home.label}
 										className={styles.headerLink}
 									>
-										<span>Home</span>
+										<span>{routes.home.label}</span>
 									</Link>
 									<Link
-										to="/about"
-										data-replace="About Us"
+										to={routes.about.href}
+										data-replace={routes.about.label}
 										className={styles.headerLink}
 									>
-										<span>About Us</span>
+										<span>{routes.about.label}</span>
 									</Link>
 									<Link
-										to="/services"
-										data-replace="services"
+										to={routes.services.href}
+										data-replace={routes.services.label}
 										className={styles.headerLink}
 									>
-										<span>services</span>
+										<span>{routes.services.label}</span>
 									</Link>
 									<Link
-										to="/our-process"
-										data-replace="OUR PROCESS"
+										to={routes["our-process"].href}
+										data-replace={routes["our-process"].label}
 										className={styles.headerLink}
 									>
-										<span>OUR PROCESS</span>
+										<span>{routes["our-process"].label}</span>
 									</Link>
 									<Link
-										to="/contact-us"
-										data-replace="CONTACT US"
+										to={routes["contact-us"].href}
+										data-replace={routes["contact-us"].label}
 										className={styles.headerLink}
 									>
-										<span>CONTACT US</span>
+										<span>{routes["contact-us"].label}</span>
 									</Link>
 									<Link
-										to="/faq"
-										data-replace="FAQ's"
+										to={routes.faq.href}
+										data-replace={routes.faq.label}
 										className={styles.headerLink}
 									>
-										<span>FAQ's</span>
+										<span>{routes.faq.label}</span>
 									</Link>
 								</div>
 							</Grid>

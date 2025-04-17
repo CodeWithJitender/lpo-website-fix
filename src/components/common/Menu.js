@@ -6,29 +6,30 @@ import useMeasure from 'react-use-measure';
 
 import MenuPortal from "./MenuPortal";
 
+import { routes } from "@/utils/routes";
+
 import * as styles from "./Menu.module.scss";
 
 const menuItems = [
-  { label: 'Home', href: '/' },
-  { label: 'About Us', href: '/about' },
+  { ...routes.home },
+  { ...routes.about },
   {
     label: 'Services',
     children: [
-      { label: 'Real Estate Litigation', href: '/services/real-estate-litigation' },
-      { label: 'Personal Injury', href: '/services/personal-injury' },
-      { label: 'Civil Litigation Support', href: '/services/civil-litigation-support' },
-      { label: 'Employment Law', href: '/services/employee-law' },
-			{ label: 'Workers Compensation', href: '/services/workers-compensation' },
-			{ label: 'Contracts', href: '/services/contracts' },
-			{ label: 'Business Litigation Support', href: '/services/business-litigation-support' },
-			{ label: 'Immigration', href: '/services/immigration' },
-			{ label: 'Family Law', href: '/services/family-law' },
-			{ label: 'Bankruptcy', href: '/services/bankruptcy' },
+      { ...routes["real-estate-litigation"] },
+			{ ...routes["personal-injury"] },
+			{ ...routes["civil-litigation-support"] },
+			{ ...routes["employee-law"] },
+			{ ...routes["workers-compensation"] },
+			{ ...routes["business-litigation-support"] },
+			{ ...routes["immigration"] },
+			{ ...routes["family-law"] },
+			{ ...routes["bankruptcy"] }
     ],
   },
-  { label: 'Our Process', href: '/our-process' },
-  { label: 'Contact Us', href: '/contact-us' },
-  { label: "FAQ's", href: '/faq' },
+  { ...routes["our-process"] },
+  { ...routes["contact-us"] },
+  { ...routes.faq },
 ];
 
 const containerVariants = {

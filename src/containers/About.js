@@ -27,7 +27,7 @@ const About = () => {
   return (
     <>
 			<section className={styles.masterHead}>
-				<Container maxWidth="xl" className={styles.commonSectionContainer}>
+				<Container maxWidth="xl">
 					<Grid
 						container
 						className={styles.commonContainer}
@@ -50,22 +50,36 @@ const About = () => {
 						</Heading>
 					</Grid>
 					<Grid size={12} justifyItems={{xs:"left", md:'center'}}>
-						<Grid size={3} className={styles.plusIcon}>
+						<Animate.ScaleIn
+							direction="up"
+							className={styles.plusIcon}
+							element={Grid}
+							elementProps={{
+								size: 3
+							}}
+						>
 							+
-						</Grid>
+						</Animate.ScaleIn>
 					</Grid>
 				</Container>
 			</section>
 			<section className={styles.aboutLPO}>
 			  <Grid container justifyContent={{ xs: "left", md:"flex-end"}}>
 					<Grid size={{md:12, lg:5}}>
-						<div className={styles.aboutHeading}>
+						<Animate.FadeUp
+							direction="up"
+							className={styles.aboutHeading}
+						>
 							At Glocal LPO, we redefine legal process outsourcing—bringing efficiency, accuracy, and expertise to the forefront.
-						</div>
+						</Animate.FadeUp>
 
-						<div className={styles.aboutText}>
+						<Animate.FadeUp
+							direction="up"
+							delay="100ms"
+							className={styles.aboutText}
+						>
 							We deliver end-to-end litigation and managed services, covering document review, contract management, legal research, and compliance solutions with absolute precision. We don't just support your legal operations; we optimize, streamline, and elevate them.
-						</div>
+						</Animate.FadeUp>
 
 						<div className={styles.btnGroup}>
 							<LinkButton to="#" delay="100ms">Explore services</LinkButton>
@@ -78,7 +92,7 @@ const About = () => {
 				<div className={styles.aboutStamp}>
 					<img src={legalStamp} alt="" />
 				</div>
-				<Container maxWidth="xl" className={styles.commonSectionContainer}>
+				<Container maxWidth="xl">
 					<Grid container columnSpacing={10} alignItems="flex-start">
 						<Grid
 							container
