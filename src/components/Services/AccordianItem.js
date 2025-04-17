@@ -9,12 +9,13 @@ import cx from "classnames";
 
 import { LinkButton } from '@/components/common';
 
+import { useDevice } from '@/context/DeviceContext';
+
 import { ChevronIcon } from "@/components/Icons";
 
 import playButtonIcon from "@/assets/icons/button-play-icon.png";
 
 import * as styles from "./AccordianItem.module.scss";
-import { isMobile } from "react-device-detect";
 
 const AccordianItem = (props) => {
 	const {
@@ -24,6 +25,9 @@ const AccordianItem = (props) => {
 		heading,
 		expanded
 	} = props;
+
+	const { isMobile } = useDevice();
+
 	return (
 		<Accordion
 			expanded={expanded === id}
