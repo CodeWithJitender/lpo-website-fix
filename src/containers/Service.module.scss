@@ -81,7 +81,7 @@
 }
 
 .serviceAccordianSection {
-	background: #DEC3A4 url("../assets/images/service-accordion-bg.jpg") no-repeat bottom center;
+	background: #dec4a5 url("../assets/images/service-accordion-bg.jpg") no-repeat bottom center;
 	background-size: contain;
 	margin-top: 150px;
 }
@@ -186,10 +186,11 @@
 		margin-top: 60px;
     margin-bottom: 150px;
 	}
-	.serviceAccordianSection{
+	.serviceAccordianSection {
 		padding: 0 10px;
 		margin-top: 100px;
-		background: #dec4a5;
+		background: #dec4a5 url("../assets/images/service-accordion-bg.jpg") no-repeat bottom 50px center;
+		background-size: contain;
 	}
 	
 	.accordionContainer{

@@ -55,7 +55,9 @@ const Header = () => {
 						lg: 2
 					}}
 				>
-					<img src={logo} className={styles.logo} alt="GlocalLPO" />
+					<Link to="/" className={styles.headerLogoLink}>
+						<img src={logo} className={styles.logo} alt="GlocalLPO" />
+					</Link>
 				</Grid>
 				{
 					isMobile ? (

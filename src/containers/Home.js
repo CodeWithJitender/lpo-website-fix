@@ -12,7 +12,7 @@ import iconSave from "@/assets/icons/icon-save.png";
 
 import arrowBig from "@/assets/icons/arrow-big.png";
 
-import precisionSectionBg from "@/assets/images/supreme-court-building.png";
+import precisionSectionBg from "@/assets/images/supreme-court-building.jpg";
 import precisionSectionBgMobile from "@/assets/images/supreme-court-building-mobile.jpg";
 
 import {

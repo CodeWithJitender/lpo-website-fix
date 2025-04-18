@@ -61,7 +61,7 @@ const slides = [
 			image={serviceCardImage1}
 			className={styles.serviceCard}
 			description="From property disputes to estate planning, we develop full proof documents that protect your client's assets and secure their future. When the stakes are high, we deliver results."
-			mobileDescription="Real estate law isn't just about property—it's about power."
+			mobileDescription="From property disputes to estate planning, we develop full proof documents that protect your client's assets and secure their future. When the stakes are high, we deliver results."
 		/>
 	},
 	{
@@ -72,7 +72,7 @@ const slides = [
 			image={serviceCardImage2}
 			className={styles.serviceCard}
 			description="Accidents happen, but accountability is non-negotiable. We draft demand letters with legal precision, ensuring your clients get the maximum compensation which they deserve."
-			mobileDescription="Injury wasn't your clients' choice. Justice is."
+			mobileDescription="Accidents happen, but accountability is non-negotiable. We draft demand letters with legal precision, ensuring your clients get the maximum compensation which they deserve."
 		/>
 	},
 	{
@@ -83,7 +83,7 @@ const slides = [
 			image={serviceCardImage3}
 			className={styles.serviceCard}
 			description="Every strong case starts with strategic documentation. From binding contracts to persuasive motions, we prepare the legal foundation that positions your clients for success."
-			mobileDescription="Lawsuits aren't just won in court—they're built on paperwork."
+			mobileDescription="Every strong case starts with strategic documentation. From binding contracts to persuasive motions, we prepare the legal foundation that positions your clients for success."
 		/>
 	},
 	{
@@ -94,7 +94,7 @@ const slides = [
 			image={serviceCardImage4}
 			className={styles.serviceCard}
 			description="Whether it's discrimination, retaliation, or wrongful termination, we prepare foolproof legal documentation to ensure justice is served."
-			mobileDescription="Your clients' rights aren't optional. They're enforceable."
+			mobileDescription="Whether it's discrimination, retaliation, or wrongful termination, we prepare foolproof legal documentation to ensure justice is served."
 		/>
 	},
 	{
@@ -105,7 +105,7 @@ const slides = [
 			image={serviceCardImage5}
 			className={styles.serviceCard}
 			description="From pre-trial to post-trial, we handle the documentation that ensures your claim is strong, your clients' rights are protected, and your case is bulletproof."
-			mobileDescription="Injured on the job? We make sure the law works for you."
+			mobileDescription="From pre-trial to post-trial, we handle the documentation that ensures your claim is strong, your clients' rights are protected, and your case is bulletproof."
 		/>
 	},
 	{
@@ -116,7 +116,7 @@ const slides = [
 			image={serviceCardImage6}
 			className={styles.serviceCard}
 			description="From drafting to review, we ensure every contract puts your client in an advantageous position—clear, enforceable, and built to protect their interests."
-			mobileDescription="A contract is only as strong as the words that bind it."
+			mobileDescription="From drafting to review, we ensure every contract puts your client in an advantageous position—clear, enforceable, and built to protect their interests."
 		/>
 	},
 	{
@@ -127,7 +127,7 @@ const slides = [
 			image={serviceCardImage7}
 			className={styles.serviceCard}
 			description="When business disputes arise, the right legal support can make or break the case. We provide strategic analysis, and well-founded legal groundwork to keep you ahead in your legal practice."
-			mobileDescription="In business, the fine print is where battles are won."
+			mobileDescription="When business disputes arise, the right legal support can make or break the case. We provide strategic analysis, and well-founded legal groundwork to keep you ahead in your legal practice."
 		/>
 	},
 	{
@@ -138,7 +138,7 @@ const slides = [
 			image={serviceCardImage8}
 			className={styles.serviceCard}
 			description="Immigration is more than just paperwork—it's about securing the future. We prepare arguments, draft letters and fill forms with precision, ensuring a smooth, strategic path forward."
-			mobileDescription="Borders may divide, but the law unites."
+			mobileDescription="Immigration is more than just paperwork—it's about securing the future. We prepare arguments, draft letters and fill forms with precision, ensuring a smooth, strategic path forward."
 		/>
 	},
 	{
@@ -149,7 +149,7 @@ const slides = [
 			image={serviceCardImage9}
 			className={styles.serviceCard}
 			description="Family law isn't just legal—it's personal. We review the documents in each case with strategy, discretion, and an unwavering commitment to securing the best outcome for you."
-			mobileDescription="Family disputes need finesse, not just force."
+			mobileDescription="Family law isn't just legal—it's personal. We review the documents in each case with strategy, discretion, and an unwavering commitment to securing the best outcome for you."
 		/>
 	},
 	{
@@ -160,7 +160,7 @@ const slides = [
 			image={serviceCardImage10}
 			className={styles.serviceCard}
 			description="Whether your client is an individual, business, or family struggling with debt, we navigate the legal pathways to financial freedom with precision and expertise."
-			mobileDescription="Bankruptcy isn't the end. It's a fresh start."
+			mobileDescription="Whether your client is an individual, business, or family struggling with debt, we navigate the legal pathways to financial freedom with precision and expertise."
 		/>
 	}
 ];

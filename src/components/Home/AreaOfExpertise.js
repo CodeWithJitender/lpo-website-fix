@@ -8,7 +8,7 @@ import {
 } from "@/components/common";
 import { useDevice } from '@/context/DeviceContext';
 
-import areaOfExpertiese from '@/assets/images/area-of-expertise.png';
+import areaOfExpertiese from '@/assets/images/area-of-expertise.jpg';
 import areaOfExpertieseMobile from '@/assets/images/area-of-expertise-mobile.png';
 import areaOfExpertieseStamp from '@/assets/images/area-of-experties-stamp.png';
 
