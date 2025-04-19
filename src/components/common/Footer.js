@@ -8,7 +8,7 @@ import { Facebook, Instagram, Twitter, LinkedIn } from "@/components/Icons";
 
 import { useDevice } from '@/context/DeviceContext';
 
-import { routes } from "@/utils/routes";
+import { routes } from "@/utils/routesPath";
 
 import Animate from "./Animate";
 import NaturalLanguageForm from './NaturalLanguageForm';

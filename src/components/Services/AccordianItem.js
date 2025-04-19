@@ -19,14 +19,15 @@ import * as styles from "./AccordianItem.module.scss";
 
 const AccordianItem = (props) => {
 	const {
-		icon,
 		id,
 		onChange,
-		heading,
-		expanded
+		expanded,
+		item
 	} = props;
 
 	const { isMobile } = useDevice();
+
+	const { header, content } = item;
 
 	return (
 		<Accordion
@@ -44,9 +45,9 @@ const AccordianItem = (props) => {
 			>
 				<div className={styles.accordianHead}>
 					<div className={styles.accordianIcon}>
-						<img src={icon} alt="" />
+						<img src={header.icon} alt="" />
 					</div>
-					<div className={styles.accordianHeadHeading}>{heading}</div>
+					<div className={styles.accordianHeadHeading}>{header.title}</div>
 					<div>
 						<ChevronIcon
 							className={cx(
@@ -58,38 +59,13 @@ const AccordianItem = (props) => {
 						/>
 					</div>
 				</div>
-				{/* <Grid
-					container
-					size={12}
-					spacing={{xs: 2, md: 3}}
-					alignItems="center"
-				>
-					<Grid size={{xs: 2, md: 1}}>
-						<div className={styles.accordianIcon}>
-							<img src={icon} alt="" />
-						</div>
-					</Grid>
-					<Grid size={{xs: 8, md: 9}}>{heading}</Grid>
-					<Grid size={2} container justifyContent="flex-end">
-						<ChevronIcon
-							className={cx(
-								styles.chevron,
-								{
-									[styles.collapsed]: expanded === id
-								}
-							)}
-						/>
-					</Grid>
-				</Grid> */}
 			</AccordionSummary>
 			<AccordionDetails className={styles.accordianDetail}>
 				<Grid size={12} spacing={4} container>
 					<Grid container size={{sm: 12, md:12, lg: 5}} alignContent="flex-start">
 						<Grid size={12}>
 							<div className={styles.accordionHeading}>
-								Medical Records - 
-								The Linchpins of every personal injury 
-								claim's success.
+								{content.heading}
 							</div>
 						</Grid>
 						{isMobile &&
@@ -97,23 +73,21 @@ const AccordianItem = (props) => {
 								<Grid size={12} className={styles.helpTitle}>WE HELP YOU BY:</Grid>
 								<Grid size={12}>
 									<ul className={styles.helpBullets}>
-										<li>Retrieving & organizing medical records</li>
-										<li>Patient Record Extraction</li>
-										<li>Summarizing diagnosis & treatments</li>
-										<li>Creating medical chronologies & injury assessments</li>
-										<li>Medical History Compilation</li>
-										<li>Medical Billing Summarization</li>
-										<li>Privilege Logs</li>
+										{
+											content.listItems.map((list, index) => (
+												<li key={index}>{list}</li>
+											))
+										}
 									</ul>
 								</Grid>
 							</Grid>
 						}
 						<Grid size={12}>
 							<div className={styles.globalDistinctive}>
-								Glocal's Distinctive Edge:
+								{content.smallHeading}
 							</div>
 							<div className={styles.globalText}>
-								Reduce overhead costs while gaining access to top-tier legal expertise and AI-powered analysis—customized to your firm's needs.
+								{content.description}
 							</div>
 							<LinkButton to="#" className={styles.bookButton}>
 								<span>BOOK AN INTERVIEW WITH A PARALEGAL</span>
@@ -126,13 +100,11 @@ const AccordianItem = (props) => {
 							<Grid size={12} className={styles.helpTitle}>WE HELP YOU BY:</Grid>
 							<Grid size={12}>
 								<ul className={styles.helpBullets}>
-									<li>Retrieving & organizing medical records</li>
-									<li>Patient Record Extraction</li>
-									<li>Summarizing diagnosis & treatments</li>
-									<li>Creating medical chronologies & injury assessments</li>
-									<li>Medical History Compilation</li>
-									<li>Medical Billing Summarization</li>
-									<li>Privilege Logs</li>
+									{
+										content.listItems.map((list, index) => (
+											<li key={index}>{list}</li>
+										))
+									}
 								</ul>
 							</Grid>
 						</Grid>

@@ -4,6 +4,7 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import Home from './containers/Home';
 import About from './containers/About';
 import Service from "./containers/Service";
+import ServiceDetails from "./containers/ServiceDetails";
 import NotFound from './containers/NotFound';
 
 import Header from './components/common/Header';
@@ -26,10 +27,10 @@ const App = () => {
 		<>
 			<Header />  
 			<Routes>
-				<Route path="/" element={<Home />} />
-				<Route path="/about" element={<About />} />
-				<Route path="/services" element={<Service />} />
-				<Route path="/services/:id" element={<Service />} />
+				<Route path="/" element={<Home />} exact />
+				<Route path="/about" element={<About />} exact />
+				<Route path="/services" element={<Service />} exact />
+				<Route path="/services/:id" element={<ServiceDetails />} exact />
 				<Route path="*" element={<NotFound />} />
 			</Routes>
 			<Footer />

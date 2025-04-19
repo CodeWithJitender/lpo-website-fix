@@ -1,13 +1,20 @@
 .masterHead {
 	padding-top: 600px;
-	background: url("../assets/images/service-masterhead-bg.jpg") no-repeat bottom center;
+	// background: url("../assets/images/service-masterhead-bg.jpg") no-repeat bottom center;
+	background-position: bottom center;
+	background-repeat: no-repeat;
 	background-size: cover;
 }
 
 .silhoutContainer {
-	margin-bottom: 140px;
+	margin-bottom: 0;
 	overflow: hidden;
 	height: 75vh;
+}
+
+.serviceAccordianHeadingSection {
+	margin-top: 120px;
+	padding-bottom: 60px;
 }
 
 .commonContainer {
@@ -75,9 +82,47 @@
 	margin: 60px 0 120px;
 }
 
+.serviceAccordianSection {
+	background: #dec4a5 url("../assets/images/service-accordion-bg.jpg") no-repeat bottom center;
+	background-size: contain;
+	margin-top: 150px;
+}
+
+.accordionContainer {
+	padding: 20px;
+	border: 1px solid #564847;
+	background: #070C1E;
+	margin: -150px 0 100px;
+	border-radius: 4px;
+}
+
+.expertiseSection {
+	position: relative;
+	background: url("../assets/images/other-key-area-bg.jpg") no-repeat top center;
+	background-size: cover;
+	padding-bottom: 100px;
+}
+
+.expertiseStamp {
+	position: absolute;
+	top: 0;
+	left: calc(50% - 115px);
+	width: 230px;
+	transform: translateY(-50%);
+	
+	img {
+		width: 100%;
+	}
+}
+
+.expertiseHeading {
+	margin-top: 300px;
+	margin-bottom: 100px;
+}
+
 .formSection {
 	background-color: #DEC4A5;
-	padding: 100px 0;
+	padding: 100px 0 200px;
 }
 
 .formHeading {
@@ -101,6 +146,11 @@
 	cursor: pointer;
 }
 
+.carouselSection {
+	position: relative;
+	height: 550px;
+}
+
 .formPensilIcon {
 	width: 100px;
 }
@@ -111,14 +161,6 @@
 
 .serviceCard {
 	width: 30rem;
-}
-
-.serviceWeOfferContainer {
-	margin-bottom: 140px;
-}
-
-.serviceHeadingContainer {
-	margin-bottom: 40px;
 }
 
 @media screen and (max-width: 900px) {
@@ -142,11 +184,25 @@
 	.typeOfServiceBoxContainer {
 		margin: 30px 0 100px;
 	}
+	.serviceAccordianHeadingSection {
+		margin-top: 60px;
+    margin-bottom: 150px;
+	}
+	.serviceAccordianSection {
+		padding: 0 10px;
+		margin-top: 100px;
+		background: #dec4a5 url("../assets/images/service-accordion-bg.jpg") no-repeat bottom 50px center;
+		background-size: contain;
+	}
+	
+	.accordionContainer{
+		padding: 15px;
+	}
 	.submitWrapper{
 		text-align: center;
 	}
 	.formSection{
-		padding: 40px 10px;
+		padding: 0px 10px 200px;
 		margin-top: -1px;
 	}
 	.formHeading{
@@ -154,5 +210,12 @@
 	}
 	.formPensilIcon{
 		max-width: 100px;
+	}
+	.expertiseHeading{
+		margin: 170px 0 20px;
+	}
+
+	.expertiseSection{
+		padding: 0 26px 100px;
 	}
 }

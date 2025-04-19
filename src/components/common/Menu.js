@@ -6,7 +6,7 @@ import useMeasure from 'react-use-measure';
 
 import MenuPortal from "./MenuPortal";
 
-import { routes } from "@/utils/routes";
+import { routes } from "@/utils/routesPath";
 
 import * as styles from "./Menu.module.scss";
 
@@ -24,7 +24,7 @@ const menuItems = [
 			{ ...routes["business-litigation-support"] },
 			{ ...routes["immigration"] },
 			{ ...routes["family-law"] },
-			{ ...routes["bankruptcy"] }
+			{ ...routes["bankrupcy"] }
     ],
   },
   { ...routes["our-process"] },

@@ -15,6 +15,7 @@ const ServiceCard = (props) => {
 		image,
 		description,
 		mobileDescription,
+		link,
 		className = ""
 	} = props;
 
@@ -38,7 +39,7 @@ const ServiceCard = (props) => {
 				{isMobile ? mobileDescription : description}
 			</Grid>
 			<Grid size={12}>
-				<Link to="#" className={styles.howWeCanHelpLink}>
+				<Link to={link} className={styles.howWeCanHelpLink}>
 					<span>
 						SEE HOW WE CAN HELP
 					</span>

@@ -8,8 +8,6 @@ import serviceImage1 from "@/assets/images/home-service-image-1.jpg";
 import serviceImage2 from "@/assets/images/home-service-image-2.jpg";
 import serviceImage3 from "@/assets/images/home-service-image-3.jpg";
 
-import { useDevice } from '@/context/DeviceContext';
-
 import * as styles from "./ServiceInfo.module.scss";
 
 const slides = [
@@ -46,37 +44,6 @@ const slides = [
 ];
 
 const ServiceInfo = () => {
-	const { isMobile } = useDevice();
-
-	const offsetFn = (offset) => {
-		const defaultAnimation = {
-			transform: "translateY(-50%) translateX(-40%) scale(0.75)",
-			opacity: "0.5"
-		};
-
-		if (offset === -1) {
-			return {
-				...defaultAnimation,
-				transform: "translateY(-50%) translateX(-10%) scale(0.75)",
-				left: "0"
-			};
-		}
-
-		if (offset === 1) {
-			return {
-				...defaultAnimation,
-				transform: `translateY(-50%) translateX(${isMobile ? '65%' : '90%'}) scale(0.75)`,
-				left: "0"
-			};
-		}
-
-		return {
-			transform: `translateY(-50%) translateX(${isMobile ? '27%' : '45%'}) scale(1)`,
-			opacity: "1",
-			left: "0",
-		};
-	};
-
   return (
     <section className={styles.serviceInfoSection}>
       <Grid container size={12} justifyContent="center">
@@ -106,7 +73,6 @@ const ServiceInfo = () => {
 						cards={slides}
 						offset={2}
 						showArrows={false}
-						// offsetFn={offsetFn}
 					/>
         </Grid>
         <Grid

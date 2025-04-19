@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import Grid from '@mui/material/Grid2';
 import { gsap } from "gsap";
+import { Link } from 'react-router-dom';
 
 import whiteArrow from "@/assets/icons/white-arrow.png";
 
@@ -9,7 +10,15 @@ import { Animate } from '@/components/common';
 import * as styles from "./ServiceBox.module.scss";
 
 const ServiceBox = (props) => {
-	const { id, title, description, contentBoxTitle, image, index } = props;
+	const {
+		id,
+		title,
+		description,
+		contentBoxTitle,
+		image,
+		index,
+		link
+	} = props;
 
 	const filterId = `distortionFilter${id}`;
 
@@ -260,10 +269,10 @@ const ServiceBox = (props) => {
 					</svg>
 					<figcaption className={styles.overlay} ref={captionRef}>
 						<div className={styles.quote} ref={captionTitleRef}>{contentBoxTitle}</div>
-						<a href="#" className={styles.button} ref={captionLinkRef}>
+						<Link to={link} className={styles.button} ref={captionLinkRef}>
 							SEE HOW WE CAN HELP<br />
 							<img src={whiteArrow} alt="" className={styles.arrow} />
-						</a>
+						</Link>
 					</figcaption>
 				</figure>
 				<div className={styles.serviceText} ref={descriptionRef}>{description}</div>

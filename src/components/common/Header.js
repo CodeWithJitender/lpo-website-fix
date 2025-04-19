@@ -1,12 +1,12 @@
 import React, { useEffect, useRef } from "react";
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Grid2 as Grid, AppBar } from '@mui/material';
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
 import { useDevice } from '@/context/DeviceContext';
 
-import { routes } from "@/utils/routes";
+import { routes } from "@/utils/routesPath";
 
 import logo from "@/assets/images/logo.png";
 
@@ -20,8 +20,6 @@ gsap.registerPlugin(ScrollTrigger);
 const Header = () => {
 	const { isMobile } = useDevice();
 	const navBar = useRef(null);
-
-	let location = useLocation();
 
 	useEffect(() => {
 		const showAnim = gsap.from(navBar.current, { 
@@ -39,10 +37,6 @@ const Header = () => {
 			}
 		});
 	}, []);
-
-	useEffect(() => {
-		console.log("location: ", location);
-	}, [location]);
 
 	return (
 		<AppBar position="fixed" ref={navBar}>

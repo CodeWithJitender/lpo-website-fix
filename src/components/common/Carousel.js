@@ -5,8 +5,7 @@ const Carousel = (props) => {
 	const {
 		cards,
 		offset,
-		showArrows,
-		offsetFn
+		showArrows
 	} = props;
 
 	const table = cards.map((element, index) => {
@@ -41,7 +40,6 @@ const Carousel = (props) => {
 				offsetRadius={2}
 				showNavigation={_showArrows}
 				animationConfig={config.gentle}
-				// offsetFn={offsetFn}
 			/>
 		)
 	}

@@ -30,7 +30,7 @@ import UspSectionCards from '@/components/Home/UspSectionCards';
 
 import { useDevice } from '@/context/DeviceContext';
 
-import { routes } from "@/utils/routes";
+import { routes } from "@/utils/routesPath";
 
 import * as styles from './Home.module.scss';
 
