@@ -26,10 +26,6 @@
 	margin-bottom: 52px;
 }
 
-.legalSupportLink {
-	margin: 52px 0 80px;
-}
-
 .expertiseImage {
 	position: relative;
 	margin-bottom: 92px;
@@ -66,23 +62,7 @@
 	.legalSupportText {
 		margin-bottom: 30px;
 	}
-	.legalSupportLink{
-		margin-top: 30px;
-		display: flex;
-		flex-direction: column;
-		gap: 20px;
-	}
 	.areaOfExpertiseSection{
 		margin-bottom: 0;
 	}
-}
-
-@media screen and (max-width: 600px) {
-
-	.legalSupportLink{
-		display: flex;
-		flex-direction: column;
-		gap: 20px;
-	}
-	
 }

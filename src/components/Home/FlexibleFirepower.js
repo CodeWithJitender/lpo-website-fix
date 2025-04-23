@@ -1,5 +1,6 @@
 import React from "react";
 import Grid from '@mui/material/Grid2';
+import { Link } from "react-router-dom";
 
 import {
 	Heading,
@@ -7,6 +8,8 @@ import {
 } from "@/components/common";
 
 import { useDevice } from '@/context/DeviceContext';
+
+import { routes } from "@/utils/routesPath";
 
 import flexibleSectionImg from "@/assets/images/flexible-section-img.png";
 
@@ -128,7 +131,8 @@ const FlexibleFirePower = () => {
 					>
 						<Grid 
 							size={{ sm: 12, md: 6 }}
-							className={styles.perWeekSection}>
+							className={`${styles.perWeekSection} ${styles.perWeekSectionLast}`}
+						>
 							<Animate.FadeUp direction="right">
 								<Grid container size={12}
 									direction={{ xs: "row", sm: "row", md: "column" }}
@@ -163,8 +167,19 @@ const FlexibleFirePower = () => {
 									<li>High-impact support without long-term constraints</li>
 								</Animate.FadeUp>
 							</ul>
-							<a href="#" className={styles.consultWithUs}>Consult with us</a>
 						</Grid>
+					</Grid>
+					<Grid
+						sx={{ flexDirection: { xs: "column", md: "row" } }}
+					>
+						<Animate.FadeUp direction="right">
+							<Link
+								to={routes["contact-us"].href}
+								className={styles.consultWithUs}
+							>
+								SCHEDULE A STRATEGY CALL WITH US
+							</Link>
+						</Animate.FadeUp>
 					</Grid>
 				</Grid>
 				{isMobile &&

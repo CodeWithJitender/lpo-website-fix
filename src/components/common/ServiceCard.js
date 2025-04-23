@@ -16,7 +16,8 @@ const ServiceCard = (props) => {
 		description,
 		mobileDescription,
 		link,
-		className = ""
+		className = "",
+		linkText = "SEE HOW WE CAN HELP"
 	} = props;
 
 	const { isMobile } = useDevice();
@@ -26,9 +27,9 @@ const ServiceCard = (props) => {
 			size={12}
 			className={`${styles.card} ${className}`}
 		>
-			<Grid size={12} justifyItems="flex-start">
+			{/* <Grid size={12} justifyItems="flex-start">
 				<div className={styles.count}>{id}.</div>
-			</Grid>
+			</Grid> */}
 			<Grid size={12} justifyItems="flex-start">
 				<div className={styles.heading}>{title}</div>
 			</Grid>
@@ -41,7 +42,7 @@ const ServiceCard = (props) => {
 			<Grid size={12}>
 				<Link to={link} className={styles.howWeCanHelpLink}>
 					<span>
-						SEE HOW WE CAN HELP
+						{linkText}
 					</span>
 					<CircleArrow fill="#a4836f" />
 				</Link>

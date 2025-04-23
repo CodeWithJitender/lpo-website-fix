@@ -75,36 +75,20 @@ const Footer = () => {
 						container
 					>
 						<a
-							href="https://www.instagram.com/glocallpo/"
-							rel="noopener noreferrer nofollow"
-							className={styles.socialIcons}
-							target="_blank"
-						>
-							<Instagram />
-						</a>
-						<a
-							href="https://www.facebook.com/glocallpo/"
-							rel="noopener noreferrer nofollow"
-							className={styles.socialIcons}
-							target="_blank"
-						>
-							<Facebook />
-						</a>
-						<a
-							href="https://www.x.com/glocallpo/"
-							rel="noopener noreferrer nofollow"
-							className={styles.socialIcons}
-							target="_blank"
-						>
-							<Twitter />
-						</a>
-						<a
 							href="https://www.linkedin.com/glocallpo/"
 							rel="noopener noreferrer nofollow"
 							className={styles.socialIcons}
 							target="_blank"
 						>
 							<LinkedIn />
+						</a>
+						<a
+							href="https://www.instagram.com/glocallpo/"
+							rel="noopener noreferrer nofollow"
+							className={styles.socialIcons}
+							target="_blank"
+						>
+							<Instagram />
 						</a>
 					</Grid>
 					<Grid size={12}>
@@ -131,13 +115,6 @@ const Footer = () => {
 								<span>{routes.services.label}</span>
 							</Link>
 							<Link
-								to={routes["our-process"].href}
-								data-replace={routes["our-process"].label}
-								className={styles.footerLink}
-							>
-								<span>{routes["our-process"].label}</span>
-							</Link>
-							<Link
 								to={routes["contact-us"].href}
 								data-replace={routes["contact-us"].label}
 								className={styles.footerLink}
@@ -157,44 +134,57 @@ const Footer = () => {
 				<Grid
 					size={12}
 					container
-					className={styles.copyrightContainer}
+					className={`${styles.copyrightContainer} ${styles.extraPaddingContainer}`}
 					alignItems="center"
+					justifyContent="center"
 				>
 					<Grid
 						size={{
 							xs: 12,
 							sm: 12,
 							md: 12,
-							lg: 6,
+							lg: 4,
 						}}
 						className={styles.copyrightText}
 					>
-						<span className={styles.allRightsReserved}>&copy; 2025 Glocal LPO. All Rights Reserved.</span>
-						<Link to={routes["terms-of-service"].href}> {routes["cookie-settings"].label}</Link> | 
-						<Link to={routes["privacy-policy"].href}> {routes["cookie-settings"].label}</Link> | 
-						<Link to={routes["cookie-settings"].href}> {routes["cookie-settings"].label}</Link>
+						<span className={styles.addressHeading}>US Headquarters:</span>
+						3422 Old Capitol Trail, Wilmington DE 19808 , USA
 					</Grid>
 					<Grid
 						size={{
 							xs: 12,
 							sm: 12,
 							md: 12,
-							lg: 6,
+							lg: 4,
 						}}
-						className={styles.contactInfo}
+						className={styles.copyrightText}
 					>
-						<span className={styles.telContainer}>
-							<a href="tel:+1 (732) 344 4260">+1 (732) 344 4260</a> /
-							<a href="tel:+1 (650) 407 2112"> +1 (650) 407 2112</a> /
-							<a href="tel:+91 (931) 056 848"> +91 (931) 056 848</a>
-						</span>
+						<span className={styles.addressHeading}>Office Operations:</span>
+						B8, B Block, Sector 59, Noida, Uttar Pradesh 201301
+					</Grid>
+					<Grid
+						size={{
+							xs: 12,
+							sm: 12,
+							md: 12,
+							lg: 4,
+						}}
+						className={styles.copyrightText}
+					>
+						<a href="tel:+1 (650) 407 2112" className={styles.addressHeading}> +1 (650) 407 2112</a>
 						<a
 							href="mailto:info@glocallpo.com"
-							className={styles.emailContainer}
 						>
 							info@glocallpo.com
 						</a>
 					</Grid>
+				</Grid>
+				<Grid
+					size={12}
+					className={styles.copyrightContainer}
+					alignItems="center"
+				>
+						&copy; 2025 Glocal LPO. All Rights Reserved.
 				</Grid>
 			</section>
 		</>

@@ -79,7 +79,7 @@ const Service = () => {
 					backgroundImage: `url(${serviceDetails.background})`
 				}}
 			>
-				<Container maxWidth="xl">
+				<Container maxWidth="xl" className={styles.headingContainer}>
 					<Grid
 						container
 						className={styles.commonContainer}
@@ -94,18 +94,6 @@ const Service = () => {
 						<Heading className={styles.lpoTitle}>
 							{serviceDetails.heading}
 						</Heading>
-					</Grid>
-					<Grid size={12} justifyItems={{xs:"left", md:'center'}}>
-						<Animate.ScaleIn
-							direction="up"
-							className={styles.plusIcon}
-							element={Grid}
-							elementProps={{
-								size: 3
-							}}
-						>
-							+
-						</Animate.ScaleIn>
 					</Grid>
 				</Container>
 			</section>
@@ -399,7 +387,7 @@ const Service = () => {
 							<Carousel
 								cards={slides}
 								offset={2}
-								showArrows={false}
+								showArrows={true}
 							/>
 						</Grid>
 					</Grid>

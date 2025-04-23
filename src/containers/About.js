@@ -8,6 +8,10 @@ import {
 	Animate
 } from '@/components/common';
 
+import { useDevice } from '@/context/DeviceContext';
+
+import { routes } from "@/utils/routesPath";
+
 import eliteExpert from "@/assets/icons/elite-expert.png";
 import dataSecurity from "@/assets/icons/data-security.png";
 import techDrivenEfficency from "@/assets/icons/tech-driven-efficency.png";
@@ -19,7 +23,6 @@ import legalStamp from "@/assets/images/about-legal-stamp.png";
 import founderLaptopImage from "@/assets/images/kunal-in-laptop.png";
 
 import * as styles from "./About.module.scss";
-import { useDevice } from '@/context/DeviceContext';
 
 const About = () => {
 	const { isMobile } = useDevice();
@@ -27,7 +30,7 @@ const About = () => {
   return (
     <>
 			<section className={styles.masterHead}>
-				<Container maxWidth="xl">
+				<Container maxWidth="xl" className={styles.headingContainer}>
 					<Grid
 						container
 						className={styles.commonContainer}
@@ -46,20 +49,7 @@ const About = () => {
 									Legal Outsourcing.
 								</>
 							}
-							
 						</Heading>
-					</Grid>
-					<Grid size={12} justifyItems={{xs:"left", md:'center'}}>
-						<Animate.ScaleIn
-							direction="up"
-							className={styles.plusIcon}
-							element={Grid}
-							elementProps={{
-								size: 3
-							}}
-						>
-							+
-						</Animate.ScaleIn>
 					</Grid>
 				</Container>
 			</section>
@@ -82,8 +72,10 @@ const About = () => {
 						</Animate.FadeUp>
 
 						<div className={styles.btnGroup}>
-							<LinkButton to="#" delay="100ms">Explore services</LinkButton>
-							<LinkButton to="#" delay="200ms">consult with us</LinkButton>
+							<LinkButton
+								to={routes["contact-us"].href}
+								delay="200ms"
+							>SCHEDULE A STRATEGY CALL WITH US</LinkButton>
 						</div>
 					</Grid>
 				</Grid>
@@ -120,7 +112,10 @@ const About = () => {
 							<div className={styles.weAreStepIn}>
 								That's where we step in.
 							</div>
-						  <LinkButton to="#" className={styles.bookButton}>
+						  <LinkButton
+								to={routes["contact-us"].href}
+								className={styles.bookButton}
+							>
 								<span>BOOK AN INTERVIEW WITH A PARALEGAL</span>
 							  {!isMobile && <span><img src={playButtonIcon} alt="" /></span>}
 								
@@ -147,7 +142,7 @@ const About = () => {
 							<QualityBox
 								icon={dataSecurity}
 								heading="Ironclad Data Security"
-								text="End-to-end encryption, strict compliance protocols, and airtight confidentiality—your data stays protected, always."
+								text="End-to-end encryption, strict compliance protocols, and watertight confidentiality—your data stays protected, always."
 								direction="left"
 								delay="200ms"
 							/>
@@ -196,7 +191,7 @@ const About = () => {
 								</div>
 							</div>
 							<div className={styles.metricsText}>
-							  <span>Precision-driven processes to keep your cases airtight.</span>
+							  <span>Precision-driven processes to keep your cases watertight.</span>
 							</div>
 						</Animate.FadeUp>
 						<Animate.FadeUp
@@ -236,7 +231,7 @@ const About = () => {
 							delay="200ms"
 						>
 							<div className={styles.metricsItem}>
-								<div className={styles.metricsHeading}>50+</div>
+								<div className={styles.metricsHeading}>180+</div>
 								<div className={styles.metricsTitle}>
 									Expert Paralegals & 
 									Legal 

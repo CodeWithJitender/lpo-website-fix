@@ -15,8 +15,9 @@ export default function NaturalLanguageForm() {
   // State to track which field is open and form values
   const [openFieldIndex, setOpenFieldIndex] = useState(-1);
   const [formValues, setFormValues] = useState({
-    platform: "zoom",
+    platform: "platform",
     time: "time",
+		timezone: "time zone",
     city: "any city",
   });
 
@@ -54,7 +55,6 @@ export default function NaturalLanguageForm() {
     };
 
     const handleOptionClick = (option) => {
-      console.log("ddfsdfdsf: ", formValues);
       setSelectedOption(option);
       updateFormValue(valueKey, option);
       setOpenFieldIndex(-1);
@@ -184,16 +184,23 @@ export default function NaturalLanguageForm() {
 					>
 						Pick a {" "}
 						<DropdownField
-							options={["7 pm", "8 pm", "9 pm", "10 pm", "11 pm"]}
+							options={["10 am", "11 am", "12 am", "01 pm", "02 pm", "03 pm"]}
 							defaultValue="time"
 							index={0}
 							valueKey="time"
 						/>, 
-						choose a platform—
+						as per your {" "}
 						<DropdownField
-							options={["zoom", "google meet", "teams", "or a good old-fashioned call"]}
-							defaultValue="zoom"
+							options={["EST", "CST", "MST", "PST", "HST"]}
+							defaultValue="time zone"
 							index={1}
+							valueKey="timezone"
+						/>. 
+						choose a preferred {" "} 
+						<DropdownField
+							options={["zoom", "google meet", "old fashioned call"]}
+							defaultValue="platform"
+							index={2}
 							valueKey="platform"
 						/>. Schedule a meeting and we'll make things happen.
 						<div

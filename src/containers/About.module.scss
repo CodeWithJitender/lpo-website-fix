@@ -30,17 +30,10 @@
 	font-size: 100px;
 }
 
-.plusIcon {
-	font-family: Poppins, sans-serif;
-	font-size: 200px;
-	color: #a4836f;
-	margin: 12px 0 12px;
-	line-height: 0.55;
-}
-
 .aboutLPO {
 	padding: 0 50px;
 	margin-bottom: 300px;
+	margin-top: 40px;
 }
 
 .aboutHeading {
@@ -234,9 +227,18 @@
 		max-width: 350px;
 		margin: 0 0 30px;
 	}
+	.headingContainer {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
 }
 
 @media screen and (max-width: 900px) {
+	.headingContainer {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+
 	.commonContainer{
 		padding: 0;
 	}
@@ -247,10 +249,6 @@
 	
 	.lpoTitle{
 		font-size: clamp(3.5rem, 6.5vw, 6.5rem);
-	}
-	.plusIcon{
-		font-size: clamp(6.5rem, 12.5vw, 12.5rem);
-		margin: 40px 0;
 	}
 	.btnGroup{
 		display: flex;

@@ -27,7 +27,6 @@ const menuItems = [
 			{ ...routes["bankrupcy"] }
     ],
   },
-  { ...routes["our-process"] },
   { ...routes["contact-us"] },
   { ...routes.faq },
 ];

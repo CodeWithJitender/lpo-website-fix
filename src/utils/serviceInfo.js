@@ -1679,11 +1679,11 @@ export const servicesInfo = {
 export const serviceCards = [
 	{
 		id: "01",
-		title: routes["real-estate-litigation"].label,
-		link: routes["real-estate-litigation"].href,
-		image: require("../assets/images/service-image-1.jpg"),
-		description: "From property disputes to estate planning, we develop full proof documents that protect your client's assets and secure their future. When the stakes are high, we deliver results.",
-		mobileDescription: "From property disputes to estate planning, we develop full proof documents that protect your client's assets and secure their future. When the stakes are high, we deliver results."
+		title: routes["civil-litigation-support"].label,
+		link: routes["civil-litigation-support"].href,
+		image: require("../assets/images/service-image-3.jpg"),
+		description: "Every strong case starts with strategic documentation. From binding contracts to persuasive motions, we prepare the legal foundation that positions your clients for success.",
+		mobileDescription: "Every strong case starts with strategic documentation. From binding contracts to persuasive motions, we prepare the legal foundation that positions your clients for success."
 	},
 	{
 		id: "02",
@@ -1695,14 +1695,6 @@ export const serviceCards = [
 	},
 	{
 		id: "03",
-		title: routes["civil-litigation-support"].label,
-		link: routes["civil-litigation-support"].href,
-		image: require("../assets/images/service-image-3.jpg"),
-		description: "Every strong case starts with strategic documentation. From binding contracts to persuasive motions, we prepare the legal foundation that positions your clients for success.",
-		mobileDescription: "Every strong case starts with strategic documentation. From binding contracts to persuasive motions, we prepare the legal foundation that positions your clients for success."
-	},
-	{
-		id: "04",
 		title: routes["employee-law"].label,
 		link: routes["employee-law"].href,
 		image: require("../assets/images/service-image-4.jpg"),
@@ -1710,31 +1702,31 @@ export const serviceCards = [
 		mobileDescription: "Whether it's discrimination, retaliation, or wrongful termination, we prepare foolproof legal documentation to ensure justice is served."
 	},
 	{
-		id: "05",
+		id: "04",
 		title: routes["workers-compensation"].label,
 		link: routes["workers-compensation"].href,
 		image: require("../assets/images/service-image-5.jpg"),
-		description: "From pre-trial to post-trial, we handle the documentation that ensures your claim is strong, your clients' rights are protected, and your case is bulletproof.",
-		mobileDescription: "From pre-trial to post-trial, we handle the documentation that ensures your claim is strong, your clients' rights are protected, and your case is bulletproof."
+		description: "From pre-trial to post-trial, we handle the documentation that ensures your claim is strong, your clients' rights are protected, and your case is foolproof.",
+		mobileDescription: "From pre-trial to post-trial, we handle the documentation that ensures your claim is strong, your clients' rights are protected, and your case is foolproof."
+	},
+	{
+		id: "05",
+		title: routes["real-estate-litigation"].label,
+		link: routes["real-estate-litigation"].href,
+		image: require("../assets/images/service-image-1.jpg"),
+		description: "From property disputes to estate planning, we develop full proof documents that protect your client's assets and secure their future. When the stakes are high, we deliver results.",
+		mobileDescription: "From property disputes to estate planning, we develop full proof documents that protect your client's assets and secure their future. When the stakes are high, we deliver results."
 	},
 	{
 		id: "06",
-		title: routes["contracts"].label,
-		link: routes["contracts"].href,
-		image: require("../assets/images/service-image-6.jpg"),
-		description: "From drafting to review, we ensure every contract puts your client in an advantageous position—clear, enforceable, and built to protect their interests.",
-		mobileDescription: "From drafting to review, we ensure every contract puts your client in an advantageous position—clear, enforceable, and built to protect their interests."
+		title: routes["family-law"].label,
+		link: routes["family-law"].href,
+		image: require("../assets/images/service-image-9.jpg"),
+		description: "Family law isn't just legal—it's personal. We review the documents in each case with strategy, discretion, and an unwavering commitment to securing the best outcome for you.",
+		mobileDescription: "Family law isn't just legal—it's personal. We review the documents in each case with strategy, discretion, and an unwavering commitment to securing the best outcome for you."
 	},
 	{
 		id: "07",
-		title: routes["business-litigation-support"].label,
-		link: routes["business-litigation-support"].href,
-		image: require("../assets/images/service-image-7.jpg"),
-		description: "When business disputes arise, the right legal support can make or break the case. We provide strategic analysis, and well-founded legal groundwork to keep you ahead in your legal practice.",
-		mobileDescription: "When business disputes arise, the right legal support can make or break the case. We provide strategic analysis, and well-founded legal groundwork to keep you ahead in your legal practice."
-	},
-	{
-		id: "08",
 		title: routes["immigration"].label,
 		link: routes["immigration"].href,
 		image: require("../assets/images/service-image-8.jpg"),
@@ -1742,12 +1734,20 @@ export const serviceCards = [
 		mobileDescription: "Immigration is more than just paperwork—it's about securing the future. We prepare arguments, draft letters and fill forms with precision, ensuring a smooth, strategic path forward."
 	},
 	{
+		id: "08",
+		title: routes["intellectual-property"].label,
+		link: routes["intellectual-property"].href,
+		image: require("../assets/images/service-image-11.jpg"),
+		description: "We support attorneys with watertight IP documentation—trademark, patent, and copyright filings that stand strong under scrutiny.",
+		mobileDescription: "We support attorneys with watertight IP documentation—trademark, patent, and copyright filings that stand strong under scrutiny."
+	},
+	{
 		id: "09",
-		title: routes["family-law"].label,
-		link: routes["family-law"].href,
-		image: require("../assets/images/service-image-9.jpg"),
-		description: "Family law isn't just legal—it's personal. We review the documents in each case with strategy, discretion, and an unwavering commitment to securing the best outcome for you.",
-		mobileDescription: "Family law isn't just legal—it's personal. We review the documents in each case with strategy, discretion, and an unwavering commitment to securing the best outcome for you."
+		title: routes["criminal-law"].label,
+		link: routes["criminal-law"].href,
+		image: require("../assets/images/service-image-12.jpg"),
+		description: "We power defense attorneys with sharp, strategic paralegal support—from pre-trial prep to courtroom execution. Fast. Focused. Built to defend every right, every time.",
+		mobileDescription: "We power defense attorneys with sharp, strategic paralegal support—from pre-trial prep to courtroom execution. Fast. Focused. Built to defend every right, every time."
 	},
 	{
 		id: "10",
@@ -1756,5 +1756,21 @@ export const serviceCards = [
 		image: require("../assets/images/service-image-10.jpg"),
 		description: "Whether your client is an individual, business, or family struggling with debt, we navigate the legal pathways to financial freedom with precision and expertise.",
 		mobileDescription: "Whether your client is an individual, business, or family struggling with debt, we navigate the legal pathways to financial freedom with precision and expertise."
+	},
+	{
+		id: "11",
+		title: routes["contracts"].label,
+		link: routes["contracts"].href,
+		image: require("../assets/images/service-image-6.jpg"),
+		description: "From drafting to review, we ensure every contract puts your client in an advantageous position—clear, enforceable, and built to protect their interests.",
+		mobileDescription: "From drafting to review, we ensure every contract puts your client in an advantageous position—clear, enforceable, and built to protect their interests."
+	},
+	{
+		id: "12",
+		title: routes["business-litigation-support"].label,
+		link: routes["business-litigation-support"].href,
+		image: require("../assets/images/service-image-7.jpg"),
+		description: "When business disputes arise, the right legal support can make or break the case. We provide strategic analysis, and well-founded legal groundwork to keep you ahead in your legal practice.",
+		mobileDescription: "When business disputes arise, the right legal support can make or break the case. We provide strategic analysis, and well-founded legal groundwork to keep you ahead in your legal practice."
 	}
 ]

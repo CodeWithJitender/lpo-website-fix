@@ -28,7 +28,7 @@ const ServiceBox = (props) => {
   const SVGImageRef = useRef(null);
   const feTurbulenceRef = useRef(null);
   const feDisplacementMapRef = useRef(null);
-	const countRef = useRef(null);
+	// const countRef = useRef(null);
 	const titleRef = useRef(null);
 	const descriptionRef = useRef(null);
 	const captionRef = useRef(null);
@@ -156,7 +156,7 @@ const ServiceBox = (props) => {
         0
       )
       .to(
-        [countRef.current, titleRef.current, descriptionRef.current],
+        [titleRef.current, descriptionRef.current],
         {
           duration: 0.1,
           x: (_, i) => (i % 2 === 0 ? "-5%" : "5%"),
@@ -166,7 +166,7 @@ const ServiceBox = (props) => {
         0
       )
       .to(
-        [countRef.current, titleRef.current, descriptionRef.current],
+        [titleRef.current, descriptionRef.current],
         {
           duration: 0.5,
           ease: "power3",
@@ -225,7 +225,7 @@ const ServiceBox = (props) => {
 			className={styles.container}
 		>
 			<div className={styles.box} ref={boxRef}>
-				<div className={styles.count} ref={countRef}>{id}.</div>
+				{/* <div className={styles.count} ref={countRef}>{id}.</div> */}
 				<div className={styles.heading} ref={titleRef}>{title}</div>
 				<figure className={styles.image} ref={thumbRef}>
 					<svg

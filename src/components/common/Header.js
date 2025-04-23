@@ -103,13 +103,6 @@ const Header = () => {
 										<span>{routes.services.label}</span>
 									</Link>
 									<Link
-										to={routes["our-process"].href}
-										data-replace={routes["our-process"].label}
-										className={styles.headerLink}
-									>
-										<span>{routes["our-process"].label}</span>
-									</Link>
-									<Link
 										to={routes["contact-us"].href}
 										data-replace={routes["contact-us"].label}
 										className={styles.headerLink}
@@ -136,9 +129,7 @@ const Header = () => {
 							>
 								{/* <div className={styles.address}>3422 Old Capitol Trail, Wilmington DE 19808, USA</div> */}
 								<div className={styles.phone}>
-									<a href="tel:+1 732 344 4260">+1 (732) 344 4260</a><br/>
-									<a href="tel:+1 650 407 2112">+1 (650) 407 2112</a><br/>
-									<a href="tel:+91 931 056 8481">+91 (931) 056 8481</a>
+									<a href="tel:+1 650 407 2112">+1 (650) 407 2112</a>
 								</div>
 							</Grid>
 						</>

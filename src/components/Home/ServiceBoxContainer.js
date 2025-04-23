@@ -10,6 +10,8 @@ import serviceImage7 from "@/assets/images/service-image-7.jpg";
 import serviceImage8 from "@/assets/images/service-image-8.jpg";
 import serviceImage9 from "@/assets/images/service-image-9.jpg";
 import serviceImage10 from "@/assets/images/service-image-10.jpg";
+import serviceImage11 from "@/assets/images/service-image-11.jpg";
+import serviceImage12 from "@/assets/images/service-image-12.jpg";
 
 import { routes } from "@/utils/routesPath";
 
@@ -18,11 +20,11 @@ import ServiceBox from './ServiceBox';
 const servicesArray = [
 	{
 		id: "01",
-		title: "Real Estate Litigation",
-		description: "From property disputes to estate planning, we develop full proof documents that protect your client's assets and secure their future. When the stakes are high, we deliver results.",
-		contentBoxTitle: "Real estate law isn't just about property—it's about power.",
-		link: routes["real-estate-litigation"].href,
-		image: serviceImage1,
+		title: "Civil Litigation Support",
+		description: "Every strong case starts with strategic documentation. From binding contracts to persuasive motions, we prepare the legal foundation that positions your clients for success.",
+		contentBoxTitle: "Lawsuits aren't just won in court—they're built on paperwork.",
+		link: routes["civil-litigation-support"].href,
+		image: serviceImage3,
 	}, {
 		id: "02",
 		title: "Personal Injury",
@@ -32,53 +34,53 @@ const servicesArray = [
 		image: serviceImage2,
 	}, {
 		id: "03",
-		title: "Civil Litigation Support",
-		description: "Every strong case starts with strategic documentation. From binding contracts to persuasive motions, we prepare the legal foundation that positions your clients for success.",
-		contentBoxTitle: "Lawsuits aren't just won in court—they're built on paperwork.",
-		link: routes["civil-litigation-support"].href,
-		image: serviceImage3,
-	}, {
-		id: "04",
 		title: "Employment Law",
 		description: "Whether it's discrimination, retaliation, or wrongful termination, we prepare foolproof legal documentation to ensure justice is served.",
 		contentBoxTitle: "Your clients' rights aren't optional. They're enforceable.",
 		link: routes["employee-law"].href,
 		image: serviceImage4,
 	}, {
-		id: "05",
+		id: "04",
 		title: "Workers' Compensation",
-		description: "From pre-trial to post-trial, we handle the documentation that ensures your claim is strong, your clients' rights are protected, and your case is bulletproof.",
+		description: "From pre-trial to post-trial, we handle the documentation that ensures your claim is strong, your clients' rights are protected, and your case is foolproof.",
 		contentBoxTitle: "Injured on the job? We make sure the law works for you.",
 		link: routes["workers-compensation"].href,
 		image: serviceImage5,
 	}, {
+		id: "05",
+		title: "Real Estate Litigation",
+		description: "From property disputes to estate planning, we develop full proof documents that protect your client's assets and secure their future. When the stakes are high, we deliver results.",
+		contentBoxTitle: "Real estate law isn't just about property—it's about power.",
+		link: routes["real-estate-litigation"].href,
+		image: serviceImage1,
+	}, {
 		id: "06",
-		title: "Contracts",
-		description: "From drafting to review, we ensure every contract puts your client in an advantageous position—clear, enforceable, and built to protect their interests.",
-		contentBoxTitle: "A contract is only as strong as the words that bind it.",
-		link: routes["contracts"].href,
-		image: serviceImage6,
+		title: "Family Law",
+		description: "Family law isn't just legal—it's personal. We review the documents in each case with strategy, discretion, and an unwavering commitment to securing the best outcome for you.",
+		contentBoxTitle: "Family disputes need finesse, not just force.",
+		link: routes["family-law"].href,
+		image: serviceImage9,
 	}, {
 		id: "07",
-		title: "Business Litigation Support",
-		description: "When business disputes arise, the right legal support can make or break the case. We provide strategic analysis, and well-founded legal groundwork to keep you ahead in your legal practice.",
-		contentBoxTitle: "In business, the fine print is where battles are won.",
-		link: routes["business-litigation-support"].href,
-		image: serviceImage7,
-	}, {
-		id: "08",
 		title: "Immigration",
 		description: "Immigration is more than just paperwork—it's about securing the future. We prepare arguments, draft letters and fill forms with precision, ensuring a smooth, strategic path forward.",
 		contentBoxTitle: "Borders may divide, but the law unites.",
 		link: routes["immigration"].href,
 		image: serviceImage8,
 	}, {
+		id: "08",
+		title: "Intellectual Property",
+		description: "We support attorneys with watertight IP documentation—trademark, patent, and copyright filings that stand strong under scrutiny.",
+		contentBoxTitle: "IP Protection. Drafted Right. Defended Better.",
+		link: routes["intellectual-property"].href,
+		image: serviceImage11,
+	}, {
 		id: "09",
-		title: "Family Law",
-		description: "Family law isn't just legal—it's personal. We review the documents in each case with strategy, discretion, and an unwavering commitment to securing the best outcome for you.",
-		contentBoxTitle: "Family disputes need finesse, not just force.",
-		link: routes["family-law"].href,
-		image: serviceImage9,
+		title: "Criminal Law",
+		description: "We power defense attorneys with sharp, strategic paralegal support—from pre-trial prep to courtroom execution. Fast. Focused. Built to defend every right, every time.",
+		contentBoxTitle: "Criminal Defense. Backed by Precision.",
+		link: routes["criminal-law"].href,
+		image: serviceImage12,
 	}, {
 		id: "10",
 		title: "Bankrupcy",
@@ -86,7 +88,21 @@ const servicesArray = [
 		contentBoxTitle: "Bankrupcy isn't the end. It's a fresh start.",
 		link: routes["bankrupcy"].href,
 		image: serviceImage10,
-	}, 
+	}, {
+		id: "11",
+		title: "Contracts",
+		description: "From drafting to review, we ensure every contract puts your client in an advantageous position—clear, enforceable, and built to protect their interests.",
+		contentBoxTitle: "A contract is only as strong as the words that bind it.",
+		link: routes["contracts"].href,
+		image: serviceImage6,
+	}, {
+		id: "12",
+		title: "Business Litigation Support",
+		description: "When business disputes arise, the right legal support can make or break the case. We provide strategic analysis, and well-founded legal groundwork to keep you ahead in your legal practice.",
+		contentBoxTitle: "In business, the fine print is where battles are won.",
+		link: routes["business-litigation-support"].href,
+		image: serviceImage7,
+	},
 ];
 
 const ServiceBoxContainer = () => {

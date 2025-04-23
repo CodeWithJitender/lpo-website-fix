@@ -52,8 +52,12 @@
 
 .perWeekSection {
 	padding-bottom: 40px;
-	margin-bottom: 40px;
+	margin-bottom: 80px;
 	border-bottom: 5px solid #8e6954;
+
+	&Last {
+		margin-bottom: 40px;
+	}
 }
 
 .perWeekHours {
@@ -122,9 +126,9 @@
 
 @media screen and (max-width: 900px) {
 	.infoHeadingSection{
-		padding: 80px 70px 120px;
-		margin-right: 23px;
-		margin-left: -15px;
+		padding: 80px 72px 120px;
+		margin-right: 24px;
+		margin-left: -20px;
 		position: relative;
 		min-height: 400px;
 		display: flex;

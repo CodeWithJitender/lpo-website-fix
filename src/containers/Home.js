@@ -12,7 +12,7 @@ import iconSave from "@/assets/icons/icon-save.png";
 
 import arrowBig from "@/assets/icons/arrow-big.png";
 
-import precisionSectionBg from "@/assets/images/supreme-court-building.jpg";
+import precisionSectionBg from "@/assets/images/supreme-court-building.png";
 import precisionSectionBgMobile from "@/assets/images/supreme-court-building-mobile.jpg";
 
 import {
@@ -64,7 +64,7 @@ const Home = () => {
 								<Animate.FadeUp>
 									Every motion. <br/>
 									Every clause. <br/>
-									Every precedent — airtight, <br/>
+									Every precedent — watertight, <br/>
 									because we wrote it.
 								</Animate.FadeUp>
 							</Grid>
@@ -135,12 +135,16 @@ const Home = () => {
 								The Right Hands Behind Every Legal Move.
 							</Heading>
 							<Animate.FadeUp direction="up" className={styles.serviceText}>
-								We are not just paper pushers—we are the backbone of every well-prepared case, ensuring airtight filings, seamless compliance, and ironclad legal groundwork.
+								We are not just paper pushers—we are the backbone of every well-prepared case, ensuring watertight filings, seamless compliance, and ironclad legal groundwork.
 							</Animate.FadeUp>	
 							{!isMobile &&
 								<div className={styles.serviceLink}>
-									<LinkButton to="#" delay="100ms">Our services</LinkButton>
-									<LinkButton to="#" delay="200ms">consult with us</LinkButton>
+									<LinkButton
+										to={routes["contact-us"].href}
+										delay="100ms"
+									>
+										SCHEDULE A STRATEGY CALL WITH US
+									</LinkButton>
 								</div>
 							}			
 							
@@ -157,7 +161,7 @@ const Home = () => {
 						>
 							<QualityBox
 								icon={iconSave}
-								heading="Bulletproof Documentation"
+								heading="Foolproof Documentation"
 								text="Every document is drafted, reviewed, and refined to perfection."
 								direction="right"
 								delay="100ms"
@@ -188,8 +192,12 @@ const Home = () => {
 					
 				  {isMobile &&
 					  <div className={styles.serviceLink}>
-						  <LinkButton to="#" delay="100ms">Our services</LinkButton>
-						  <LinkButton to="#" delay="200ms">consult with us</LinkButton>
+							<LinkButton
+								to={routes["contact-us"].href}
+								delay="100ms"
+							>
+								SCHEDULE A STRATEGY CALL WITH US
+							</LinkButton>
 					  </div>
 				  }	
 				</Container>
@@ -209,7 +217,7 @@ const Home = () => {
 							direction="up"
 							className={styles.legalSupportText}
 						>
-							Whether it's a high-stakes litigation or an airtight contract, we handle it like a grandmaster plays chess—three moves ahead, with a checkmate always in sight.
+							Whether it's a high-stakes litigation or an watertight contract, we handle it like a grandmaster plays chess—three moves ahead, with a checkmate always in sight.
 						</Animate.FadeUp>
 					  <Animate.ScaleIn className={styles.legalSupportIcon}>
 							<img src={stampIcon} className={styles.stampIcon} alt="" />
@@ -245,7 +253,7 @@ const Home = () => {
 							direction="up"
 							className={styles.uspSectionText}
 						>
-							Elite expertise, seamless management, and airtight security—built to deliver, every time.
+							Elite expertise, seamless management, and watertight security—built to deliver, every time.
 						</Animate.FadeUp>
 					</Grid>
 				</Grid>

@@ -1,11 +1,7 @@
 import React from "react";
 import Grid from "@mui/material/Grid2";
 
-import {
-	Heading,
-	LinkButton,
-	Animate
-} from "@/components/common";
+import { Heading, Animate } from "@/components/common";
 import { useDevice } from '@/context/DeviceContext';
 
 import areaOfExpertiese from '@/assets/images/area-of-expertise.jpg';
@@ -38,10 +34,6 @@ const AreaOfExpertise = () => {
 					<Animate.FadeUp direction="up" className={styles.legalSupportText}>
 						With expertise spanning civil litigation, real estate, business law, employment law, family law, and more, we anticipate challenges before they arise, delivering documents that hold up under scrutiny and strategies that keep attorneys ahead of the curve.
 					</Animate.FadeUp>
-					<div className={styles.legalSupportLink}>
-						<LinkButton to="#" delay="100ms">explore services</LinkButton>
-						<LinkButton to="#" delay="200ms">consult with us</LinkButton>
-					</div>
 				</Grid>
 			</Grid>
 		</section>

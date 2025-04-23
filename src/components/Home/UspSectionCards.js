@@ -39,7 +39,7 @@ const cardData = [
   {
     id: 4,
     title: "Technology and Data Security Driven",
-    text: "Ironclad Security. Bulletproof Precision.",
+    text: "Ironclad Security. Foolproof Precision.",
     imgSrc: uspIcon4,
     bgClass: "bg-4",
   },

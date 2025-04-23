@@ -11,16 +11,12 @@ export const routes = {
 		label: 'Services',
 		href: "/services"
 	},
-	"our-process": {
-		label: 'Our Process',
-		href: "/our-process"
-	},
 	"contact-us": {
 		label: 'Contact Us',
 		href: "/contact-us"
 	},
 	"faq": {
-		label: "FAQ's",
+		label: "FAQs",
 		href: "/faq"
 	},
 	"real-estate-litigation": {
@@ -62,6 +58,14 @@ export const routes = {
 	"bankrupcy": {
 		label: 'Bankrupcy',
 		href: '/services/bankrupcy'
+	},
+	"intellectual-property": {
+		label: 'Intellectual Property',
+		href: '/services/intellectual-property'
+	},
+	"criminal-law": {
+		label: 'Criminal Law',
+		href: '/services/criminal-law'
 	},
 	"terms-of-service": {
 		label: 'Terms of Service',

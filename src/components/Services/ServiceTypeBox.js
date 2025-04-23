@@ -14,7 +14,7 @@ const ServiceTypeBox = (props) => {
 	const {
 		heading,
 		text,
-		id,
+		// id,
 		image,
 		direction,
 		delay,
@@ -46,7 +46,7 @@ const ServiceTypeBox = (props) => {
 				alignItems="center"
 				spacing={0}
 			>
-				{isMobile && <Grid size={12} className={styles.serviceBoxNumber}>{id}.</Grid>}
+				{isMobile && <Grid size={12} className={styles.serviceBoxNumber}>&nbsp;</Grid>}
 				<Grid
 					size={12}
 					className={styles.serviceBoxHeading}
@@ -63,7 +63,7 @@ const ServiceTypeBox = (props) => {
 				spacing={0}
 				alignContent="space-between"
 			>
-				{!isMobile && <Grid size={12} className={styles.serviceBoxNumber}>{id}.</Grid>}
+				{!isMobile && <Grid size={12} className={styles.serviceBoxNumber}>&nbsp;</Grid>}
 				<Grid size={12}>
 					<div className={styles.connectWithUsButton}>
 						<span>
