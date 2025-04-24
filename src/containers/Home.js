@@ -27,6 +27,7 @@ import AreaOfExpertise from "@/components/Home/AreaOfExpertise";
 import FlexibleFirePower from '@/components/Home/FlexibleFirepower';
 import ServiceInfo from '@/components/Home/ServiceInfo';
 import UspSectionCards from '@/components/Home/UspSectionCards';
+import Clients from '@/components/Home/Clients';
 
 import { useDevice } from '@/context/DeviceContext';
 
@@ -259,6 +260,7 @@ const Home = () => {
 				</Grid>
 				<UspSectionCards />
 			</section>
+			<Clients />
 			<FlexibleFirePower />
 		</>
   );

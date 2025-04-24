@@ -22,26 +22,36 @@
 	height: auto;
 }
 
-.address,
-.phone {
-	font-family: Poppins, sans-serif;
-	font-size: 10px;
-	color: #a4836f;
+.phoneButton {
+	border-radius: 50px;
+	background: #dec4a5;
+	color: #070c1e;
+	padding: 16px 40px;
+	transition: all 0.3s ease;
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	width: fit-content;
+	font-size: 12px;
 	font-weight: 600;
+	justify-self: flex-end;
 
-	a {
-		text-decoration: none;
-		color: #a4836f;
-		transition: color 0.3s ease;
+	svg {
+		width: 20px;
+    height: 20px;
+    fill: #070c1e;
+		margin-right: 8px;
+		transition: fill 0.3s ease;
+	}
 
-		&:hover {
-			color: #fff8f2;
+	&:hover {
+		color: #f7f5f3;
+		background: #433636;
+
+		svg {
+			fill: #f7f5f3;
 		}
 	}
-}
-
-.phone {
-	color: #b7a397;
 }
 
 .headerLink {

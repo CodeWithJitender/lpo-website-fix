@@ -8,6 +8,8 @@ import { useDevice } from '@/context/DeviceContext';
 
 import { routes } from "@/utils/routesPath";
 
+import { PhoneIcon } from "@/components/Icons";
+
 import logo from "@/assets/images/logo.png";
 
 import Menu from "./Menu";
@@ -125,12 +127,12 @@ const Header = () => {
 									md: 2,
 									lg: 2
 								}}
-								sx={{ textAlign: "right", alignSelf: "center" }}
+								sx={{ textAlign: "right", alignSelf: "flex-end" }}
 							>
-								{/* <div className={styles.address}>3422 Old Capitol Trail, Wilmington DE 19808, USA</div> */}
-								<div className={styles.phone}>
-									<a href="tel:+1 650 407 2112">+1 (650) 407 2112</a>
-								</div>
+								<a href="tel:+1 650 407 2112" className={styles.phoneButton}>
+									<PhoneIcon />
+									+1 (650) 407 2112
+								</a>
 							</Grid>
 						</>
 					)
