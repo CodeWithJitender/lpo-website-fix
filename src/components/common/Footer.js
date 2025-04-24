@@ -148,7 +148,13 @@ const Footer = () => {
 						className={styles.copyrightText}
 					>
 						<span className={styles.addressHeading}>US Headquarters:</span>
-						3422 Old Capitol Trail, Wilmington DE 19808 , USA
+						<a
+							href="https://g.co/kgs/2Gbqrfo"
+							rel="noopener noreferrer nofollow"
+							target="_blank"
+						>
+							3422 Old Capitol Trail, Wilmington DE 19808, USA
+						</a>
 					</Grid>
 					<Grid
 						size={{
@@ -160,7 +166,13 @@ const Footer = () => {
 						className={styles.copyrightText}
 					>
 						<span className={styles.addressHeading}>Office Operations:</span>
-						B8, B Block, Sector 59, Noida, Uttar Pradesh 201301
+						<a
+							href="https://g.co/kgs/jd2x9s4"
+							rel="noopener noreferrer nofollow"
+							target="_blank"
+						>
+							B8, B Block, Sector 59, Noida, Uttar Pradesh 201301, India
+						</a>
 					</Grid>
 					<Grid
 						size={{
