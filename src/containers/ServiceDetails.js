@@ -21,12 +21,12 @@ import { CircleArrow } from "@/components/Icons";
 import ServiceTypeBox from "@/components/Services/ServiceTypeBox";
 import ServiceClipAnimation from "@/components/Services/ServiceClipAnimation";
 import AccordianItem from "@/components/Services/AccordianItem";
+import OurProcess from "@/components/Services/OurProcess";
 
 import { useDevice } from '@/context/DeviceContext';
 
 import expertiseSeal from "@/assets/images/confidential-seal.png";
 
-import pencilIcon from "@/assets/icons/pencil-icon.png";
 import playButtonIcon from "@/assets/icons/button-play-icon.png";
 
 import { serviceCards, servicesInfo } from "@/utils/serviceInfo";
@@ -199,52 +199,11 @@ const Service = () => {
 									/>
 								))
 							}
-							{/* <AccordianItem
-								icon={accordianIcon1}
-								id="panel1"
-								onChange={handleChange}
-								heading="Client Onboarding & Case Merit Evaluation"
-								expanded={expanded}
-							/>
-							<AccordianItem
-								icon={accordianIcon2}
-								id="panel2"
-								onChange={handleChange}
-								heading="Medical Record Retrieval & Summarization"
-								expanded={expanded}
-							/>
-							<AccordianItem
-								icon={accordianIcon3}
-								id="panel3"
-								onChange={handleChange}
-								heading="Document Drafting & Discovery Support"
-								expanded={expanded}
-							/>
-							<AccordianItem
-								icon={accordianIcon4}
-								id="panel4"
-								onChange={handleChange}
-								heading="Legal Research, Case Law Review & Legal Interpretation"
-								expanded={expanded}
-							/>
-							<AccordianItem
-								icon={accordianIcon5}
-								id="panel5"
-								onChange={handleChange}
-								heading="Litigation & Trial Support"
-								expanded={expanded}
-							/>
-							<AccordianItem
-								icon={accordianIcon6}
-								id="panel6"
-								onChange={handleChange}
-								heading="Administrative Tasks"
-								expanded={expanded}
-							/> */}
 						</Grid>
 					</Grid>
 				</Container>
 			</section>
+			<OurProcess />
 			<section className={styles.formSection}>
 				<Container maxWidth="xl">
 					<Grid
@@ -255,7 +214,7 @@ const Service = () => {
 					>
 						<Grid size={{md:12, lg: 4}}>
 							<div>
-								<img src={pencilIcon} className={styles.formPensilIcon} alt="" />
+								<Heading className={styles.getInTouchHeading}>Get In Touch</Heading>
 							</div>
 							<div className={styles.formHeading}>
 								Tell us what you need, 
