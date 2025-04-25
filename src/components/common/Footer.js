@@ -4,7 +4,7 @@ import Grid from "@mui/material/Grid2";
 
 import logo from "@/assets/images/logo.png";
 
-import { Facebook, Instagram, Twitter, LinkedIn } from "@/components/Icons";
+import { Instagram, LinkedIn } from "@/components/Icons";
 
 import { useDevice } from '@/context/DeviceContext';
 
@@ -22,35 +22,35 @@ const Footer = () => {
 		<>
 			<section className={styles.letsWinTogetherSection}>
 				<Grid container size={12} justifyContent="center">
+					<Grid
+						container
+						size={{
+							xs: 12,
+							sm: 12,
+							md: 12,
+							lg: 9,
+						}}
+						alignItems="center"
+					>
 						<Grid
-							container
 							size={{
 								xs: 12,
 								sm: 12,
 								md: 12,
-								lg: 9,
+								lg: 3,
 							}}
-							alignItems="center"
 						>
-							<Grid
-								size={{
-									xs: 12,
-									sm: 12,
-									md: 12,
-									lg: 3,
-								}}
-							>
-								<Animate.FadeUp direction="down" className={styles.infoSmallSection}>
-									Let's get our A game to the court.
-								</Animate.FadeUp>
-								<Animate.FadeUp direction="up" className={styles.infoBigSection}>
-									
-								{!isMobile && <div className={styles.infoHeading1}>Let's win—</div>}	
-								<div className={styles.infoHeading2}>{isMobile && "Let's win—" }together.</div>
-								</Animate.FadeUp>
-							</Grid>
-							<NaturalLanguageForm />
+							<Animate.FadeUp direction="down" className={styles.infoSmallSection}>
+								Let's get our A game to the court.
+							</Animate.FadeUp>
+							<Animate.FadeUp direction="up" className={styles.infoBigSection}>
+								
+							{!isMobile && <div className={styles.infoHeading1}>Let's win—</div>}	
+							<div className={styles.infoHeading2}>{isMobile && "Let's win—" }together.</div>
+							</Animate.FadeUp>
 						</Grid>
+						<NaturalLanguageForm />
+					</Grid>
 				</Grid>
 			</section>
 			<section className={styles.footer}>

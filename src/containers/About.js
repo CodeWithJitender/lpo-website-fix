@@ -20,7 +20,6 @@ import linkedIcon from "@/assets/icons/about-linkedin-icon.png";
 import playButtonIcon from "@/assets/icons/button-play-icon.png";
 
 import legalStamp from "@/assets/images/about-legal-stamp.png";
-import founderLaptopImage from "@/assets/images/kunal-in-laptop.png";
 
 import * as styles from "./About.module.scss";
 
@@ -276,28 +275,81 @@ const About = () => {
 				</Grid>
 			</section>
 			<section className={styles.aboutFounder}>
-				<div className={styles.founderLaptopImage}>
-					<img src={founderLaptopImage} alt="" />
-				</div>
-				<Grid size={12} container justifyContent="center">
-					<Grid size={{sm:12, md: 7}}>
-						<div className={styles.founderTitle}>
-							Meet the Visionary Behind Glocal LPO
-						</div>
-						<div className={styles.name}>
-							Kunal Jaggi
-						</div>
-						<div className={styles.designation}>
-							Founder and CEO
-						</div>
-						<div className={styles.description}>
-							Kunal Jaggi, Founder & CEO of Glocal LPO, is a visionary leader with 15+ years in outsourcing, sales, and operations. He also heads Head Field Solutions, a market leader in recruitment, digital, and virtual assistant services across the US and Canada. With a people-first approach, he has built Glocal LPO into a trusted legal outsourcing partner for global law firms and corporations.
-						</div>
-						<div className={styles.socialFootprint}>
-							<img src={linkedIcon} alt="" className={styles.linkedinIcon} />
-						</div>
+				<Container maxWidth="xl" className={styles.founderContainer}>
+					<Grid
+						size={12}
+						justifyContent="center"
+						className={styles.commonContainer}
+					>
+						<Heading className={styles.meetTheTeamHeading}>Meet the Team</Heading>
 					</Grid>
-				</Grid>
+					<Grid
+						size={12}
+						container
+						justifyContent="center"
+						className={styles.commonContainer}
+						spacing={4}
+					>
+						<Grid
+							size={{sm:12, md: 6}}
+							className={styles.founderColumn}
+						>
+							<div className={styles.founderImage}>
+								<img src="https://placehold.co/600x300/070c1e/FFFFFF/png" alt="" />
+							</div>
+							<div className={styles.founderTitle}>
+								The Visionary Behind Glocal LPO
+							</div>
+							<div className={styles.name}>
+								Kunal Jaggi
+							</div>
+							<div className={styles.designation}>
+								Founder & CEO, Glocal IPO
+							</div>
+							<div className={styles.description}>
+								Kunal Jaggi, the force behind Glocal LPO, blends 20+ years of global outsourcing leadership with a sharp eye for legal innovation. As a people-first visionary, he's redefining legal support with precision, passion, and purpose.
+							</div>
+							<div className={styles.socialFootprint}>
+								<a
+									href="https://www.linkedin.com/in/kunal-jaggi-0b5a182/"
+									target="_blank"
+									rel="noopener noreferrer nofollow"
+								>
+									<img src={linkedIcon} alt="" className={styles.linkedinIcon} />
+								</a>
+							</div>
+						</Grid>
+						<Grid
+							size={{sm:12, md: 6}}
+							className={styles.founderColumn}
+						>
+							<div className={styles.founderImage}>
+								<img src="https://placehold.co/600x300/070c1e/FFFFFF/png" alt="" />
+							</div>
+							<div className={styles.founderTitle}>
+								The Force Behind Business Operations
+							</div>
+							<div className={styles.name}>
+								Deepti Sisodiya
+							</div>
+							<div className={styles.designation}>
+								Business Head. Glocal LPO
+							</div>
+							<div className={styles.description}>
+								Deepti, the powerhouse behind Glocal LPO, drives growth with sharp legal outsourcing acumen and a client-first mindset. With 180+ experts under her lead, sne aelivers smar, scalable solutions wiin precision ana neari
+							</div>
+							<div className={styles.socialFootprint}>
+								<a
+									href="https://www.linkedin.com/in/deepti-sisodiya-b87170236/"
+									target="_blank"
+									rel="noopener noreferrer nofollow"
+								>
+									<img src={linkedIcon} alt="" className={styles.linkedinIcon} />
+								</a>
+							</div>
+						</Grid>
+					</Grid>
+				</Container>
 			</section>
 		</>
   );

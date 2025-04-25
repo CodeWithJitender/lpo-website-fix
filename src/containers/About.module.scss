@@ -153,15 +153,24 @@
 	background-size: cover;
 	padding-bottom: 100px;
 	position: relative;
-	padding-top: 17%;
+	padding-top: 11%;
 }
 
-.founderLaptopImage {
-	width: 60%;
-	position: absolute;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	top: 0;
+.meetTheTeamHeading {
+	color: #070c1e;
+	text-align: center;
+	margin-bottom: 60px;
+}
+
+.founderColumn {
+	margin-bottom: 20px;
+}
+
+.founderImage {
+	border-radius: 6px;
+	margin-bottom: 40px;
+	overflow: hidden;
+	height: 300px;
 
 	img {
 		width: 100%;
@@ -173,6 +182,7 @@
 	font-size: 20px;
 	color: #423635;
 	text-align: center;
+	margin-bottom: 8px;
 }
 
 .name {
@@ -234,6 +244,14 @@
 }
 
 @media screen and (max-width: 900px) {
+	.founderContainer {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+
+	.founderImage {
+		height: 150px;
+	}
 	.headingContainer {
 		padding-left: 0 !important;
 		padding-right: 0 !important;
