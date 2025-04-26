@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import {
 	Container,
-	Grid2 as Grid,
-	TextField
+	Grid2 as Grid
 } from "@mui/material";
 import { useLocation } from "react-router-dom";
 
@@ -25,10 +24,10 @@ import OurProcess from "@/components/Services/OurProcess";
 import { useDevice } from '@/context/DeviceContext';
 
 import expertiseSeal from "@/assets/images/confidential-seal.png";
-
 import playButtonIcon from "@/assets/icons/button-play-icon.png";
 
 import { serviceCards, servicesInfo } from "@/utils/serviceInfo";
+import { routes } from "@/utils/routesPath";
 
 import * as styles from "./ServiceDetails.module.scss";
 
@@ -115,7 +114,7 @@ const Service = () => {
 						</Animate.FadeUp>
 
 						<div>
-							<LinkButton to="#" className={styles.bookButton}>
+							<LinkButton to={routes["contact-us"].href} className={styles.bookButton}>
 								<span>BOOK AN INTERVIEW WITH A PARALEGAL</span>
 								{!isMobile && <span><img src={playButtonIcon} alt="" /></span>}
 							</LinkButton>
@@ -123,38 +122,42 @@ const Service = () => {
 					</Grid>
 				</Grid>
 			</section>
-			<section>
-				<Container maxWidth="xl">
-					<Grid
-						container
-						className={styles.commonContainer}
-						flexDirection="column"
-					>
-						<Grid size={12}>
-							<Heading>Types of Cases We Specialize In:</Heading>
-						</Grid>
-						<Grid
-							container
-							size={12}
-							spacing={4}
-							className={styles.typeOfServiceBoxContainer}
-						>
-							{
-								serviceDetails.casesSpecializedIn.map((caseInfo, index) => (
-									<ServiceTypeBox
-										key={caseInfo.id}
-										id={caseInfo.id}
-										heading={caseInfo.title}
-										text={caseInfo.description}
-										image={caseInfo.image}
-										direction={index % 2 === 0 ? "right" : "left"}
-									/>
-								))
-							}
-						</Grid>
-					</Grid>
-				</Container>
-			</section>
+			{
+				serviceDetails.casesSpecializedIn ? (
+					<section>
+						<Container maxWidth="xl">
+							<Grid
+								container
+								className={styles.commonContainer}
+								flexDirection="column"
+							>
+								<Grid size={12}>
+									<Heading>Types of Cases We Specialize In:</Heading>
+								</Grid>
+								<Grid
+									container
+									size={12}
+									spacing={4}
+									className={styles.typeOfServiceBoxContainer}
+								>
+									{
+										serviceDetails.casesSpecializedIn.map((caseInfo, index) => (
+											<ServiceTypeBox
+												key={caseInfo.id}
+												id={caseInfo.id}
+												heading={caseInfo.title}
+												text={caseInfo.description}
+												image={caseInfo.image}
+												direction={index % 2 === 0 ? "right" : "left"}
+											/>
+										))
+									}
+								</Grid>
+							</Grid>
+						</Container>
+					</section>
+				) : null
+			}
 			<section className={styles.silhoutContainer}>
 				<Grid size={12}>
 					<ServiceClipAnimation />

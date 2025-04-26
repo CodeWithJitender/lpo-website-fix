@@ -327,20 +327,20 @@ const About = () => {
 								<img src="https://placehold.co/600x600/070c1e/FFFFFF/png" alt="" />
 							</div>
 							<div className={styles.founderTitle}>
-								The Force Behind Business Operations
+								The Mind Behind Sales & Marketing
 							</div>
 							<div className={styles.name}>
-								Deepti Sisodiya
+								Srishti Khatri
 							</div>
 							<div className={styles.designation}>
-								Business Head. Glocal LPO
+								VP - Sales & Marketing
 							</div>
 							<div className={styles.description}>
-								Deepti, the powerhouse behind Glocal LPO, drives growth with sharp legal outsourcing acumen and a client-first mindset. With 180+ experts under her lead, sne aelivers smar, scalable solutions wiin precision ana neari
+								Srishti drives growth at Glocal LPO through strategic partnerships and sharp marketing expertise, strengthening brand presence and business expansion.
 							</div>
 							<div className={styles.socialFootprint}>
 								<a
-									href="https://www.linkedin.com/in/deepti-sisodiya-b87170236/"
+									href="https://www.linkedin.com/in/kunal-jaggi-0b5a182/"
 									target="_blank"
 									rel="noopener noreferrer nofollow"
 								>
@@ -356,20 +356,20 @@ const About = () => {
 								<img src="https://placehold.co/600x600/070c1e/FFFFFF/png" alt="" />
 							</div>
 							<div className={styles.founderTitle}>
-								The Visionary Behind Glocal LPO
+								The Force Behind Business Operations
 							</div>
 							<div className={styles.name}>
-								Srishti
+								Deepti Sisodiya
 							</div>
 							<div className={styles.designation}>
-								VP of sales and marketing
+								Business Head. Glocal LPO
 							</div>
 							<div className={styles.description}>
-								Kunal Jaggi, the force behind Glocal LPO, blends 20+ years of global outsourcing leadership with a sharp eye for legal innovation. As a people-first visionary, he's redefining legal support with precision, passion, and purpose.
+								Deepti, the powerhouse behind Glocal LPO, drives growth with sharp legal outsourcing acumen and a client-first mindset. With 180+ experts under her lead, sne aelivers smar, scalable solutions wiin precision ana neari
 							</div>
 							<div className={styles.socialFootprint}>
 								<a
-									href="https://www.linkedin.com/in/kunal-jaggi-0b5a182/"
+									href="https://www.linkedin.com/in/deepti-sisodiya-b87170236/"
 									target="_blank"
 									rel="noopener noreferrer nofollow"
 								>

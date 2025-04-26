@@ -13,6 +13,8 @@ import { useDevice } from '@/context/DeviceContext';
 
 import { ChevronIcon } from "@/components/Icons";
 
+import { routes } from "@/utils/routesPath";
+
 import playButtonIcon from "@/assets/icons/button-play-icon.png";
 
 import * as styles from "./AccordianItem.module.scss";
@@ -89,7 +91,7 @@ const AccordianItem = (props) => {
 							<div className={styles.globalText}>
 								{content.description}
 							</div>
-							<LinkButton to="#" className={styles.bookButton}>
+							<LinkButton to={routes["contact-us"].href} className={styles.bookButton}>
 								<span>BOOK AN INTERVIEW WITH A PARALEGAL</span>
 								{!isMobile && <span><img src={playButtonIcon} alt="" /></span>}
 							</LinkButton>

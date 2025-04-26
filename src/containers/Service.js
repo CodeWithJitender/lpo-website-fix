@@ -14,6 +14,8 @@ import ServiceBoxContainer from '@/components/Home/ServiceBoxContainer';
 
 import { useDevice } from '@/context/DeviceContext';
 
+import { routes } from "@/utils/routesPath";
+
 import pencilIcon from "@/assets/icons/pencil-icon.png";
 import playButtonIcon from "@/assets/icons/button-play-icon.png";
 
@@ -73,7 +75,7 @@ const Service = () => {
 						</Animate.FadeUp>
 
 						<div>
-							<LinkButton to="#" className={styles.bookButton}>
+							<LinkButton to={routes["contact-us"].href} className={styles.bookButton}>
 								<span>BOOK AN INTERVIEW WITH A PARALEGAL</span>
 								{!isMobile && <span><img src={playButtonIcon} alt="" /></span>}
 							</LinkButton>

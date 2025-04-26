@@ -82,6 +82,8 @@
 		margin-bottom: 12px;
 		padding-bottom: 12px;
 		border-bottom: 1px solid #564847;
+		position: relative;
+		padding-left: 28px;
 
 		&::before {
 			content: '';
@@ -91,8 +93,9 @@
 			height: 16px;
 			display: inline-block;
 			margin-right: 12px;
-			position: relative;
+			position: absolute;
 			top: 3px;
+			left: 0;
 		}
 
 		&:last-child {
