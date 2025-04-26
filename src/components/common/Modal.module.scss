@@ -1,0 +1,28 @@
+.box {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #DEC4A5;
+	border-radius: 12px;
+	max-height: 400px;
+	overflow-y: auto;
+}
+
+.closeIcon {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	z-index: 999;
+}
+
+@media screen and (max-width: 900px) {
+	.box {
+		width: 90%;
+		height: 80vh;
+		padding: 20px !important;
+	}
+}

@@ -57,6 +57,14 @@ const theme = createTheme({
 				}
 			}
 		},
+		MuiBackdrop: {
+			styleOverrides: {
+				root: {
+					background: "rgba(7, 12, 30, 0.7)",
+					backdropFilter: "blur(9.5px)"
+				}
+			}
+		},
 		MuiInput: {
 			styleOverrides: {
 				root: {

@@ -228,6 +228,14 @@
 }
 
 @media screen and (max-width: 900px) {
+	.dividerContainer {
+		padding: 0;
+	}
+
+	.carouselHeadingSection {
+		padding: 40px 20px;
+	}
+
 	.founderContainer {
 		padding-left: 0 !important;
 		padding-right: 0 !important;
@@ -282,12 +290,12 @@
 	
 		.slick-prev {
 			transform: rotate(270deg);
-			left: 40%;
+			left: 39%;
 		}
 	
 		.slick-next {
 			transform: rotate(90deg);
-			left: 53%;
+			left: 54%;
 		}
 	}
 }

@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container, Grid2 as Grid } from '@mui/material';
 
 import {
 	Heading,
 	LinkButton,
 	QualityBox,
-	Animate
+	Animate,
+	Modal
 } from '@/components/common';
+
+import AboutKunal from '@/components/About/AboutKunal';
+import AboutDeepti from '@/components/About/AboutDeepti';
+import AboutSrishti from '@/components/About/AboutSrishti';
 
 import { useDevice } from '@/context/DeviceContext';
 
@@ -25,6 +30,26 @@ import * as styles from "./About.module.scss";
 
 const About = () => {
 	const { isMobile } = useDevice();
+
+	const [toggleModal, setToggleModal] = useState(false);
+	const [modalInfo, setModalInfo] = useState("");
+
+	const handleModalOpen = (name = "") => {
+		setToggleModal(!toggleModal);
+		setModalInfo(name);
+	};
+
+	const renderModelContent = () => {
+		if (modalInfo === "kunal") {
+			return <AboutKunal />;
+		}
+
+		if (modalInfo === "deepti") {
+			return <AboutDeepti />;
+		}
+
+		return <AboutSrishti />;
+	};
 
   return (
     <>
@@ -294,7 +319,7 @@ const About = () => {
 							size={{sm:12, md: 4}}
 							className={styles.founderColumn}
 						>
-							<div className={styles.founderImage}>
+							<div className={styles.founderImage} onClick={() => handleModalOpen("kunal")}>
 								<img src="https://placehold.co/600x600/070c1e/FFFFFF/png" alt="" />
 							</div>
 							<div className={styles.founderTitle}>
@@ -323,7 +348,7 @@ const About = () => {
 							size={{sm:12, md: 4}}
 							className={styles.founderColumn}
 						>
-							<div className={styles.founderImage}>
+							<div className={styles.founderImage} onClick={() => handleModalOpen("srishti")}>
 								<img src="https://placehold.co/600x600/070c1e/FFFFFF/png" alt="" />
 							</div>
 							<div className={styles.founderTitle}>
@@ -340,7 +365,7 @@ const About = () => {
 							</div>
 							<div className={styles.socialFootprint}>
 								<a
-									href="https://www.linkedin.com/in/kunal-jaggi-0b5a182/"
+									href="https://www.linkedin.com/in/srishti-khatri-a13a86119/"
 									target="_blank"
 									rel="noopener noreferrer nofollow"
 								>
@@ -352,7 +377,7 @@ const About = () => {
 							size={{sm:12, md: 4}}
 							className={styles.founderColumn}
 						>
-							<div className={styles.founderImage}>
+							<div className={styles.founderImage} onClick={() => handleModalOpen("deepti")}>
 								<img src="https://placehold.co/600x600/070c1e/FFFFFF/png" alt="" />
 							</div>
 							<div className={styles.founderTitle}>
@@ -380,6 +405,13 @@ const About = () => {
 					</Grid>
 				</Container>
 			</section>
+			<Modal
+				open={toggleModal}
+				onClose={handleModalOpen}
+			>
+				
+				{renderModelContent()}
+			</Modal>
 		</>
   );
 };

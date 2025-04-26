@@ -14,3 +14,4 @@ export { default as ShareResume } from "./ShareResume";
 export { default as WritingPen } from "./WritingPen";
 export { default as ArrowUpFilled } from "./ArrowUpFilled";
 export { default as StarIcon } from "./StarIcon";
+export { default as CloseIcon } from "./CloseIcon";

@@ -7,3 +7,9 @@ body {
 	height: 100%;
 	// overflow-x: hidden;
 }
+
+* {
+	:focus-visible {
+		outline: 0 !important;
+	}
+}
