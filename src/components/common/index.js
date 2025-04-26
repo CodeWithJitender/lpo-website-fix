@@ -6,3 +6,4 @@ export { default as QualityBox } from "./QualityBox";
 export { default as Animate } from "./Animate";
 export { default as Carousel } from "./Carousel";
 export { default as ServiceCard } from "./ServiceCard";
+export { default as ContactForm } from "./ContactForm";

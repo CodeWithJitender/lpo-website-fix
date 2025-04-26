@@ -291,11 +291,11 @@ const About = () => {
 						spacing={4}
 					>
 						<Grid
-							size={{sm:12, md: 6}}
+							size={{sm:12, md: 4}}
 							className={styles.founderColumn}
 						>
 							<div className={styles.founderImage}>
-								<img src="https://placehold.co/600x300/070c1e/FFFFFF/png" alt="" />
+								<img src="https://placehold.co/600x600/070c1e/FFFFFF/png" alt="" />
 							</div>
 							<div className={styles.founderTitle}>
 								The Visionary Behind Glocal LPO
@@ -320,11 +320,11 @@ const About = () => {
 							</div>
 						</Grid>
 						<Grid
-							size={{sm:12, md: 6}}
+							size={{sm:12, md: 4}}
 							className={styles.founderColumn}
 						>
 							<div className={styles.founderImage}>
-								<img src="https://placehold.co/600x300/070c1e/FFFFFF/png" alt="" />
+								<img src="https://placehold.co/600x600/070c1e/FFFFFF/png" alt="" />
 							</div>
 							<div className={styles.founderTitle}>
 								The Force Behind Business Operations
@@ -341,6 +341,35 @@ const About = () => {
 							<div className={styles.socialFootprint}>
 								<a
 									href="https://www.linkedin.com/in/deepti-sisodiya-b87170236/"
+									target="_blank"
+									rel="noopener noreferrer nofollow"
+								>
+									<img src={linkedIcon} alt="" className={styles.linkedinIcon} />
+								</a>
+							</div>
+						</Grid>
+						<Grid
+							size={{sm:12, md: 4}}
+							className={styles.founderColumn}
+						>
+							<div className={styles.founderImage}>
+								<img src="https://placehold.co/600x600/070c1e/FFFFFF/png" alt="" />
+							</div>
+							<div className={styles.founderTitle}>
+								The Visionary Behind Glocal LPO
+							</div>
+							<div className={styles.name}>
+								Srishti
+							</div>
+							<div className={styles.designation}>
+								VP of sales and marketing
+							</div>
+							<div className={styles.description}>
+								Kunal Jaggi, the force behind Glocal LPO, blends 20+ years of global outsourcing leadership with a sharp eye for legal innovation. As a people-first visionary, he's redefining legal support with precision, passion, and purpose.
+							</div>
+							<div className={styles.socialFootprint}>
+								<a
+									href="https://www.linkedin.com/in/kunal-jaggi-0b5a182/"
 									target="_blank"
 									rel="noopener noreferrer nofollow"
 								>

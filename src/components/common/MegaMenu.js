@@ -27,7 +27,7 @@ const MegaMenu = () => {
 								<div className={styles.starIcon}>
 									<StarIcon className={styles.icon} />
 								</div>
-								<div className={styles.menuInfo}>
+								<div>
 									<div className={styles.menuTitle}>{service.title}</div>
 									<div className={styles.menuDescription}>
 										{service.description}

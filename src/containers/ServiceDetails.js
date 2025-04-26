@@ -11,12 +11,11 @@ import {
 	LinkButton,
 	ServiceCard,
 	Carousel,
-	Animate
+	Animate,
+	ContactForm
 } from '@/components/common';
 
 import NotFound from "@/containers/NotFound";
-
-import { CircleArrow } from "@/components/Icons";
 
 import ServiceTypeBox from "@/components/Services/ServiceTypeBox";
 import ServiceClipAnimation from "@/components/Services/ServiceClipAnimation";
@@ -205,124 +204,7 @@ const Service = () => {
 			</section>
 			<OurProcess />
 			<section className={styles.formSection}>
-				<Container maxWidth="xl">
-					<Grid
-						container
-						className={styles.commonContainer}
-						spacing={3}
-						alignItems="flex-start"
-					>
-						<Grid size={{md:12, lg: 4}}>
-							<div>
-								<Heading className={styles.getInTouchHeading}>Get In Touch</Heading>
-							</div>
-							<div className={styles.formHeading}>
-								Tell us what you need, 
-								and we'll map the way 
-								forward to victory.
-							</div>
-							<div className={styles.formText}>
-								At Glocal LPO, we provide full-spectrum legal support, enabling law firms and attorneys to optimize case management with streamlined execution and process oversight.
-							</div>
-						</Grid>
-						<Grid container size={{md: 12, lg: 8}}>
-							<Grid size={12} className={styles.requiredFieldTitle}>
-								All the fields marked with * are required
-							</Grid>
-							<Grid size={12} container spacing={3}>
-								<Grid size={{xs: 12, md: 6}}>
-									<TextField
-										slotProps={{
-											inputLabel: {
-												shrink: true,
-											},
-										}}
-										label="FIRST NAME"
-										fullWidth={true}
-										variant="standard"
-									/>
-								</Grid>
-								<Grid size={{ xs: 12, md: 6 }}>
-									<TextField
-										slotProps={{
-											inputLabel: {
-												shrink: true,
-											},
-										}}
-										label="LAST NAME"
-										fullWidth={true}
-										variant="standard"
-									/>
-								</Grid>
-								<Grid size={{ xs: 12, md: 6 }}>
-									<TextField
-										slotProps={{
-											inputLabel: {
-												shrink: true,
-											},
-										}}
-										label="EMAIL"
-										type="email"
-										fullWidth={true}
-										variant="standard"
-									/>
-								</Grid>
-								<Grid size={{ xs: 12, md: 6 }}>
-									<TextField
-										slotProps={{
-											inputLabel: {
-												shrink: true,
-											},
-										}}
-										label="COMPANY"
-										fullWidth={true}
-										variant="standard"
-									/>
-								</Grid>
-								<Grid size={{ xs: 12, md: 6 }}>
-									<TextField
-										slotProps={{
-											inputLabel: {
-												shrink: true,
-											},
-										}}
-										label="JOB TITLE"
-										fullWidth={true}
-										variant="standard"
-									/>
-								</Grid>
-								<Grid size={{ xs: 12, md: 6 }}>
-									<TextField
-										slotProps={{
-											inputLabel: {
-												shrink: true,
-											},
-										}}
-										label="PHONE"
-										type="tel"
-										fullWidth={true}
-										variant="standard"
-									/>
-								</Grid>
-								<Grid size={12}>
-									<TextField
-										slotProps={{
-											inputLabel: {
-												shrink: true,
-											},
-										}}
-										label="PLEASE DESCRIBE THE TYPE OF SERVICE YOU ARE INTERESTED IN"
-										fullWidth={true}
-										variant="standard"
-									/>
-								</Grid>
-							</Grid>
-							<Grid size={12} className={styles.submitWrapper}>
-								<CircleArrow fill="#564847" className={styles.formSubmitButton} />
-							</Grid>
-						</Grid>
-					</Grid>
-				</Container>
+				<ContactForm />
 			</section>
 			<section className={styles.expertiseSection}>
 				<div className={styles.expertiseStamp}>

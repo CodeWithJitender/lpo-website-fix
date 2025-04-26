@@ -1,0 +1,73 @@
+.commonContainer {
+	padding: 0 50px;
+}
+
+.getInTouchHeading {
+	color: #070c1e;
+	margin-bottom: 20px;
+}
+
+.formHeading {
+	font-family: Antonio, sans-serif;
+	color: #070c1e;
+	font-size: 32px;
+	line-height: 1.3;
+}
+
+.formText {
+	color: #070c1e;
+	margin-top: 20px;
+}
+
+.requiredFieldTitle {
+	font-size: 10px;
+}
+
+.submitWrapper {
+	text-align: right;
+}
+
+.formSubmitButton {
+	width: 80px;
+	cursor: pointer;
+}
+
+.contactForm {
+	.getInTouchHeading {
+		color: #fff8f2;
+	}
+
+	.formHeading,
+	.requiredFieldTitle {
+		color: #a4836f;
+	}
+
+	.formText {
+		color: #c9b9b0;
+	}
+
+	.formSubmitButton {
+		fill: #c9b9b0;
+	}
+
+	:global {
+		.MuiFormLabel-root,
+		.MuiInputBase-input {
+			color: #c9b9b0 !important;
+		}
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.commonContainer {
+		padding: 0;
+	}
+
+	.formHeading{
+		font-size: clamp(2rem, 3.2vw, 3.2rem);
+	}
+
+	.submitWrapper{
+		text-align: center;
+	}
+}

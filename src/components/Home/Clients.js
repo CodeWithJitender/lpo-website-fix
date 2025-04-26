@@ -24,7 +24,7 @@ const Clients = () => {
 						<div className={styles.marquee}>
 							<ul className={styles.marqueeContent}>
 								{
-									Array.from({ length: 28 }, (_, i) => {
+									Array.from({ length: 20 }, (_, i) => {
 										const imageSrc = require(`../../assets/images/logos/${i + 1}.jpg`);
 										return (
 											<li key={i}>
@@ -39,7 +39,7 @@ const Clients = () => {
 							</ul>
 							<ul className={styles.marqueeContent}>
 								{
-									Array.from({ length: 28 }, (_, i) => {
+									Array.from({ length: 20 }, (_, i) => {
 										const imageSrc = require(`../../assets/images/logos/${i + 1}.jpg`);
 										return (
 											<li key={i}>

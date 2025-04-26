@@ -212,7 +212,7 @@ const ServiceBox = (props) => {
   return (
 		<Animate.FadeUp
 			direction="up"
-			delay={`${index * 100}ms`}
+			delay={`${index * 50}ms`}
 			element={Grid}
 			elementProps={{
 				size: {

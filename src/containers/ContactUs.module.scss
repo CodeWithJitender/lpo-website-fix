@@ -1,0 +1,293 @@
+.masterHead {
+	padding-top: 600px;
+	background: url("../assets/images/contact-us-bg.jpg") no-repeat top center;
+	background-size: cover;
+}
+
+.commonContainer {
+	padding: 0 50px;
+}
+
+.breadcrumb {
+	padding: 0;
+	margin: 0;
+	text-transform: uppercase;
+	color: #a4836f;
+	font-family: Poppins, sans-serif;
+	font-size: 16px;
+	list-style: none;
+	display: block;
+
+	li {
+		&::after {
+			content: "/";
+			margin: 0 8px;
+		}
+	}
+}
+
+.lpoTitle {
+	font-size: 100px;
+}
+
+.aboutLPO {
+	padding: 0 50px;
+	margin-bottom: 20px;
+	margin-top: 40px;
+}
+
+.aboutHeading {
+	font-family: Poppins, sans-serif;
+	font-size: 20px;
+	color: #fff8f2;
+	margin-bottom: 20px;
+}
+
+.aboutText {
+	color: #c9b9b0;
+	margin: 28px 0;
+}
+
+.formSection {
+	background-color: #070c1e;
+	padding: 80px 0 40px;
+}
+
+.dividerContainer {
+	padding: 0 20px;
+}
+
+.sectionDivider {
+	position: relative;
+	text-align: center;
+	margin-top: 60px;
+
+	svg {
+		width: 120px;
+		background: #070c1e;
+    position: relative;
+    z-index: 1;
+		fill: #a4836f;
+	}
+
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		transform: translateY(-50%);
+		height: 1px;
+		width: 100%;
+		background: #a4836f;
+    left: 0;
+	}
+
+	&::before {
+		top: calc(50% - 1px);
+	}
+
+	&::after {
+		top: calc(50% + 1px);
+	}
+}
+
+.contactAddressContainer {
+	background: url("../assets/images/contact-address-section-bg.jpg") no-repeat top center;
+	background-size: cover;
+	padding-top: 300px;
+}
+
+.addressContainer {
+	background: rgba(7, 12, 30, 0.9);
+	border-radius: 12px;
+	color: #fff8f2;
+	margin: 0 50px;
+	padding: 40px;
+}
+
+.infoContainer {
+	margin-bottom: 40px;
+}
+
+.title {
+	font-family: Antonio, sans-serif;
+	font-size: 24px;
+	margin-bottom: 20px;
+}
+
+.address {
+	color: #c9b9b0;
+
+	a {
+		color: #c9b9b0;
+		text-decoration: none;
+	}
+}
+
+.mapFrame {
+	border: 0;
+	border-radius: 12px;
+}
+
+.carouselHeadingSection {
+	padding: 40px 0;
+}
+
+.textCenter {
+	text-align: center;
+}
+
+.carouselSection {
+	background: #dec4a5;
+	margin-top: 150px;
+	margin-bottom: -60px;
+}
+
+.carouselBody {
+	position: relative;
+	top: -150px;
+}
+
+.arrow {
+	width: 100px;
+	height: 100px;
+}
+
+.carouselCard {
+	background: #433636;
+	color: #dec4a5;
+	border-radius: 6px;
+	padding: 20px;
+}
+
+.testimonial {
+	background: url("../assets/icons/quote-icon.png") no-repeat top left;
+	background-size: 40px;
+	padding-left: 56px;
+	margin-bottom: 20px;
+}
+
+.imageWrapper {
+	overflow: hidden;
+	border-radius: 100%;
+	width: 75px;
+	height: 75px;
+	
+	.image {
+		width: 100%;
+		height: 100%;
+		background: #fff8f2;
+	}
+}
+
+.clientInfoWrapper {
+	margin-left: 12px;
+}
+
+.clientName {
+	font-family: Antonio, sans-serif;
+	font-size: 20px;
+	margin-bottom: 4px;
+}
+
+.designation {
+	font-size: 12px;
+}
+
+:global {
+	.slick-slider {
+		width: 100%;
+	}
+
+	.slick-slide > div {
+		margin-right: 20px;
+	}
+
+	.slick-arrow {
+		fill: #CFB69A;
+		width: 40px;
+		height: 40px;
+		top: 30%;
+	}
+
+	.slick-prev {
+		transform: rotate(270deg);
+		left: -50px;
+	}
+
+	.slick-next {
+		transform: rotate(90deg);
+		right: -30px;
+	}
+}
+
+@media only screen and (max-width: 1199px) and (min-width: 901px){
+	.headingContainer {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.founderContainer {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+
+	.headingContainer {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+
+	.commonContainer{
+		padding: 0;
+	}
+
+	.aboutLPO{
+		padding: 0;
+		margin-bottom: 60px;
+	}
+	
+	.lpoTitle{
+		font-size: clamp(3.5rem, 6.5vw, 6.5rem);
+	}
+
+	.formSection{
+		padding: 0px 10px 40px;
+		margin-top: -1px;
+	}
+
+	.contactAddressContainer {
+		padding-top: 250px;
+	}
+
+	.addressContainer {
+		margin: 0;
+		padding: 24px;
+	}
+
+	:global {
+		.slick-slider {
+			width: 100%;
+		}
+	
+		.slick-slide > div {
+			margin-right: 4px;
+		}
+	
+		.slick-arrow {
+			fill: #070C1E;
+			top: auto;
+			bottom: -23%;
+		}
+	
+		.slick-prev {
+			transform: rotate(270deg);
+			left: 40%;
+		}
+	
+		.slick-next {
+			transform: rotate(90deg);
+			left: 53%;
+		}
+	}
+}

@@ -171,7 +171,7 @@ const Footer = () => {
 							rel="noopener noreferrer nofollow"
 							target="_blank"
 						>
-							B8, B Block, Sector 59, Noida, Uttar Pradesh 201301, India
+							B 73, Block B, Sector 57, Noida, Uttar Pradesh 201301, India
 						</a>
 					</Grid>
 					<Grid
