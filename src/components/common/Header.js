@@ -1,8 +1,13 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from 'react-router-dom';
-import { Grid2 as Grid, AppBar } from '@mui/material';
+import {
+	Grid2 as Grid,
+	AppBar,
+	Menu as MenuDesktop
+} from '@mui/material';
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import { useLocation } from "react-router-dom";
 
 import { useDevice } from '@/context/DeviceContext';
 
@@ -12,6 +17,7 @@ import { PhoneIcon } from "@/components/Icons";
 
 import logo from "@/assets/images/logo.png";
 
+import MegaMenu from "./MegaMenu";
 import Menu from "./Menu";
 
 import * as styles from "./Header.module.scss";
@@ -21,7 +27,13 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Header = () => {
 	const { isMobile } = useDevice();
+
+	const { pathname } = useLocation();
+
 	const navBar = useRef(null);
+	const anchorEl = useRef(null);
+
+	const [menuOpen, setMenuOpen] = useState(false);
 
 	useEffect(() => {
 		const showAnim = gsap.from(navBar.current, { 
@@ -39,6 +51,18 @@ const Header = () => {
 			}
 		});
 	}, []);
+
+	useEffect(() => {
+		setMenuOpen(false);
+	}, [pathname]);
+
+	const handleMenuOpen = () => {
+		setMenuOpen(true);
+	};
+
+	const handleMenuClose = () => {
+		setMenuOpen(false);
+	}
 
 	return (
 		<AppBar position="fixed" ref={navBar}>
@@ -101,6 +125,8 @@ const Header = () => {
 										to={routes.services.href}
 										data-replace={routes.services.label}
 										className={styles.headerLink}
+										onMouseEnter={handleMenuOpen}
+										ref={anchorEl}
 									>
 										<span>{routes.services.label}</span>
 									</Link>
@@ -134,6 +160,29 @@ const Header = () => {
 									+1 (650) 407 2112
 								</a>
 							</Grid>
+							<MenuDesktop
+								id="simple-menu"
+								anchorEl={anchorEl.current}
+								open={menuOpen}
+								onClose={handleMenuClose}
+								PaperProps={{
+									onMouseEnter: handleMenuOpen,
+									onMouseLeave: handleMenuClose,
+								}}
+								anchorOrigin={{
+									vertical: "bottom",
+									horizontal: "center",
+								}}
+								transformOrigin={{
+									vertical: "top",
+									horizontal: "center",
+								}}
+								PopoverClasses={{
+									paper: styles.menuPopover
+								}}
+							>
+								<MegaMenu />
+							</MenuDesktop>
 						</>
 					)
 				}

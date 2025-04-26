@@ -13,3 +13,4 @@ export { default as MeetingSchedule } from "./MeetingSchedule";
 export { default as ShareResume } from "./ShareResume";
 export { default as WritingPen } from "./WritingPen";
 export { default as ArrowUpFilled } from "./ArrowUpFilled";
+export { default as StarIcon } from "./StarIcon";
