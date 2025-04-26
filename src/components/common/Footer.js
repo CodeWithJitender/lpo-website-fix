@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 import Grid from "@mui/material/Grid2";
 
 import logo from "@/assets/images/logo.png";
+import hippaLogo from "@/assets/images/hipaa-compliant.png";
+import iso27001Logo from "@/assets/images/iso-27001-logo.png";
+import iso9001Logo from "@/assets/images/iso-9001-logo.png";
 
 import { Instagram, LinkedIn } from "@/components/Icons";
 
@@ -50,6 +53,21 @@ const Footer = () => {
 							</Animate.FadeUp>
 						</Grid>
 						<NaturalLanguageForm />
+					</Grid>
+				</Grid>
+			</section>
+			<section className={styles.complianceLogo}>
+				<Grid size={12} container justifyContent="center">
+					<Grid
+						size={{
+							md: 12,
+							lg: 6,
+						}}
+						className={styles.complianceLogoContainer}
+					>
+						<img src={iso9001Logo} alt="" className={styles.logoImage} />
+						<img src={iso27001Logo} alt="" className={styles.logoImage} />
+						<img src={hippaLogo} alt="" className={styles.logoImage} />
 					</Grid>
 				</Grid>
 			</section>

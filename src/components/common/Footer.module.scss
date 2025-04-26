@@ -11,6 +11,27 @@
 	padding: 40px 0;
 }
 
+.complianceLogo {
+	background: #433636;
+}
+
+.complianceLogoContainer {
+	display: flex;
+	align-items: center;
+	margin-top: -60px;
+  justify-content: center;
+}
+
+.logoImage {
+	width: 120px;
+	margin-right: 20px;
+
+	&:last-child {
+		width: 150px;
+		margin-right: 0;
+	}
+}
+
 .logoContainer {
 	text-align: center;
 	margin-bottom: 12px;
@@ -123,7 +144,7 @@
 
 .letsWinTogetherSection {
 	background-color: #070C1E;
-	padding: 60px 0;
+	padding: 60px 0 120px;
 }
 
 .infoSmallSection {
@@ -163,7 +184,7 @@
 
 @media screen and (max-width: 1199px) {
 	.footer {
-		padding: 30px 0 0;
+		padding: 0;
 	}
 
 	.footerSection {
@@ -176,7 +197,7 @@
 
 	.letsWinTogetherSection{
 		text-align: center;
-		padding: 60px 20px;
+		padding: 60px 20px 92px;
 	}
 
 	.infoSmallSection{
@@ -214,11 +235,25 @@
 		height: 30px;
 	}
 
+	.complianceLogoContainer {
+		margin-top: -40px;
+	}
+
 	.copyrightText {
 		margin-bottom: 20px;
 
 		&:last-child {
 			margin-bottom: 0;
+		}
+	}
+
+	.logoImage {
+		width: 80px;
+		margin-right: 12px;
+	
+		&:last-child {
+			width: 100px;
+			margin-right: 0;
 		}
 	}
 }
