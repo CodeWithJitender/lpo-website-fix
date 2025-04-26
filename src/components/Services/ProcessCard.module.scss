@@ -24,6 +24,31 @@ $bdrs: 6px;
 			.timeline__event__icon {
 				margin-left: 40px;
 				margin-right: 0;
+
+				&:before {
+          content: "";
+          width: 2px;
+          height: 50%;
+          background: rgb(142, 106, 84);
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          right: auto;
+          z-index: 0;
+          transform: translateX(-50%);
+        }
+        &:after {
+          content: "";
+          width: 50%;
+          height: 2px;
+          background: rgb(142, 106, 84);
+          position: absolute;
+          right: 0;
+          z-index: 0;
+          top: 50%;
+          left: -50%;
+          transform: translateY(-50%);
+        }
 			}
     }
 
@@ -39,6 +64,7 @@ $bdrs: 6px;
       padding: $spacing;
 			border: 1px solid #8E6A54;
 			border-radius: 0 $bdrs $bdrs 0;
+			background: #DEC4A5;
     }
 
     &__date {
@@ -73,6 +99,29 @@ $bdrs: 6px;
 				height: 100px;
 				fill: #DEC4A5;
 			}
+
+			&:before {
+        content: "";
+        width: 2px;
+        height: 50%;
+        background: rgb(142, 106, 84);
+        position: absolute;
+        top: 100%;
+        z-index: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      &:after {
+        content: "";
+        width: 40%;
+        height: 2px;
+        background: rgb(142, 106, 84);
+        position: absolute;
+        left: 100%;
+        z-index: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
     }
 
     &__description {
