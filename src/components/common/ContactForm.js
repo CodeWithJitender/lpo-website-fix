@@ -61,7 +61,7 @@ const ContactForm = (props) => {
 			<Grid
 				container
 				className={styles.commonContainer}
-				spacing={3}
+				spacing={12}
 				alignItems="flex-start"
 			>
 				<Grid size={{md:12, lg: 4}}>

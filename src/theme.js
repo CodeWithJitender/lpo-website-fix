@@ -69,7 +69,7 @@ const theme = createTheme({
 			styleOverrides: {
 				root: {
 					"&::after": {
-						borderColor: "#1D1916",
+						borderColor: "rgba(164, 131, 111, 1)",
 					}
 				}
 			}
@@ -81,7 +81,10 @@ const theme = createTheme({
 					lineHeight: "18px",
 					color: "#070c1e",
 					":after": {
-						borderColor: "#1D1916",
+						borderColor: "#fff8f2",
+					},
+					":before": {
+						borderBottom: "1px solid rgba(164, 131, 111, 0.5) !important",
 					}
 				}
 			}			
@@ -104,6 +107,15 @@ const theme = createTheme({
 					boxShadow: "none",
 					"&.Mui-expanded": {
 						margin: 0,
+					}
+				}
+			}
+		},
+		MuiButton: {
+			styleOverrides: {
+				root: {
+					"&:hover": {
+						background: "transparent !important",
 					}
 				}
 			}
