@@ -72,37 +72,37 @@ export const servicesInfo = {
            "id":"01",
            "title":"Motor Vehicle Accidents Accidents",
            "description":"Car, truck, bicycle and motorcycle accident claims.",
-           "image":require("../assets/images/service-1.jpg")
+           "image":require("../assets/images/service-images/personal-injury/Motor-Vehicle-Accidents.jpg")
         },
         {
            "id":"02",
            "title":"Medical Negligence & Malpractice",
            "description":"Ensuring Compliance with Legal Standards.",
-           "image":require("../assets/images/service-2.jpg")
+           "image":require("../assets/images/service-images/personal-injury/Medical-Negligence.jpg")
         },
         {
            "id":"03",
            "title":"Slip & Fall or Trip and Fall Cases",
            "description":"Highlightin`g Maximum Injury Compensation.",
-           "image":require("../assets/images/service-3.jpg")
+           "image":require("../assets/images/service-images/personal-injury/Slip-and-Fall-or-Trip.jpg")
         },
         {
            "id":"04",
            "title":"Dog Bite",
            "description":"Nerve damage, disfigurement, or long-term medical issues.",
-           "image":require("../assets/images/service-4.jpg")
+           "image":require("../assets/images/service-images/personal-injury/Nerve-damage-disfigurement.jpg")
         },
         {
            "id":"05",
            "title":"Brain & Spinal Cord Injuries",
            "description":"Securing Justice for Those with Devastating Injuries.",
-           "image":require("../assets/images/service-5.jpg")
+           "image":require("../assets/images/service-images/personal-injury/Brain-and-Spinal-Cord.jpg")
         },
         {
            "id":"06",
            "title":"Workplace & Construction Accidents",
            "description":"Protecting Legal Rights for Workplace Injuries.",
-           "image":require("../assets/images/service-6.jpg")
+           "image":require("../assets/images/service-images/personal-injury/Workplace-and-Construction-Accidents.jpg")
         }
      ],
      "accordianItems":[
@@ -244,31 +244,31 @@ export const servicesInfo = {
            "id":"01",
            "title":"Workplace Discrimination & Harassment",
            "description":"Title VII, ADA, ADEA, EEOC claims",
-           "image":require("../assets/images/service-1.jpg")
+           "image":require("../assets/images/service-images/employee-law/Workplace-Discrimination-and-Harassment.jpg")
         },
         {
            "id":"02",
            "title":"Wage & Hour Compliance",
            "description":"FLSA, overtime disputes, misclassification issues.",
-           "image":require("../assets/images/service-2.jpg")
+           "image":require("../assets/images/service-images/employee-law/Wage-and-Hour-Compliance.jpg")
         },
         {
            "id":"03",
            "title":"Wrongful Termination & Retaliation",
            "description":"Whistleblower protection, at-will exceptions.",
-           "image":require("../assets/images/service-3.jpg")
+           "image":require("../assets/images/service-images/employee-law/Wrongful-Termination.jpg")
         },
         {
            "id":"04",
            "title":"Employment Contracts & Agreements",
            "description":"Offer letters, NDAs, non-compete clauses.",
-           "image":require("../assets/images/service-4.jpg")
+           "image":require("../assets/images/service-images/employee-law/Employment-Contracts.jpg")
         },
         {
            "id":"05",
            "title":"Workplace Investigations & Compliance",
            "description":"Employee handbooks, training policies.",
-           "image":require("../assets/images/service-5.jpg")
+           "image":require("../assets/images/service-images/employee-law/Workplace-Investigations.jpg")
         },
         
      ],
@@ -396,31 +396,31 @@ export const servicesInfo = {
            "id":"01",
            "title":"Claim Filing & Case Management",
            "description":"Initial filings, documentation, and administrative procedures.",
-           "image":require("../assets/images/service-1.jpg")
+           "image":require("../assets/images/service-images/workers-compensation/Claim-Filing.jpg")
         },
         {
            "id":"02",
            "title":"Employer Defense",
            "description":"Fraudulent claims, return-to-work policies, and premium disputes.",
-           "image":require("../assets/images/service-2.jpg")
+           "image":require("../assets/images/service-images/workers-compensation/Employer-Defense.jpg")
         },
         {
            "id":"03",
            "title":"Medical Evidence & Disability Evaluations",
            "description":" IME coordination, medical record reviews, and disability rating analysis.",
-           "image":require("../assets/images/service-3.jpg")
+           "image":require("../assets/images/service-images/workers-compensation/Medical-Evidence.jpg")
         },
         {
            "id":"04",
            "title":"Third-Party Liability Claims",
            "description":"Subrogation and concurrent personal injury claims.",
-           "image":require("../assets/images/service-4.jpg")
+           "image":require("../assets/images/service-images/workers-compensation/Third-Party-Liability-Claims.jpg")
         },
         {
            "id":"05",
            "title":"Settlement & Appeals Support",
            "description":"Benefit calculations, mediation preparation, and appellate briefs.",
-           "image":require("../assets/images/service-5.jpg")
+           "image":require("../assets/images/service-images/workers-compensation/Settlement-and-Appeals.jpg")
         },
         
      ],
@@ -665,49 +665,49 @@ export const servicesInfo = {
            "id":"01",
            "title":"Divorce & Legal Separation",
            "description":"Contested Divorce, Uncontested Divorce, Legal Separation, Annulment, Division of Property & Assets.",
-           "image":require("../assets/images/service-1.jpg")
+           "image":require("../assets/images/service-images/family-law/Divorce.jpg")
         },
         {
            "id":"02",
            "title":"Child Custody & Visitation",
            "description":"Initial Custody Orders, Parenting Plans, Custody Modifications, Guardianship.",
-           "image":require("../assets/images/service-2.jpg")
+           "image":require("../assets/images/service-images/family-law/Child-Custody.jpg")
         },
         {
            "id":"03",
            "title":"Child Support",
            "description":"Establishing Child Support Orders, Modifications of Support, Enforcement Actions.",
-           "image":require("../assets/images/service-3.jpg")
+           "image":require("../assets/images/service-images/family-law/Child-Support.jpg")
         },
         {
            "id":"04",
            "title":"Spousal Support (Alimony)",
            "description":"Temporary & Permanent Support Orders, Modifications.",
-           "image":require("../assets/images/service-4.jpg")
+           "image":require("../assets/images/service-images/family-law/Spousal-Support.jpg")
         },
         {
            "id":"05",
            "title":"Paternity",
            "description":"Establishing Paternity, Custody and Child Support Proceedings.",
-           "image":require("../assets/images/service-5.jpg")
+           "image":require("../assets/images/service-images/family-law/Paternity.jpg")
         },
         {
            "id":"06",
            "title":"Domestic Violence & Protective Orders",
            "description":"Emergency Protective Orders (EPO), Restraining Orders (Temporary & Permanent).",
-           "image":require("../assets/images/service-6.jpg")
+           "image":require("../assets/images/service-images/family-law/Domestic-Violence.jpg")
         },
         {
            "id":"07",
            "title":"Prenuptial & Postnuptial Agreements",
            "description":"Drafting and Reviewing Agreements.",
-           "image":require("../assets/images/service-6.jpg")
+           "image":require("../assets/images/service-images/family-law/Prenuptial-and-Postnuptial-Agreements.jpg")
         },
         {
            "id":"08",
            "title":"Guardianship & Conservatorship",
            "description":"Guardianship for Minors, Guardianship of Adults.",
-           "image":require("../assets/images/service-6.jpg")
+           "image":require("../assets/images/service-images/family-law/Guardianship-and-Conservatorship.jpg")
         }
      ],
      "accordianItems":[
@@ -1019,31 +1019,31 @@ export const servicesInfo = {
            "id":"01",
            "title":"Strategic Immigration Roadmaps",
            "description":"Preparation of comprehensive strategy and supporting documentation.",
-           "image":require("../assets/images/service-1.jpg")
+           "image":require("../assets/images/service-images/immigration/Strategic-Immigration.jpg")
         },
         {
            "id":"02",
            "title":"Persuasive Petition Drafting",
            "description":"Drafting of compelling petition letters",
-           "image":require("../assets/images/service-2.jpg")
+           "image":require("../assets/images/service-images/immigration/Petition-Drafting.jpg")
         },
         {
            "id":"03",
            "title":"Organized Case File Management",
            "description":"Organize and prepare immigration case files.",
-           "image":require("../assets/images/service-3.jpg")
+           "image":require("../assets/images/service-images/immigration/Case-File-Management.jpg")
         },
         {
            "id":"04",
            "title":"Insightful Legal Research",
            "description":"Research on evolving immigration statutes and guidelines, offering actionable insights to help shape robust legal strategies.",
-           "image":require("../assets/images/service-4.jpg")
+           "image":require("../assets/images/service-images/immigration/Legal-Research.jpg")
         },
         {
            "id":"05",
            "title":"Process Simplification & Clarity",
            "description":"Simplifying complex immigration procedures —clarifying steps, timelines, and expectations to strengthen trust and satisfaction.",
-           "image":require("../assets/images/service-5.jpg")
+           "image":require("../assets/images/service-images/immigration/Process-Simplification.jpg")
         },
         
      ],
@@ -1143,44 +1143,6 @@ export const servicesInfo = {
         "mainDescription":"Strengthening IP Rights with Expert Legal Support",
         "smallDesription":"We provide outsourced support to attorneys by drafting precise legal documents that safeguard their clients' intellectual property rights, ensuring trademarks, patents, and copyrights remain legally secure. Our services ensure accuracy, compliance with evolving regulations, and robust protection for intellectual property assets."
      },
-     // "casesSpecializedIn":[
-     //    {
-     //       "id":"01",
-     //       "title":"Motor Vehicle Accidents Accidents",
-     //       "description":"Car, truck, bicycle and motorcycle accident claims.",
-     //       "image":require("../assets/images/service-1.jpg")
-     //    },
-     //    {
-     //       "id":"02",
-     //       "title":"Medical Negligence & Malpractice",
-     //       "description":"Ensuring Compliance with Legal Standards.",
-     //       "image":require("../assets/images/service-2.jpg")
-     //    },
-     //    {
-     //       "id":"03",
-     //       "title":"Slip & Fall or Trip and Fall Cases",
-     //       "description":"Highlightin`g Maximum Injury Compensation.",
-     //       "image":require("../assets/images/service-3.jpg")
-     //    },
-     //    {
-     //       "id":"04",
-     //       "title":"Dog Bite",
-     //       "description":"Nerve damage, disfigurement, or long-term medical issues.",
-     //       "image":require("../assets/images/service-4.jpg")
-     //    },
-     //    {
-     //       "id":"05",
-     //       "title":"Brain & Spinal Cord Injuries",
-     //       "description":"Securing Justice for Those with Devastating Injuries.",
-     //       "image":require("../assets/images/service-5.jpg")
-     //    },
-     //    {
-     //       "id":"06",
-     //       "title":"Workplace & Construction Accidents",
-     //       "description":"Protecting Legal Rights for Workplace Injuries.",
-     //       "image":require("../assets/images/service-6.jpg")
-     //    }
-     // ],
      "accordianItems":[
         {
            "header":{
@@ -1255,43 +1217,43 @@ export const servicesInfo = {
            "id":"01",
            "title":"Misdemeanors & Felonies",
            "description":"Comprehensive defense for both minor and serious criminal charges.",
-           "image":require("../assets/images/service-1.jpg")
+           "image":require("../assets/images/service-images/criminal-law/misdemeanors-and-felonies.jpg")
         },
         {
            "id":"02",
            "title":"DUI, DWI & Traffic Offenses",
            "description":"Strategic support for driving-related violations and license protection.",
-           "image":require("../assets/images/service-2.jpg")
+           "image":require("../assets/images/service-images/criminal-law/DUI-DWI-and-traffic.jpg")
         },
         {
            "id":"03",
            "title":"Disorderly Conduct & Civic Unrest",
            "description":"Defending rights in public disturbance and protest-related offenses.",
-           "image":require("../assets/images/service-3.jpg")
+           "image":require("../assets/images/service-images/criminal-law/protest-related-offenses.jpg")
         },
         {
            "id":"04",
            "title":"Drug Possession & Illicit Trade",
            "description":"Expert support in drug charges and controlled substance cases.",
-           "image":require("../assets/images/service-4.jpg")
+           "image":require("../assets/images/service-images/criminal-law/drug-possession.jpg")
         },
         {
            "id":"05",
            "title":"Theft, Burglary & White-Collar Intrigue",
            "description":"Smart defense for property theft and financial fraud allegations.",
-           "image":require("../assets/images/service-5.jpg")
+           "image":require("../assets/images/service-images/criminal-law/theft-burglary.jpg")
         },
         {
            "id":"06",
            "title":"Domestic Violence & Assaults",
            "description":"Tactful handling of emotionally sensitive personal violence matters.",
-           "image":require("../assets/images/service-6.jpg")
+           "image":require("../assets/images/service-images/criminal-law/domestic-violence.jpg")
         },
         {
-           "id":"06",
+           "id":"07",
            "title":"Homicide & Murder",
            "description":"Focused legal aid in high-stakes life and death cases.",
-           "image":require("../assets/images/service-6.jpg")
+           "image":require("../assets/images/service-images/criminal-law/homicide-and-murder.jpg")
         }
      ],
      "accordianItems":[
@@ -1377,44 +1339,6 @@ export const servicesInfo = {
         "mainDescription":"Strategic Legal Support for Debt Relief and Financial Recovery",
         "smallDesription":"Whether your client is an individual, business, or family struggling with debt, we navigate the legal pathways to financial freedom with precision and expertise. We help you conclude the legal options to eliminate or restructure their debts through available records. "
      },
-     // "casesSpecializedIn":[
-     //    {
-     //       "id":"01",
-     //       "title":"Motor Vehicle Accidents Accidents",
-     //       "description":"Car, truck, bicycle and motorcycle accident claims.",
-     //       "image":require("../assets/images/service-1.jpg")
-     //    },
-     //    {
-     //       "id":"02",
-     //       "title":"Medical Negligence & Malpractice",
-     //       "description":"Ensuring Compliance with Legal Standards.",
-     //       "image":require("../assets/images/service-2.jpg")
-     //    },
-     //    {
-     //       "id":"03",
-     //       "title":"Slip & Fall or Trip and Fall Cases",
-     //       "description":"Highlightin`g Maximum Injury Compensation.",
-     //       "image":require("../assets/images/service-3.jpg")
-     //    },
-     //    {
-     //       "id":"04",
-     //       "title":"Dog Bite",
-     //       "description":"Nerve damage, disfigurement, or long-term medical issues.",
-     //       "image":require("../assets/images/service-4.jpg")
-     //    },
-     //    {
-     //       "id":"05",
-     //       "title":"Brain & Spinal Cord Injuries",
-     //       "description":"Securing Justice for Those with Devastating Injuries.",
-     //       "image":require("../assets/images/service-5.jpg")
-     //    },
-     //    {
-     //       "id":"06",
-     //       "title":"Workplace & Construction Accidents",
-     //       "description":"Protecting Legal Rights for Workplace Injuries.",
-     //       "image":require("../assets/images/service-6.jpg")
-     //    }
-     // ],
      "accordianItems":[
         {
            "header":{
@@ -1566,25 +1490,25 @@ export const servicesInfo = {
            "id":"01",
            "title":"Contract Drafting & Review",
            "description":"Crafting and scrutinizing agreements to ensure legal compliance and alignment with client goals.",
-           "image":require("../assets/images/service-1.jpg")
+           "image":require("../assets/images/service-images/contracts/contract-drafting.jpg")
         },
         {
            "id":"02",
            "title":"Contract Negotiation",
            "description":"Facilitating favorable terms and resolving disputes during negotiations.",
-           "image":require("../assets/images/service-2.jpg")
+           "image":require("../assets/images/service-images/contracts/contract-negotiation.jpg")
         },
         {
            "id":"03",
            "title":"Contract Administration",
            "description":"Managing and tracking contracts to ensure compliance and performance.",
-           "image":require("../assets/images/service-3.jpg")
+           "image":require("../assets/images/service-images/contracts/Contract-Administration.jpg")
         },
         {
            "id":"04",
            "title":"Dispute Resolution",
            "description":"Providing support for contract-related conflicts and litigation.",
-           "image":require("../assets/images/service-4.jpg")
+           "image":require("../assets/images/service-images/contracts/Dispute-Resolution.jpg")
         }
         
      ],
