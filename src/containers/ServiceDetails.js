@@ -24,7 +24,6 @@ import OurProcess from "@/components/Services/OurProcess";
 import { useDevice } from '@/context/DeviceContext';
 
 import expertiseSeal from "@/assets/images/confidential-seal.png";
-import playButtonIcon from "@/assets/icons/button-play-icon.png";
 
 import { serviceCards, servicesInfo } from "@/utils/serviceInfo";
 import { routes } from "@/utils/routesPath";
@@ -74,7 +73,8 @@ const Service = () => {
 			<section
 				className={styles.masterHead}
 				style={{
-					backgroundImage: `url(${serviceDetails.background})`
+					backgroundImage: `url(${serviceDetails.background})`,
+					backgroundPosition: serviceDetails.backgroundPosition
 				}}
 			>
 				<Container maxWidth="xl" className={styles.headingContainer}>
@@ -114,10 +114,11 @@ const Service = () => {
 						</Animate.FadeUp>
 
 						<div>
-							<LinkButton to={routes["contact-us"].href} className={styles.bookButton}>
-								<span>BOOK AN INTERVIEW WITH A PARALEGAL</span>
-								{!isMobile && <span><img src={playButtonIcon} alt="" /></span>}
-							</LinkButton>
+							<LinkButton
+								to={routes["contact-us"].href}
+								delay="200ms"
+								className={styles.bookButton}
+							>SCHEDULE A STRATEGY CALL WITH US</LinkButton>
 						</div>
 					</Grid>
 				</Grid>

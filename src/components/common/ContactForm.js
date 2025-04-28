@@ -6,7 +6,8 @@ import {
 	Snackbar,
 	Alert
 } from "@mui/material";
-import { useForm } from "react-hook-form";
+import { Controller, useForm } from "react-hook-form";
+import { useLocation } from "react-router-dom";
 
 import { CircleArrow, CircleLoader } from "@/components/Icons";
 
@@ -24,6 +25,8 @@ const ContactForm = (props) => {
 	const [status, setStatus] = useState("");
 	
 	const { handleSubmit, control, formState: { isSubmitting } } = useForm();
+
+	const { pathname } = useLocation();
 
 	const onSubmit = async (data) => {
 		const response = await fetch("/api/submit-form", {
@@ -76,6 +79,16 @@ const ContactForm = (props) => {
 				</Grid>
 				<Grid container size={{md: 12, lg: 8}}>
 					<form onSubmit={handleSubmit(onSubmit)}>
+						<Controller
+							name="page_url"
+							control={control}
+							defaultValue={pathname}
+							render={({
+								field: { onChange, value }
+							}) => (
+								<input type="hidden" name="page_url" value={value} />
+							)}
+						/>
 						<Grid container size={12}>
 							<Grid size={12} className={styles.requiredFieldTitle}>
 								All the fields marked with * are required

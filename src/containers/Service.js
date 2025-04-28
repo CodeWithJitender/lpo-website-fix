@@ -17,7 +17,6 @@ import { useDevice } from '@/context/DeviceContext';
 import { routes } from "@/utils/routesPath";
 
 import pencilIcon from "@/assets/icons/pencil-icon.png";
-import playButtonIcon from "@/assets/icons/button-play-icon.png";
 
 import * as styles from "./Service.module.scss";
 
@@ -37,22 +36,16 @@ const Service = () => {
 							<li>OUR SERVICES</li>
 						</ul>
 						<Heading className={styles.lpoTitle}>
-							Strategic Support <br />
-							for Injury Claims <br />
-							That Win.
+							{isMobile ? 
+							  "Your Legal Ally in Every Step of the Journey."
+								:
+								<>
+									Your Legal Ally<br />
+									in Every Step <br />
+									of the Journey.
+								</>
+							}
 						</Heading>
-					</Grid>
-					<Grid size={12} justifyItems={{xs:"left", md:'center'}}>
-						<Animate.ScaleIn
-							direction="up"
-							className={styles.plusIcon}
-							element={Grid}
-							elementProps={{
-								size: 3
-							}}
-						>
-							+
-						</Animate.ScaleIn>
 					</Grid>
 				</Container>
 			</section>
@@ -63,7 +56,7 @@ const Service = () => {
 							direction="up"
 							className={styles.aboutHeading}
 						>
-							Injury-related litigation entails exacting case analysis, exhaustive legal research, tactical document preparation and personalized support.
+							At Glocal LPO, we provide top-tier outsourced legal services that empower attorneys across various practice areas.
 						</Animate.FadeUp>
 
 						<Animate.FadeUp
@@ -71,14 +64,15 @@ const Service = () => {
 							delay="100ms"
 							className={styles.aboutText}
 						>
-							At Glocal LPO, we provide full-spectrum legal support, enabling law firms and attorneys to optimize case management with streamlined execution and process oversight.
+							From business litigation to family law, our dedicated team ensures that every document, strategy, and detail is executed with precision, giving your clients the best chance at success. Whether you need support in contracts, criminal law, or intellectual property, we’re here to streamline your legal processes and elevate your practice.
 						</Animate.FadeUp>
 
 						<div>
-							<LinkButton to={routes["contact-us"].href} className={styles.bookButton}>
-								<span>BOOK AN INTERVIEW WITH A PARALEGAL</span>
-								{!isMobile && <span><img src={playButtonIcon} alt="" /></span>}
-							</LinkButton>
+							<LinkButton
+								to={routes["contact-us"].href}
+								delay="200ms"
+								className={styles.bookButton}
+							>SCHEDULE A STRATEGY CALL WITH US</LinkButton>
 						</div>
 					</Grid>
 				</Grid>

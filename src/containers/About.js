@@ -22,8 +22,9 @@ import dataSecurity from "@/assets/icons/data-security.png";
 import techDrivenEfficency from "@/assets/icons/tech-driven-efficency.png";
 import costAdvantage from "@/assets/icons/cost-advantage.png";
 import linkedIcon from "@/assets/icons/about-linkedin-icon.png";
-import playButtonIcon from "@/assets/icons/button-play-icon.png";
 
+import kunalProfilePic from "@/assets/images/kunal-profile-pic.jpg";
+import srishtiProfilePic from "@/assets/images/srishti-profile-pic.jpg";
 import legalStamp from "@/assets/images/about-legal-stamp.png";
 
 import * as styles from "./About.module.scss";
@@ -138,12 +139,8 @@ const About = () => {
 							</div>
 						  <LinkButton
 								to={routes["contact-us"].href}
-								className={styles.bookButton}
-							>
-								<span>BOOK AN INTERVIEW WITH A PARALEGAL</span>
-							  {!isMobile && <span><img src={playButtonIcon} alt="" /></span>}
-								
-						  </LinkButton>
+								delay="200ms"
+							>SCHEDULE A STRATEGY CALL WITH US</LinkButton>
 						  {isMobile && <><br /><br /></>}
 						</Grid>
 						<Grid
@@ -287,7 +284,7 @@ const About = () => {
 								</div>
 							</div>
 							<div className={styles.metricsText}>
-							  	<span>Your sensitive information stays protected, no exceptions.</span>
+							  <span>Your sensitive information stays protected, no exceptions.</span>
 							</div>
 						</Animate.FadeUp>
 					</Grid>
@@ -320,7 +317,7 @@ const About = () => {
 							className={styles.founderColumn}
 						>
 							<div className={styles.founderImage} onClick={() => handleModalOpen("kunal")}>
-								<img src="https://placehold.co/600x600/070c1e/FFFFFF/png" alt="" />
+								<img src={kunalProfilePic} alt="" />
 							</div>
 							<div className={styles.founderTitle}>
 								The Visionary Behind Glocal LPO
@@ -349,7 +346,7 @@ const About = () => {
 							className={styles.founderColumn}
 						>
 							<div className={styles.founderImage} onClick={() => handleModalOpen("srishti")}>
-								<img src="https://placehold.co/600x600/070c1e/FFFFFF/png" alt="" />
+								<img src={srishtiProfilePic} alt="" />
 							</div>
 							<div className={styles.founderTitle}>
 								The Mind Behind Sales & Marketing

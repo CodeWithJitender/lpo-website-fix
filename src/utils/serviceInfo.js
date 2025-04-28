@@ -23,6 +23,7 @@ export const servicesInfo = {
      Strategy that Wins.
      </>,
      "background":require("../assets/images/services-bg/business-litigation.jpg"),
+		 "backgroundPosition": "top center",
      "description":{
         "mainDescription":"Accuracy is the foundation of our approach — we perform thorough document reviews to meticulously safeguard your business interests.",
         "smallDesription":"We provide comprehensive litigation support across all facets of business law, including meticulous document review, discovery analysis, contract disputes, intellectual property matters, shareholder conflicts, franchise agreement issues, non-compete enforcement, and more. Our goal is to ensure your business interests are safeguarded at every stage of the legal process, with strategies designed to protect and advance your rights."
@@ -63,6 +64,7 @@ export const servicesInfo = {
      for Injury Claims <br />
      That Win.</>,
      "background":require("../assets/images/services-bg/personal-injury.jpg"),
+		 "backgroundPosition": "top center",
      "description":{
         "mainDescription":"Injury-related litigation entails exacting case analysis, exhaustive legal research, tactical document preparation and personalized support.",
         "smallDesription":"At Glocal LPO, we provide full-spectrum legal support, enabling law firms and attorneys to optimize case management with streamlined execution and process oversight."
@@ -235,6 +237,7 @@ export const servicesInfo = {
      Enforcing Compliance. 
      </>,
      "background":require("../assets/images/services-bg/employement-law.jpg"),
+		 "backgroundPosition": "top center",
      "description":{
         "mainDescription":"We provide comprehensive employment law support to attorneys across the U.S., ensuring businesses and employees navigate complex legal landscapes with confidence.",
         "smallDesription":"Our team of experienced Paralegals assist in all aspects of employment law, from compliance and contract drafting to litigation support and workplace dispute resolution. With in-depth expertise in federal and state employment regulations, we deliver precise, strategic, and efficient legal assistance to safeguard workplace rights and employer interests."
@@ -387,6 +390,7 @@ export const servicesInfo = {
      justice shall prevail.
      </>,
      "background":require("../assets/images/services-bg/workers-compensation.jpg"),
+		 "backgroundPosition": "top center",
      "description":{
         "mainDescription":"Our comprehensive paralegal support to attorneys handling workers' compensation cases across the U.S. ",
         "smallDesription":"Our experienced legal Paralegals, assist in all aspects of workplace injury claims, from case preparation and medical record analysis to litigation support and settlement negotiations. With expertise in federal and state workers' compensation laws, we deliver precise, strategic, and efficient assistance to help attorneys advocate for their clients, whether employees seeking benefits or employers defending claims."
@@ -535,7 +539,8 @@ export const servicesInfo = {
      Your Legacy, <br />
      Our Strategy
      </>,
-     "background":require("../assets/images/services-bg/real-estate-litigation.jpg"),
+     "background":require("../assets/images/services-bg/estate-planning-litigation.jpg"),
+		 "backgroundPosition": "top center",
      "description":{
         "mainDescription":"A strong estate plan isn't just paperwork—it's a fortress.",
         "smallDesription":"We structure your client's documents relating to assets, highlight points to eliminate the risks therein, and ensure your strategies stand unrefuted."
@@ -597,6 +602,7 @@ export const servicesInfo = {
      We Secure Every Step.
      </>,
      "background":require("../assets/images/services-bg/real-estate-litigation.jpg"),
+		 "backgroundPosition": "top center",
      "description":{
         "mainDescription":"A strong estate plan isn't just paperwork—it's a fortress.",
         "smallDesription":"We structure your client's documents relating to assets, highlight points to eliminate the risks therein, and ensure your strategies stand unrefuted."
@@ -656,6 +662,7 @@ export const servicesInfo = {
      with Strength in  <br />
      Family Law.</>,
      "background":require("../assets/images/services-bg/family-law.jpg"),
+		 "backgroundPosition": "top center",
      "description":{
         "mainDescription":"Our family law paralegals play a crucial role in managing legal and administrative aspects of cases—from client intake to final agreements. ",
         "smallDesription":"They draft legal documents, conduct research, manage timelines, and coordinate with clients and legal teams, all while navigating the emotional nuances of family matters."
@@ -1010,6 +1017,7 @@ export const servicesInfo = {
      in Immigration Casework.
      </>,
      "background":require("../assets/images/services-bg/immigration.jpg"),
+		 "backgroundPosition": "top center",
      "description":{
         "mainDescription":"We are a committed team of immigration paralegals with in-depth experience across humanitarian, family-based, and employment-based immigration matters. ",
         "smallDesription":"Over past three years, we have supported various law firms across the US in numerous cases including I-360 VAWA petitions, I-130 family petitions, and employment visas such as EB-1, EB-2 NIW, and O-1. Our work also extends to U visa applications, Special Immigrant Juvenile (SIJ) petitions, and both affirmative and defensive asylum filings."
@@ -1138,7 +1146,8 @@ export const servicesInfo = {
      Your clients' ideas. <br />
      Your clients' rights.  <br />
      Protected.</>,
-     "background":require("../assets/images/services-bg/bankrupcy.jpg"),
+     "background":require("../assets/images/services-bg/intellectual-property.jpg"),
+		 "backgroundPosition": "top center",
      "description":{
         "mainDescription":"Strengthening IP Rights with Expert Legal Support",
         "smallDesription":"We provide outsourced support to attorneys by drafting precise legal documents that safeguard their clients' intellectual property rights, ensuring trademarks, patents, and copyrights remain legally secure. Our services ensure accuracy, compliance with evolving regulations, and robust protection for intellectual property assets."
@@ -1207,7 +1216,8 @@ export const servicesInfo = {
      Thine unseen hand <br />
      in your Triumph <br />
      of Justice.</>,
-     "background":require("../assets/images/services-bg/bankrupcy.jpg"),
+     "background":require("../assets/images/services-bg/criminal-law.jpg"),
+		 "backgroundPosition": "top center",
      "description":{
         "mainDescription":"We provide comprehensive criminal defense paralegal support to attorneys across US. ",
         "smallDesription":"Our team of experienced legal professionals assists at every stage of the criminal proceedings, from case analysis and pre-trial preparation to plea negotiations and courtroom advocacy. With a deep understanding of US criminal law and procedural requirements, we deliver precise, efficient, and strategic support, enabling defense counsel to navigate cases effectively and uphold their clients' rights."
@@ -1335,6 +1345,7 @@ export const servicesInfo = {
      Recovery is a Strategy.
      </>,
      "background":require("../assets/images/services-bg/bankrupcy.jpg"),
+		 "backgroundPosition": "top center",
      "description":{
         "mainDescription":"Strategic Legal Support for Debt Relief and Financial Recovery",
         "smallDesription":"Whether your client is an individual, business, or family struggling with debt, we navigate the legal pathways to financial freedom with precision and expertise. We help you conclude the legal options to eliminate or restructure their debts through available records. "
@@ -1477,10 +1488,11 @@ export const servicesInfo = {
   "contracts":{
      "title":"Contracts",
      "heading":<>
-     Contracts are the foundation of business; <br />
-     we ensure they are unshakable.
+     Contracts are the foundation of
+		 business; we ensure they are unshakable.
      </>,
      "background":require("../assets/images/services-bg/contracts.jpg"),
+		 "backgroundPosition": "top center",
      "description":{
         "mainDescription":"We provide comprehensive contract-related legal support to attorneys and businesses across the U.S.",
         "smallDesription":"Our team of seasoned legal professionals specializes in drafting, reviewing, negotiating, and managing contracts to ensure clarity, enforceability, and protection of your clients' interests. With a deep understanding of contract law and a commitment to precision, we deliver strategic solutions that minimize risk and maximize value."
@@ -1758,7 +1770,7 @@ export const servicesArray = [
 		contentBoxTitle: "Real estate law isn't just about property—it's about power.",
 		link: routes["real-estate-litigation"].href,
 		image: serviceImage1,
-		menuContent: "Securing your client’s property and future with ironclad legal documentation and results-driven strategy."
+		menuContent: "Securing your client's property and future with ironclad legal documentation and results-driven strategy."
 	}, {
 		id: "06",
 		title: "Family Law",

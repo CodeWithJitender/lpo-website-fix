@@ -15,8 +15,6 @@ import { ChevronIcon, InfoIcon } from "@/components/Icons";
 
 import { routes } from "@/utils/routesPath";
 
-import playButtonIcon from "@/assets/icons/button-play-icon.png";
-
 import * as styles from "./AccordianItem.module.scss";
 
 const AccordianItem = (props) => {
@@ -91,10 +89,11 @@ const AccordianItem = (props) => {
 							<div className={styles.globalText}>
 								{content.description}
 							</div>
-							<LinkButton to={routes["contact-us"].href} className={styles.bookButton}>
-								<span>BOOK AN INTERVIEW WITH A PARALEGAL</span>
-								{!isMobile && <span><img src={playButtonIcon} alt="" /></span>}
-							</LinkButton>
+							<LinkButton
+								to={routes["contact-us"].href}
+								delay="200ms"
+								className={styles.bookButton}
+							>SCHEDULE A STRATEGY CALL WITH US</LinkButton>
 						</Grid>
 					</Grid>
 					{!isMobile && 
