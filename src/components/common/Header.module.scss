@@ -104,6 +104,15 @@
 	}
 }
 
+.menuRoot {
+	:global {
+		.MuiBackdrop-root {
+			backdrop-filter: none !important;
+			background: transparent !important;
+		}
+	}
+}
+
 .menuPopover {
 	background-color: rgba(7, 12, 30, 0.8) !important;
 	backdrop-filter: blur(9.5px);

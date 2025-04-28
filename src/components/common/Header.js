@@ -56,8 +56,9 @@ const Header = () => {
 		setMenuOpen(false);
 	}, [pathname]);
 
-	const handleMenuOpen = () => {
+	const handleMenuOpen = (e) => {
 		setMenuOpen(true);
+		e.preventDefault();
 	};
 
 	const handleMenuClose = () => {
@@ -125,7 +126,7 @@ const Header = () => {
 										to={routes.services.href}
 										data-replace={routes.services.label}
 										className={styles.headerLink}
-										onMouseEnter={handleMenuOpen}
+										onClick={handleMenuOpen}
 										ref={anchorEl}
 									>
 										<span>{routes.services.label}</span>
@@ -166,8 +167,7 @@ const Header = () => {
 								open={menuOpen}
 								onClose={handleMenuClose}
 								PaperProps={{
-									onMouseEnter: handleMenuOpen,
-									onMouseLeave: handleMenuClose,
+									onClick: handleMenuClose
 								}}
 								anchorOrigin={{
 									vertical: "bottom",
@@ -178,7 +178,8 @@ const Header = () => {
 									horizontal: "center",
 								}}
 								PopoverClasses={{
-									paper: styles.menuPopover
+									paper: styles.menuPopover,
+									root: styles.menuRoot
 								}}
 							>
 								<MegaMenu />

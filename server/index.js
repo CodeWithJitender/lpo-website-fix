@@ -1,10 +1,23 @@
 import express from 'express';
-import renderer from './renderer';
 import path from 'path';
+import bodyParser from 'body-parser';
+
+import renderer from './renderer';
+import apiRouter from "./api";
 
 const app = express();
+
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded())
+
+// parse application/json
+app.use(bodyParser.json())
+
 // Serve assets from '/assets/' prefix
 app.use('/assets', express.static(path.join(__dirname, '')));
+
+// API for contact
+app.use("/api", apiRouter)
 
 // Handle all other requests with SSR
 app.use(renderer);

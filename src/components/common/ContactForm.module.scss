@@ -25,6 +25,7 @@
 
 .submitWrapper {
 	text-align: right;
+	margin-top: 12px;
 }
 
 .formSubmitButton {
@@ -55,6 +56,22 @@
 		.MuiInputBase-input {
 			color: #c9b9b0 !important;
 		}
+	}
+}
+
+.loader {
+	animation: loaderAnimation 5s ease;
+	animation-iteration-count: infinite;
+	fill: #c9b9b0;
+	width: 80px;
+}
+
+@keyframes loaderAnimation {
+	0% {
+		transform: rotate(0);
+	}
+	100% {
+		transform: rotate(360deg);
 	}
 }
 
