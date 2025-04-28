@@ -25,11 +25,11 @@ const AboutDeepti = () => {
 					<div className={styles.designation}>Business Head. Glocal LPO</div>
 				</Grid>
 				<Grid size={12} className={styles.aboutFounder}>
-					Kunal Jaggi is the visionary Founder & CEO behind Glocal LPO, backed by over 20 years of entrepreneurial and operational leadership.
+					Deepti is the driving force behind Glocal LPO, turning Kunal's vision into reality. 
 				</Grid>
 				<Grid size={12}>
-					<p>As the architect or Head Field Solutions—India's premier recrunment-outsourcing mirm since 2001-ne nas delivered top-tier offshore recruitment, digital, accounting, and virtual assistant services across the U.S. and Canada. Spottina the surae in demand for cost-eftective, high-quality ledal sumport. Kunal launcher Glocal PO to bring world-class alternative legal solutions to law firms and corporate legal teams in the Us, canade, and europe.</p>
-					<p>Under his stewardship, Glocal IPO has become a sophisticated boutique partner celebrated for precision-driven services and an unwavering commitment to excellence, A champion or people-first leader" ship, Kunal cultivates a culture of growth and engagement-empowering every team member as an "in-ternal client" and setting new benchmarks in the outsourcing industry.</p>
+					<p>As Business Head, she leverages deep sales and marketing expertise in legal outsourcing to fuel revenue growth, expand our reach and delight clients with tailored, scalable solutions. Leading a powerhouse team of over 180 legal specialists and business development strategists, Deepti's “understand, curate, deliver” philosophy ensures every engagement exceeds expectations.</p>
+					<p>A discipline-driven leader and proud defense brat, she blends resilience with strategic insight to set new industry benchmarks. With Deepti at the helm, Glocal LPO is more than a service provider—it's your trusted partner in legal excellence, delivering powerful representation with a personal touch.</p>
 				</Grid>
 			</Grid>
 		</Container>

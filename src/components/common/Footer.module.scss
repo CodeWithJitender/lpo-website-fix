@@ -54,6 +54,8 @@
     margin: 0 15px;
     color: #fff8f2;
     text-decoration: none;
+		line-height: 1.3;
+		margin-bottom: 8px;
   }
 }
 
@@ -211,8 +213,8 @@
 		margin-bottom: 55px;
 	}
 
-	.logo{
-		width: 277px;
+	.logo {
+		width: 180px;
 	}
 
 	.navBar{
@@ -225,7 +227,7 @@
 	}
 
 	.copyrightContainer {
-		padding: 32px 16px;
+		padding: 16px;
 		text-align: center;
 		font-size: 16px;
 		margin-top: 0;
@@ -236,7 +238,7 @@
 	}
 
 	.complianceLogoContainer {
-		margin-top: -40px;
+		margin-top: -45px;
 	}
 
 	.copyrightText {
@@ -248,12 +250,26 @@
 	}
 
 	.logoImage {
-		width: 80px;
+		width: 90px;
 		margin-right: 12px;
 	
 		&:last-child {
-			width: 100px;
+			width: 130px;
 			margin-right: 0;
 		}
+	}
+
+	.footer {
+		.addressHeading {
+			font-size: 16px;
+		}
+
+		.address {
+			font-size: 14px;
+		}
+	}
+
+	.extraPaddingContainer {
+		padding: 32px 16px;
 	}
 }

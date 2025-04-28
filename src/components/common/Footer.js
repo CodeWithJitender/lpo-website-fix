@@ -170,6 +170,7 @@ const Footer = () => {
 							href="https://g.co/kgs/2Gbqrfo"
 							rel="noopener noreferrer nofollow"
 							target="_blank"
+							className={styles.address}
 						>
 							3422 Old Capitol Trail, Wilmington DE 19808, USA
 						</a>
@@ -188,6 +189,7 @@ const Footer = () => {
 							href="https://g.co/kgs/jd2x9s4"
 							rel="noopener noreferrer nofollow"
 							target="_blank"
+							className={styles.address}
 						>
 							B 73, Block B, Sector 57, Noida, Uttar Pradesh 201301, India
 						</a>
