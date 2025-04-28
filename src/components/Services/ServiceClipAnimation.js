@@ -1,6 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { useLocation } from "react-router-dom";
+import { gsap } from "gsap";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
 import * as styles from "./ServiceClipAnimation.module.scss";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function ServiceClipAnimation() {
   const contentRef = useRef(null);
@@ -8,6 +13,8 @@ export default function ServiceClipAnimation() {
   const posterRefs = useRef([]);
   const posterInnerRefs = useRef([]);
   const [isClient, setIsClient] = useState(false);
+
+	const { pathname } = useLocation();
 
   useEffect(() => {
     // Set isClient to true when component mounts in browser
@@ -17,70 +24,46 @@ export default function ServiceClipAnimation() {
   useEffect(() => {
     if (!isClient) return;
 
-    // Dynamic import of GSAP to handle SSR case
-    const setupGSAP = async () => {
-      try {
-        // Dynamic imports for GSAP to handle SSR
-        const gsapModule = await import('gsap');
-        const gsap = gsapModule.default || gsapModule;
-        
-        const scrollTriggerModule = await import('gsap/ScrollTrigger');
-        const ScrollTrigger = scrollTriggerModule.ScrollTrigger;
-        
-        // Register the ScrollTrigger plugin
-        gsap.registerPlugin(ScrollTrigger);
+		// Animation setup
+		const clipPath = clipPathRefs.current;
+		const poster = posterRefs.current;
+		const posterInner = posterInnerRefs.current;
 
-        // Animation setup
-        const clipPath = clipPathRefs.current;
-        const poster = posterRefs.current;
-        const posterInner = posterInnerRefs.current;
-
-        // Create animations for each clipPath element
-        clipPath.forEach((clipPathEl, pos) => {
-          gsap.timeline({
-            scrollTrigger: {
-              trigger: poster[pos],
-              start: 'top bottom',
-              end: 'bottom top',
-              scrub: true,
-              id: `st-${pos}`
-            }
-          })
-          .fromTo(clipPathEl, {
-            xPercent: pos === 0 ? 40 : -80
-          }, {
-            ease: 'none',
-            xPercent: pos === 0 ? -40 : 20
-          }, 0)
-          .fromTo(posterInner[pos], {
-            xPercent: pos === 0 ? -5 : 5,
-            yPercent: pos === 0 ? -5 : 5
-          }, {
-            xPercent: pos === 0 ? 5 : -5,
-            yPercent: pos === 0 ? 5 : -5
-          }, 0);
-        });
-      } catch (error) {
-        console.error("Failed to load GSAP:", error);
-      }
-    };
-
-    setupGSAP();
+		// Create animations for each clipPath element
+		clipPath.forEach((clipPathEl, pos) => {
+			gsap.timeline({
+				scrollTrigger: {
+					trigger: poster[pos],
+					start: 'top bottom',
+					end: 'bottom top',
+					scrub: true,
+					id: `st-${pos}`
+				}
+			})
+			.fromTo(clipPathEl, {
+				xPercent: pos === 0 ? 40 : -80
+			}, {
+				ease: 'none',
+				xPercent: pos === 0 ? -40 : 20
+			}, 0)
+			.fromTo(posterInner[pos], {
+				xPercent: pos === 0 ? -5 : 5,
+				yPercent: pos === 0 ? -5 : 5
+			}, {
+				xPercent: pos === 0 ? 5 : -5,
+				yPercent: pos === 0 ? 5 : -5
+			}, 0);
+		});
 
     // Cleanup function
     return () => {
-      // Clean up ScrollTrigger instances
-      import('gsap/ScrollTrigger')
-        .then(({ ScrollTrigger }) => {
-          clipPathRefs.current.forEach((_, pos) => {
-            if (ScrollTrigger.getById(`st-${pos}`)) {
-              ScrollTrigger.getById(`st-${pos}`).kill();
-            }
-          });
-        })
-        .catch(err => console.error("Error cleaning up ScrollTrigger:", err));
+			clipPathRefs.current.forEach((_, pos) => {
+				if (ScrollTrigger.getById(`st-${pos}`)) {
+					ScrollTrigger.getById(`st-${pos}`).kill();
+				}
+			});
     };
-  }, [isClient]); // Only run when isClient changes to true
+  }, [isClient, pathname]); // Only run when isClient changes to true
 
   // Add refs to arrays for later use
   const addToClipPathRefs = (el) => {

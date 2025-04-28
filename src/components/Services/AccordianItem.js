@@ -11,7 +11,7 @@ import { LinkButton } from '@/components/common';
 
 import { useDevice } from '@/context/DeviceContext';
 
-import { ChevronIcon } from "@/components/Icons";
+import { ChevronIcon, InfoIcon } from "@/components/Icons";
 
 import { routes } from "@/utils/routesPath";
 
@@ -47,7 +47,7 @@ const AccordianItem = (props) => {
 			>
 				<div className={styles.accordianHead}>
 					<div className={styles.accordianIcon}>
-						<img src={header.icon} alt="" />
+						<InfoIcon />
 					</div>
 					<div className={styles.accordianHeadHeading}>{header.title}</div>
 					<div>

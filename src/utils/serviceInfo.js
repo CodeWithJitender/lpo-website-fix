@@ -16,357 +16,223 @@ import serviceImage12 from "@/assets/images/service-image-12.jpg";
 import { routes } from "./routesPath";
 
 export const servicesInfo = {
-	"civil-litigation-support": {
-		"title":"Civil Litigation Support",
-		"heading":<>
-			Strategic Support <br />
-			for Injury Claims <br />
-			That Win.
-		</>,
-		"background": require("../assets/images/services-bg/civil-litigation.jpg"),
-		"description":{
-			"mainDescription":"Injury-related litigation entails exacting case analysis, exhaustive legal research, tactical document preparation and personalized support.",
-			"smallDesription":"At Glocal LPO, we provide full-spectrum legal support, enabling law firms and attorneys to optimize case management with streamlined execution and process oversight."
-		},
-		"casesSpecializedIn":[
-			{
-				"id":"01",
-				"title":"Motor Vehicle Accidents Accidents",
-				"description":"Car, truck, bicycle and motorcycle accident claims.",
-				"image": require("../assets/images/service-1.jpg")
-			},
-			{
-				"id":"02",
-				"title":"Medical Negligence & Malpractice",
-				"description":"Ensuring Compliance with Legal Standards.",
-				"image": require("../assets/images/service-2.jpg")
-			},
-			{
-				"id":"03",
-				"title":"Slip & Fall or Trip and Fall Cases",
-				"description":"Highlightin`g Maximum Injury Compensation.",
-				"image": require("../assets/images/service-3.jpg")
-			},
-			{
-				"id":"04",
-				"title":"Dog Bite",
-				"description":"Nerve damage, disfigurement, or long-term medical issues.",
-				"image": require("../assets/images/service-4.jpg")
-			},
-			{
-				"id":"05",
-				"title":"Brain & Spinal Cord Injuries",
-				"description":"Securing Justice for Those with Devastating Injuries.",
-				"image": require("../assets/images/service-5.jpg")
-			},
-			{
-				"id":"06",
-				"title":"Workplace & Construction Accidents",
-				"description":"Protecting Legal Rights for Workplace Injuries.",
-				"image": require("../assets/images/service-6.jpg")
-			}
-		],
-		"accordianItems":[
-			{
-				"header":{
-					"icon": require("../assets/icons/accordian-icon-1.png"),
-					"title":"Client Onboarding & Case Merit Evaluation"
-				},
-				"content":{
-					"heading":"Medical Records - The Linchpins of every personal injury claim's success.",
-					"smallHeading":"Glocal's Distinctive Edge:",
-					"description":"Reduce overhead costs while gaining access to top-tier legal expertise and AI-powered analysis—customized to your firm's needs.",
-					"listItems":[
-						"Retrieving & organizing medical records",
-						"Patient Record Extraction",
-						"Summarizing diagnosis & treatments",
-						"Creating medical chronologies & injury assessments",
-						"Medical History Compilation",
-						"Medical Billing Summarization",
-						"Privilege Logs"
-					]
-				}
-			},
-			{
-				"header":{
-					"icon": require("../assets/icons/accordian-icon-2.png"),
-					"title":"Medical Record Retrieval & Summarization"
-				},
-				"content":{
-					"heading":"Medical Records - The Linchpins of every personal injury claim's success.",
-					"smallHeading":"Glocal's Distinctive Edge:",
-					"description":"Reduce overhead costs while gaining access to top-tier legal expertise and AI-powered analysis—customized to your firm's needs.",
-					"listItems":[
-						"Retrieving & organizing medical records",
-						"Patient Record Extraction",
-						"Summarizing diagnosis & treatments",
-						"Creating medical chronologies & injury assessments",
-						"Medical History Compilation",
-						"Medical Billing Summarization",
-						"Privilege Logs"
-					]
-				}
-			},
-			{
-				"header":{
-					"icon": require("../assets/icons/accordian-icon-3.png"),
-					"title":"Document Drafting & Discovery Support"
-				},
-				"content":{
-					"heading":"Medical Records - The Linchpins of every personal injury claim's success.",
-					"smallHeading":"Glocal's Distinctive Edge:",
-					"description":"Reduce overhead costs while gaining access to top-tier legal expertise and AI-powered analysis—customized to your firm's needs.",
-					"listItems":[
-						"Retrieving & organizing medical records",
-						"Patient Record Extraction",
-						"Summarizing diagnosis & treatments",
-						"Creating medical chronologies & injury assessments",
-						"Medical History Compilation",
-						"Medical Billing Summarization",
-						"Privilege Logs"
-					]
-				}
-			},
-			{
-				"header":{
-					"icon": require("../assets/icons/accordian-icon-4.png"),
-					"title":"Legal Research, Case Law Review & Legal Interpretation"
-				},
-				"content":{
-					"heading":"Medical Records - The Linchpins of every personal injury claim's success.",
-					"smallHeading":"Glocal's Distinctive Edge:",
-					"description":"Reduce overhead costs while gaining access to top-tier legal expertise and AI-powered analysis—customized to your firm's needs.",
-					"listItems":[
-						"Retrieving & organizing medical records",
-						"Patient Record Extraction",
-						"Summarizing diagnosis & treatments",
-						"Creating medical chronologies & injury assessments",
-						"Medical History Compilation",
-						"Medical Billing Summarization",
-						"Privilege Logs"
-					]
-				}
-			},
-			{
-				"header":{
-					"icon": require("../assets/icons/accordian-icon-5.png"),
-					"title":"Litigation & Trial Support"
-				},
-				"content":{
-					"heading":"Medical Records - The Linchpins of every personal injury claim's success.",
-					"smallHeading":"Glocal's Distinctive Edge:",
-					"description":"Reduce overhead costs while gaining access to top-tier legal expertise and AI-powered analysis—customized to your firm's needs.",
-					"listItems":[
-						"Retrieving & organizing medical records",
-						"Patient Record Extraction",
-						"Summarizing diagnosis & treatments",
-						"Creating medical chronologies & injury assessments",
-						"Medical History Compilation",
-						"Medical Billing Summarization",
-						"Privilege Logs"
-					]
-				}
-			},
-			{
-				"header":{
-					"icon":require("../assets/icons/accordian-icon-6.png"),
-					"title":"Administrative Tasks"
-				},
-				"content":{
-					"heading":"Medical Records - The Linchpins of every personal injury claim's success.",
-					"smallHeading":"Glocal's Distinctive Edge:",
-					"description":"Reduce overhead costs while gaining access to top-tier legal expertise and AI-powered analysis—customized to your firm's needs.",
-					"listItems":[
-						"Retrieving & organizing medical records",
-						"Patient Record Extraction",
-						"Summarizing diagnosis & treatments",
-						"Creating medical chronologies & injury assessments",
-						"Medical History Compilation",
-						"Medical Billing Summarization",
-						"Privilege Logs"
-					]
-				}
-			}
-		]
+	"business-litigation-support":{
+     "title":"Business Litigation Support",
+     "heading":<>
+     Precision that Protects.  <br />
+     Strategy that Wins.
+     </>,
+     "background":require("../assets/images/services-bg/business-litigation.jpg"),
+     "description":{
+        "mainDescription":"Accuracy is the foundation of our approach — we perform thorough document reviews to meticulously safeguard your business interests.",
+        "smallDesription":"We provide comprehensive litigation support across all facets of business law, including meticulous document review, discovery analysis, contract disputes, intellectual property matters, shareholder conflicts, franchise agreement issues, non-compete enforcement, and more. Our goal is to ensure your business interests are safeguarded at every stage of the legal process, with strategies designed to protect and advance your rights."
+     },
+     "accordianItems":[
+        {
+           "header":{
+              "icon":require("../assets/icons/accordian-icon-1.png"),
+              "title":"Business Litigation Solutions"
+           },
+           "content":{
+              "heading":"Precision is key — we meticulously review every document to safeguard your interests.",
+              "smallHeading":"Glocal's Distinctive Edge:",
+              "description":"With a track record of handling complex business litigation matters, we leverage deep legal expertise and strategic insight to protect your business interests and resolve disputes efficiently.",
+              "listItems":[
+                 "Business Litigation Support: Comprehensive assistance for all business-related legal challenges.",
+                 "Document Review: Thorough review and analysis of key documents to ensure accuracy and compliance.",
+                 "Discovery Documents Analysis: In-depth examination of discovery documents to uncover critical information.",
+                 "Business Disputes & Litigation: Expert support in resolving a wide range of business conflicts.",
+                 "Contract Disputes: Resolving disagreements related to breach, interpretation, and enforcement of contracts.",
+                 "Breach of Contract: Legal strategies to address violations of contract terms and protect your interests.",
+                 "Business Partnership Disputes: Mediation and litigation support for conflicts between business partners.",
+                 "Intellectual Property Disputes: Defending and enforcing intellectual property rights, including patents, trademarks, and copyrights.",
+                 "Shareholder Disputes: Legal guidance and representation in shareholder conflicts, ensuring fair resolution.",
+                 "Franchise Agreement Disputes: Resolving conflicts related to franchise agreements, ensuring compliance with terms.",
+                 "Non-Compete Agreements: Legal support for enforcing or challenging non-compete clauses in employment contracts.",
+
+              ]
+           }
+        }
+        
+     ]
   },
   "personal-injury":{
-    "title":"Personal Injury",
-    "heading": <>
-			Strategic Support <br />
-			for Injury Claims <br />
-			That Win.
-		</>,
-    "background": require("../assets/images/services-bg/personal-injury.jpg"),
-    "description":{
+     "title":"Personal Injury",
+     "heading":<>
+     Strategic Support <br />
+     for Injury Claims <br />
+     That Win.</>,
+     "background":require("../assets/images/services-bg/personal-injury.jpg"),
+     "description":{
         "mainDescription":"Injury-related litigation entails exacting case analysis, exhaustive legal research, tactical document preparation and personalized support.",
         "smallDesription":"At Glocal LPO, we provide full-spectrum legal support, enabling law firms and attorneys to optimize case management with streamlined execution and process oversight."
      },
      "casesSpecializedIn":[
         {
-					"id":"01",
-					"title":"Motor Vehicle Accidents Accidents",
-					"description":"Car, truck, bicycle and motorcycle accident claims.",
-					"image": require("../assets/images/service-1.jpg")
+           "id":"01",
+           "title":"Motor Vehicle Accidents Accidents",
+           "description":"Car, truck, bicycle and motorcycle accident claims.",
+           "image":require("../assets/images/service-1.jpg")
         },
         {
-					"id":"02",
-					"title":"Medical Negligence & Malpractice",
-					"description":"Ensuring Compliance with Legal Standards.",
-					"image": require("../assets/images/service-2.jpg")
+           "id":"02",
+           "title":"Medical Negligence & Malpractice",
+           "description":"Ensuring Compliance with Legal Standards.",
+           "image":require("../assets/images/service-2.jpg")
         },
         {
-					"id":"03",
-					"title":"Slip & Fall or Trip and Fall Cases",
-					"description":"Highlightin`g Maximum Injury Compensation.",
-					"image": require("../assets/images/service-3.jpg")
+           "id":"03",
+           "title":"Slip & Fall or Trip and Fall Cases",
+           "description":"Highlightin`g Maximum Injury Compensation.",
+           "image":require("../assets/images/service-3.jpg")
         },
         {
-					"id":"04",
-					"title":"Dog Bite",
-					"description":"Nerve damage, disfigurement, or long-term medical issues.",
-					"image": require("../assets/images/service-4.jpg")
+           "id":"04",
+           "title":"Dog Bite",
+           "description":"Nerve damage, disfigurement, or long-term medical issues.",
+           "image":require("../assets/images/service-4.jpg")
         },
         {
-					"id":"05",
-					"title":"Brain & Spinal Cord Injuries",
-					"description":"Securing Justice for Those with Devastating Injuries.",
-					"image": require("../assets/images/service-5.jpg")
+           "id":"05",
+           "title":"Brain & Spinal Cord Injuries",
+           "description":"Securing Justice for Those with Devastating Injuries.",
+           "image":require("../assets/images/service-5.jpg")
         },
         {
-					"id":"06",
-					"title":"Workplace & Construction Accidents",
-					"description":"Protecting Legal Rights for Workplace Injuries.",
-					"image": require("../assets/images/service-6.jpg")
+           "id":"06",
+           "title":"Workplace & Construction Accidents",
+           "description":"Protecting Legal Rights for Workplace Injuries.",
+           "image":require("../assets/images/service-6.jpg")
         }
      ],
      "accordianItems":[
         {
            "header":{
-              "icon": require("../assets/icons/accordian-icon-1.png"),
+              "icon":require("../assets/icons/accordian-icon-1.png"),
               "title":"Client Onboarding & Case Merit Evaluation"
            },
            "content":{
-						"heading":"Medical Records - The Linchpins of every personal injury claim's success.",
-						"smallHeading":"Glocal's Distinctive Edge:",
-						"description":"Reduce overhead costs while gaining access to top-tier legal expertise and AI-powered analysis—customized to your firm's needs.",
-						"listItems":[
-							"Retrieving & organizing medical records",
-							"Patient Record Extraction",
-							"Summarizing diagnosis & treatments",
-							"Creating medical chronologies & injury assessments",
-							"Medical History Compilation",
-							"Medical Billing Summarization",
-							"Privilege Logs"
-						]
+              "heading":"Medical Records - The Linchpins of every personal injury claim's success.",
+              "smallHeading":"Glocal's Distinctive Edge:",
+              "description":"Reduce overhead costs while gaining access to top-tier legal expertise and AI-powered analysis—customized to your firm's needs.",
+              "listItems":[
+                 "Retrieving & organizing medical records",
+                 "Patient Record Extraction",
+                 "Summarizing diagnosis & treatments",
+                 "Creating medical chronologies & injury assessments",
+                 "Medical History Compilation",
+                 "Medical Billing Summarization",
+                 "Privilege Logs"
+              ]
            }
         },
         {
-					"header":{
-					"icon": require("../assets/icons/accordian-icon-2.png"),
-					"title":"Medical Record Retrieval & Summarization"
-					},
-					"content":{
-						"heading":"Medical Records - The Linchpins of every personal injury claim's success.",
-						"smallHeading":"Glocal's Distinctive Edge:",
-						"description":"Reduce overhead costs while gaining access to top-tier legal expertise and AI-powered analysis—customized to your firm's needs.",
-						"listItems":[
-							"Retrieving & organizing medical records",
-							"Patient Record Extraction",
-							"Summarizing diagnosis & treatments",
-							"Creating medical chronologies & injury assessments",
-							"Medical History Compilation",
-							"Medical Billing Summarization",
-							"Privilege Logs"
-						]
-					}
+           "header":{
+              "icon":require("../assets/icons/accordian-icon-2.png"),
+              "title":"Medical Record Retrieval & Summarization"
+           },
+           "content":{
+              "heading":"Medical Records - The Linchpins of every personal injury claim's success.",
+              "smallHeading":"Glocal's Distinctive Edge:",
+              "description":"Reduce overhead costs while gaining access to top-tier legal expertise and AI-powered analysis—customized to your firm's needs.",
+              "listItems":[
+                 "Retrieving & organizing medical records",
+                 "Patient Record Extraction",
+                 "Summarizing diagnosis & treatments",
+                 "Creating medical chronologies & injury assessments",
+                 "Medical History Compilation",
+                 "Medical Billing Summarization",
+                 "Privilege Logs"
+              ]
+           }
         },
         {
-					"header":{
-						"icon": require("../assets/icons/accordian-icon-3.png"),
-						"title":"Document Drafting & Discovery Support"
-					},
-					"content":{
-						"heading":"Medical Records - The Linchpins of every personal injury claim's success.",
-						"smallHeading":"Glocal's Distinctive Edge:",
-						"description":"Reduce overhead costs while gaining access to top-tier legal expertise and AI-powered analysis—customized to your firm's needs.",
-						"listItems":[
-							"Retrieving & organizing medical records",
-							"Patient Record Extraction",
-							"Summarizing diagnosis & treatments",
-							"Creating medical chronologies & injury assessments",
-							"Medical History Compilation",
-							"Medical Billing Summarization",
-							"Privilege Logs"
-						]
-					}
+           "header":{
+              "icon":require("../assets/icons/accordian-icon-3.png"),
+              "title":"Document Drafting & Discovery Support"
+           },
+           "content":{
+              "heading":"Medical Records - The Linchpins of every personal injury claim's success.",
+              "smallHeading":"Glocal's Distinctive Edge:",
+              "description":"Reduce overhead costs while gaining access to top-tier legal expertise and AI-powered analysis—customized to your firm's needs.",
+              "listItems":[
+                 "Retrieving & organizing medical records",
+                 "Patient Record Extraction",
+                 "Summarizing diagnosis & treatments",
+                 "Creating medical chronologies & injury assessments",
+                 "Medical History Compilation",
+                 "Medical Billing Summarization",
+                 "Privilege Logs"
+              ]
+           }
         },
         {
-					"header":{
-						"icon": require("../assets/icons/accordian-icon-4.png"),
-						"title":"Legal Research, Case Law Review & Legal Interpretation"
-					},
-					"content":{
-						"heading":"Medical Records - The Linchpins of every personal injury claim's success.",
-						"smallHeading":"Glocal's Distinctive Edge:",
-						"description":"Reduce overhead costs while gaining access to top-tier legal expertise and AI-powered analysis—customized to your firm's needs.",
-						"listItems":[
-							"Retrieving & organizing medical records",
-							"Patient Record Extraction",
-							"Summarizing diagnosis & treatments",
-							"Creating medical chronologies & injury assessments",
-							"Medical History Compilation",
-							"Medical Billing Summarization",
-							"Privilege Logs"
-						]
-					}
+           "header":{
+              "icon":require("../assets/icons/accordian-icon-4.png"),
+              "title":"Legal Research, Case Law Review & Legal Interpretation"
+           },
+           "content":{
+              "heading":"Medical Records - The Linchpins of every personal injury claim's success.",
+              "smallHeading":"Glocal's Distinctive Edge:",
+              "description":"Reduce overhead costs while gaining access to top-tier legal expertise and AI-powered analysis—customized to your firm's needs.",
+              "listItems":[
+                 "Retrieving & organizing medical records",
+                 "Patient Record Extraction",
+                 "Summarizing diagnosis & treatments",
+                 "Creating medical chronologies & injury assessments",
+                 "Medical History Compilation",
+                 "Medical Billing Summarization",
+                 "Privilege Logs"
+              ]
+           }
         },
         {
-					"header":{
-						"icon": require("../assets/icons/accordian-icon-5.png"),
-						"title":"Litigation & Trial Support"
-					},
-					"content":{
-						"heading":"Medical Records - The Linchpins of every personal injury claim's success.",
-						"smallHeading":"Glocal's Distinctive Edge:",
-						"description":"Reduce overhead costs while gaining access to top-tier legal expertise and AI-powered analysis—customized to your firm's needs.",
-						"listItems":[
-							"Retrieving & organizing medical records",
-							"Patient Record Extraction",
-							"Summarizing diagnosis & treatments",
-							"Creating medical chronologies & injury assessments",
-							"Medical History Compilation",
-							"Medical Billing Summarization",
-							"Privilege Logs"
-						]
-					}
+           "header":{
+              "icon":require("../assets/icons/accordian-icon-5.png"),
+              "title":"Litigation & Trial Support"
+           },
+           "content":{
+              "heading":"Medical Records - The Linchpins of every personal injury claim's success.",
+              "smallHeading":"Glocal's Distinctive Edge:",
+              "description":"Reduce overhead costs while gaining access to top-tier legal expertise and AI-powered analysis—customized to your firm's needs.",
+              "listItems":[
+                 "Retrieving & organizing medical records",
+                 "Patient Record Extraction",
+                 "Summarizing diagnosis & treatments",
+                 "Creating medical chronologies & injury assessments",
+                 "Medical History Compilation",
+                 "Medical Billing Summarization",
+                 "Privilege Logs"
+              ]
+           }
         },
         {
-					"header":{
-						"icon": require("../assets/icons/accordian-icon-6.png"),
-						"title":"Administrative Tasks"
-					},
-					"content":{
-						"heading":"Medical Records - The Linchpins of every personal injury claim's success.",
-						"smallHeading":"Glocal's Distinctive Edge:",
-						"description":"Reduce overhead costs while gaining access to top-tier legal expertise and AI-powered analysis—customized to your firm's needs.",
-						"listItems":[
-							"Retrieving & organizing medical records",
-							"Patient Record Extraction",
-							"Summarizing diagnosis & treatments",
-							"Creating medical chronologies & injury assessments",
-							"Medical History Compilation",
-							"Medical Billing Summarization",
-							"Privilege Logs"
-						]
-					}
+           "header":{
+              "icon":require("../assets/icons/accordian-icon-6.png"),
+              "title":"Administrative Tasks"
+           },
+           "content":{
+              "heading":"Medical Records - The Linchpins of every personal injury claim's success.",
+              "smallHeading":"Glocal's Distinctive Edge:",
+              "description":"Reduce overhead costs while gaining access to top-tier legal expertise and AI-powered analysis—customized to your firm's needs.",
+              "listItems":[
+                 "Retrieving & organizing medical records",
+                 "Patient Record Extraction",
+                 "Summarizing diagnosis & treatments",
+                 "Creating medical chronologies & injury assessments",
+                 "Medical History Compilation",
+                 "Medical Billing Summarization",
+                 "Privilege Logs"
+              ]
+           }
         }
      ]
   },
   "employee-law":{
      "title":"Employment Law",
      "heading":<>
-			Ensuring Fair Workplaces,<br />
-			Enforcing Compliance. 
+     Ensuring Fair Workplaces,<br />
+     Enforcing Compliance. 
      </>,
      "background":require("../assets/images/services-bg/employement-law.jpg"),
      "description":{
@@ -466,7 +332,7 @@ export const servicesInfo = {
               "title":"Employment Compliance & Advisory Services / Workplace Policies & Training"
            },
            "content":{
-              "heading":"By law’s fair hand, we guard and guide.",
+              "heading":"By law's fair hand, we guard and guide.",
               "smallHeading":"Glocal's Distinctive Edge:",
               "description":"WE have the ability to scale resources up or down based on workload.",
               "listItems":[
@@ -517,8 +383,8 @@ export const servicesInfo = {
   "workers-compensation":{
      "title":"Workers' Conmensation & Workplace Injury Support",
      "heading":<>
-			We believe - In toil and trial, <br />
-			justice shall prevail.
+     We believe - In toil and trial, <br />
+     justice shall prevail.
      </>,
      "background":require("../assets/images/services-bg/workers-compensation.jpg"),
      "description":{
@@ -663,97 +529,99 @@ export const servicesInfo = {
         }
      ]
   },
-  "real-estate-litigation":{
+  "estate-planning-litigation":{
      "title":"Estate Planning Litigation",
      "heading":<>
-			Your Legacy, <br />
-			Our Strategy
+     Your Legacy, <br />
+     Our Strategy
      </>,
      "background":require("../assets/images/services-bg/real-estate-litigation.jpg"),
      "description":{
-        "mainDescription":"A strong estate plan isn’t just paperwork—it’s a fortress.",
-        "smallDesription":"We structure your client’s documents relating to assets, highlight points to eliminate the risks therein, and ensure your strategies stand unrefuted."
+        "mainDescription":"A strong estate plan isn't just paperwork—it's a fortress.",
+        "smallDesription":"We structure your client's documents relating to assets, highlight points to eliminate the risks therein, and ensure your strategies stand unrefuted."
      },
-     "casesSpecializedIn":[
-        {
-           "id":"01",
-           "title":"Revocable Living Trusts",
-           "description":"Flexible legal arrangement efficiently done to avoid probate.",
-           "image":require("../assets/images/service-1.jpg")
-        },
-        {
-           "id":"02",
-           "title":"Irrevocable Trusts",
-           "description":"Shielding assets from creditors and lawsuits.",
-           "image":require("../assets/images/service-2.jpg")
-        },
-        {
-           "id":"03",
-           "title":"Last Will and Testament",
-           "description":"Ensuring wills are compliant with Estate Planning laws.",
-           "image":require("../assets/images/service-3.jpg")
-        },
-        {
-           "id":"04",
-           "title":"Durable Power of Attorney ",
-           "description":" Expertly crafted POAs ensuring secure delegation of financial and legal authority.",
-           "image":require("../assets/images/service-4.jpg")
-        },
-        {
-           "id":"05",
-           "title":"Health Care Directives",
-           "description":"Tailored healthcare directives that reflect client’s medical wishes with legal clarity. ",
-           "image":require("../assets/images/service-5.jpg")
-        },
-        {
-           "id":"06",
-           "title":"HIPAA Authorization Forms",
-           "description":"Regulation-compliant authorizations enabling smooth access to medical records.",
-           "image":require("../assets/images/service-6.jpg")
-        },
-        {
-           "id":"07",
-           "title":"Pour-Over Wills ",
-           "description":"Facilitating seamless transfer of non-trust assets to beneficiaries upon death.",
-           "image":require("../assets/images/service-6.jpg")
-        },
-        {
-           "id":"08",
-           "title":"Living Wills",
-           "description":"Explicitly documented medical preferences for a secure and clear end-of-life plan.",
-           "image":require("../assets/images/service-6.jpg")
-        },
-        {
-           "id":"09",
-           "title":"Beneficiary Designations",
-           "description":"Well-structured records guaranteeing direct and efficient beneficiary asset distribution.",
-           "image":require("../assets/images/service-6.jpg")
-        },
-        {
-           "id":"10",
-           "title":"Guardianship Designations",
-           "description":"Official designation of reliable guardians to ensure the care and security of minors and dependents.",
-           "image":require("../assets/images/service-6.jpg")
-        }
-     ],
      "accordianItems":[
         {
            "header":{
               "icon":require("../assets/icons/accordian-icon-1.png"),
-              "title":"Client Onboarding & Case Merit Evaluation"
+              "title":"Our Brilliant Lawyers draft superior Courtroom Documents"
            },
            "content":{
               "heading":"Medical Records - The Linchpins of every personal injury claim's success.",
               "smallHeading":"Glocal's Distinctive Edge:",
-              "description":"Reduce overhead costs while gaining access to top-tier legal expertise and AI-powered analysis—customized to your firm's needs.",
+              "description":"Backed by seasoned estate planning specialists, we safeguard your clients' interests while delivering efficient, accurate, and hassle-free probate back-end support.",
               "listItems":[
-                 "Retrieving & organizing medical records",
-                 "Patient Record Extraction",
-                 "Summarizing diagnosis & treatments",
+                 "Revocable Living Trusts- Flexible legal arrangement efficiently done to avoid probate.",
+                 "Irrevocable Trusts – Shielding assets from creditors and lawsuits.",
+                 "Last Will and Testament – Ensuring wills are compliant with Estate Planning laws.",
                  "Creating medical chronologies & injury assessments",
-                 "Medical History Compilation",
-                 "Medical Billing Summarization",
-                 "Privilege Logs"
+                 "Durable Power of Attorney - Expertly crafted POAs ensuring secure delegation of financial and legal authority.",
+                 "Health Care Directives - Tailored healthcare directives that reflect client's medical wishes with legal clarity. ",
+                 "HIPAA Authorization Forms - Regulation-compliant authorizations enabling smooth access to medical records.",
+                 "Pour-Over Wills - Facilitating seamless transfer of non-trust assets to beneficiaries upon death.",
+                 "Living Wills - Explicitly documented medical preferences for a secure and clear end-of-life plan.",
+                 "Beneficiary Designations - Well-structured records guaranteeing direct and efficient beneficiary asset distribution.",
+                 "Guardianship Designations - Official designation of reliable guardians to ensure the care and security of minors and dependents.",
+
+              ]
+           }
+        },
+        {
+           "header":{
+              "icon":require("../assets/icons/accordian-icon-6.png"),
+              "title":"Probate"
+           },
+           "content":{
+              "heading":"Seamless Probate Documents prepped without any Pitfalls",
+              "smallHeading":"Glocal's Distinctive Edge:",
+              "description":"Ensuring smooth estate transitions with expert-backed, accurate, and efficient probate support, protecting your clients every step of the way.",
+              "listItems":[
+                 "Petition for Probate - Assist with drafting court petitions to initiate probate and validate wills seamlessly.",
+                 "Letters Testamentary / Letters of Administration - Precise document preparation with the available documents to secure court approval for estate management.",
+                 "Inventory and Appraisal - Detailed asset documentation and valuation to ensure accurate estate accounting.",
+                 "Notice to Creditors - Timely preparation and filing of legal notices to manage estate liabilities efficiently.",
+                 "Accounting and Final Distribution - Comprehensive estate accounting and final asset distribution reports, ensuring compliance.",
+                 "Petition for Final Settlement - Flawless documentation to close probate smoothly and distribute assets per court approval.",
+                 "Waivers and Consents - Professionally prepared legal waivers to streamline estate administration and avoid disputes.",
+                 "Claims Against Estate - Efficient handling of creditor claims, ensuring proper validation and resolution.",
+                 "Affidavits of Heirship - Legally sound affidavits to establish heirs and facilitate estate transfers without delays."
+              ]
+           }
+        }
+     ]
+  },
+  "real-estate-litigation":{
+     "title":"Real Estate",
+     "heading":<>
+     From Ownership to Legacy —  <br />
+     We Secure Every Step.
+     </>,
+     "background":require("../assets/images/services-bg/real-estate-litigation.jpg"),
+     "description":{
+        "mainDescription":"A strong estate plan isn't just paperwork—it's a fortress.",
+        "smallDesription":"We structure your client's documents relating to assets, highlight points to eliminate the risks therein, and ensure your strategies stand unrefuted."
+     },
+     "accordianItems":[
+        {
+           "header":{
+              "icon":require("../assets/icons/accordian-icon-1.png"),
+              "title":"Authoritative Legal documents that we draft"
+           },
+           "content":{
+              "heading":"Drafting the Documents That Drive Justice Forward.",
+              "smallHeading":"Glocal's Distinctive Edge:",
+              "description":"We don't just assist in resolving disputes. We redefine the benchmarks. From property disputes to estate planning, we develop full proof documents that protect your client's assets and secure their future. When the stakes are high, we deliver results.",
+              "listItems":[
+                 "Complaint and Answer – Expertise in outlining the legal claims, facts, and the damages sought.",
+                 "Motion for Summary Judgment- Disputes involving contracts, foreclosure proceedings, landlord-tenant issues, and property title claims.",
+                 "Discovery Requests (Interrogatories, Requests for Production, Requests for Admission) – We help in uncovering key facts about property ownership, contracts, financial transactions, and compliance with laws.",
+                 "Notices of Deposition and Subpoenas - Testimony and documents from parties and third parties, such as real estate agents, lenders, or municipal authorities.",
+                 "Settlement Agreements - Disputes relating to property sales, leases, construction defects, foreclosures, boundary disputes, and landlord-tenant issues.",
+                 "Trial Briefs – Summarization of relevant facts, evidence, and applicable laws.",
+                 "Appeal Documents – Identify legal errors ",
+                 "Lis Pendens - Title disputes, Foreclosures, Breach of real estate and Easements & boundary disputes. ",
+                 "Quiet Title Actions - Establishing a single, undisputed titleholder and eliminating challenges from third parties and fraudulent, or disputed claims. "
+             
               ]
            }
         },
@@ -761,20 +629,21 @@ export const servicesInfo = {
         {
            "header":{
               "icon":require("../assets/icons/accordian-icon-6.png"),
-              "title":"Glocal’s Distinctive Edge: Backed by seasoned estate planning specialists, we safeguard your clients’ interests while delivering efficient, accurate, and hassle-free probate back-end support."
+              "title":"Technology and Tools we use"
            },
            "content":{
-              "heading":"",
+              "heading":"Tech-powered perfectionists: We know the tools that matter",
               "smallHeading":"",
               "description":"",
               "listItems":[
-                 "",
-                 "",
-                 "",
-                 "",
-                 "",
-                 "",
-                 ""
+                 "Clio",
+                 "MyCase",
+                 "Smokeball",
+                 "WealthCounsel",
+                 "Westlaw",
+                 "LexisNexis",
+                 "DocuSign",
+                 "Hot Docs"
               ]
            }
         }
@@ -848,7 +717,7 @@ export const servicesInfo = {
               "title":"Pleadings & Court Filings"
            },
            "content":{
-              "heading":"Punchline / Heading here...",
+              "heading":"To fight justice, we inscribe your clients' cause with the precision of the scribe, presenting your pleadings to the court as decrees of fate.",
               "smallHeading":"",
               "description":"",
               "listItems":[
@@ -871,7 +740,7 @@ export const servicesInfo = {
               "title":"Discovery Documents"
            },
            "content":{
-              "heading":"Punchline / Heading here...",
+              "heading":"With a keen eye and a steady hand, we dig up the docs that'll show you the truth.",
               "smallHeading":"",
               "description":"",
               "listItems":[
@@ -890,7 +759,7 @@ export const servicesInfo = {
               "title":"Financial Documents"
            },
            "content":{
-              "heading":"Punchline / Heading here...",
+              "heading":"As a samurai guards his blade, we help you guard the integrity of the financial documents, bringing justice and balance.",
               "smallHeading":"",
               "description":"",
               "listItems":[
@@ -909,7 +778,7 @@ export const servicesInfo = {
               "title":"Custody & Support Agreements"
            },
            "content":{
-              "heading":"Punchline / Heading here...",
+              "heading":"We process your financial documents, bringing order and fairness to your case.",
               "smallHeading":"",
               "description":"",
               "listItems":[
@@ -927,7 +796,7 @@ export const servicesInfo = {
               "title":"Settlement Agreements & Contracts"
            },
            "content":{
-              "heading":"Punchline / Heading here...",
+              "heading":"Turning negotiations into agreements — we ensure the settlement is both fair and binding.",
               "smallHeading":"",
               "description":"",
               "listItems":[
@@ -947,7 +816,7 @@ export const servicesInfo = {
               "title":"Protective Orders & Domestic Violence Filings"
            },
            "content":{
-              "heading":"Punchline / Heading here...",
+              "heading":"In times of crisis, we step in with expertise —trust us for legal needs in filing protective orders, ensuring safety and peace.",
               "smallHeading":"",
               "description":"",
               "listItems":[
@@ -966,7 +835,7 @@ export const servicesInfo = {
               "title":"Guardianship & Adoption Documents"
            },
            "content":{
-              "heading":"Punchline / Heading here...",
+              "heading":"We ensure every guardianship and adoption document is handled with grace.",
               "smallHeading":"",
               "description":"",
               "listItems":[
@@ -986,7 +855,7 @@ export const servicesInfo = {
               "title":"Case Management & Organization"
            },
            "content":{
-              "heading":"Punchline / Heading here...",
+              "heading":"Efficient management, organized strategy — we streamline your case to achieve the best possible outcome.",
               "smallHeading":"",
               "description":"",
               "listItems":[
@@ -1005,7 +874,7 @@ export const servicesInfo = {
               "title":"Calendar & Scheduling"
            },
            "content":{
-              "heading":"Punchline / Heading here...",
+              "heading":"Driven by precision, we schedule with accuracy — keeping your goals on time and on target.",
               "smallHeading":"",
               "description":"",
               "listItems":[
@@ -1023,7 +892,7 @@ export const servicesInfo = {
               "title":"Client Communication"
            },
            "content":{
-              "heading":"Punchline / Heading here...",
+              "heading":"Through word and will, we uphold the sacred bond of client and counsel",
               "smallHeading":"",
               "description":"",
               "listItems":[
@@ -1041,7 +910,7 @@ export const servicesInfo = {
               "title":"Court Filing & Service of Documents"
            },
            "content":{
-              "heading":"Punchline / Heading here...",
+              "heading":"From desk to docket, we deliver every document flawlessly and promptly.",
               "smallHeading":"",
               "description":"",
               "listItems":[
@@ -1060,7 +929,7 @@ export const servicesInfo = {
               "title":"Legal Research"
            },
            "content":{
-              "heading":"Punchline / Heading here...",
+              "heading":"With grit, we chart the clearest path to truth.",
               "smallHeading":"",
               "description":"",
               "listItems":[
@@ -1079,7 +948,7 @@ export const servicesInfo = {
               "title":"Document Review & Trial Preparation"
            },
            "content":{
-              "heading":"Punchline / Heading here...",
+              "heading":"Every detail reviewed, every strategy prepared — your trial, ready for success.",
               "smallHeading":"",
               "description":"",
               "listItems":[
@@ -1099,7 +968,7 @@ export const servicesInfo = {
               "title":"Billing & Timekeeping"
            },
            "content":{
-              "heading":"Punchline / Heading here...",
+              "heading":"From start to finish, we keep time and billing aligned for a smooth, transparent process.",
               "smallHeading":"",
               "description":"",
               "listItems":[
@@ -1120,7 +989,7 @@ export const servicesInfo = {
            },
            "content":{
               "heading":"Punchline / Heading here...",
-              "smallHeading":"Glocal’s Distinctive Edge:",
+              "smallHeading":"Glocal's Distinctive Edge:",
               "description":"Glocal LPO provides skilled paralegal support backed by deep knowledge of family law, jurisdiction-specific rules, and efficient case handling. ",
               "listItems":[
                  "Family Law Calculators: DissoMaster, FamilySoft (Child & Spousal Support)",
@@ -1182,57 +1051,36 @@ export const servicesInfo = {
         {
            "header":{
               "icon":require("../assets/icons/accordian-icon-1.png"),
-              "title":"Reponses to Requests for Evidence (RFEs), and ensuring full procedural compliance with USCIS, EOIR, and NYSCEF standards."
+              "title":"Essential Immigration Law Services by Glocal LPO Team"
            },
            "content":{
-              "heading":"Punchline / Heading here...",
+              "heading":"Efficient. Accurate. Immigration Support That Delivers.",
               "smallHeading":"",
               "description":"",
               "listItems":[
-                 "1",
-                 "2",
-                 "3",
-                 "4",
-                 "5",
-                 "6",
-                 "7"
+                 "Strategic Immigration Roadmaps: Preparation of comprehensive strategy and supporting documentation",
+                 "Persuasive Petition Drafting: Drafting of compelling petition letters",
+                 "Organized Case File Management: Organize and prepare immigration case files",
+                 "Insightful Legal Research: Research on evolving immigration statutes and guidelines, offering actionable insights to help shape robust legal strategies.",
+                 "Process Simplification & Clarity: Simplifying complex immigration procedures —clarifying steps, timelines, and expectations to strengthen trust and satisfaction.",
+                 "Reponses to Requests for Evidence (RFEs) - full procedural compliance with USCIS, EOIR, and NYSCEF standards.",
+                 "I-130 and I-485 to H-1B petitions -  ll major immigration forms carefully and correctly, following up-to-date legal rules."
               ]
            }
         },
         {
            "header":{
               "icon":require("../assets/icons/accordian-icon-2.png"),
-              "title":"From I-130 and I-485 to H-1B petitions, we prepare all major immigration forms carefully and correctly, following up-to-date legal rules."
-           },
-           "content":{
-              "heading":"Punchline / Heading here...",
-              "smallHeading":"",
-              "description":"",
-              "listItems":[
-                 "1",
-                 "2",
-                 "3",
-                 "4",
-                 "5",
-                 "6",
-                 "7"
-              ]
-           }
-        },
-        {
-           "header":{
-              "icon":require("../assets/icons/accordian-icon-3.png"),
               "title":"We help streamline your legal workflow by expertly drafting critical documents"
            },
            "content":{
-              "heading":"Punchline / Heading here...",
+              "heading":"We transform confusion into clarity, guiding your case to victory.",
               "smallHeading":"",
               "description":"",
               "listItems":[
                  "Petition Letters – Professionally prepared submissions for various visa and immigration requests.",
                  "Self-Petition Letters – Tailored petitions, including those under VAWA and similar provisions.",
                  "VAWA 360 & I-600 Memos – Detailed legal memorandums supporting VAWA and intercountry adoption cases.",
-                 "Creating medical chronologies & injury assessments",
                  "Asylum Briefs & Declarations – Compelling narratives and legal briefs to strengthen asylum applications.",
                  "Affidavits & Reference Letters – Drafting third-party testimonies and recommendation letters.",
                  "Cover Letters & Motions – Strategically crafted submissions and legal motions.",
@@ -1242,11 +1090,11 @@ export const servicesInfo = {
         },
         {
            "header":{
-              "icon":require("../assets/icons/accordian-icon-4.png"),
-              "title":"We Support Across Immigration Case Types. "
+              "icon":require("../assets/icons/accordian-icon-3.png"),
+              "title":"We Support Across Immigration Case Types"
            },
            "content":{
-              "heading":"Punchline / Heading here...",
+              "heading":"From asylum to naturalization, we provide expert support for every immigration need.",
               "smallHeading":"",
               "description":"",
               "listItems":[
@@ -1256,33 +1104,36 @@ export const servicesInfo = {
                  "P-3 Visas for Culturally Unique Artists and Performers",
                  "Family-Based Petitions and Sponsorships",
                  "In-depth Legal Research to Support Case Strategy and Briefs"
-                 
+               
               ]
            }
         },
         {
            "header":{
-              "icon":require("../assets/icons/accordian-icon-5.png"),
-              "title":"Administrative & Client Coordination Services"
+              "icon":require("../assets/icons/accordian-icon-4.png"),
+              "title":"Administrative & Client Coordination Services "
            },
            "content":{
-              "heading":"Medical Records - The Linchpins of every personal injury claim's success.",
+              "heading":"From the first step to the final stage, we assist you with commitment and know-how",
               "smallHeading":"Glocal's Distinctive Edge:",
-              "description":"We are Cost-Efficient and have Scalable Support with U.S. Immigration Law Trained Legal Professionals. ",
+              "description":" We are Cost-Efficient and have Scalable Support with U.S. Immigration Law Trained Legal Professionals. ",
               "listItems":[
                  "Case Tracking & File Management – Maintain organized, up-to-date case files at every stage.",
                  "Client Follow-ups – Reach out for missing documents, clarifications, and signatures.",
                  "Hearing Preparation – Assist in prepping clients for interviews, hearings, and court appearances.",
+                 "P-3 Visas for Culturally Unique Artists and Performers",
                  "Email & Documentation Support – Draft and manage client emails, track submissions, and organize support materials."
-             
+                 
+                 
               ]
            }
-        }
+        },
+        
         
      ]
   },
   "intellectual-property":{
-     "title":"Bankrupcy",
+     "title":"Intellectual Property",
      "heading":<>
      Your clients' ideas. <br />
      Your clients' rights.  <br />
@@ -1389,7 +1240,7 @@ export const servicesInfo = {
      ]
   },
   "criminal-law":{
-     "title":"Bankrupcy",
+     "title":"Criminal Law",
      "heading":<>
      Thine unseen hand <br />
      in your Triumph <br />
@@ -1450,13 +1301,13 @@ export const servicesInfo = {
               "title":"Pre-Trial Assistance & Case Investigation"
            },
            "content":{
-              "heading":"Heading / Punchline here...",
+              "heading":"Ere the first word be spoken in court, we have already forged the path to thy triumph.",
               "smallHeading":"",
               "description":"",
               "listItems":[
                  "Legal Research & Case Law Analysis: In-depth research on relevant statutes, precedents, and legal arguments.",
                  "Case File Review: Analyzing police reports, forensic evidence, witness statements, and discovery materials.",
-                 "Fact Investigation & Evidence Gathering: Identifying key weaknesses in the prosecution’s case and compiling strong defense materials.",
+                 "Fact Investigation & Evidence Gathering: Identifying key weaknesses in the prosecution's case and compiling strong defense materials.",
                  "Drafting Pre-Trial Motions: Suppression motions, bail applications, motions to dismiss, and requests for evidence disclosure."
                  
               ]
@@ -1468,7 +1319,7 @@ export const servicesInfo = {
               "title":"Plea Negotiations & Legal Documentation"
            },
            "content":{
-              "heading":"Heading / Punchline here...",
+              "heading":"Through eloquent negotiation and firm documentation, we secure thy cause before the law.",
               "smallHeading":"",
               "description":"",
               "listItems":[
@@ -1484,7 +1335,7 @@ export const servicesInfo = {
               "title":"Trial Preparation & Litigation Support"
            },
            "content":{
-              "heading":"Heading / Punchline here...",
+              "heading":"In the service of justice, we prepare with prayerful diligence, supporting your cause through every challenge.",
               "smallHeading":"",
               "description":"",
               "listItems":[
@@ -1501,7 +1352,7 @@ export const servicesInfo = {
               "title":"Post-Trial & Appeal Support"
            },
            "content":{
-              "heading":"Heading / Punchline here...",
+              "heading":"When the trial ends, our support continues — we uphold your cause in appeal, trusting in the grace of justice.",
               "smallHeading":"Glocal's Distinctive Edge:",
               "description":"With knowledge as our spear and precision as our armor, unlike generic outsourcing providers, we specialize in jurisdiction-specific laws.",
               "listItems":[
@@ -1568,7 +1419,7 @@ export const servicesInfo = {
         {
            "header":{
               "icon":require("../assets/icons/accordian-icon-1.png"),
-              "title":"Foreclsure"
+              "title":"Foreclosure"
            },
            "content":{
               "heading":"Fortunes fall as empires do and we stand ready to assist you for your clients",
@@ -1617,7 +1468,7 @@ export const servicesInfo = {
               "title":"Chapter 13 Bankruptcy: Structured Repayment Plans"
            },
            "content":{
-              "heading":"Heading / Punchline here...",
+              "heading":"You draft the structure, we drive the success.",
               "smallHeading":"",
               "description":"",
               "listItems":[
@@ -1635,7 +1486,7 @@ export const servicesInfo = {
               "title":"Chapter 11 Bankruptcy: Business Reorganization"
            },
            "content":{
-              "heading":"Heading / Punchline here...",
+              "heading":"Structured by you, reorganized by us — for better, faster results.",
               "smallHeading":"",
               "description":"",
               "listItems":[
@@ -1653,7 +1504,7 @@ export const servicesInfo = {
               "title":"Chapter 12 Bankruptcy: Family Farmer & Fisherman Support"
            },
            "content":{
-              "heading":"Heading / Punchline here...",
+              "heading":"For Every growing Dream — We've Got Your Back.",
               "smallHeading":"Glocal's Distinctive Edge:",
               "description":"Our professionals specialize in bankruptcy laws, court procedures, and documentation and ensure filings are completed correctly and efficiently.",
               "listItems":[
@@ -1670,7 +1521,7 @@ export const servicesInfo = {
               "title":"Means Test & Eligibility"
            },
            "content":{
-              "heading":"Heading / Punchline here...",
+              "heading":"We help you get the Means Test right — because almost right won't work.",
               "smallHeading":"",
               "description":"",
               "listItems":[
@@ -1686,7 +1537,7 @@ export const servicesInfo = {
               "title":"Wage Garnishment & Levy Protection"
            },
            "content":{
-              "heading":"Heading / Punchline here...",
+              "heading":"Your clients' money and their rights — we aim to help you protect both.",
               "smallHeading":"Glocal's Distinctive Edge:",
               "description":"Our team prioritizes clear communication and personalized support with full range of bankruptcy and foreclosure services.",
               "listItems":[
@@ -1701,7 +1552,7 @@ export const servicesInfo = {
   },
   "contracts":{
      "title":"Contracts",
-     "heading": <>
+     "heading":<>
      Contracts are the foundation of business; <br />
      we ensure they are unshakable.
      </>,
@@ -1764,13 +1615,13 @@ export const servicesInfo = {
               "title":"Client Interaction"
            },
            "content":{
-              "heading":"Heading / Punchline here...",
+              "heading":"A contract is not just a law, but a trust we protect.",
               "smallHeading":"",
               "description":"",
               "listItems":[
                  "2.1 Gathering Contract Requirements: Collaborating with clients to understand their needs and objectives.",
                  "2.2 Clarifying Contract Terms: Explaining complex legal language and implications to ensure informed decision-making.",
-                 "2.3 Negotiating Contract Details: Advocating for clients’ interests during negotiations to achieve balanced and favorable outcomes."
+                 "2.3 Negotiating Contract Details: Advocating for clients' interests during negotiations to achieve balanced and favorable outcomes."
                
               ]
            }
@@ -1781,7 +1632,7 @@ export const servicesInfo = {
               "title":"Contract Administration"
            },
            "content":{
-              "heading":"Heading / Punchline here...",
+              "heading":"From deadlines to compliance lines, we keep your contract on track.",
               "smallHeading":"",
               "description":"",
               "listItems":[
@@ -1799,7 +1650,7 @@ export const servicesInfo = {
               "title":"Types of Contracts Handled"
            },
            "content":{
-              "heading":"Heading / Punchline here...",
+              "heading":"From the straightforward to the sophisticated — every contract is in trusted hands.",
               "smallHeading":"",
               "description":"",
               "listItems":[
@@ -1819,9 +1670,9 @@ export const servicesInfo = {
               "title":"Related Services"
            },
            "content":{
-              "heading":"Heading / Punchline here...",
+              "heading":"In the realm of contracts, we command the research, analyze with accuracy, and bring forth clarity.",
               "smallHeading":"Glocal's Distinctive Edge:",
-              "description":"We specialize in contract law and jurisdiction-specific requirements, ensuring that every document we produce is tailored to your clients’ needs and stands up to legal scrutiny. Whether you need support with a single contract or ongoing contract management, we are here to provide the expertise and advocacy your clients deserve.",
+              "description":"We specialize in contract law and jurisdiction-specific requirements, ensuring that every document we produce is tailored to your clients' needs and stands up to legal scrutiny. Whether you need support with a single contract or ongoing contract management, we are here to provide the expertise and advocacy your clients deserve.",
               "listItems":[
                  "5.1 Legal Research Related to Contract Law: Providing insights into jurisdiction-specific contract laws and precedents.",
                  "5.2 Due Diligence Support for Contracts: Reviewing contracts during mergers, acquisitions, or other transactions.",
@@ -1833,184 +1684,17 @@ export const servicesInfo = {
         
         
      ]
-  },
-	"business-litigation-support": {
-		title: "Business Litigation Support",
-		heading: <>
-			Strategic Support <br />
-			for Injury Claims <br />
-			That Win.</>,
-		background: require("../assets/images/services-bg/business-litigation.jpg"),
-		description: {
-			mainDescription: "Injury-related litigation entails exacting case analysis, exhaustive legal research, tactical document preparation and personalized support.",
-			smallDesription: "At Glocal LPO, we provide full-spectrum legal support, enabling law firms and attorneys to optimize case management with streamlined execution and process oversight."
-		},
-		casesSpecializedIn: [
-			{
-				id: "01",
-				title: "Motor Vehicle Accidents Accidents",
-				description: "Car, truck, bicycle and motorcycle accident claims.",
-				image: require("../assets/images/service-1.jpg"),
-			},
-			{
-				id: "02",
-				title: "Medical Negligence & Malpractice",
-				description: "Ensuring Compliance with Legal Standards.",
-				image: require("../assets/images/service-2.jpg"),
-			},
-			{
-				id: "03",
-				title: "Slip & Fall or Trip and Fall Cases",
-				description: "Highlightin`g Maximum Injury Compensation.",
-				image: require("../assets/images/service-3.jpg"),
-			},
-			{
-				id: "04",
-				title: "Dog Bite",
-				description: "Nerve damage, disfigurement, or long-term medical issues.",
-				image: require("../assets/images/service-4.jpg"),
-			},
-			{
-				id: "05",
-				title: "Brain & Spinal Cord Injuries",
-				description: "Securing Justice for Those with Devastating Injuries.",
-				image: require("../assets/images/service-5.jpg"),
-			},
-			{
-				id: "06",
-				title: "Workplace & Construction Accidents",
-				description: "Protecting Legal Rights for Workplace Injuries.",
-				image: require("../assets/images/service-6.jpg"),
-			}
-		],
-		accordianItems: [
-			{
-				header: {
-					icon: require("../assets/icons/accordian-icon-1.png"),
-					title: "Client Onboarding & Case Merit Evaluation",
-				},
-				content: {
-					heading: "Medical Records - The Linchpins of every personal injury claim's success.",
-					smallHeading: "Glocal's Distinctive Edge:",
-					description: "Reduce overhead costs while gaining access to top-tier legal expertise and AI-powered analysis—customized to your firm's needs.",
-					listItems: [
-						"Retrieving & organizing medical records",
-						"Patient Record Extraction",
-						"Summarizing diagnosis & treatments",
-						"Creating medical chronologies & injury assessments",
-						"Medical History Compilation",
-						"Medical Billing Summarization",
-						"Privilege Logs"
-					]
-				}
-			}, {
-				header: {
-					icon: require("../assets/icons/accordian-icon-2.png"),
-					title: "Medical Record Retrieval & Summarization",
-				},
-				content: {
-					heading: "Medical Records - The Linchpins of every personal injury claim's success.",
-					smallHeading: "Glocal's Distinctive Edge:",
-					description: "Reduce overhead costs while gaining access to top-tier legal expertise and AI-powered analysis—customized to your firm's needs.",
-					listItems: [
-						"Retrieving & organizing medical records",
-						"Patient Record Extraction",
-						"Summarizing diagnosis & treatments",
-						"Creating medical chronologies & injury assessments",
-						"Medical History Compilation",
-						"Medical Billing Summarization",
-						"Privilege Logs"
-					]
-				}
-			}, {
-				header: {
-					icon: require("../assets/icons/accordian-icon-3.png"),
-					title: "Document Drafting & Discovery Support",
-				},
-				content: {
-					heading: "Medical Records - The Linchpins of every personal injury claim's success.",
-					smallHeading: "Glocal's Distinctive Edge:",
-					description: "Reduce overhead costs while gaining access to top-tier legal expertise and AI-powered analysis—customized to your firm's needs.",
-					listItems: [
-						"Retrieving & organizing medical records",
-						"Patient Record Extraction",
-						"Summarizing diagnosis & treatments",
-						"Creating medical chronologies & injury assessments",
-						"Medical History Compilation",
-						"Medical Billing Summarization",
-						"Privilege Logs"
-					]
-				}
-			}, {
-				header: {
-					icon: require("../assets/icons/accordian-icon-4.png"),
-					title: "Legal Research, Case Law Review & Legal Interpretation",
-				},
-				content: {
-					heading: "Medical Records - The Linchpins of every personal injury claim's success.",
-					smallHeading: "Glocal's Distinctive Edge:",
-					description: "Reduce overhead costs while gaining access to top-tier legal expertise and AI-powered analysis—customized to your firm's needs.",
-					listItems: [
-						"Retrieving & organizing medical records",
-						"Patient Record Extraction",
-						"Summarizing diagnosis & treatments",
-						"Creating medical chronologies & injury assessments",
-						"Medical History Compilation",
-						"Medical Billing Summarization",
-						"Privilege Logs"
-					]
-				}
-			}, {
-				header: {
-					icon: require("../assets/icons/accordian-icon-5.png"),
-					title: "Litigation & Trial Support",
-				},
-				content: {
-					heading: "Medical Records - The Linchpins of every personal injury claim's success.",
-					smallHeading: "Glocal's Distinctive Edge:",
-					description: "Reduce overhead costs while gaining access to top-tier legal expertise and AI-powered analysis—customized to your firm's needs.",
-					listItems: [
-						"Retrieving & organizing medical records",
-						"Patient Record Extraction",
-						"Summarizing diagnosis & treatments",
-						"Creating medical chronologies & injury assessments",
-						"Medical History Compilation",
-						"Medical Billing Summarization",
-						"Privilege Logs"
-					]
-				}
-			}, {
-				header: {
-					icon: require("../assets/icons/accordian-icon-6.png"),
-					title: "Administrative Tasks",
-				},
-				content: {
-					heading: "Medical Records - The Linchpins of every personal injury claim's success.",
-					smallHeading: "Glocal's Distinctive Edge:",
-					description: "Reduce overhead costs while gaining access to top-tier legal expertise and AI-powered analysis—customized to your firm's needs.",
-					listItems: [
-						"Retrieving & organizing medical records",
-						"Patient Record Extraction",
-						"Summarizing diagnosis & treatments",
-						"Creating medical chronologies & injury assessments",
-						"Medical History Compilation",
-						"Medical Billing Summarization",
-						"Privilege Logs"
-					]
-				}
-			}
-		]
-	}
+  }
 };
 
 export const serviceCards = [
 	{
-		id: "01",
-		title: routes["civil-litigation-support"].label,
-		link: routes["civil-litigation-support"].href,
-		image: require("../assets/images/service-image-3.jpg"),
-		description: "Every strong case starts with strategic documentation. From binding contracts to persuasive motions, we prepare the legal foundation that positions your clients for success.",
-		mobileDescription: "Every strong case starts with strategic documentation. From binding contracts to persuasive motions, we prepare the legal foundation that positions your clients for success."
+		id: "12",
+		title: routes["business-litigation-support"].label,
+		link: routes["business-litigation-support"].href,
+		image: require("../assets/images/service-image-7.jpg"),
+		description: "When business disputes arise, the right legal support can make or break the case. We provide strategic analysis, and well-founded legal groundwork to keep you ahead in your legal practice.",
+		mobileDescription: "When business disputes arise, the right legal support can make or break the case. We provide strategic analysis, and well-founded legal groundwork to keep you ahead in your legal practice."
 	},
 	{
 		id: "02",
@@ -2035,6 +1719,14 @@ export const serviceCards = [
 		image: require("../assets/images/service-image-5.jpg"),
 		description: "From pre-trial to post-trial, we handle the documentation that ensures your claim is strong, your clients' rights are protected, and your case is foolproof.",
 		mobileDescription: "From pre-trial to post-trial, we handle the documentation that ensures your claim is strong, your clients' rights are protected, and your case is foolproof."
+	},
+	{
+		id: "01",
+		title: routes["estate-planning-litigation"].label,
+		link: routes["estate-planning-litigation"].href,
+		image: require("../assets/images/service-image-3.jpg"),
+		description: "A strong estate plan isn't just paperwork—it's a fortress. We structure your client's documents relating to assets, highlight points to eliminate the risks therein, and ensure your strategies stand unrefuted.",
+		mobileDescription: "A strong estate plan isn't just paperwork—it's a fortress. We structure your client's documents relating to assets, highlight points to eliminate the risks therein, and ensure your strategies stand unrefuted."
 	},
 	{
 		id: "05",
@@ -2091,32 +1783,26 @@ export const serviceCards = [
 		image: require("../assets/images/service-image-6.jpg"),
 		description: "From drafting to review, we ensure every contract puts your client in an advantageous position—clear, enforceable, and built to protect their interests.",
 		mobileDescription: "From drafting to review, we ensure every contract puts your client in an advantageous position—clear, enforceable, and built to protect their interests."
-	},
-	{
-		id: "12",
-		title: routes["business-litigation-support"].label,
-		link: routes["business-litigation-support"].href,
-		image: require("../assets/images/service-image-7.jpg"),
-		description: "When business disputes arise, the right legal support can make or break the case. We provide strategic analysis, and well-founded legal groundwork to keep you ahead in your legal practice.",
-		mobileDescription: "When business disputes arise, the right legal support can make or break the case. We provide strategic analysis, and well-founded legal groundwork to keep you ahead in your legal practice."
 	}
 ];
 
 export const servicesArray = [
 	{
-		id: "01",
-		title: "Civil Litigation Support",
-		description: "Every strong case starts with strategic documentation. From binding contracts to persuasive motions, we prepare the legal foundation that positions your clients for success.",
-		contentBoxTitle: "Lawsuits aren't just won in court—they're built on paperwork.",
-		link: routes["civil-litigation-support"].href,
-		image: serviceImage3,
-	}, {
+		id: "12",
+		title: "Business Litigation Support",
+		description: "When business disputes arise, the right legal support can make or break the case. We provide strategic analysis, and well-founded legal groundwork to keep you ahead in your legal practice.",
+		contentBoxTitle: "In business, the fine print is where battles are won.",
+		link: routes["business-litigation-support"].href,
+		image: serviceImage7,
+		menuContent: "When disputes strike, our legal precision keeps your practice ahead."
+	},  {
 		id: "02",
 		title: "Personal Injury",
 		description: "Accidents happen, but accountability is non-negotiable. We draft demand letters with legal precision, ensuring your clients get the maximum compensation which they deserve.",
 		contentBoxTitle: "Injury wasn't your clients' choice. Justice is.",
 		link: routes["personal-injury"].href,
 		image: serviceImage2,
+		menuContent: "When accidents happen, we draft demand letters that demand justice."
 	}, {
 		id: "03",
 		title: "Employment Law",
@@ -2124,6 +1810,7 @@ export const servicesArray = [
 		contentBoxTitle: "Your clients' rights aren't optional. They're enforceable.",
 		link: routes["employee-law"].href,
 		image: serviceImage4,
+		menuContent: "Crafting impeccable legal documentation to fight discrimination, retaliation, and wrongful termination."
 	}, {
 		id: "04",
 		title: "Workers Compensation",
@@ -2131,6 +1818,15 @@ export const servicesArray = [
 		contentBoxTitle: "Injured on the job? We make sure the law works for you.",
 		link: routes["workers-compensation"].href,
 		image: serviceImage5,
+		menuContent: "Building foolproof workers' compensation cases with meticulous documentation from start to finish."
+	}, {
+		id: "01",
+		title: "Estate Planning Litigation",
+		description: "A strong estate plan isn't just paperwork—it's a fortress. We structure your client's documents relating to assets, highlight points to eliminate the risks therein, and ensure your strategies stand unrefuted.",
+		contentBoxTitle: "Building Estate Plans That Stand the Test of Time.",
+		link: routes["estate-planning-litigation"].href,
+		image: serviceImage3,
+		menuContent: "Transforming estate plans into unbreakable fortresses with precise documentation and risk mitigation."
 	}, {
 		id: "05",
 		title: "Real Estate Litigation",
@@ -2138,6 +1834,7 @@ export const servicesArray = [
 		contentBoxTitle: "Real estate law isn't just about property—it's about power.",
 		link: routes["real-estate-litigation"].href,
 		image: serviceImage1,
+		menuContent: "Securing your client’s property and future with ironclad legal documentation and results-driven strategy."
 	}, {
 		id: "06",
 		title: "Family Law",
@@ -2145,6 +1842,7 @@ export const servicesArray = [
 		contentBoxTitle: "Family disputes need finesse, not just force.",
 		link: routes["family-law"].href,
 		image: serviceImage9,
+		menuContent: "Navigating sensitive family matters with strategic legal precision and a commitment to your clients' well-being."
 	}, {
 		id: "07",
 		title: "Immigration",
@@ -2152,6 +1850,7 @@ export const servicesArray = [
 		contentBoxTitle: "Borders may divide, but the law unites.",
 		link: routes["immigration"].href,
 		image: serviceImage8,
+		menuContent: "Crafting precise immigration solutions to pave the way for your clients' future."
 	}, {
 		id: "08",
 		title: "Intellectual Property",
@@ -2159,6 +1858,7 @@ export const servicesArray = [
 		contentBoxTitle: "IP Protection. Drafted Right. Defended Better.",
 		link: routes["intellectual-property"].href,
 		image: serviceImage11,
+		menuContent: "Fortifying your clients' innovations with rock-solid IP documentation and protection."
 	}, {
 		id: "09",
 		title: "Criminal Law",
@@ -2166,6 +1866,7 @@ export const servicesArray = [
 		contentBoxTitle: "Criminal Defense. Backed by Precision.",
 		link: routes["criminal-law"].href,
 		image: serviceImage12,
+		menuContent: "Empowering defense with precision, strategy, and unwavering support—every step of the way."
 	}, {
 		id: "10",
 		title: "Bankrupcy",
@@ -2173,6 +1874,7 @@ export const servicesArray = [
 		contentBoxTitle: "Bankrupcy isn't the end. It's a fresh start.",
 		link: routes["bankrupcy"].href,
 		image: serviceImage10,
+		menuContent: "Guiding clients through financial turmoil with expert strategies for a fresh start."
 	}, {
 		id: "11",
 		title: "Contracts",
@@ -2180,12 +1882,6 @@ export const servicesArray = [
 		contentBoxTitle: "A contract is only as strong as the words that bind it.",
 		link: routes["contracts"].href,
 		image: serviceImage6,
-	}, {
-		id: "12",
-		title: "Business Litigation Support",
-		description: "When business disputes arise, the right legal support can make or break the case. We provide strategic analysis, and well-founded legal groundwork to keep you ahead in your legal practice.",
-		contentBoxTitle: "In business, the fine print is where battles are won.",
-		link: routes["business-litigation-support"].href,
-		image: serviceImage7,
-	},
+		menuContent: "Crafting contracts that secure your client's future—clear, strong, and unbreakable."
+	}
 ];

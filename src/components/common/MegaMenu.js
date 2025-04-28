@@ -30,7 +30,7 @@ const MegaMenu = () => {
 								<div>
 									<div className={styles.menuTitle}>{service.title}</div>
 									<div className={styles.menuDescription}>
-										{service.description}
+										{service.menuContent}
 									</div>
 								</div>
 							</Link>

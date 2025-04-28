@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import Lenis from "@studio-freight/lenis";
 
 import uspIcon1 from "@/assets/icons/usp-icon-1.png";
 import uspIcon2 from "@/assets/icons/usp-icon-2.png";
@@ -48,24 +47,6 @@ const cardData = [
 export default function App() {
   const wrapRef = useRef(null);
   const cardsRef = useRef([]);
-  const lenisRef = useRef(null);
-
-  // Initialize smooth scrolling with Lenis
-  const initSmoothScrolling = () => {
-    lenisRef.current = new Lenis({
-      lerp: 0.2,
-      smoothWheel: true,
-    });
-
-    lenisRef.current.on("scroll", () => ScrollTrigger.update());
-
-    const scrollFn = (time) => {
-      lenisRef.current.raf(time);
-      requestAnimationFrame(scrollFn);
-    };
-
-    requestAnimationFrame(scrollFn);
-  };
 
   // Setup scroll animations
   const setupScrollAnimations = () => {
@@ -98,15 +79,11 @@ export default function App() {
   };
 
   useEffect(() => {
-		initSmoothScrolling();
+		// initSmoothScrolling();
     setupScrollAnimations();
 
     // Cleanup function
     return () => {
-      if (lenisRef.current) {
-        lenisRef.current.destroy();
-      }
-
       // Kill all ScrollTrigger instances
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };

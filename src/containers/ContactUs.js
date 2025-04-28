@@ -183,7 +183,7 @@ const ContactUs = () => {
 						>
 							<div size={4} container className={styles.carouselCard}>
 								<Grid size={12} className={styles.testimonial}>
-									At Glocal LPO, we provide full-spectrum legal support, enabling law firms and attorneys to optimize case management with streamlined execution and process oversight.
+									Glocal LPO has consistently exceeded our expectations. Their attention to detail and responsiveness have been crucial to our casework. We truly view them as a strategic partner.
 								</Grid>
 								<Grid
 									container
@@ -195,14 +195,14 @@ const ContactUs = () => {
 										<div className={styles.image} />
 									</div>
 									<div className={styles.clientInfoWrapper}>
-										<div className={styles.clientName}>Client Name</div>
-										<div className={styles.designation}>Designation</div>
+										<div className={styles.clientName}>James Carter</div>
+										<div className={styles.designation}>Senior Partner, Carter & Wells LLP, New York</div>
 									</div>
 								</Grid>
 							</div>
 							<div size={4} container className={styles.carouselCard}>
 								<Grid size={12} className={styles.testimonial}>
-									At Glocal LPO, we provide full-spectrum legal support, enabling law firms and attorneys to optimize case management with streamlined execution and process oversight.
+									From litigation support to document management, Glocal LPO delivers top-notch service. Their team understands the urgency and precision our cases demand. Highly recommend for firms looking to scale smartly.
 								</Grid>
 								<Grid
 									container
@@ -214,14 +214,14 @@ const ContactUs = () => {
 										<div className={styles.image} />
 									</div>
 									<div className={styles.clientInfoWrapper}>
-										<div className={styles.clientName}>Client Name</div>
-										<div className={styles.designation}>Designation</div>
+										<div className={styles.clientName}>Olivia Reed</div>
+										<div className={styles.designation}>Managing Attorney, Reed & Hunt Law Group, California</div>
 									</div>
 								</Grid>
 							</div>
 							<div size={4} container className={styles.carouselCard}>
 								<Grid size={12} className={styles.testimonial}>
-									At Glocal LPO, we provide full-spectrum legal support, enabling law firms and attorneys to optimize case management with streamlined execution and process oversight.
+									Glocal LPO's paralegal and legal research support has helped us streamline operations and focus on high-impact work. Their professionalism and turnaround time are outstanding.
 								</Grid>
 								<Grid
 									container
@@ -233,8 +233,8 @@ const ContactUs = () => {
 										<div className={styles.image} />
 									</div>
 									<div className={styles.clientInfoWrapper}>
-										<div className={styles.clientName}>Client Name</div>
-										<div className={styles.designation}>Designation</div>
+										<div className={styles.clientName}>Michael Anderson</div>
+										<div className={styles.designation}>Principal, Anderson Legal Solutions, Texas</div>
 									</div>
 								</Grid>
 							</div>

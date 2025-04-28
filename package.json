@@ -22,7 +22,6 @@
     "@getbrevo/brevo": "^2.2.0",
     "@gsap/react": "^2.1.2",
     "@mui/material": "^6.4.7",
-    "@studio-freight/lenis": "^1.0.42",
     "body-parser": "^2.2.0",
     "classie": "^1.0.0",
     "classnames": "^2.5.1",
