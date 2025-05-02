@@ -2,8 +2,10 @@ const path = require('path');
 const nodeExternals = require('webpack-node-externals');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
+const isProduction = process.env.NODE_ENV === 'production';
+
 module.exports = {
-  mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
+  mode: isProduction ? 'production' : 'development',
   target: 'node',
   entry: './server.js',
   externals: [nodeExternals()],
@@ -14,7 +16,7 @@ module.exports = {
 		publicPath: '/assets/',
 		clean: true
   },
-	devtool: "source-map",
+	devtool: isProduction ? false : "source-map",
   module: {
     rules: [
       {

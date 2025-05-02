@@ -34,27 +34,49 @@ const Header = () => {
 
 	const navBar = useRef(null);
 	const anchorEl = useRef(null);
+	const scrollTriggerRef = useRef(null);
 
 	const [menuOpen, setMenuOpen] = useState(false);
 
 	useEffect(() => {
-		const showAnim = gsap.from(navBar.current, { 
-			yPercent: -100,
-			paused: true,
-			duration: 0.65
-		}).progress(1);
-		
-		ScrollTrigger.create({
-			start: "top top",
+		const nav = navBar.current;
+
+		// Create animation to hide the nav
+		const hideAnim = gsap.fromTo(
+			nav,
+			{ yPercent: 0 },
+			{ yPercent: -100, duration: 0.40, paused: true }
+		);
+
+		// Create ScrollTrigger to toggle animation based on scroll direction
+		scrollTriggerRef.current = ScrollTrigger.create({
+			start: 0,
 			end: "max",
-			markers: false,
 			onUpdate: (self) => {
-				self.direction === -1 ? showAnim.play() : showAnim.reverse()
+				if (self.direction === -1) {
+					// scrolling up
+					hideAnim.reverse();
+				} else {
+					// scrolling down
+					hideAnim.play();
+				}
 			}
 		});
+
+		return () => {
+			scrollTriggerRef.current?.kill();
+		};
 	}, []);
 
+	// Reset scroll and show navbar on route change
 	useEffect(() => {
+		// Make sure nav is visible on route change
+		gsap.to(navBar.current, {
+			yPercent: 0,
+			duration: 0.40
+		});
+
+		// Refresh ScrollTrigger in case layout changes
 		ScrollTrigger.refresh();
 	}, [pathname]);
 

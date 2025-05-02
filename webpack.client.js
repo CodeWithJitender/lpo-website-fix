@@ -16,7 +16,7 @@ module.exports = {
 	devServer: {
 		hot: true,
 	},
-	devtool: isProduction ? "none" : "source-map",
+	devtool: isProduction ? false : "source-map",
   module: {
     rules: [
       {
