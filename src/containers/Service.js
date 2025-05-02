@@ -19,7 +19,7 @@ const Service = () => {
 	const { isMobile } = useDevice();
 
 	return (
-		<>
+		<div className={styles.mainContainer}>
 			<section className={styles.masterHead}>
 				<Container maxWidth="xl">
 					<Grid
@@ -96,7 +96,7 @@ const Service = () => {
 			<section className={styles.formSection}>
 				<ContactForm />
 			</section>
-		</>
+		</div>
 	);
 };
 

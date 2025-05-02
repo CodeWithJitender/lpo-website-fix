@@ -1,11 +1,12 @@
 import React from "react";
 import { Grid2 as Grid } from "@mui/material";
+import { Link } from "react-router-dom";
 
 import { useDevice } from '@/context/DeviceContext';
 
 import { Animate } from "@/components/common";
 
-import playIcon from "@/assets/icons/button-play-icon.png";
+import { routes } from "@/utils/routesPath";
 
 import * as styles from "./ServiceTypeBox.module.scss";
 
@@ -65,13 +66,15 @@ const ServiceTypeBox = (props) => {
 			>
 				{!isMobile && <Grid size={12} className={styles.serviceBoxNumber}>&nbsp;</Grid>}
 				<Grid size={12}>
-					<div className={styles.connectWithUsButton}>
+					<Link
+						to={routes["contact-us"].href}
+						className={styles.connectWithUsButton}
+					>
 						<span>
 							CONSULT
 							WITH US
 						</span>
-						<img src={playIcon} alt="" />
-					</div>
+					</Link>
 				</Grid>
 			</Grid>
 		</Animate.FadeUp>
