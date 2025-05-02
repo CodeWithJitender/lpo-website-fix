@@ -125,6 +125,7 @@
 .mapFrame {
 	border: 0;
 	border-radius: 12px;
+	width: 100%;
 }
 
 .carouselHeadingSection {
@@ -218,6 +219,16 @@
 		transform: rotate(90deg);
 		right: -30px;
 	}
+}
+
+.imageListRoot {
+	margin: 0;
+}
+
+.imageListItem {
+	border-radius: 6px;
+	overflow: hidden;
+	cursor: pointer;
 }
 
 @media only screen and (max-width: 1199px) and (min-width: 901px){

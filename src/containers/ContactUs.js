@@ -1,5 +1,10 @@
 import React from 'react';
-import { Container, Grid2 as Grid } from '@mui/material';
+import {
+	Container,
+	Grid2 as Grid,
+	ImageList,
+	ImageListItem
+} from '@mui/material';
 import Slider from "react-slick";
 
 import {
@@ -127,16 +132,53 @@ const ContactUs = () => {
 								</div>
 							</Grid>
 						</Grid>
-						<Grid size={12}>
-							<iframe
-								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.777961025159!2d77.3630584!3d28.6064372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce56eee10001b%3A0xe692f713efb39502!2sHead%20Field%20Solutions%20Private%20Limited!5e0!3m2!1sen!2sin!4v1745653850367!5m2!1sen!2sin"
-								width="100%"
-								height="450"
-								allowFullScreen=""
-								loading="lazy"
-								referrerPolicy="no-referrer-when-downgrade"
-								className={styles.mapFrame}
-							/>
+						<Grid
+							size={12}
+							spacing={3}
+							container
+							justifyContent="stretch"
+						>
+							<Grid size={{
+								md: 12,
+								lg: 6
+							}}>
+								<iframe
+									src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.777961025159!2d77.3630584!3d28.6064372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce56eee10001b%3A0xe692f713efb39502!2sHead%20Field%20Solutions%20Private%20Limited!5e0!3m2!1sen!2sin!4v1745653850367!5m2!1sen!2sin"
+									width="100%"
+									height="550"
+									allowFullScreen=""
+									loading="lazy"
+									referrerPolicy="no-referrer-when-downgrade"
+									className={styles.mapFrame}
+								/>
+							</Grid>
+							<Grid size={{
+								md: 12,
+								lg: 6
+							}}>
+								<ImageList
+									variant="masonry"
+									cols={3}
+									gap={8}
+									className={styles.imageListRoot}
+								>
+									{
+										Array.from({ length: 10 }, (_, i) => {
+											const imageSrc = require(`../assets/images/office-images/lpo-office-${i + 1}.jpg`);
+											return (
+												<ImageListItem key={i} className={styles.imageListItem}>
+													<img
+														srcSet={imageSrc}
+														src={imageSrc}
+														loading="lazy"
+														alt=""
+													/>
+												</ImageListItem>
+											)
+										})
+									}
+								</ImageList>
+							</Grid>
 						</Grid>
 					</Grid>
 				</Container>

@@ -142,13 +142,13 @@ const Header = () => {
 									>
 										<span>{routes["contact-us"].label}</span>
 									</Link>
-									<Link
+									{/* <Link
 										to={routes.faq.href}
 										data-replace={routes.faq.label}
 										className={styles.headerLink}
 									>
 										<span>{routes.faq.label}</span>
-									</Link>
+									</Link> */}
 								</div>
 							</Grid>
 							<Grid

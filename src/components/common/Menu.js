@@ -28,7 +28,7 @@ const menuItems = [
     ],
   },
   { ...routes["contact-us"] },
-  { ...routes.faq },
+  // { ...routes.faq },
 ];
 
 const containerVariants = {
