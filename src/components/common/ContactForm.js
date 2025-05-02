@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import {
 	Container,
 	Grid2 as Grid,
@@ -8,6 +8,7 @@ import {
 } from "@mui/material";
 import { Controller, useForm } from "react-hook-form";
 import { useLocation } from "react-router-dom";
+import { Turnstile } from '@marsidev/react-turnstile'
 
 import { CircleArrow, CircleLoader } from "@/components/Icons";
 
@@ -22,18 +23,24 @@ const ContactForm = (props) => {
 	const [open, setOpen] = useState(false);
 	const [message, setMessage] = useState("");
 	const [status, setStatus] = useState("");
+
+	const captchaRef = useRef();
 	
 	const { handleSubmit, control, formState: { isSubmitting } } = useForm();
 
 	const { pathname } = useLocation();
 
 	const onSubmit = async (data) => {
+		const captchaToken = await captchaRef.current?.getResponse();
 		const response = await fetch("/api/submit-form", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(data),
+      body: JSON.stringify({
+				...data,
+				captchaToken
+			}),
     });
 
 		const result = await response.json();
@@ -44,6 +51,7 @@ const ContactForm = (props) => {
 		}
 		setMessage(result.message);
 		setOpen(true);
+		captchaRef.current?.reset();
 	};
 
 	const handleClose = () => {
@@ -251,6 +259,10 @@ const ContactForm = (props) => {
 								</Button>
 							</Grid>
 						</Grid>
+						<Turnstile
+							ref={captchaRef}
+							siteKey='0x4AAAAAABY7kpv1X_K7bKmj'
+						/>
 					</form>
 				</Grid>
 			</Grid>

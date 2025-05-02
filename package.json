@@ -21,6 +21,7 @@
     "@emotion/styled": "^11.14.0",
     "@getbrevo/brevo": "^2.2.0",
     "@gsap/react": "^2.1.2",
+    "@marsidev/react-turnstile": "^1.1.0",
     "@mui/material": "^6.4.7",
     "body-parser": "^2.2.0",
     "classie": "^1.0.0",
