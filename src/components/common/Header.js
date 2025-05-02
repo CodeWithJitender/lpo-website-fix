@@ -53,6 +53,10 @@ const Header = () => {
 	}, []);
 
 	useEffect(() => {
+		ScrollTrigger.refresh();
+	}, [pathname]);
+
+	useEffect(() => {
 		setMenuOpen(false);
 	}, [pathname]);
 

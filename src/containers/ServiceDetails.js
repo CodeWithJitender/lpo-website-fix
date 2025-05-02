@@ -21,8 +21,6 @@ import ServiceClipAnimation from "@/components/Services/ServiceClipAnimation";
 import AccordianItem from "@/components/Services/AccordianItem";
 import OurProcess from "@/components/Services/OurProcess";
 
-import { useDevice } from '@/context/DeviceContext';
-
 import expertiseSeal from "@/assets/images/confidential-seal.png";
 
 import { serviceCards, servicesInfo } from "@/utils/serviceInfo";
@@ -33,8 +31,6 @@ import * as styles from "./ServiceDetails.module.scss";
 const Service = () => {
 	const [expanded, setExpanded] = useState('panel0');
 	const { pathname } = useLocation();
-
-	const { isMobile } = useDevice();
 
 	const serviceName = pathname.match(/[^/]+$/);
 	const serviceDetails = servicesInfo[serviceName[0]] || null;
@@ -60,7 +56,7 @@ const Service = () => {
 		}
 	});
 
-  const handleChange = (panel) => (event, newExpanded) => {
+  const handleChange = (panel) => () => {
     setExpanded(panel);
   };
 
