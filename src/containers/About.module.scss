@@ -248,6 +248,16 @@
 }
 
 @media screen and (max-width: 900px) {
+	.mainSection {
+		background: none;
+		background-size: contain;
+	}
+	
+	.masterHead {
+		background: url("../assets/images/about-materhead-bg.jpg") no-repeat top center;
+		background-size: cover;
+	}
+
 	.founderContainer {
 		padding-left: 0 !important;
 		padding-right: 0 !important;

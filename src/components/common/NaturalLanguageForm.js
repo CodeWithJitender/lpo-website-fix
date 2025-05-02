@@ -89,7 +89,7 @@ export default function NaturalLanguageForm() {
 
   // InputField component
   const InputField = ({ placeholder, subline, index, valueKey }) => {
-    const [value, setValue] = useState("");
+    const [value, setValue] = useState(formValues[valueKey]);
     const [isOpen, setIsOpen] = useState(false);
     const fieldRef = useRef(null);
     const inputRef = useRef(null);
@@ -142,7 +142,7 @@ export default function NaturalLanguageForm() {
               ref={inputRef}
               type="text"
               placeholder={placeholder}
-              value={value || formValues[valueKey]}
+              value={value}
               onChange={handleInputChange}
               onKeyDown={handleKeyDown}
             />

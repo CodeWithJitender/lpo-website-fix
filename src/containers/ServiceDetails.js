@@ -21,16 +21,20 @@ import ServiceClipAnimation from "@/components/Services/ServiceClipAnimation";
 import AccordianItem from "@/components/Services/AccordianItem";
 import OurProcess from "@/components/Services/OurProcess";
 
-import expertiseSeal from "@/assets/images/confidential-seal.png";
+import { useDevice } from '@/context/DeviceContext';
 
 import { serviceCards, servicesInfo } from "@/utils/serviceInfo";
 import { routes } from "@/utils/routesPath";
+
+import expertiseSeal from "@/assets/images/confidential-seal.png";
 
 import * as styles from "./ServiceDetails.module.scss";
 
 const Service = () => {
 	const [expanded, setExpanded] = useState('panel0');
 	const { pathname } = useLocation();
+
+	const { isMobile } = useDevice();
 
 	const serviceName = pathname.match(/[^/]+$/);
 	const serviceDetails = servicesInfo[serviceName[0]] || null;
@@ -66,15 +70,21 @@ const Service = () => {
 
 	return (
 		<div
-			style={{
+			style={!isMobile ? {
 				backgroundImage: `url(${serviceDetails.background})`,
 				backgroundPosition: serviceDetails.backgroundPosition,
 				backgroundSize: "contain",
 				backgroundRepeat: "no-repeat"
-			}}
+			} : {}}
 		>
 			<section
 				className={styles.masterHead}
+				style={isMobile ? {
+					backgroundImage: `url(${serviceDetails.background})`,
+					backgroundPosition: serviceDetails.backgroundPosition,
+					backgroundSize: "cover",
+					backgroundRepeat: "no-repeat"
+				} : {} }
 			>
 				<Container maxWidth="xl" className={styles.headingContainer}>
 					<Grid

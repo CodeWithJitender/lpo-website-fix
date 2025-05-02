@@ -97,7 +97,14 @@
 }
 
 @media screen and (max-width: 900px) {
+	.mainContainer {
+		background: none;
+		background-size: contain;
+	}
+	
 	.masterHead {
+		background: url("../assets/images/service-page-header-bg.jpg") no-repeat top center;
+		background-size: cover;
 		background-position: bottom 0 left 55%;
 	}
 	.commonContainer{
