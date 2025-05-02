@@ -65,13 +65,16 @@ const Service = () => {
 	}
 
 	return (
-		<>
+		<div
+			style={{
+				backgroundImage: `url(${serviceDetails.background})`,
+				backgroundPosition: serviceDetails.backgroundPosition,
+				backgroundSize: "contain",
+				backgroundRepeat: "no-repeat"
+			}}
+		>
 			<section
 				className={styles.masterHead}
-				style={{
-					backgroundImage: `url(${serviceDetails.background})`,
-					backgroundPosition: serviceDetails.backgroundPosition
-				}}
 			>
 				<Container maxWidth="xl" className={styles.headingContainer}>
 					<Grid
@@ -234,7 +237,7 @@ const Service = () => {
 					</Grid>
 				</Grid>
 			</section>
-		</>
+		</div>
 	);
 };
 

@@ -54,7 +54,7 @@ const About = () => {
 	};
 
   return (
-    <>
+    <div className={styles.mainSection}>
 			<section className={styles.masterHead}>
 				<Container maxWidth="xl" className={styles.headingContainer}>
 					<Grid
@@ -410,7 +410,7 @@ const About = () => {
 				
 				{renderModelContent()}
 			</Modal>
-		</>
+		</div>
   );
 };
 

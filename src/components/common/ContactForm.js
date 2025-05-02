@@ -26,7 +26,7 @@ const ContactForm = (props) => {
 
 	const captchaRef = useRef();
 	
-	const { handleSubmit, control, formState: { isSubmitting } } = useForm();
+	const { handleSubmit, control, formState: { isSubmitting }, reset } = useForm();
 
 	const { pathname } = useLocation();
 
@@ -46,6 +46,7 @@ const ContactForm = (props) => {
 		const result = await response.json();
 		if (result.success) {
 			setStatus("success");
+			reset();
 		} else {
 			setStatus("error");
 		}

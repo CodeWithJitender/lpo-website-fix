@@ -93,7 +93,7 @@ const Footer = () => {
 						container
 					>
 						<a
-							href="https://www.linkedin.com/glocallpo/"
+							href="https://www.linkedin.com/company/glocal-lpo/"
 							rel="noopener noreferrer nofollow"
 							className={styles.socialIcons}
 							target="_blank"
@@ -191,7 +191,7 @@ const Footer = () => {
 							target="_blank"
 							className={styles.address}
 						>
-							B 73, Block B, Sector 57, Noida, Uttar Pradesh 201301, India
+							B-73, Block B, Sector 57, Noida, Uttar Pradesh 201301, India
 						</a>
 					</Grid>
 					<Grid

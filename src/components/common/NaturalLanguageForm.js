@@ -17,7 +17,9 @@ export default function NaturalLanguageForm() {
   const [formValues, setFormValues] = useState({
     platform: "platform",
     time: "time",
-		timezone: "time zone"
+		timezone: "time zone",
+		name: "guest",
+		email: "abc@xyz.com"
   });
 	const [open, setOpen] = useState(false);
 	const [message, setMessage] = useState("");
@@ -145,7 +147,7 @@ export default function NaturalLanguageForm() {
               onKeyDown={handleKeyDown}
             />
             <button className={styles["nl-field-go"]} onClick={handleSubmit}>
-              Go
+							<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#070C1E"><path d="m13.022 14.999v3.251c0 .412.335.75.752.75.188 0 .375-.071.518-.206 1.775-1.685 4.945-4.692 6.396-6.069.2-.189.312-.452.312-.725 0-.274-.112-.536-.312-.725-1.451-1.377-4.621-4.385-6.396-6.068-.143-.136-.33-.207-.518-.207-.417 0-.752.337-.752.75v3.251h-9.02c-.531 0-1.002.47-1.002 1v3.998c0 .53.471 1 1.002 1z" fillRule="nonzero"/></svg>
             </button>
           </li>
           <li
@@ -160,6 +162,12 @@ export default function NaturalLanguageForm() {
   // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
+		if (formValues.name === "guest") {
+			setStatus("error");
+			setOpen(true);
+			setMessage("Please enter your name");
+			return;
+		}
 		if (formValues.time === "time") {
 			setStatus("error");
 			setOpen(true);
@@ -176,6 +184,12 @@ export default function NaturalLanguageForm() {
 			setStatus("error");
 			setOpen(true);
 			setMessage("Please select platform");
+			return;
+		}
+		if (formValues.email === "abc@xyz.com") {
+			setStatus("error");
+			setOpen(true);
+			setMessage("Please enter your email");
 			return;
 		}
     const response = await fetch("/api/submit-small-form", {
@@ -220,26 +234,40 @@ export default function NaturalLanguageForm() {
 						className={styles["nl-form"]}
 						onSubmit={handleSubmit}
 					>
-						Choose {" "}
+						Hi {" "}
+						<InputField
+							placeholder="guest"
+							index={3}
+							valueKey="name"
+							subline="Enter your name"
+						/>
+						, Let's schedule your meeting for {" "}
 						<DropdownField
 							options={["10 am", "11 am", "12 am", "01 pm", "02 pm", "03 pm"]}
 							defaultValue="time"
 							index={0}
 							valueKey="time"
-						/>, {" "}
+						/> {" "}
 						<DropdownField
 							options={["EST", "CST", "MST", "PST", "HST"]}
 							defaultValue="time zone"
 							index={1}
 							valueKey="timezone"
 						/> {" "}
-						for a {" "}
+						on {" "}
 						<DropdownField
-							options={["zoom call", "google meet call", "old fashioned call"]}
+							options={["Zoom", "Google Meet", "Phone call"]}
 							defaultValue="platform"
 							index={2}
 							valueKey="platform"
-						/>. Schedule your meeting — and let's make things happen!
+						/>. Just share your email (
+							<InputField
+								placeholder="abc@xyz.com"
+								index={4}
+								valueKey="email"
+								subline="Enter your email"
+							/>
+						), and let's make things happen!
 						<div
 							ref={overlayRef}
 							className={`${styles["nl-overlay"]} ${

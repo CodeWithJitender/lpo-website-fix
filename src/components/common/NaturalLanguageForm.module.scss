@@ -117,8 +117,7 @@
 
 /* icons for some elements */
 .nl-dd ul li.nl-dd-checked:before,
-.nl-submit:before,
-.nl-field-go:before {
+.nl-submit:before {
   font-family: "nlicons";
   speak: none;
   font-style: normal;
@@ -144,35 +143,32 @@
 }
 
 .nl-ti-text ul {
-  min-width: 8em;
+  min-width: 10em;
 }
 
 .nl-ti-text ul li.nl-ti-input input {
   width: 100%;
   padding: 0.2em 2em 0.2em 0.5em;
   border-bottom: none;
-  color: #fff;
+  color: #070C1E;
 }
 
 .nl-form .nl-field-go {
-  position: absolute;
-  right: 0;
-  top: 0;
   height: 100%;
   cursor: pointer;
   background: rgba(0, 0, 0, 0.1);
   width: 1.8em;
   text-align: center;
-  color: transparent;
-}
+	position: absolute;
+	top: 0;
+	align-items: center;
+	justify-content: center;
+	right: 0;
 
-.nl-field-go:before {
-  content: "\e001";
-  font-size: 75%;
-  color: #fff;
-  width: 100%;
-  line-height: 2.5;
-  display: block;
+	svg {
+		width: 32px;
+		height: 32px;
+	}
 }
 
 /* custom placeholder color */
@@ -209,7 +205,7 @@ input:focus::-ms-input-placeholder {
   font-style: italic;
   font-weight: 400;
   padding: 0.4em 1em;
-  color: rgba(0, 0, 0, 0.2);
+  color: #070C1E;
   border-top: 1px dashed rgba(255, 255, 255, 0.7);
 }
 
