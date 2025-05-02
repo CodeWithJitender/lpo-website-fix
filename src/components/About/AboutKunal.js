@@ -22,7 +22,7 @@ const AboutKunal = () => {
 							<img src={linkedIcon} alt="" className={styles.linkedinIcon} />
 						</a>
 					</Heading>
-					<div className={styles.designation}>Founder & CEO, Glocal IPO</div>
+					<div className={styles.designation}>Founder & CEO, Glocal LPO</div>
 				</Grid>
 				<Grid size={12} className={styles.aboutFounder}>
 					Kunal Jaggi is the visionary Founder & CEO behind Glocal LPO, backed by over 20 years of entrepreneurial and operational leadership.

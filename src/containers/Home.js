@@ -218,7 +218,7 @@ const Home = () => {
 							direction="up"
 							className={styles.legalSupportText}
 						>
-							Whether it's a high-stakes litigation or an watertight contract, we handle it like a grandmaster plays chess—three moves ahead, with a checkmate always in sight.
+							Whether it's a high-stakes litigation or a watertight contract, we handle it like a grandmaster plays chess—three moves ahead, with a checkmate always in sight.
 						</Animate.FadeUp>
 					  <Animate.ScaleIn className={styles.legalSupportIcon}>
 							<img src={stampIcon} className={styles.stampIcon} alt="" />

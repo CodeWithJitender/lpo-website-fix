@@ -59,7 +59,7 @@ const Service = () => {
 							delay="100ms"
 							className={styles.aboutText}
 						>
-							From business litigation to family law, our dedicated team ensures that every document, strategy, and detail is executed with precision, giving your clients the best chance at success. Whether you need support in contracts, criminal law, or intellectual property, we’re here to streamline your legal processes and elevate your practice.
+							From business litigation to family law, our dedicated team ensures that every document, strategy, and detail is executed with precision, giving your clients the best chance at success. Whether you need support in contracts, criminal law, or intellectual property, we're here to streamline your legal processes and elevate your practice.
 						</Animate.FadeUp>
 
 						<div>
