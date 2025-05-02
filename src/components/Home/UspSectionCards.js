@@ -80,7 +80,7 @@ export default function App() {
 
   useEffect(() => {
 		// initSmoothScrolling();
-    setupScrollAnimations();
+		setupScrollAnimations();
 
     // Cleanup function
     return () => {
