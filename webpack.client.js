@@ -3,8 +3,10 @@ const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require("copy-webpack-plugin");
 
+const isProduction = process.env.NODE_ENV === 'production';
+
 module.exports = {
-  mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
+  mode: isProduction ? 'production' : 'development',
   entry: './client.js',
   output: {
     filename: 'client.[contenthash:8].js',
@@ -14,6 +16,7 @@ module.exports = {
 	devServer: {
 		hot: true,
 	},
+	devtool: isProduction ? "none" : "source-map",
   module: {
     rules: [
       {

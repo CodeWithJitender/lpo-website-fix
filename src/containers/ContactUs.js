@@ -38,6 +38,13 @@ const ContactUs = () => {
 		imageList.push(imageSrc);
 	});
 
+	const CustomArrow = ({ type, onClick }) => (
+		<ArrowUpFilled
+			onClick={onClick}
+			className={`slick-arrow ${type === "next" ? "slick-next" : "slick-prev"}`}
+		/>
+	);
+
   return (
     <>
 			<section className={styles.masterHead}>
@@ -229,10 +236,9 @@ const ContactUs = () => {
 						<Slider
 							slidesToShow={2}
 							slidesToScroll={1}
-							container="true"
 							dots={false}
-							nextArrow={<ArrowUpFilled className={styles.arrow} />}
-							prevArrow={<ArrowUpFilled className={styles.arrow} />}
+							nextArrow={<CustomArrow type="next" />}
+							prevArrow={<CustomArrow type="prev" />}
 							responsive={[
 								{
 									breakpoint: 900,

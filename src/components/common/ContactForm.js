@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import {
 	Container,
 	Grid2 as Grid,
@@ -8,7 +8,6 @@ import {
 } from "@mui/material";
 import { Controller, useForm } from "react-hook-form";
 import { useLocation } from "react-router-dom";
-import { Turnstile } from '@marsidev/react-turnstile'
 
 import { CircleArrow, CircleLoader } from "@/components/Icons";
 
@@ -23,6 +22,7 @@ const ContactForm = (props) => {
 	const [open, setOpen] = useState(false);
 	const [message, setMessage] = useState("");
 	const [status, setStatus] = useState("");
+	const [TurnstileComponent, setTurnstileComponent] = useState(null);
 
 	const captchaRef = useRef();
 	
@@ -59,6 +59,13 @@ const ContactForm = (props) => {
 		setMessage("");
 		setOpen(false);
 	};
+
+	useEffect(() => {
+    // Dynamically import only on client-side after hydration
+    import('@marsidev/react-turnstile').then((mod) => {
+      setTurnstileComponent(() => mod.Turnstile);
+    });
+  }, []);
 
 	return (
 		<Container
@@ -259,10 +266,12 @@ const ContactForm = (props) => {
 								</Button>
 							</Grid>
 						</Grid>
-						<Turnstile
-							ref={captchaRef}
-							siteKey='0x4AAAAAABY7kpv1X_K7bKmj'
-						/>
+						{TurnstileComponent && (
+							<TurnstileComponent
+								ref={captchaRef}
+								siteKey='0x4AAAAAABY7kpv1X_K7bKmj'
+							/>
+						)}
 					</form>
 				</Grid>
 			</Grid>

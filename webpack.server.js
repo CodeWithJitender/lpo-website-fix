@@ -14,6 +14,7 @@ module.exports = {
 		publicPath: '/assets/',
 		clean: true
   },
+	devtool: "source-map",
   module: {
     rules: [
       {
