@@ -1,6 +1,7 @@
 const path = require('path');
 const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
@@ -72,6 +73,11 @@ module.exports = {
     }),
 		new WebpackManifestPlugin({
       fileName: path.resolve(__dirname, 'build/assets-manifest.json'), // Generates a JSON file with mappings
+    }),
+		new CopyPlugin({
+      patterns: [
+        { from: path.resolve(__dirname, 'public/favicon.png'), to: "" },
+      ],
     }),
   ],
   resolve: {
