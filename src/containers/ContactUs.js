@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
 	Container,
 	Grid2 as Grid,
 	ImageList,
 	ImageListItem
 } from '@mui/material';
+import FsLightbox from "fslightbox-react";
 import Slider from "react-slick";
 
 import {
@@ -18,6 +19,25 @@ import { WritingPen, ArrowUpFilled } from "@/components/Icons";
 import * as styles from "./ContactUs.module.scss";
 
 const ContactUs = () => {
+	const [lightboxController, setLightboxController] = useState({
+		toggler: false,
+		slide: 1
+	});
+
+	function openLightboxOnSlide(number) {
+		setLightboxController({
+			toggler: !lightboxController.toggler,
+			slide: number
+		});
+	};
+
+	const imageList= [];
+
+	Array.from({ length: 10 }, (_, i) => {
+		const imageSrc = require(`../assets/images/office-images/lpo-office-${i + 1}.jpg`);
+		imageList.push(imageSrc);
+	});
+
   return (
     <>
 			<section className={styles.masterHead}>
@@ -163,19 +183,20 @@ const ContactUs = () => {
 									className={styles.imageListRoot}
 								>
 									{
-										Array.from({ length: 10 }, (_, i) => {
-											const imageSrc = require(`../assets/images/office-images/lpo-office-${i + 1}.jpg`);
-											return (
-												<ImageListItem key={i} className={styles.imageListItem}>
-													<img
-														srcSet={imageSrc}
-														src={imageSrc}
-														loading="lazy"
-														alt=""
-													/>
-												</ImageListItem>
-											)
-										})
+										imageList.map((image, i) => (
+											<ImageListItem
+												key={i}
+												className={styles.imageListItem}
+												onClick={() => openLightboxOnSlide(i + 1)}
+											>
+												<img
+													srcSet={image}
+													src={image}
+													loading="lazy"
+													alt=""
+												/>
+											</ImageListItem>
+										))
 									}
 								</ImageList>
 							</Grid>
@@ -457,6 +478,11 @@ const ContactUs = () => {
 					</Grid>
 				</Container>
 			</section>
+			<FsLightbox
+				toggler={lightboxController.toggler}
+				sources={imageList}
+				slide={lightboxController.slide}
+			/>
 		</>
   );
 };

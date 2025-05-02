@@ -13,13 +13,14 @@
   }
 }
 
-.headerLogoLink {
-	text-decoration: none;
+.logoContainer {
+	display: flex;
 }
 
 .logo {
 	width: 160px;
 	height: auto;
+	cursor: pointer;
 }
 
 .phoneButton {

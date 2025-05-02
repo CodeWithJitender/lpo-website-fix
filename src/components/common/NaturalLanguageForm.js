@@ -188,7 +188,7 @@ export default function NaturalLanguageForm() {
 							defaultValue="time"
 							index={0}
 							valueKey="time"
-						/> {" "}
+						/>, {" "}
 						<DropdownField
 							options={["EST", "CST", "MST", "PST", "HST"]}
 							defaultValue="time zone"

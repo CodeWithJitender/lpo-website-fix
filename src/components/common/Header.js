@@ -7,7 +7,7 @@ import {
 } from '@mui/material';
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 import { useDevice } from '@/context/DeviceContext';
 
@@ -29,6 +29,8 @@ const Header = () => {
 	const { isMobile } = useDevice();
 
 	const { pathname } = useLocation();
+
+	const navigate = useNavigate();
 
 	const navBar = useRef(null);
 	const anchorEl = useRef(null);
@@ -69,6 +71,10 @@ const Header = () => {
 		setMenuOpen(false);
 	}
 
+	const handleLogoClick = () => {
+		navigate("/");
+	};
+
 	return (
 		<AppBar position="fixed" ref={navBar}>
 			<Grid container size={12} alignItems="center">
@@ -79,10 +85,14 @@ const Header = () => {
 						md: 2,
 						lg: 2
 					}}
+					className={styles.logoContainer}
 				>
-					<Link to="/" className={styles.headerLogoLink}>
-						<img src={logo} className={styles.logo} alt="GlocalLPO" />
-					</Link>
+					<img
+						src={logo}
+						className={styles.logo}
+						alt="GlocalLPO"
+						onClick={handleLogoClick}
+					/>
 				</Grid>
 				{
 					isMobile ? (
@@ -106,9 +116,6 @@ const Header = () => {
 									sm: 0,
 									md: 8,
 									lg: 8
-								}}
-								sx={{
-									alignSelf: "center",
 								}}
 							>
 								<div className={styles.navBar}>
@@ -158,7 +165,6 @@ const Header = () => {
 									md: 2,
 									lg: 2
 								}}
-								sx={{ textAlign: "right", alignSelf: "flex-end" }}
 							>
 								<a href="tel:+1 650 407 2112" className={styles.phoneButton}>
 									<PhoneIcon />
