@@ -15,7 +15,6 @@ import Heading from "./Heading";
 import InputField from "./InputField";
 
 import * as styles from "./ContactForm.module.scss";
-import { style } from "framer-motion/client";
 
 const ContactForm = (props) => {
 	const { section } = props;

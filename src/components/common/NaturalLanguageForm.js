@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import Grid from "@mui/material/Grid2";
+import { Snackbar, Grid2 as Grid, Alert } from "@mui/material";
 
 import { CircleArrow } from "@/components/Icons";
 
@@ -17,9 +17,11 @@ export default function NaturalLanguageForm() {
   const [formValues, setFormValues] = useState({
     platform: "platform",
     time: "time",
-		timezone: "time zone",
-    city: "any city",
+		timezone: "time zone"
   });
+	const [open, setOpen] = useState(false);
+	const [message, setMessage] = useState("");
+	const [status, setStatus] = useState("");
 
   // Handle click on the overlay (close all fields)
   const handleOverlayClick = () => {
@@ -156,13 +158,49 @@ export default function NaturalLanguageForm() {
   };
 
   // Handle form submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // You can perform actions with your form values here
-    alert(
-      `Finding ${formValues.food} restaurants in ${formValues.city} (${formValues.restaurant} style) for ${formValues.time}`
-    );
+		if (formValues.time === "time") {
+			setStatus("error");
+			setOpen(true);
+			setMessage("Please select time");
+			return;
+		}
+		if (formValues.timezone === "time zone") {
+			setStatus("error");
+			setOpen(true);
+			setMessage("Please select time zone");
+			return;
+		}
+		if (formValues.platform === "platform") {
+			setStatus("error");
+			setOpen(true);
+			setMessage("Please select platform");
+			return;
+		}
+    const response = await fetch("/api/submit-small-form", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formValues),
+    });
+
+		const result = await response.json();
+		if (result.success) {
+			setStatus("success");
+		} else {
+			setStatus("error");
+		}
+		setMessage(result.message);
+		setOpen(true);
   };
+
+	const handleClose = () => {
+		setStatus("");
+		setMessage("");
+		setOpen(false);
+	};
 
   return (
 		<>
@@ -222,9 +260,27 @@ export default function NaturalLanguageForm() {
 				className={styles.winButton}
 			>
 				<Animate.FadeUp direction="up" delay="100ms">
-					<CircleArrow />
+					<CircleArrow onClick={handleSubmit} />
 				</Animate.FadeUp>
 			</Grid>
+			<Snackbar
+				open={open}
+				autoHideDuration={5000}
+				onClose={handleClose}
+				anchorOrigin={{
+					horizontal: 'center',
+					vertical: 'top',
+				}}
+			>
+				<Alert
+					onClose={handleClose}
+					severity={status}
+					variant="filled"
+					sx={{ width: '100%' }}
+				>
+					{message}
+				</Alert>
+			</Snackbar>
 		</>
   );
 }
