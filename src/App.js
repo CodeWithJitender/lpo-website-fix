@@ -1,5 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
+import { gsap } from "gsap";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
 import Home from './containers/Home';
 import About from './containers/About';
@@ -19,7 +21,12 @@ import * as styles from "./App.module.scss";
 
 import './styles/main.scss';
 
+// Register the ScrollTrigger plugin
+gsap.registerPlugin(ScrollTrigger);
+
 const App = () => {
+	const backToTopRef = useRef(null);
+
 	const { pathname } = useLocation();
 
 	const scrollToTop = () => {
@@ -29,6 +36,34 @@ const App = () => {
 			behavior: 'smooth'
 		});
 	};
+
+	useEffect(() => {
+    // Only run on client side
+    if (typeof window === 'undefined') return;
+
+    const btt = backToTopRef.current;
+    if (!btt) return;
+
+    // Initially hide the button (autoAlpha: 0 sets opacity:0 + visibility:hidden)
+    gsap.set(btt, { autoAlpha: 0 });
+
+    // Create ScrollTrigger that tracks the whole page (from top to bottom)
+    ScrollTrigger.create({
+      trigger: document.body,       // use the entire document as trigger
+      start: "top top",             // when top of page meets top of viewport
+      end: "bottom bottom",         // until bottom of page meets bottom of viewport
+      onUpdate: (self) => {
+        // If scrolled past 30% of the page, show the button; otherwise hide it
+        if (self.progress > 0.3) {
+          // Fade in the button
+          gsap.to(btt, { autoAlpha: 1, duration: 0.3 });
+        } else {
+          // Fade out the button
+          gsap.to(btt, { autoAlpha: 0, duration: 0.3 });
+        }
+      }
+    });
+  }, [pathname]);
 
 	useEffect(() => {
     scrollToTop();
@@ -46,7 +81,11 @@ const App = () => {
 				<Route path="*" element={<NotFound />} />
 			</Routes>
 			<Footer />
-			<div className={styles.backToTop} onClick={scrollToTop}>
+			<div
+				className={styles.backToTop}
+				onClick={scrollToTop}
+				ref={backToTopRef}
+			>
 				<ArrowUpFilled />
 			</div>
 		</>
