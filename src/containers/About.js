@@ -25,6 +25,7 @@ import linkedIcon from "@/assets/icons/about-linkedin-icon.png";
 
 import kunalProfilePic from "@/assets/images/kunal-profile-pic.jpg";
 import srishtiProfilePic from "@/assets/images/srishti-profile-pic.jpg";
+import deeptiProfilePic from "@/assets/images/deepti-profile-pic.jpg";
 import legalStamp from "@/assets/images/about-legal-stamp.png";
 
 import * as styles from "./About.module.scss";
@@ -349,7 +350,7 @@ const About = () => {
 								<img src={srishtiProfilePic} alt="" />
 							</div>
 							<div className={styles.founderTitle}>
-								The Mind Behind Sales & Marketing
+								The Driving Energy Behind Service Excellence
 							</div>
 							<div className={styles.name}>
 								Srishti Khatri
@@ -375,10 +376,10 @@ const About = () => {
 							className={styles.founderColumn}
 						>
 							<div className={styles.founderImage} onClick={() => handleModalOpen("deepti")}>
-								<img src="https://placehold.co/600x600/070c1e/FFFFFF/png" alt="" />
+								<img src={deeptiProfilePic} alt="" />
 							</div>
 							<div className={styles.founderTitle}>
-								The Force Behind Business Operations
+								The Strategic Architect of Growth and Expansion
 							</div>
 							<div className={styles.name}>
 								Deepti Sisodiya

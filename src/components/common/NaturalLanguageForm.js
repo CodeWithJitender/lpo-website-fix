@@ -182,27 +182,26 @@ export default function NaturalLanguageForm() {
 						className={styles["nl-form"]}
 						onSubmit={handleSubmit}
 					>
-						Pick a {" "}
+						Choose {" "}
 						<DropdownField
 							options={["10 am", "11 am", "12 am", "01 pm", "02 pm", "03 pm"]}
 							defaultValue="time"
 							index={0}
 							valueKey="time"
-						/>, 
-						as per your {" "}
+						/> {" "}
 						<DropdownField
 							options={["EST", "CST", "MST", "PST", "HST"]}
 							defaultValue="time zone"
 							index={1}
 							valueKey="timezone"
-						/>. 
-						choose a preferred {" "} 
+						/> {" "}
+						for a {" "}
 						<DropdownField
-							options={["zoom", "google meet", "old fashioned call"]}
+							options={["zoom call", "google meet call", "old fashioned call"]}
 							defaultValue="platform"
 							index={2}
 							valueKey="platform"
-						/>. Schedule a meeting and we'll make things happen.
+						/>. Schedule your meeting — and let's make things happen!
 						<div
 							ref={overlayRef}
 							className={`${styles["nl-overlay"]} ${
