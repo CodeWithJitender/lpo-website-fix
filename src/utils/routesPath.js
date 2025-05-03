@@ -27,9 +27,9 @@ export const routes = {
 		label: 'Personal Injury',
 		href: '/services/personal-injury'
 	},
-	"estate-planning": {
-		label: 'Estate Planning',
-		href: '/services/estate-planning'
+	"estate-planning-probate": {
+		label: 'Estate Planning & Probate',
+		href: '/services/estate-planning-probate'
 	},
 	"employee-law": {
 		label: 'Employment Law',

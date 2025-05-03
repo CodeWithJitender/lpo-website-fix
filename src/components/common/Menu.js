@@ -18,7 +18,7 @@ const menuItems = [
     children: [
       { ...routes["real-estate-litigation"] },
 			{ ...routes["personal-injury"] },
-			{ ...routes["estate-planning"] },
+			{ ...routes["estate-planning-probate"] },
 			{ ...routes["employee-law"] },
 			{ ...routes["workers-compensation"] },
 			{ ...routes["business-litigation-support"] },

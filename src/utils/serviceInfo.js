@@ -533,40 +533,63 @@ export const servicesInfo = {
         }
      ]
   },
-  "estate-planning":{
-     "title":"Estate Planning",
+  "estate-planning-probate":{
+     "title":"Estate Planning & Probate",
      "heading":<>
-     Cut through the red tape.  <br />
-     Uphold your clients' legal claims.
+    Your Client's Legacy,  <br />
+     Strategically Planned and Securely Settled.
      </>,
      "background":require("../assets/images/services-bg/estate-planning.jpg"),
 		 "backgroundPosition": "top center",
      "description":{
-        "mainDescription":"Probate is complex, with legal intricacies that can delay estate resolution.",
-        "smallDesription":"We expertly navigate court procedures, validate wills, manage creditor claims, and ensure rightful asset distribution. Our precision-driven approach safeguards your clients' interests, accelerates the process, and ensures full compliance with U.S. probate laws—protecting inheritances while minimizing legal hurdles."
+        "mainDescription":"Estate planning isn't just paperwork—it's a protective strategy. ",
+        "smallDesription":"We craft tailored documents that safeguard assets and minimize risk. When probate begins, our expertise ensures a smooth transition—handling court procedures, validating wills, and managing claims with precision. From planning to resolution, we protect inheritances, expedite the process, and ensure full legal compliance—securing your client's legacy at every step."
      },
      "accordianItems":[
         {
            "header":{
               "icon":require("../assets/icons/accordian-icon-1.png"),
-              "title":"Seamless Probate Documents prepped without any Pitfalls"
+              "title":"Estate Planning"
            },
            "content":{
-              "heading":"Probate Documentation That Holds Up—And Speeds Up.",
+              "heading":"Our Brilliant Lawyers draft superior Courtroom Documents",
+              "smallHeading":"Glocal's Distinctive Edge:",
+              "description":"Backed by seasoned estate planning specialists, we safeguard your clients' interests while delivering efficient, accurate, and hassle-free probate back-end support.",
+              "listItems":[
+                 "Revocable Living Trusts- Flexible legal arrangement efficiently done to avoid probate",
+                 "Irrevocable Trusts - Shielding assets from creditors and lawsuits.",
+                 "Last Will and Testament - Ensuring wills are compliant with Estate Planning laws. ",
+                 "Durable Power of Attorney - Expertly crafted POAs ensuring secure delegation of financial and legal authority.",
+                 "Health Care Directives - Tailored healthcare directives that reflect client's medical wishes with legal clarity.",
+                 "HIPAA Authorization Forms - Regulation-compliant authorizations enabling smooth access to medical records.",
+                 "Pour-Over Wills - Facilitating seamless transfer of non-trust assets to beneficiaries upon death.",
+                 "Living Wills - Explicitly documented medical preferences for a secure and clear end-of-life plan.",
+                 "Beneficiary Designations - Well-structured records guaranteeing direct and efficient beneficiary asset distribution.",
+                 "Guardianship Designations - Official designation of reliable guardians to ensure the care and security of minors and dependents."
+                
+
+              ]
+           }
+        },
+        {
+           "header":{
+              "icon":require("../assets/icons/accordian-icon-6.png"),
+              "title":"Probate"
+           },
+           "content":{
+              "heading":"Seamless Probate Documents prepped without any Pitfalls",
               "smallHeading":"Glocal's Distinctive Edge:",
               "description":"Ensuring smooth estate transitions with expert-backed, accurate, and efficient probate support, protecting your clients every step of the way.",
               "listItems":[
                  "Petition for Probate - Assist with drafting court petitions to initiate probate and validate wills seamlessly.",
                  "Letters Testamentary / Letters of Administration - Precise document preparation with the available documents to secure court approval for estate management.",
-                 "Inventory and Appraisal - Detailed asset documentation and valuation to ensure accurate estate accounting. ",
+                 "Inventory and Appraisal - Detailed asset documentation and valuation to ensure accurate estate accounting.",
                  "Notice to Creditors - Timely preparation and filing of legal notices to manage estate liabilities efficiently.",
                  "Accounting and Final Distribution - Comprehensive estate accounting and final asset distribution reports, ensuring compliance.",
                  "Petition for Final Settlement - Flawless documentation to close probate smoothly and distribute assets per court approval.",
                  "Waivers and Consents - Professionally prepared legal waivers to streamline estate administration and avoid disputes.",
                  "Claims Against Estate - Efficient handling of creditor claims, ensuring proper validation and resolution.",
                  "Affidavits of Heirship - Legally sound affidavits to establish heirs and facilitate estate transfers without delays."
-                
-
               ]
            }
         }
@@ -1635,8 +1658,8 @@ export const serviceCards = [
 	},
 	{
 		id: "01",
-		title: routes["estate-planning"].label,
-		link: routes["estate-planning"].href,
+		title: routes["estate-planning-probate"].label,
+		link: routes["estate-planning-probate"].href,
 		image: require("../assets/images/service-image-3.jpg"),
 		description: "A strong estate plan isn't just paperwork—it's a fortress. We structure your client's documents relating to assets, highlight points to eliminate the risks therein, and ensure your strategies stand unrefuted.",
 		mobileDescription: "A strong estate plan isn't just paperwork—it's a fortress. We structure your client's documents relating to assets, highlight points to eliminate the risks therein, and ensure your strategies stand unrefuted."
@@ -1734,10 +1757,10 @@ export const servicesArray = [
 		menuContent: "Building foolproof workers' compensation cases with meticulous documentation from start to finish."
 	}, {
 		id: "01",
-		title: "Estate Planning",
+		title: "Estate Planning & Probate",
 		description: "A strong estate plan isn't just paperwork—it's a fortress. We structure your client's documents relating to assets, highlight points to eliminate the risks therein, and ensure your strategies stand unrefuted.",
 		contentBoxTitle: "Building Estate Plans That Stand the Test of Time.",
-		link: routes["estate-planning"].href,
+		link: routes["estate-planning-probate"].href,
 		image: serviceImage3,
 		menuContent: "Transforming estate plans into unbreakable fortresses with precise documentation and risk mitigation."
 	}, {
