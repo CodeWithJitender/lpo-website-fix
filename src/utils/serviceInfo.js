@@ -72,7 +72,7 @@ export const servicesInfo = {
      "casesSpecializedIn":[
         {
            "id":"01",
-           "title":"Motor Vehicle Accidents Accidents",
+           "title":"Motor Vehicle Accidents",
            "description":"Car, truck, bicycle and motorcycle accident claims.",
            "image":require("../assets/images/service-images/personal-injury/Motor-Vehicle-Accidents.jpg")
         },
@@ -84,8 +84,8 @@ export const servicesInfo = {
         },
         {
            "id":"03",
-           "title":"Slip & Fall or Trip and Fall Cases",
-           "description":"Highlightin`g Maximum Injury Compensation.",
+           "title":"Slip & Fall or Trip & Fall Cases",
+           "description":"Highlighting Maximum Injury Compensation.",
            "image":require("../assets/images/service-images/personal-injury/Slip-and-Fall-or-Trip.jpg")
         },
         {
@@ -384,7 +384,7 @@ export const servicesInfo = {
      ]
   },
   "workers-compensation":{
-     "title":"Workers' Conmensation & Workplace Injury Support",
+     "title":"Workers' Compensation & Workplace Injury Support",
      "heading":<>
      We believe - In toil and trial, <br />
      justice shall prevail.
@@ -533,13 +533,13 @@ export const servicesInfo = {
         }
      ]
   },
-  "estate-planning-litigation":{
-     "title":"Estate Planning Litigation",
+  "estate-planning":{
+     "title":"Estate Planning",
      "heading":<>
      Your Legacy, <br />
      Our Strategy
      </>,
-     "background":require("../assets/images/services-bg/estate-planning-litigation.jpg"),
+     "background":require("../assets/images/services-bg/estate-planning.jpg"),
 		 "backgroundPosition": "top center",
      "description":{
         "mainDescription":"A strong estate plan isn't just paperwork—it's a fortress.",
@@ -688,7 +688,7 @@ export const servicesInfo = {
         },
         {
            "id":"04",
-           "title":"Spousal Support (Alimony)",
+           "title":"Spousal Support",
            "description":"Temporary & Permanent Support Orders, Modifications.",
            "image":require("../assets/images/service-images/family-law/Spousal-Support.jpg")
         },
@@ -1338,13 +1338,13 @@ export const servicesInfo = {
     
      ]
   },
-  "bankrupcy":{
-     "title":"Bankrupcy",
+  "bankruptcy":{
+     "title":"Bankruptcy",
      "heading":<>
      Debt Happens.  <br />
      Recovery is a Strategy.
      </>,
-     "background":require("../assets/images/services-bg/bankrupcy.jpg"),
+     "background":require("../assets/images/services-bg/bankruptcy.jpg"),
 		 "backgroundPosition": "top center",
      "description":{
         "mainDescription":"Strategic Legal Support for Debt Relief and Financial Recovery",
@@ -1494,7 +1494,7 @@ export const servicesInfo = {
      "background":require("../assets/images/services-bg/contracts.jpg"),
 		 "backgroundPosition": "top center",
      "description":{
-        "mainDescription":"We provide comprehensive contract-related legal support to attorneys and businesses across the U.S.",
+        "mainDescription":"We provide comprehensive contract-related legal support to attorneys and businesses across the U.S, U.K, and Canada",
         "smallDesription":"Our team of seasoned legal professionals specializes in drafting, reviewing, negotiating, and managing contracts to ensure clarity, enforceability, and protection of your clients' interests. With a deep understanding of contract law and a commitment to precision, we deliver strategic solutions that minimize risk and maximize value."
      },
      "casesSpecializedIn":[
@@ -1637,8 +1637,8 @@ export const serviceCards = [
 		title: routes["personal-injury"].label,
 		link: routes["personal-injury"].href,
 		image: require("../assets/images/service-image-2.jpg"),
-		description: "Accidents happen, but accountability is non-negotiable. We draft demand letters with legal precision, ensuring your clients get the maximum compensation which they deserve.",
-		mobileDescription: "Accidents happen, but accountability is non-negotiable. We draft demand letters with legal precision, ensuring your clients get the maximum compensation which they deserve."
+		description: "Accidents happen, but accountability is non-negotiable. We provide end to end legal support with legal precision, ensuring your clients get the maximum compensation which they deserve.",
+		mobileDescription: "Accidents happen, but accountability is non-negotiable. We provide end to end legal support with legal precision, ensuring your clients get the maximum compensation which they deserve."
 	},
 	{
 		id: "03",
@@ -1658,8 +1658,8 @@ export const serviceCards = [
 	},
 	{
 		id: "01",
-		title: routes["estate-planning-litigation"].label,
-		link: routes["estate-planning-litigation"].href,
+		title: routes["estate-planning"].label,
+		link: routes["estate-planning"].href,
 		image: require("../assets/images/service-image-3.jpg"),
 		description: "A strong estate plan isn't just paperwork—it's a fortress. We structure your client's documents relating to assets, highlight points to eliminate the risks therein, and ensure your strategies stand unrefuted.",
 		mobileDescription: "A strong estate plan isn't just paperwork—it's a fortress. We structure your client's documents relating to assets, highlight points to eliminate the risks therein, and ensure your strategies stand unrefuted."
@@ -1706,8 +1706,8 @@ export const serviceCards = [
 	},
 	{
 		id: "10",
-		title: routes["bankrupcy"].label,
-		link: routes["bankrupcy"].href,
+		title: routes["bankruptcy"].label,
+		link: routes["bankruptcy"].href,
 		image: require("../assets/images/service-image-10.jpg"),
 		description: "Whether your client is an individual, business, or family struggling with debt, we navigate the legal pathways to financial freedom with precision and expertise.",
 		mobileDescription: "Whether your client is an individual, business, or family struggling with debt, we navigate the legal pathways to financial freedom with precision and expertise."
@@ -1734,7 +1734,7 @@ export const servicesArray = [
 	},  {
 		id: "02",
 		title: "Personal Injury",
-		description: "Accidents happen, but accountability is non-negotiable. We draft demand letters with legal precision, ensuring your clients get the maximum compensation which they deserve.",
+		description: "Accidents happen, but accountability is non-negotiable. We provide end to end legal support with legal precision, ensuring your clients get the maximum compensation which they deserve.",
 		contentBoxTitle: "Injury wasn't your clients' choice. Justice is.",
 		link: routes["personal-injury"].href,
 		image: serviceImage2,
@@ -1757,10 +1757,10 @@ export const servicesArray = [
 		menuContent: "Building foolproof workers' compensation cases with meticulous documentation from start to finish."
 	}, {
 		id: "01",
-		title: "Estate Planning Litigation",
+		title: "Estate Planning",
 		description: "A strong estate plan isn't just paperwork—it's a fortress. We structure your client's documents relating to assets, highlight points to eliminate the risks therein, and ensure your strategies stand unrefuted.",
 		contentBoxTitle: "Building Estate Plans That Stand the Test of Time.",
-		link: routes["estate-planning-litigation"].href,
+		link: routes["estate-planning"].href,
 		image: serviceImage3,
 		menuContent: "Transforming estate plans into unbreakable fortresses with precise documentation and risk mitigation."
 	}, {
@@ -1805,10 +1805,10 @@ export const servicesArray = [
 		menuContent: "Empowering defense with precision, strategy, and unwavering support—every step of the way."
 	}, {
 		id: "10",
-		title: "Bankrupcy",
+		title: "Bankruptcy",
 		description: "Whether your client is an individual, business, or family struggling with debt, we navigate the legal pathways to financial freedom with precision and expertise.",
-		contentBoxTitle: "Bankrupcy isn't the end. It's a fresh start.",
-		link: routes["bankrupcy"].href,
+		contentBoxTitle: "Bankruptcy isn't the end. It's a fresh start.",
+		link: routes["bankruptcy"].href,
 		image: serviceImage10,
 		menuContent: "Guiding clients through financial turmoil with expert strategies for a fresh start."
 	}, {

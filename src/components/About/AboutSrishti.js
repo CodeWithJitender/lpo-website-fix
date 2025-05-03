@@ -22,13 +22,13 @@ const AboutSrishti = () => {
 							<img src={linkedIcon} alt="" className={styles.linkedinIcon} />
 						</a>
 					</Heading>
-					<div className={styles.designation}>VP - Sales & Marketing</div>
+					<div className={styles.designation}>VP - Sales & Marketing, Glocal LPO</div>
 				</Grid>
 				<Grid size={12} className={styles.aboutFounder}>
-					She is a results-driven sales and marketing professional with expertise in driving business growth for Glocal LPO, a leading legal process outsourcing company.
+					Srishti Khatri is a dynamic leader with over a decade of experience in sales, marketing, and business development.
 				</Grid>
 				<Grid size={12}>
-					<p>With a strong background in sales and marketing, Srishti leverages her skills to foster strategic partnerships, enhance brand visibility, and propel business expansion.</p>
+					<p>Currently serving as the Vice President - Sales & Marketing, she has been instrumental in driving strategic growth, fostering strong client relationships, and building high-performing teams. Known for her energy, precision, and commitment to service excellence, Srishti has consistently elevated brand presence and business outcomes across every role she has undertaken. Her career reflects a deep passion for innovation, client satisfaction, and a relentless pursuit of excellence.</p>
 				</Grid>
 			</Grid>
 		</Container>

@@ -27,9 +27,9 @@ export const routes = {
 		label: 'Personal Injury',
 		href: '/services/personal-injury'
 	},
-	"estate-planning-litigation": {
-		label: 'Estate Planning Litigation',
-		href: '/services/estate-planning-litigation'
+	"estate-planning": {
+		label: 'Estate Planning',
+		href: '/services/estate-planning'
 	},
 	"employee-law": {
 		label: 'Employment Law',
@@ -55,9 +55,9 @@ export const routes = {
 		label: 'Family Law',
 		href: '/services/family-law'
 	},
-	"bankrupcy": {
-		label: 'Bankrupcy',
-		href: '/services/bankrupcy'
+	"bankruptcy": {
+		label: 'Bankruptcy',
+		href: '/services/bankruptcy'
 	},
 	"intellectual-property": {
 		label: 'Intellectual Property',

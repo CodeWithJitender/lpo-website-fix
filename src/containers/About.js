@@ -321,7 +321,7 @@ const About = () => {
 								<img src={kunalProfilePic} alt="" />
 							</div>
 							<div className={styles.founderTitle}>
-								The Visionary Behind Glocal LPO
+								Visionary Behind Glocal LPO
 							</div>
 							<div className={styles.name}>
 								Kunal Jaggi
@@ -350,13 +350,13 @@ const About = () => {
 								<img src={srishtiProfilePic} alt="" />
 							</div>
 							<div className={styles.founderTitle}>
-								The Driving Energy Behind Service Excellence
+								Driving Energy Behind Service Excellence
 							</div>
 							<div className={styles.name}>
 								Srishti Khatri
 							</div>
 							<div className={styles.designation}>
-								VP - Sales & Marketing
+								VP - Sales & Marketing, Glocal LPO
 							</div>
 							<div className={styles.description}>
 								Srishti drives growth at Glocal LPO through strategic partnerships and sharp marketing expertise, strengthening brand presence and business expansion.
@@ -379,7 +379,7 @@ const About = () => {
 								<img src={deeptiProfilePic} alt="" />
 							</div>
 							<div className={styles.founderTitle}>
-								The Strategic Architect of Growth and Expansion
+								Strategic Architect of Growth & Expansion
 							</div>
 							<div className={styles.name}>
 								Deepti Sisodiya

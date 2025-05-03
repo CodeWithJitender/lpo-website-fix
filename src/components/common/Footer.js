@@ -84,7 +84,7 @@ const Footer = () => {
 					className={styles.footerSection}
 				>
 					<Grid size={12} className={styles.logoContainer}>
-						<img src={logo} className={styles.logo} alt="GlocalLPO" />
+						<img src={logo} className={styles.logo} alt="Glocal LPO" />
 					</Grid>
 					<Grid
 						size={12}

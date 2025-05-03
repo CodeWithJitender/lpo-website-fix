@@ -112,7 +112,7 @@ const Header = () => {
 					<img
 						src={logo}
 						className={styles.logo}
-						alt="GlocalLPO"
+						alt="Glocal LPO"
 						onClick={handleLogoClick}
 					/>
 				</Grid>

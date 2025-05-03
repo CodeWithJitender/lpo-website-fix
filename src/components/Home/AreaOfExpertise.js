@@ -32,7 +32,7 @@ const AreaOfExpertise = () => {
 						</Heading>
 					</div>
 					<Animate.FadeUp direction="up" className={styles.legalSupportText}>
-						With expertise spanning civil litigation, real estate, business law, employment law, family law, and more, we anticipate challenges before they arise, delivering documents that hold up under scrutiny and strategies that keep attorneys ahead of the curve.
+						With expertise spanning civil litigation, real estate, business law, employment law, family law, contracts, and more, we anticipate challenges before they arise, delivering documents that hold up under scrutiny and strategies that keep attorneys ahead of the curve.
 					</Animate.FadeUp>
 				</Grid>
 			</Grid>

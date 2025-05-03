@@ -70,7 +70,7 @@ export default (req, res) => {
 					type="text/css"
 					href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
 				/>
-				<title>GlocalLPO</title>
+				<title>Glocal LPO</title>
 				${emotionCss}
 				<link rel="stylesheet" type="text/css" href="${stylesCss}">
       </head>

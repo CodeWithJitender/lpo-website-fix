@@ -18,13 +18,13 @@ const menuItems = [
     children: [
       { ...routes["real-estate-litigation"] },
 			{ ...routes["personal-injury"] },
-			{ ...routes["estate-planning-litigation"] },
+			{ ...routes["estate-planning"] },
 			{ ...routes["employee-law"] },
 			{ ...routes["workers-compensation"] },
 			{ ...routes["business-litigation-support"] },
 			{ ...routes["immigration"] },
 			{ ...routes["family-law"] },
-			{ ...routes["bankrupcy"] }
+			{ ...routes["bankruptcy"] }
     ],
   },
   { ...routes["contact-us"] },
