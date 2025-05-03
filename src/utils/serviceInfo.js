@@ -282,7 +282,7 @@ export const servicesInfo = {
               "title":"Pre-Litigation & Case Investigation"
            },
            "content":{
-              "heading":"Deduce, Defend, and Resolve – Before the Game is Afoot!",
+              "heading":"Deduce, Defend, and Resolve - Before the Game is Afoot!",
               "smallHeading":"Glocal's Distinctive Edge:",
               "description":"Our keen-eyed paralegals, much like a well-trained Baker Street force, leave no stone unturned in the realm of employment law—be it ensuring compliance, drafting contracts, aiding in litigation, or unraveling the mysteries of workplace disputes with precision and tact.",
               "listItems":[
@@ -536,60 +536,37 @@ export const servicesInfo = {
   "estate-planning":{
      "title":"Estate Planning",
      "heading":<>
-     Your Legacy, <br />
-     Our Strategy
+     Cut through the red tape.  <br />
+     Uphold your clients' legal claims.
      </>,
      "background":require("../assets/images/services-bg/estate-planning.jpg"),
 		 "backgroundPosition": "top center",
      "description":{
-        "mainDescription":"A strong estate plan isn't just paperwork—it's a fortress.",
-        "smallDesription":"We structure your client's documents relating to assets, highlight points to eliminate the risks therein, and ensure your strategies stand unrefuted."
+        "mainDescription":"Probate is complex, with legal intricacies that can delay estate resolution.",
+        "smallDesription":"We expertly navigate court procedures, validate wills, manage creditor claims, and ensure rightful asset distribution. Our precision-driven approach safeguards your clients' interests, accelerates the process, and ensures full compliance with U.S. probate laws—protecting inheritances while minimizing legal hurdles."
      },
      "accordianItems":[
         {
            "header":{
               "icon":require("../assets/icons/accordian-icon-1.png"),
-              "title":"Our Brilliant Lawyers draft superior Courtroom Documents"
+              "title":"Seamless Probate Documents prepped without any Pitfalls"
            },
            "content":{
-              "heading":"Medical Records - The Linchpins of every personal injury claim's success.",
-              "smallHeading":"Glocal's Distinctive Edge:",
-              "description":"Backed by seasoned estate planning specialists, we safeguard your clients' interests while delivering efficient, accurate, and hassle-free probate back-end support.",
-              "listItems":[
-                 "Revocable Living Trusts- Flexible legal arrangement efficiently done to avoid probate.",
-                 "Irrevocable Trusts – Shielding assets from creditors and lawsuits.",
-                 "Last Will and Testament – Ensuring wills are compliant with Estate Planning laws.",
-                 "Creating medical chronologies & injury assessments",
-                 "Durable Power of Attorney - Expertly crafted POAs ensuring secure delegation of financial and legal authority.",
-                 "Health Care Directives - Tailored healthcare directives that reflect client's medical wishes with legal clarity. ",
-                 "HIPAA Authorization Forms - Regulation-compliant authorizations enabling smooth access to medical records.",
-                 "Pour-Over Wills - Facilitating seamless transfer of non-trust assets to beneficiaries upon death.",
-                 "Living Wills - Explicitly documented medical preferences for a secure and clear end-of-life plan.",
-                 "Beneficiary Designations - Well-structured records guaranteeing direct and efficient beneficiary asset distribution.",
-                 "Guardianship Designations - Official designation of reliable guardians to ensure the care and security of minors and dependents.",
-
-              ]
-           }
-        },
-        {
-           "header":{
-              "icon":require("../assets/icons/accordian-icon-6.png"),
-              "title":"Probate"
-           },
-           "content":{
-              "heading":"Seamless Probate Documents prepped without any Pitfalls",
+              "heading":"Probate Documentation That Holds Up—And Speeds Up.",
               "smallHeading":"Glocal's Distinctive Edge:",
               "description":"Ensuring smooth estate transitions with expert-backed, accurate, and efficient probate support, protecting your clients every step of the way.",
               "listItems":[
                  "Petition for Probate - Assist with drafting court petitions to initiate probate and validate wills seamlessly.",
                  "Letters Testamentary / Letters of Administration - Precise document preparation with the available documents to secure court approval for estate management.",
-                 "Inventory and Appraisal - Detailed asset documentation and valuation to ensure accurate estate accounting.",
+                 "Inventory and Appraisal - Detailed asset documentation and valuation to ensure accurate estate accounting. ",
                  "Notice to Creditors - Timely preparation and filing of legal notices to manage estate liabilities efficiently.",
                  "Accounting and Final Distribution - Comprehensive estate accounting and final asset distribution reports, ensuring compliance.",
                  "Petition for Final Settlement - Flawless documentation to close probate smoothly and distribute assets per court approval.",
                  "Waivers and Consents - Professionally prepared legal waivers to streamline estate administration and avoid disputes.",
                  "Claims Against Estate - Efficient handling of creditor claims, ensuring proper validation and resolution.",
                  "Affidavits of Heirship - Legally sound affidavits to establish heirs and facilitate estate transfers without delays."
+                
+
               ]
            }
         }
@@ -618,13 +595,13 @@ export const servicesInfo = {
               "smallHeading":"Glocal's Distinctive Edge:",
               "description":"We don't just assist in resolving disputes. We redefine the benchmarks. From property disputes to estate planning, we develop full proof documents that protect your client's assets and secure their future. When the stakes are high, we deliver results.",
               "listItems":[
-                 "Complaint and Answer – Expertise in outlining the legal claims, facts, and the damages sought.",
+                 "Complaint and Answer - Expertise in outlining the legal claims, facts, and the damages sought.",
                  "Motion for Summary Judgment- Disputes involving contracts, foreclosure proceedings, landlord-tenant issues, and property title claims.",
-                 "Discovery Requests (Interrogatories, Requests for Production, Requests for Admission) – We help in uncovering key facts about property ownership, contracts, financial transactions, and compliance with laws.",
+                 "Discovery Requests (Interrogatories, Requests for Production, Requests for Admission) - We help in uncovering key facts about property ownership, contracts, financial transactions, and compliance with laws.",
                  "Notices of Deposition and Subpoenas - Testimony and documents from parties and third parties, such as real estate agents, lenders, or municipal authorities.",
                  "Settlement Agreements - Disputes relating to property sales, leases, construction defects, foreclosures, boundary disputes, and landlord-tenant issues.",
-                 "Trial Briefs – Summarization of relevant facts, evidence, and applicable laws.",
-                 "Appeal Documents – Identify legal errors ",
+                 "Trial Briefs - Summarization of relevant facts, evidence, and applicable laws.",
+                 "Appeal Documents - Identify legal errors ",
                  "Lis Pendens - Title disputes, Foreclosures, Breach of real estate and Easements & boundary disputes. ",
                  "Quiet Title Actions - Establishing a single, undisputed titleholder and eliminating challenges from third parties and fraudulent, or disputed claims. "
              
@@ -1086,13 +1063,13 @@ export const servicesInfo = {
               "smallHeading":"",
               "description":"",
               "listItems":[
-                 "Petition Letters – Professionally prepared submissions for various visa and immigration requests.",
-                 "Self-Petition Letters – Tailored petitions, including those under VAWA and similar provisions.",
-                 "VAWA 360 & I-600 Memos – Detailed legal memorandums supporting VAWA and intercountry adoption cases.",
-                 "Asylum Briefs & Declarations – Compelling narratives and legal briefs to strengthen asylum applications.",
-                 "Affidavits & Reference Letters – Drafting third-party testimonies and recommendation letters.",
-                 "Cover Letters & Motions – Strategically crafted submissions and legal motions.",
-                 "Checklists & Interview Questions – Curated content lists and questionnaires to support case preparation."
+                 "Petition Letters - Professionally prepared submissions for various visa and immigration requests.",
+                 "Self-Petition Letters - Tailored petitions, including those under VAWA and similar provisions.",
+                 "VAWA 360 & I-600 Memos - Detailed legal memorandums supporting VAWA and intercountry adoption cases.",
+                 "Asylum Briefs & Declarations - Compelling narratives and legal briefs to strengthen asylum applications.",
+                 "Affidavits & Reference Letters - Drafting third-party testimonies and recommendation letters.",
+                 "Cover Letters & Motions - Strategically crafted submissions and legal motions.",
+                 "Checklists & Interview Questions - Curated content lists and questionnaires to support case preparation."
               ]
            }
         },
@@ -1126,11 +1103,11 @@ export const servicesInfo = {
               "smallHeading":"Glocal's Distinctive Edge:",
               "description":" We are Cost-Efficient and have Scalable Support with U.S. Immigration Law Trained Legal Professionals. ",
               "listItems":[
-                 "Case Tracking & File Management – Maintain organized, up-to-date case files at every stage.",
-                 "Client Follow-ups – Reach out for missing documents, clarifications, and signatures.",
-                 "Hearing Preparation – Assist in prepping clients for interviews, hearings, and court appearances.",
+                 "Case Tracking & File Management - Maintain organized, up-to-date case files at every stage.",
+                 "Client Follow-ups - Reach out for missing documents, clarifications, and signatures.",
+                 "Hearing Preparation - Assist in prepping clients for interviews, hearings, and court appearances.",
                  "P-3 Visas for Culturally Unique Artists and Performers",
-                 "Email & Documentation Support – Draft and manage client emails, track submissions, and organize support materials."
+                 "Email & Documentation Support - Draft and manage client emails, track submissions, and organize support materials."
                  
                  
               ]
