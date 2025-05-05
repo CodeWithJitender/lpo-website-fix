@@ -114,17 +114,18 @@ export const servicesInfo = {
               "title":"Client Onboarding & Case Merit Evaluation"
            },
            "content":{
-              "heading":"Medical Records - The Linchpins of every personal injury claim's success.",
+              "heading":"Trust begins with a compelling first impression",
               "smallHeading":"Glocal's Distinctive Edge:",
-              "description":"Reduce overhead costs while gaining access to top-tier legal expertise and AI-powered analysis—customized to your firm's needs.",
+              "description":"Flexible, Scalable Solutions - We can manage large caseloads across personal injury, medical malpractice, workers' compensation, and other complex legal areas with expert legal review and a thorough pre-screening.",
               "listItems":[
-                 "Retrieving & organizing medical records",
-                 "Patient Record Extraction",
-                 "Summarizing diagnosis & treatments",
-                 "Creating medical chronologies & injury assessments",
-                 "Medical History Compilation",
-                 "Medical Billing Summarization",
-                 "Privilege Logs"
+                 "Client Intakes",
+                 "Inquiries via phone/email",
+                 "Fact checks",
+                 "Filing on various case management tools",
+                 "Client follow-ups & document collection",
+                 "Letter of representation (LOR)",
+                 "Workflow administration",
+								 "Medical authorization letters (HIPPA)"
               ]
            }
         },
@@ -134,9 +135,9 @@ export const servicesInfo = {
               "title":"Medical Record Retrieval & Summarization"
            },
            "content":{
-              "heading":"Medical Records - The Linchpins of every personal injury claim's success.",
+              "heading":"Medical records - the linchpins of every personal injury claim's success.",
               "smallHeading":"Glocal's Distinctive Edge:",
-              "description":"Reduce overhead costs while gaining access to top-tier legal expertise and AI-powered analysis—customized to your firm's needs.",
+              "description":"We streamline medical documentation process for law firms by reducing review time by half. We specifically hire competent healthcare professionals to assist the paralegals.",
               "listItems":[
                  "Retrieving & organizing medical records",
                  "Patient Record Extraction",
@@ -154,17 +155,25 @@ export const servicesInfo = {
               "title":"Document Drafting & Discovery Support"
            },
            "content":{
-              "heading":"Medical Records - The Linchpins of every personal injury claim's success.",
+              "heading":"Precision in Words, Irrefutable Outcomes.",
               "smallHeading":"Glocal's Distinctive Edge:",
               "description":"Reduce overhead costs while gaining access to top-tier legal expertise and AI-powered analysis—customized to your firm's needs.",
               "listItems":[
-                 "Retrieving & organizing medical records",
-                 "Patient Record Extraction",
-                 "Summarizing diagnosis & treatments",
-                 "Creating medical chronologies & injury assessments",
-                 "Medical History Compilation",
-                 "Medical Billing Summarization",
-                 "Privilege Logs"
+                 "Demand letters",
+                 "Mediation position papers",
+                 "Petitions",
+                 "Complaints & Pleadings",
+                 "Motions",
+                 "Drafting & responding to interrogatories",
+                 "Requests for the production of documents",
+								 "Requests for admissions",
+								 "Interrogatories",
+								 "Witness and exhibit lists",
+								 "Subpoenas",
+								 "Deposition summaries",
+								 "Witness Expert Summaries",
+								 "Initial & Expert Disclosures",
+								 "Case and File Summaries"
               ]
            }
         },
@@ -174,17 +183,15 @@ export const servicesInfo = {
               "title":"Legal Research, Case Law Review & Legal Interpretation"
            },
            "content":{
-              "heading":"Medical Records - The Linchpins of every personal injury claim's success.",
+              "heading":"Well-Substantiated Research, Relevant Precedents, Strongest Claims.",
               "smallHeading":"Glocal's Distinctive Edge:",
-              "description":"Reduce overhead costs while gaining access to top-tier legal expertise and AI-powered analysis—customized to your firm's needs.",
+              "description":"In-depth knowledge in platforms like Westlaw, Lexis Plus AI, Bloomberg Law, Clio, and many more...",
               "listItems":[
-                 "Retrieving & organizing medical records",
-                 "Patient Record Extraction",
-                 "Summarizing diagnosis & treatments",
-                 "Creating medical chronologies & injury assessments",
-                 "Medical History Compilation",
-                 "Medical Billing Summarization",
-                 "Privilege Logs"
+                 "Analyzing case law & statutes to support legal arguments",
+                 "Drafting legal memoranda for attorneys' reference",
+                 "Identifying relevant precedents to build a stronger case strategy",
+                 "Researching on powerful and authentic platforms",
+                 "Making Research ready before you arrive in your office"
               ]
            }
         },
@@ -194,17 +201,14 @@ export const servicesInfo = {
               "title":"Litigation & Trial Support"
            },
            "content":{
-              "heading":"Medical Records - The Linchpins of every personal injury claim's success.",
+              "heading":"Well-equipped legal minds secure success.",
               "smallHeading":"Glocal's Distinctive Edge:",
-              "description":"Reduce overhead costs while gaining access to top-tier legal expertise and AI-powered analysis—customized to your firm's needs.",
+              "description":"Glocal LPO sets the gold standard in legal outsourcing by engaging only the most qualified law graduates and seasoned lawyers for complex litigation assignments.",
               "listItems":[
-                 "Retrieving & organizing medical records",
-                 "Patient Record Extraction",
-                 "Summarizing diagnosis & treatments",
-                 "Creating medical chronologies & injury assessments",
-                 "Medical History Compilation",
-                 "Medical Billing Summarization",
-                 "Privilege Logs"
+                 "Pre-trial motion drafting",
+                 "Exhibit preparation & evidence organization",
+                 "Jury instruction drafting",
+                 "Trial logistics coordination"
               ]
            }
         },
@@ -214,17 +218,13 @@ export const servicesInfo = {
               "title":"Administrative Tasks"
            },
            "content":{
-              "heading":"Medical Records - The Linchpins of every personal injury claim's success.",
+              "heading":"Diligent Business administration underpins financial accountability.",
               "smallHeading":"Glocal's Distinctive Edge:",
-              "description":"Reduce overhead costs while gaining access to top-tier legal expertise and AI-powered analysis—customized to your firm's needs.",
+              "description":"To secure your ongoing liquidity while eliminating unnecessary red tapes we carefully select professional having experience in supporting legal functions with unmatched expertise.",
               "listItems":[
-                 "Retrieving & organizing medical records",
-                 "Patient Record Extraction",
-                 "Summarizing diagnosis & treatments",
-                 "Creating medical chronologies & injury assessments",
-                 "Medical History Compilation",
-                 "Medical Billing Summarization",
-                 "Privilege Logs"
+                 "Legal time tracking & expense management",
+                 "Invoice preparation & compliance checks",
+                 "Billing audits to prevent revenue leakage"
               ]
            }
         }
