@@ -1353,30 +1353,6 @@ export const servicesInfo = {
      "accordianItems":[
         {
            "header":{
-              "icon":require("../assets/icons/accordian-icon-1.png"),
-              "title":"Foreclosure"
-           },
-           "content":{
-              "heading":"Fortunes fall as empires do and we stand ready to assist you for your clients",
-              "smallHeading":"Glocal's Distinctive Edge:",
-              "description":"Proficiency additionally in bankruptcy tools like Case Bankruptcy, NextChapter, Clio, MyCase, and DocuSign.",
-
-              "smallHeading2":"Software proficiency:",
-              "description2":"Clio, Smokeball, HotDocs, Westlaw, and LexisNexis streamline document preparation and legal research for foreclosure cases.",
-
-              "listItems":[
-                 "Notice of Default (NOD)",
-                 "Notice of Sale",
-                 "Complaint for Foreclosure",
-                 "Answer and Defenses to Foreclosure",
-                 "Motion for Summary Judgment",
-                 "Reinstatement and Payoff Quotes",
-                 "Short Sale Agreements"
-              ]
-           }
-        },
-        {
-           "header":{
               "icon":require("../assets/icons/accordian-icon-2.png"),
               "title":"Chapter 7 Bankruptcy: Fresh Start Through Liquidation"
            },
