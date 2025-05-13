@@ -33,7 +33,7 @@ const ContactUs = () => {
 
 	const imageList= [];
 
-	Array.from({ length: 10 }, (_, i) => {
+	Array.from({ length: 11 }, (_, i) => {
 		const imageSrc = require(`../assets/images/office-images/lpo-office-${i + 1}.jpg`);
 		imageList.push(imageSrc);
 	});
@@ -155,7 +155,7 @@ const ContactUs = () => {
 									Call Us
 								</div>
 								<div className={styles.address}>
-									<a href="tel:+1 (650) 407 2112">+1 (650) 407 2112</a> / <a href="tel:+91 (931) 056 8481">+91 (931) 056 8481</a>
+									<a href="tel:+16504072112">+1 (650) 407 2112</a> / <a href="tel:+918120562462">+91 (812) 056 2462</a>
 								</div>
 							</Grid>
 						</Grid>
