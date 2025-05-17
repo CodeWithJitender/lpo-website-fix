@@ -74,7 +74,7 @@ const Home = () => {
 						  size={{ md: 12, lg: 4, xl: 4 }}
 							className={styles.handleDetail}
 						>
-							<img src={layerLady} className={styles.ladyImage} />
+							<img src={layerLady} className={styles.ladyImage} alt="" />
 							<div className={styles.detailCard}>
 								<Animate.FadeUp direction="down">
 									<h2 className={styles.detailHeading}>

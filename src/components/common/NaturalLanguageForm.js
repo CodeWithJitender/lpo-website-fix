@@ -69,9 +69,9 @@ export default function NaturalLanguageForm() {
         ref={fieldRef}
         className={`${styles["nl-field"]} ${styles["nl-dd"]} ${isOpen ? styles["nl-field-open"] : ""}`}
       >
-        <a className={styles["nl-field-toggle"]} onClick={handleToggleClick}>
+        <span className={styles["nl-field-toggle"]} onClick={handleToggleClick}>
           {formValues[valueKey]}
-        </a>
+        </span>
         <ul>
           {options.map((option, i) => (
             <li
@@ -133,9 +133,9 @@ export default function NaturalLanguageForm() {
         ref={fieldRef}
         className={`${styles["nl-field"]} ${styles["nl-ti-text"]} ${isOpen ? styles["nl-field-open"] : ""}`}
       >
-        <a className={styles["nl-field-toggle"]} onClick={handleToggleClick}>
+        <span className={styles["nl-field-toggle"]} onClick={handleToggleClick}>
           {formValues[valueKey]}
-        </a>
+        </span>
         <ul>
           <li className={styles["nl-ti-input"]}>
             <input

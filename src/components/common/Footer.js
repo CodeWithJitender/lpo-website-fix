@@ -97,6 +97,7 @@ const Footer = () => {
 							rel="noopener noreferrer nofollow"
 							className={styles.socialIcons}
 							target="_blank"
+							aria-label="LinkedIn"
 						>
 							<LinkedIn />
 						</a>
@@ -105,6 +106,7 @@ const Footer = () => {
 							rel="noopener noreferrer nofollow"
 							className={styles.socialIcons}
 							target="_blank"
+							aria-label="Instagram"
 						>
 							<Instagram />
 						</a>

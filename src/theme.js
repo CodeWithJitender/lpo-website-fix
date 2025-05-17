@@ -23,7 +23,7 @@ const theme = createTheme({
 					backgroundColor: "rgba(7, 12, 30, 0.8)",
 					boxShadow: "none",
 					padding: "24px",
-					backdropFilter: "blur(9.5px)",
+					backdropFilter: "blur(9.5px)"
 				},
 			}
 		},

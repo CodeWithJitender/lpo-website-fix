@@ -80,6 +80,7 @@ module.exports = {
 		new CopyPlugin({
       patterns: [
         { from: path.resolve(__dirname, 'public/favicon.png'), to: "" },
+				{ from: path.resolve(__dirname, 'public/robots.txt'), to: "" },
 				{ from: path.resolve(__dirname, 'public/emailer/envelope.png'), to: "emailer" },
 				{ from: path.resolve(__dirname, 'public/emailer/mobilebutton.png'), to: "emailer" },
 				{ from: path.resolve(__dirname, 'public/emailer/instagram-circle-colored.png'), to: "emailer" },

@@ -89,7 +89,7 @@ const Menu = () => {
 
 	return (
 		<>
-			<Hamburger toggled={showMenu} toggle={setShowMenu} />
+			<Hamburger toggled={showMenu} toggle={setShowMenu} label="Hamburger Menu" />
 
 			<MenuPortal>
 				<AnimatePresence mode="wait">
