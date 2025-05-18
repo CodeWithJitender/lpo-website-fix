@@ -1,16 +1,14 @@
-import React, { useEffect, useRef } from "react";
-import { gsap } from "gsap";
-import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import React, { useRef } from "react";
+import { useScroll } from 'framer-motion';
 
 import uspIcon1 from "@/assets/icons/usp-icon-1.png";
 import uspIcon2 from "@/assets/icons/usp-icon-2.png";
 import uspIcon3 from "@/assets/icons/usp-icon-3.png";
 import uspIcon4 from "@/assets/icons/usp-icon-4.png";
 
-import * as styles from "./UspSectionCards.module.scss";
+import SectionCards from "./SectionCards";
 
-// Register the ScrollTrigger plugin
-gsap.registerPlugin(ScrollTrigger);
+import * as styles from "./UspSectionCards.module.scss";
 
 // Card data
 const cardData = [
@@ -46,68 +44,27 @@ const cardData = [
 
 export default function App() {
   const wrapRef = useRef(null);
-  const cardsRef = useRef([]);
 
-  // Setup scroll animations
-  const setupScrollAnimations = () => {
-    const contentElements = cardsRef.current;
-    const totalContentElements = contentElements.length;
-
-    contentElements.forEach((el, position) => {
-      const isLast = position === totalContentElements - 1;
-
-      gsap
-        .timeline({
-          scrollTrigger: {
-            trigger: el,
-            start: "center center",
-            end: "+=100%",
-            scrub: true,
-          },
-        })
-        .to(
-          el,
-          {
-            ease: "none",
-            scale: 0.6,
-            opacity: 0,
-            yPercent: isLast ? 125 : 0,
-          },
-          0
-        );
-    });
-  };
-
-  useEffect(() => {
-		// initSmoothScrolling();
-		setupScrollAnimations();
-
-    // Cleanup function
-    return () => {
-      // Kill all ScrollTrigger instances
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-    };
-  }, []);
+	const { scrollYProgress } = useScroll({
+    target: wrapRef,
+    offset: ['start start', 'end end']
+  })
 
   return (
     <div className={styles.uspSection} ref={wrapRef}>
-      {cardData.map((card, index) => (
-        <div
-          key={card.id}
-          className={`${styles.content} ${styles[card.bgClass]}`}
-          ref={(el) => (cardsRef.current[index] = el)}
-        >
-          <img
-            className={styles.img}
-            src={card.imgSrc}
-            alt={card.title}
-          />
-          <div className={styles.title}>
-            {card.title}
-          </div>
-          <p className={styles.text}>{card.text}</p>
-        </div>
-      ))}
+      {cardData.map((card, index) => {
+				const targetScale = 1 - ( ((cardData.length - 1) - index) * 0.15);
+        return (
+					<SectionCards
+						key={card.id}
+						index={index}
+						card={card}
+						progress={scrollYProgress}
+						range={[index * .25, 1]}
+						targetScale={targetScale}
+					/>
+				);
+			})}
     </div>
   );
 }
