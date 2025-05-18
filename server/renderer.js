@@ -8,6 +8,7 @@ import { StaticRouter } from 'react-router-dom/server';
 import { ThemeProvider } from '@mui/material/styles';
 import { CacheProvider } from '@emotion/react';
 import { getSelectorsByUserAgent } from 'react-device-detect';
+import { ChunkExtractor } from '@loadable/server';
 
 import theme from '@/theme';
 import App from '@/App';
@@ -25,13 +26,10 @@ export default (req, res) => {
 
 	const deviceInfo = getSelectorsByUserAgent(userAgent)
 
-	const manifestPath = path.join(process.cwd(), 'build/assets-manifest.json');
-  const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
+	const statsFile = path.resolve(process.cwd(), 'build/public/loadable-stats.json');
+	const extractor = new ChunkExtractor({ statsFile, entrypoints: ['client'] });
 
-  const clientJs = manifest['main.js'];
-  const stylesCss = manifest['main.css'];
-
-  const content = renderToString(
+  const jsx = extractor.collectChunks(
 		<DeviceProvider value={deviceInfo}>
 			<CacheProvider value={cache}>
 				<ThemeProvider theme={theme}>
@@ -43,6 +41,8 @@ export default (req, res) => {
 			</CacheProvider>
 		</DeviceProvider>
   );
+
+	const content = renderToString(jsx);
 
 	// Grab the CSS from emotion
   const emotionChunks = extractCriticalToChunks(content);
@@ -71,8 +71,9 @@ export default (req, res) => {
 					href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
 				/>
 				<title>Glocal LPO</title>
+				${extractor.getLinkTags()}
+				${extractor.getStyleTags()}
 				${emotionCss}
-				<link rel="stylesheet" type="text/css" href="${stylesCss}">
       </head>
       <body>
         <div id="root">${content}</div>
@@ -80,7 +81,7 @@ export default (req, res) => {
 				<script>
           window.__DEVICE_INFO__ = ${JSON.stringify(deviceInfo)};
         </script>
-				<script src="${clientJs}"></script>
+				${extractor.getScriptTags()}
       </body>
     </html>
   `;

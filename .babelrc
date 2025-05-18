@@ -29,6 +29,7 @@
 				"camel2DashComponentName": false
 			},
 			"icons"
-		]
+		],
+		"@loadable/babel-plugin"
   ]
 }

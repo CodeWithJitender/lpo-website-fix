@@ -2,13 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-
-import Home from './containers/Home';
-import About from './containers/About';
-import Service from "./containers/Service";
-import ServiceDetails from "./containers/ServiceDetails";
-import ContactUs from "./containers/ContactUs";
-import NotFound from './containers/NotFound';
+import loadable from '@loadable/component';
 
 import { ArrowUpFilled } from "./components/Icons";
 
@@ -20,6 +14,13 @@ import { routes } from "./utils/routesPath";
 import * as styles from "./App.module.scss";
 
 import './styles/main.scss';
+
+const Home = loadable(() => import('./containers/Home'));
+const About = loadable(() => import('./containers/About'));
+const Service = loadable(() => import('./containers/Service'));
+const ServiceDetails = loadable(() => import('./containers/ServiceDetails'));
+const ContactUs = loadable(() => import('./containers/ContactUs'));
+const NotFound = loadable(() => import('./containers/NotFound'));
 
 // Register the ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);

@@ -2,14 +2,18 @@ const path = require('path');
 const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require("copy-webpack-plugin");
+const LoadablePlugin = require("@loadable/webpack-plugin");
 
 const isProduction = process.env.NODE_ENV === 'production';
 
 module.exports = {
   mode: isProduction ? 'production' : 'development',
-  entry: './client.js',
+  entry: {
+		client: './client.js',
+	},
   output: {
     filename: 'client.[contenthash:8].js',
+		chunkFilename: 'chunk.[name].[contenthash:8].js',
     path: path.resolve(__dirname, 'build/public'),
     publicPath: '/assets/'
   },
@@ -77,6 +81,7 @@ module.exports = {
 		new WebpackManifestPlugin({
       fileName: path.resolve(__dirname, 'build/assets-manifest.json'), // Generates a JSON file with mappings
     }),
+		new LoadablePlugin({ filename: 'loadable-stats.json' }),
 		new CopyPlugin({
       patterns: [
         { from: path.resolve(__dirname, 'public/favicon.png'), to: "" },
