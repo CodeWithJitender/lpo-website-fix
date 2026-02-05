@@ -1,22 +1,24 @@
-import React from "react";
+import React from 'react';
 import { Link } from 'react-router-dom';
-import Grid from "@mui/material/Grid2";
+import Grid from '@mui/material/Grid2';
 
-import logo from "@/assets/images/logo.png";
-import hippaLogo from "@/assets/images/hipaa-compliant.png";
-import iso27001Logo from "@/assets/images/iso-27001-logo.png";
-import iso9001Logo from "@/assets/images/iso-9001-logo.png";
+import logo from '@/assets/images/logo.png';
+import hippaLogo from '@/assets/images/hipaa-compliant.png';
+import iso27001Logo from '@/assets/images/iso-27001-logo.png';
+import iso9001Logo from '@/assets/images/iso-9001-logo.png';
 
-import { Instagram, LinkedIn } from "@/components/Icons";
+import { Instagram, LinkedIn } from '@/components/Icons';
 
 import { useDevice } from '@/context/DeviceContext';
 
-import { routes } from "@/utils/routesPath";
+import { routes } from '@/utils/routesPath';
 
-import Animate from "./Animate";
+import Animate from './Animate';
 import NaturalLanguageForm from './NaturalLanguageForm';
 
-import * as styles from "./Footer.module.scss";
+import * as styles from './Footer.module.scss';
+import * as stylesContact from "../../containers/ContactUs.module.scss";
+import { ContactForm } from '@/components/common';
 
 const Footer = () => {
 	const { isMobile } = useDevice();
@@ -43,13 +45,19 @@ const Footer = () => {
 								lg: 3,
 							}}
 						>
-							<Animate.FadeUp direction="down" className={styles.infoSmallSection}>
+							<Animate.FadeUp
+								direction="down"
+								className={styles.infoSmallSection}
+							>
 								Let's get our A game to the court.
 							</Animate.FadeUp>
 							<Animate.FadeUp direction="up" className={styles.infoBigSection}>
-								
-							{!isMobile && <div className={styles.infoHeading1}>Let's win—</div>}	
-							<div className={styles.infoHeading2}>{isMobile && "Let's win—" }together.</div>
+								{!isMobile && (
+									<div className={styles.infoHeading1}>Let's win—</div>
+								)}
+								<div className={styles.infoHeading2}>
+									{isMobile && "Let's win—"}together.
+								</div>
 							</Animate.FadeUp>
 						</Grid>
 						<NaturalLanguageForm />
@@ -135,11 +143,11 @@ const Footer = () => {
 								<span>{routes.services.label}</span>
 							</Link>
 							<Link
-								to={routes["contact-us"].href}
-								data-replace={routes["contact-us"].label}
+								to={routes['contact-us'].href}
+								data-replace={routes['contact-us'].label}
 								className={styles.footerLink}
 							>
-								<span>{routes["contact-us"].label}</span>
+								<span>{routes['contact-us'].label}</span>
 							</Link>
 							{/* <Link
 								to={routes.faq.href}
@@ -151,6 +159,10 @@ const Footer = () => {
 						</div>
 					</Grid>
 				</Grid>
+					<section className={stylesContact.formSection} >
+						<ContactForm section="contact" />
+					</section>
+
 				<Grid
 					size={12}
 					container
@@ -205,12 +217,11 @@ const Footer = () => {
 						}}
 						className={styles.copyrightText}
 					>
-						<a href="tel:+1 (650) 407 2112" className={styles.addressHeading}> +1 (650) 407 2112</a>
-						<a
-							href="mailto:info@glocallpo.com"
-						>
-							info@glocallpo.com
+						<a href="tel:+1 (650) 407 2112" className={styles.addressHeading}>
+							{' '}
+							+1 (650) 407 2112
 						</a>
+						<a href="mailto:info@glocallpo.com">info@glocallpo.com</a>
 					</Grid>
 				</Grid>
 				<Grid
@@ -218,7 +229,7 @@ const Footer = () => {
 					className={styles.copyrightContainer}
 					alignItems="center"
 				>
-						&copy; 2025 Glocal LPO. All Rights Reserved.
+					&copy; 2025 Glocal LPO. All Rights Reserved.
 				</Grid>
 			</section>
 		</>
