@@ -9,8 +9,8 @@
     "dev:build-server": "webpack --config webpack.server.js --watch",
     "dev:build-client": "webpack --config webpack.client.js --watch",
     "build": "npm-run-all --parallel build:*",
-    "build:server": "NODE_ENV=production webpack --config webpack.server.js --mode=production",
-    "build:client": "NODE_ENV=production webpack --config webpack.client.js --mode=production",
+    "build:server": "cross-env NODE_ENV=production webpack --config webpack.server.js --mode=production",
+    "build:client": "cross-env NODE_ENV=production webpack --config webpack.client.js --mode=production",
     "start": "node build/public/server.js"
   },
   "author": "",
@@ -54,6 +54,7 @@
     "babel-plugin-import": "^1.13.8",
     "babel-plugin-module-resolver": "^5.0.2",
     "copy-webpack-plugin": "^13.0.0",
+    "cross-env": "^10.1.0",
     "css-loader": "^7.1.2",
     "mini-css-extract-plugin": "^2.9.2",
     "nodemon": "^3.1.9",
