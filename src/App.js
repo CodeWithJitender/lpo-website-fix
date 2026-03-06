@@ -14,6 +14,11 @@ import { routes } from "./utils/routesPath";
 import * as styles from "./App.module.scss";
 
 import './styles/main.scss';
+import Personal from './containers/Personal';
+import BundleOffer from './containers/BundleOffer';
+import CriminalLaw from './containers/CriminalLaw';
+import ThankYou from './components/common/Thankyou';
+import PrivacyPolicy from './containers/PrivacyPolicy';
 
 const Home = loadable(() => import('./containers/Home'));
 const About = loadable(() => import('./containers/About'));
@@ -29,6 +34,9 @@ const App = () => {
 	const backToTopRef = useRef(null);
 
 	const { pathname } = useLocation();
+
+	// Check if the current route is the personal injury landing page
+ const isLandingPage = ["/personal-injury", "/bundle-offer", "/criminal-law"].includes(pathname);
 
 	const scrollToTop = () => {
 		window.scrollTo({
@@ -72,7 +80,8 @@ const App = () => {
 
   return (  
 		<>
-			<Header />  
+			{/* 1. Header is hidden if on landing page */}
+            {!isLandingPage && <Header />}
 			<Routes>
 				<Route path={routes.home.href} element={<Home />} exact />
 				<Route path={routes.about.href} element={<About />} exact />
@@ -80,8 +89,14 @@ const App = () => {
 				<Route path="/services/:id" element={<ServiceDetails />} exact />
 				<Route path={routes["contact-us"].href} element={<ContactUs />} exact />
 				<Route path="*" element={<NotFound />} />
+				<Route path="/thank-you" element={<ThankYou />} exact />
+				<Route path="/privacy-policy" element={<PrivacyPolicy />} exact />
+				<Route path="/personal-injury" element={<Personal />} exact />
+				<Route path="/bundle-offer" element={<BundleOffer />} exact />
+				<Route path="/criminal-law" element={<CriminalLaw />} exact />
 			</Routes>
-			<Footer />
+			{/* 2. Footer is hidden if on landing page */}
+            {!isLandingPage && <Footer />}
 			<div
 				className={styles.backToTop}
 				onClick={scrollToTop}
