@@ -36,13 +36,13 @@ const ContactForm = (props) => {
         try {
             // DIRECT EMAILJS LOGIC - No backend required
             await emailjs.send(
-                "service_5cwmsaw",     // Your Service ID
-                "template_7gd8obd",    // Your Template ID
+                "service_5ukbpwr",     // Your Service ID
+                "template_6ytxk8s",    // Your Template ID
                 {
                     ...data,           // Sends all form fields (first_name, email, etc.)
                     page_url: pathname // Current page URL
                 },
-                "q3ShF0jIK5qU-l29X"    // Your Public Key
+                "QpkBmnT4LJ4PGyWTX"    // Your Public Key
             );
 
             setStatus('success');

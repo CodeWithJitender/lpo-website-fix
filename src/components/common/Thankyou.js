@@ -47,7 +47,7 @@ const ThankYou = () => {
                             Schedule a Meeting
                         </Heading> */}
                     </div>
-                    <Animate.FadeUp className={styles.calendlyContainer}>
+                    {/* <Animate.FadeUp className={styles.calendlyContainer}>
     <iframe
         // Added &theme=dark to the URL to match your site
         src="https://cal.com/glocal-lpo/30min?user=glocal-lpo&duration=30&theme=dark"
@@ -57,7 +57,7 @@ const ThankYou = () => {
         title="Schedule a Meeting"
         scrolling="no" 
     ></iframe>
-</Animate.FadeUp>
+</Animate.FadeUp> */}
 
                     <Grid container spacing={3} className={styles.buttonGroup}>
                         <Grid>
