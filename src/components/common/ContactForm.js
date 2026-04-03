@@ -31,7 +31,7 @@ const ContactForm = (props) => {
     } = useForm();
 
     const { pathname } = useLocation();
-const navigate = useNavigate(); // 2. Initialize the navigate function
+    const navigate = useNavigate(); // 2. Initialize the navigate function
     const onSubmit = async (data) => {
         try {
             // DIRECT EMAILJS LOGIC - No backend required
@@ -118,7 +118,7 @@ const navigate = useNavigate(); // 2. Initialize the navigate function
                                         type="email"
                                         fullWidth
                                         variant="standard"
-                                        rules={{ 
+                                        rules={{
                                             required: 'Email is required',
                                             pattern: { value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/, message: 'Invalid email' }
                                         }}

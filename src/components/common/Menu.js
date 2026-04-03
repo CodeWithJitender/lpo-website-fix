@@ -28,6 +28,7 @@ const menuItems = [
     ],
   },
   { ...routes["contact-us"] },
+  { ...routes["blog"] },
   // { ...routes.faq },
 ];
 

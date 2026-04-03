@@ -11,7 +11,8 @@
     "build": "npm-run-all --parallel build:*",
     "build:server": "cross-env NODE_ENV=production webpack --config webpack.server.js --mode=production",
     "build:client": "cross-env NODE_ENV=production webpack --config webpack.client.js --mode=production",
-    "start": "node build/public/server.js"
+    "start": "node build/public/server.js",
+    "sitemap": "node generate-sitemap.js"
   },
   "author": "",
   "license": "ISC",
@@ -36,6 +37,7 @@
     "react": "^18.2.0",
     "react-device-detect": "^2.2.3",
     "react-dom": "^18.2.0",
+    "react-helmet-async": "^3.0.0",
     "react-hook-form": "^7.56.1",
     "react-router-dom": "^6.21.1",
     "react-slick": "^0.30.3",

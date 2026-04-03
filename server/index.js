@@ -15,6 +15,13 @@ app.use(bodyParser.json())
 
 // Serve assets from '/assets/' prefix
 app.use('/assets', express.static(path.join(__dirname, '')));
+app.use(express.static(path.resolve(__dirname, 'public'))); // ✅ ADD THIS
+app.get('/sitemap.xml', (req, res) => {
+	res.sendFile(path.join(__dirname,  'sitemap.xml'));
+});
+app.get('/robots.txt', (req, res) => {
+	res.sendFile(path.resolve(__dirname,  'robots.txt'));
+});
 
 // API for contact
 app.use("/api", apiRouter)

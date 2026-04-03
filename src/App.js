@@ -19,6 +19,9 @@ import BundleOffer from './containers/BundleOffer';
 import CriminalLaw from './containers/CriminalLaw';
 import ThankYou from './components/common/Thankyou';
 import PrivacyPolicy from './containers/PrivacyPolicy';
+import BlogPage from './containers/BlogPage';
+import { HelmetProvider } from 'react-helmet-async';
+import BlogDetails from './containers/BlogDetails';
 
 const Home = loadable(() => import('./containers/Home'));
 const About = loadable(() => import('./containers/About'));
@@ -79,7 +82,7 @@ const App = () => {
   }, [pathname]);
 
   return (  
-		<>
+		<HelmetProvider>
 			{/* 1. Header is hidden if on landing page */}
             {!isLandingPage && <Header />}
 			<Routes>
@@ -88,12 +91,14 @@ const App = () => {
 				<Route path={routes.services.href} element={<Service />} exact />
 				<Route path="/services/:id" element={<ServiceDetails />} exact />
 				<Route path={routes["contact-us"].href} element={<ContactUs />} exact />
-				<Route path="*" element={<NotFound />} />
 				<Route path="/thank-you" element={<ThankYou />} exact />
 				<Route path="/privacy-policy" element={<PrivacyPolicy />} exact />
 				<Route path="/personal-injury" element={<Personal />} exact />
 				<Route path="/bundle-offer" element={<BundleOffer />} exact />
 				<Route path="/criminal-law" element={<CriminalLaw />} exact />
+				<Route path="/blog" element={<BlogPage />} exact />
+				<Route path="/blog/:slug" element={<BlogDetails />} exact />
+				<Route path="*" element={<NotFound />} />
 			</Routes>
 			{/* 2. Footer is hidden if on landing page */}
             {!isLandingPage && <Footer />}
@@ -104,7 +109,7 @@ const App = () => {
 			>
 				<ArrowUpFilled />
 			</div>
-		</>
+		</HelmetProvider>
   );
 };
 

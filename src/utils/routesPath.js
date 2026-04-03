@@ -15,6 +15,10 @@ export const routes = {
 		label: 'Contact Us',
 		href: "/contact-us"
 	},
+	"blog": {
+		label: 'Blog',
+		href: "/blog"
+	},
 	"faq": {
 		label: "FAQs",
 		href: "/faq"

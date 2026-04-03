@@ -171,6 +171,13 @@ const Header = () => {
 									>
 										<span>{routes["contact-us"].label}</span>
 									</Link>
+									<Link
+								to={routes['blog'].href}
+								data-replace={routes['blog'].label}
+								className={styles.footerLink}
+							>
+								<span>{routes['blog'].label}</span>
+							</Link>
 									{/* <Link
 										to={routes.faq.href}
 										data-replace={routes.faq.label}
