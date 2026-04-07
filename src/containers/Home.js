@@ -50,12 +50,14 @@ const Home = () => {
 						<Grid container size={{md: 12, lg: 8, xl: 8}}>
 						  <Grid size={{ sm: 12, md: 8, xl: 8 }}>
 								<Heading variant="secondary" direction="down">
-									Think of us as
+									Your Trusted Legal Ally
 								</Heading>
 								<Heading className={styles.lpoTitleBig} direction="up">
-									The Power <br/>
+									{/* The Power <br/>
 									Behind your <br/>
-									Legal Prowess.
+									Legal Prowess. */}
+
+									Fueling Your Legal <br/> Prowess with  <br/> Expert Legal <br/> Process <br/> Outsourcing
 								</Heading>
 							</Grid>
 							<Grid
@@ -130,10 +132,11 @@ const Home = () => {
 							alignSelf="flex-start"
 						>
 							<Heading variant="secondary" direction="down">
-								Precision. Power. Partnership.
+								Built for Modern Legal Law Firms
 							</Heading>
 							<Heading direction="up">
-								The Right Hands Behind Every Legal Move.
+								Built for Modern Legal Law Firms
+								{/* The Right Hands Behind Every Legal Move. */}
 							</Heading>
 							<Animate.FadeUp direction="up" className={styles.serviceText}>
 								We are not just paper pushers—we are the backbone of every well-prepared case, ensuring watertight filings, seamless compliance, and ironclad legal groundwork.
@@ -208,10 +211,11 @@ const Home = () => {
 				  <Grid size={{xs: 12,sm: 8}} className={styles.legalSupportItem}>
 						<div className={styles.legalSupportHeading}>
 							<Heading className={styles.headingSection1} direction="down">
-								Legal Support That's
+								{/* Legal Support That's */}
+								Expert Legal Drafting with
 							</Heading>
 							<Heading direction="up">
-								Sharp, Seamless, and Smart.
+								{/* Sharp, Seamless, and Smart. */}AI Powered Legal Research
 							</Heading>
 						</div>
 						<Animate.FadeUp
@@ -244,10 +248,12 @@ const Home = () => {
 					<Grid size={{xs:11, md:8}}>
 						<div className={styles.useSectionHeading}>
 							<Heading variant="secondary" direction="down">
-								Tailored Solutions.
+								{/* Tailored Solutions. */}
+								AI-Backed Legal Teams
 							</Heading>
 							<Heading direction="up">
-								Global Standards.
+								{/* Global Standards. */}
+								Delivering Courtroom Wins
 							</Heading>
 						</div>
 						<Animate.FadeUp

@@ -12,10 +12,12 @@ const Clients = () => {
 				<Grid size={{ xs:12, md:8}}>
 					<div className={styles.useSectionHeading}>
 						<Heading variant="secondary" direction="down">
-							The Winning Difference
+							{/* The Winning Difference  */}
+							AI-Powered Legal Support
 						</Heading>
 						<Heading direction="up">
-							Smart Tools. Sharp Minds. Seamless Execution.
+							{/* Smart Tools. Sharp Minds. Seamless Execution. */}
+							Expertly Delivered with Technology & Data Security.
 						</Heading>
 					</div>
 				</Grid>

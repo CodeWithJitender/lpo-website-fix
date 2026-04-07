@@ -181,7 +181,10 @@ const Service = () => {
 						flexDirection="column"
 					>
 						<Grid size={12}>
-							<Heading>Services We Offer in {serviceDetails.title} Cases:</Heading>
+							<Heading>
+								{serviceDetails.accordionTitle || `Seamless ${serviceDetails.title} Paralegal & Legal Assistant Services`}
+								{/* Seamless {serviceDetails.title} Paralegal & Legal Assistant Services */}
+								</Heading>
 						</Grid>
 					</Grid>
 				</Container>

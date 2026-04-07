@@ -34,10 +34,12 @@ const FlexibleFirePower = () => {
 				>
 					<Grid size={12} className={styles.infoHeadingSection}>
 						<Heading direction="down">
-							Flexible Firepower for Your Cases
+							{/* Flexible Firepower for Your Cases */}
+							Case-Ready Legal Expertise, On Demand
 						</Heading>
 						<Heading variant="secondary" className={styles.infoSubHeading} direction="up">
-							Scale. Adapt. Conquer. Repeat.
+							{/* Scale. Adapt. Conquer. Repeat. */}
+							Scale. Adapt. Conquer. Repeat 
 						</Heading>
 					</Grid>
 

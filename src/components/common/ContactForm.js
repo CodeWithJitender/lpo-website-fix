@@ -75,7 +75,8 @@ const ContactForm = (props) => {
                 <Grid size={{ md: 12, lg: 4 }}>
                     <Heading className={styles.getInTouchHeading}>Get In Touch</Heading>
                     <div className={styles.formHeading}>
-                        Tell us what you need, and we'll map the way forward to victory.
+                       You Focus on Winning, We Take Care 
+of the Rest.
                     </div>
                     <div className={styles.formText}>
                         At Glocal LPO, we provide full-spectrum legal support, enabling law

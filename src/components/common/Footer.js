@@ -53,10 +53,12 @@ const Footer = () => {
 							</Animate.FadeUp>
 							<Animate.FadeUp direction="up" className={styles.infoBigSection}>
 								{!isMobile && (
-									<div className={styles.infoHeading1}>Let's win—</div>
+									<div className={styles.infoHeading1}>
+										Your Victory,  
+									</div>
 								)}
 								<div className={styles.infoHeading2}>
-									{isMobile && "Let's win—"}together.
+									{isMobile && "Your Victory,  "}Our Expertise.
 								</div>
 							</Animate.FadeUp>
 						</Grid>

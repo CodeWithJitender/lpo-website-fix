@@ -25,10 +25,12 @@ const AreaOfExpertise = () => {
 				<Grid size={{xs:11, sm:12, md:8}} className={styles.areaOfExpertieseBox}>	
 					<div className={styles.legalSupportHeading}>
 						<Heading className={styles.headingSection1} direction="down">
-							We Work Behind the Scenes,
+							{/* We Work Behind the Scenes, */}
+							Your Partner for 
 						</Heading>
 						<Heading direction="up">
-							So You Can Own the Courtroom.
+							{/* So You Can Own the Courtroom. */}
+							Successful Outcomes
 						</Heading>
 					</div>
 					<Animate.FadeUp direction="up" className={styles.legalSupportText}>

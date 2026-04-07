@@ -58,7 +58,8 @@ const ContactUs = () => {
 							<li>CONTACT US</li>
 						</ul>
 						<Heading className={styles.lpoTitle}>
-							Let's Talk Law.
+							Let’s Power Your Legal Success
+							
 						</Heading>
 						<Heading variant="secondary">
 							Have questions? We've got answers<br/>
@@ -219,8 +220,12 @@ const ContactUs = () => {
 						size={12}
 					>
 						<Grid size={12} className={styles.textCenter}>
-							<Heading>Words That Win Us Cases</Heading>
-							<Heading variant="secondary">Real Stories. Real Results.</Heading>
+							<Heading>
+								Top Legal Firms Winning Words {/* Words That Win Us Cases */}
+								</Heading>
+							<Heading variant="secondary">
+								{/* Real Stories. Real Results. */}
+								Driving Us Success</Heading>
 						</Grid>
 					</Grid>
 				</Container>
