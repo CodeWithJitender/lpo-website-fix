@@ -181,7 +181,7 @@ const BlogPage = () => {
 
                           <CardMedia
                             component="img"
-                            height="200"
+                            // height="200"
                             image={image}
                             alt={title}
                             sx={{ filter: "brightness(0.8)", mb: 3 }}

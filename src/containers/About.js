@@ -29,6 +29,7 @@ import deeptiProfilePic from '@/assets/images/deepti-profile-pic.jpg';
 import legalStamp from '@/assets/images/about-legal-stamp.png';
 
 import * as styles from './About.module.scss';
+import { Helmet } from 'react-helmet-async';
 
 const About = () => {
 	const { isMobile } = useDevice();
@@ -55,6 +56,11 @@ const About = () => {
 
 	return (
 		<div className={styles.mainSection}>
+			<Helmet>
+				<title>About Us | Glocal LPO</title>
+				<meta name="description" content="Learn about Glocal LPO — a premier legal process outsourcing company helping law firms with paralegal support, legal research, and document drafting." />
+				<meta name="keywords" content="about Glocal LPO, legal process outsourcing company, LPO services" />
+			</Helmet>
 			<section className={styles.masterHead}>
 				<Container maxWidth="xl" className={styles.headingContainer}>
 					<Grid

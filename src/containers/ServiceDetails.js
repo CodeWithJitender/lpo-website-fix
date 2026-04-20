@@ -29,6 +29,7 @@ import { routes } from "@/utils/routesPath";
 import expertiseSeal from "@/assets/images/confidential-seal.png";
 
 import * as styles from "./ServiceDetails.module.scss";
+import { Helmet } from "react-helmet-async";
 
 const Service = () => {
 	const [expanded, setExpanded] = useState('panel0');
@@ -77,6 +78,17 @@ const Service = () => {
 				backgroundRepeat: "no-repeat"
 			} : {}}
 		>
+			<Helmet>
+				<title>{serviceDetails.metaTitle || `${serviceDetails.title} | Glocal LPO`}</title>
+				<meta
+					name="description"
+					content={serviceDetails.metaDescription || `Expert ${serviceDetails.title} legal support services by Glocal LPO.`}
+				/>
+				{serviceDetails.metaKeywords && (
+					<meta name="keywords" content={serviceDetails.metaKeywords} />
+				)}
+				<link rel="canonical" href={`https://www.glocallpo.com${pathname}`} />
+			</Helmet>
 			<section
 				className={styles.masterHead}
 				style={isMobile ? {

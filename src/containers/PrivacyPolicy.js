@@ -2,10 +2,22 @@ import React from 'react';
 import { Container, Grid2 as Grid } from '@mui/material';
 import { Heading, Animate } from '@/components/common';
 import * as styles from './PrivacyPolicy.module.scss';
+import { Helmet } from 'react-helmet-async';
 
 const PrivacyPolicy = () => {
 	return (
 		<section className={styles.privacySection}>
+			<Helmet>
+				<title>Privacy Policy | Glocal LPO</title>
+				<meta
+					name="description"
+					content="Read Glocal LPO's privacy policy to understand how we collect, use, and protect your personal data in compliance with applicable laws."
+				/>
+				<meta
+					name="keywords"
+					content="Glocal LPO privacy policy, legal outsourcing data security"
+				/>
+			</Helmet>
 			<Container maxWidth="lg">
 				<Grid container direction="column" className={styles.contentWrapper}>
 					<div className={styles.header}>

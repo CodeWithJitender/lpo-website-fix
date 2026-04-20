@@ -18,6 +18,9 @@ import { routes } from './routesPath';
 export const servicesInfo = {
 	'business-litigation-support': {
 		title: 'Business Litigation Support',
+		metaTitle: 'Litigation Support Services for Law Firms | Glocal LPO',
+		metaDescription: 'Glocal LPO delivers reliable litigation support services for law firms, reducing costs while ensuring fast turnaround and compliance-driven legal assistance.',
+		metaKeywords: 'Litigation support services, business legal solutions',
 		heading: (
 			<>
 				Strategic Litigation <br /> Support Services
@@ -63,6 +66,9 @@ export const servicesInfo = {
 	},
 	'personal-injury': {
 		title: 'Personal Injury',
+		metaTitle: 'Personal Injury Paralegal Support for Law Firms | Glocal LPO',
+		metaDescription: 'Need reliable personal injury paralegal support? Glocal LPO helps law firms streamline claims, organize files, and prepare cases efficiently.',
+		metaKeywords: 'personal injury paralegal, personal injury legal assistant',
 		heading: (
 			<>
 				Powerful Personal <br /> Injury Paralegal <br /> Support
@@ -250,6 +256,9 @@ export const servicesInfo = {
 	},
 	'employee-law': {
 		title: 'Employment Law',
+		metaTitle: 'Employment Law Outsourcing Solutions | Glocal LPO',
+		metaDescription: 'Glocal LPO offers employment law outsourcing services including legal research, contract drafting, and compliance support for attorneys.',
+		metaKeywords: 'employment law outsourcing, outsourcing employment law',
 		heading: (
 			<>
 				Ensuring Fair Workplaces <br /> & Compliance
@@ -410,6 +419,9 @@ export const servicesInfo = {
 	},
 	'workers-compensation': {
 		title: "Workers' Compensation & Workplace Injury Support",
+		metaTitle: 'Best Workers Compensation Law Firms | Glocal LPO',
+		metaDescription: 'Looking for reliable workers compensation law firms? Get expert legal guidance and claim the compensation you deserve after a workplace injury.',
+		metaKeywords: 'workers compensation law firms, workers compensation florida',
 		heading: (
 			<>
 				Justice endures, even in toil <br /> and trial.
@@ -570,6 +582,9 @@ export const servicesInfo = {
 	},
 	'estate-planning-probate': {
 		title: 'Estate Planning & Probate',
+		metaTitle: 'Estate Planning and Probate Services for Law Firms | Glocal LPO',
+		metaDescription: 'Glocal LPO provides estate planning and probate services for law firms, including wills, trusts, drafting, and estate administration support.',
+		metaKeywords: 'estate planning and probate, estate planning laws',
 		heading: (
 			<>
 				Your Client’s Legacy, <br />
@@ -638,6 +653,9 @@ export const servicesInfo = {
 	},
 	'real-estate-litigation': {
 		title: 'Real Estate',
+		metaTitle: 'Real Estate Litigation Law Services for Law Firms | Glocal LPO',
+		metaDescription: 'Glocal LPO provides real estate litigation law support including research, document drafting, and case management for attorneys and law firms.',
+		metaKeywords: 'real estate litigation law, real estate litigation',
 		heading: (
 			<>
 				Backed by Real Estate <br /> Litigation Law
@@ -702,6 +720,9 @@ export const servicesInfo = {
 	},
 	'family-law': {
 		title: 'Family Law',
+		metaTitle: 'Family Law Litigation Services for Law Firms | Glocal LPO',
+		metaDescription: 'Glocal LPO supports law firms with reliable family law litigation services, helping manage support cases with confidence.',
+		metaKeywords: 'family law litigation, family law legal documents',
 		heading: (
 			<>
 				Navigating Challenges <br /> with Strength and <br /> Sensitivity
@@ -1059,6 +1080,9 @@ export const servicesInfo = {
 	},
 	immigration: {
 		title: 'Immigration',
+		metaTitle: 'Immigration Paralegal Services for Law Firms | Glocal LPO',
+		metaDescription: 'Glocal LPO provides immigration paralegal services for law firms, handling petitions, USCIS filings, case preparation, and document review.',
+		metaKeywords: 'Immigration paralegal services, immigration legal service providers',
 		heading: (
 			<>
 				Guiding Every Step <br /> of Your Case
@@ -1195,6 +1219,9 @@ export const servicesInfo = {
 	},
 	'intellectual-property': {
 		title: 'Intellectual Property',
+		metaTitle: 'Outsource Support for Intellectual Property Law Firms | Glocal LPO',
+		metaDescription: 'Outsource legal support for intellectual property law firms to Glocal LPO. We assist with IP research, documentation, and case management.',
+		metaKeywords: 'intellectual property law firm, patent annuity service',
 		heading: (
 			<>
 				Safeguarding Rights <br /> and Intellectual <br /> Property Law Firm
@@ -1267,6 +1294,9 @@ export const servicesInfo = {
 	},
 	'criminal-law': {
 		title: 'Criminal Law',
+			metaTitle: 'Outsource Criminal Case Management Services | Glocal LPO',
+		metaDescription: 'Outsource criminal case management to Glocal LPO for accurate documentation, legal research, and organized case workflows for attorneys and law firms.',
+		metaKeywords: 'criminal case management, criminal paralegal services',
 		heading: (
 			<>
 				Behind Every Legal <br /> Victory
@@ -1405,6 +1435,9 @@ export const servicesInfo = {
 	},
 	bankruptcy: {
 		title: 'Bankruptcy',
+		metaTitle: 'Outsource Legal Services for Bankruptcy | Glocal LPO',
+		metaDescription: 'Glocal LPO provides reliable legal services for bankruptcy cases. Support for research, documentation, and case preparation for attorneys and law firms.',
+		metaKeywords: 'legal services for bankruptcy, outsourcing employment law',
 		heading: (
 			<>
 				For Affordable <br /> Bankruptcy Law Firm
@@ -1531,6 +1564,9 @@ export const servicesInfo = {
 	},
 	contracts: {
 		title: 'Contracts',
+		metaTitle: 'Outsource Contract Drafting Services | Glocal LPO',
+		metaDescription: 'Glocal LPO offers reliable contract drafting services including legal agreements, document review, and customized contract preparation.',
+		metaKeywords: 'contract drafting services, Contract management, Legal research services, Litigation support',
 		heading: (
 			<>
 				Execution for Strong <br />

@@ -3,50 +3,60 @@ import {
 	Container,
 	Grid2 as Grid,
 	ImageList,
-	ImageListItem
+	ImageListItem,
 } from '@mui/material';
-import FsLightbox from "fslightbox-react";
-import Slider from "react-slick";
+import FsLightbox from 'fslightbox-react';
+import Slider from 'react-slick';
 
-import {
-	Heading,
-	Animate,
-	ContactForm
-} from '@/components/common';
+import { Heading, Animate, ContactForm } from '@/components/common';
 
-import { WritingPen, ArrowUpFilled } from "@/components/Icons";
+import { WritingPen, ArrowUpFilled } from '@/components/Icons';
 
-import * as styles from "./ContactUs.module.scss";
+import * as styles from './ContactUs.module.scss';
+import { Helmet } from 'react-helmet-async';
 
 const ContactUs = () => {
 	const [lightboxController, setLightboxController] = useState({
 		toggler: false,
-		slide: 1
+		slide: 1,
 	});
 
 	function openLightboxOnSlide(number) {
 		setLightboxController({
 			toggler: !lightboxController.toggler,
-			slide: number
+			slide: number,
 		});
-	};
+	}
 
-	const imageList= [];
+	const imageList = [];
 
 	Array.from({ length: 11 }, (_, i) => {
-		const imageSrc = require(`../assets/images/office-images/lpo-office-${i + 1}.jpg`);
+		const imageSrc = require(
+			`../assets/images/office-images/lpo-office-${i + 1}.jpg`,
+		);
 		imageList.push(imageSrc);
 	});
 
 	const CustomArrow = ({ type, onClick }) => (
 		<ArrowUpFilled
 			onClick={onClick}
-			className={`slick-arrow ${type === "next" ? "slick-next" : "slick-prev"}`}
+			className={`slick-arrow ${type === 'next' ? 'slick-next' : 'slick-prev'}`}
 		/>
 	);
 
-  return (
-    <>
+	return (
+		<>
+			<Helmet>
+				<title>Contact Us | Glocal LPO</title>
+				<meta
+					name="description"
+					content="Get in touch with Glocal LPO. Schedule a strategy call and let our legal process outsourcing experts support your law firm today."
+				/>
+				<meta
+					name="keywords"
+					content="contact Glocal LPO, legal outsourcing contact, LPO consultation"
+				/>
+			</Helmet>
 			<section className={styles.masterHead}>
 				<Container maxWidth="xl" className={styles.headingContainer}>
 					<Grid
@@ -59,22 +69,19 @@ const ContactUs = () => {
 						</ul>
 						<Heading className={styles.lpoTitle}>
 							Let’s Power Your Legal Success
-							
 						</Heading>
 						<Heading variant="secondary">
-							Have questions? We've got answers<br/>
-							- and solutions.
+							Have questions? We've got answers
+							<br />- and solutions.
 						</Heading>
 					</Grid>
 				</Container>
 				<div className={styles.aboutLPO}>
-					<Grid container justifyContent={{ xs: "left", md:"flex-end"}}>
-						<Grid size={{md:12, lg:5}}>
-							<Animate.FadeUp
-								direction="up"
-								className={styles.aboutHeading}
-							>
-								Whether you're ready to outsource or simply exploring options, our team is here to listen, advise, and act.
+					<Grid container justifyContent={{ xs: 'left', md: 'flex-end' }}>
+						<Grid size={{ md: 12, lg: 5 }}>
+							<Animate.FadeUp direction="up" className={styles.aboutHeading}>
+								Whether you're ready to outsource or simply exploring options,
+								our team is here to listen, advise, and act.
 							</Animate.FadeUp>
 
 							<Animate.FadeUp
@@ -82,12 +89,15 @@ const ContactUs = () => {
 								delay="100ms"
 								className={styles.aboutText}
 							>
-								Reach out to schedule a consultation or ask a quick ques tion-whatever vour need, we're alwavs within reach.
+								Reach out to schedule a consultation or ask a quick ques
+								tion-whatever vour need, we're alwavs within reach.
 							</Animate.FadeUp>
 						</Grid>
 					</Grid>
 					<Grid size={12} className={styles.dividerContainer}>
-						<div className={styles.sectionDivider}><WritingPen /></div>
+						<div className={styles.sectionDivider}>
+							<WritingPen />
+						</div>
 					</Grid>
 				</div>
 			</section>
@@ -96,11 +106,7 @@ const ContactUs = () => {
 			</section>
 			<section className={styles.contactAddressContainer}>
 				<Container maxWidth="xl" className={styles.founderContainer}>
-					<Grid
-						size={12}
-						container
-						className={styles.addressContainer}
-					>
+					<Grid size={12} container className={styles.addressContainer}>
 						<Grid
 							size={12}
 							spacing={3}
@@ -110,12 +116,10 @@ const ContactUs = () => {
 							<Grid
 								size={{
 									md: 12,
-									lg: 3
+									lg: 3,
 								}}
 							>
-								<div className={styles.title}>
-									Operations Office
-								</div>
+								<div className={styles.title}>Operations Office</div>
 								<div className={styles.address}>
 									B-73, Block B, Sector 57, Noida, Uttar Pradesh 201301, India
 								</div>
@@ -123,12 +127,10 @@ const ContactUs = () => {
 							<Grid
 								size={{
 									md: 12,
-									lg: 3
+									lg: 3,
 								}}
 							>
-								<div className={styles.title}>
-									Headquarters
-								</div>
+								<div className={styles.title}>Headquarters</div>
 								<div className={styles.address}>
 									3422 Old Capitol Trail, Wilmington DE 19808, USA
 								</div>
@@ -136,12 +138,10 @@ const ContactUs = () => {
 							<Grid
 								size={{
 									md: 12,
-									lg: 3
+									lg: 3,
 								}}
 							>
-								<div className={styles.title}>
-									Email Us
-								</div>
+								<div className={styles.title}>Email Us</div>
 								<div className={styles.address}>
 									<a href="mailto:info@glocallpo.com">info@glocallpo.com</a>
 								</div>
@@ -149,27 +149,23 @@ const ContactUs = () => {
 							<Grid
 								size={{
 									md: 12,
-									lg: 3
+									lg: 3,
 								}}
 							>
-								<div className={styles.title}>
-									Call Us
-								</div>
+								<div className={styles.title}>Call Us</div>
 								<div className={styles.address}>
-									<a href="tel:+16504072112">+1 (650) 407 2112</a> / <a href="tel:+918120562462">+91 (812) 056 2462</a>
+									<a href="tel:+16504072112">+1 (650) 407 2112</a> /{' '}
+									<a href="tel:+918120562462">+91 (812) 056 2462</a>
 								</div>
 							</Grid>
 						</Grid>
-						<Grid
-							size={12}
-							spacing={3}
-							container
-							justifyContent="stretch"
-						>
-							<Grid size={{
-								md: 12,
-								lg: 6
-							}}>
+						<Grid size={12} spacing={3} container justifyContent="stretch">
+							<Grid
+								size={{
+									md: 12,
+									lg: 6,
+								}}
+							>
 								<iframe
 									src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.8457640024803!2d77.35152699999999!3d28.6044035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5aaa074182b%3A0x28d21d722b53a1c2!2sHead%20Field%20Solutions%20Private%20Limited%20-%20Head%20office!5e0!3m2!1sen!2sin!4v1746201898478!5m2!1sen!2sin"
 									width="100%"
@@ -180,32 +176,27 @@ const ContactUs = () => {
 									className={styles.mapFrame}
 								/>
 							</Grid>
-							<Grid size={{
-								md: 12,
-								lg: 6
-							}}>
+							<Grid
+								size={{
+									md: 12,
+									lg: 6,
+								}}
+							>
 								<ImageList
 									variant="masonry"
 									cols={3}
 									gap={8}
 									className={styles.imageListRoot}
 								>
-									{
-										imageList.map((image, i) => (
-											<ImageListItem
-												key={i}
-												className={styles.imageListItem}
-												onClick={() => openLightboxOnSlide(i + 1)}
-											>
-												<img
-													srcSet={image}
-													src={image}
-													loading="lazy"
-													alt=""
-												/>
-											</ImageListItem>
-										))
-									}
+									{imageList.map((image, i) => (
+										<ImageListItem
+											key={i}
+											className={styles.imageListItem}
+											onClick={() => openLightboxOnSlide(i + 1)}
+										>
+											<img srcSet={image} src={image} loading="lazy" alt="" />
+										</ImageListItem>
+									))}
 								</ImageList>
 							</Grid>
 						</Grid>
@@ -214,18 +205,15 @@ const ContactUs = () => {
 			</section>
 			<section className={styles.carouselHeadingSection}>
 				<Container maxWidth="xl" className={styles.founderContainer}>
-					<Grid
-						container
-						className={styles.commonContainer}
-						size={12}
-					>
+					<Grid container className={styles.commonContainer} size={12}>
 						<Grid size={12} className={styles.textCenter}>
 							<Heading>
 								Top Legal Firms Winning Words {/* Words That Win Us Cases */}
-								</Heading>
+							</Heading>
 							<Heading variant="secondary">
 								{/* Real Stories. Real Results. */}
-								Driving Us Success</Heading>
+								Driving Us Success
+							</Heading>
 						</Grid>
 					</Grid>
 				</Container>
@@ -250,53 +238,52 @@ const ContactUs = () => {
 									settings: {
 										slidesToShow: 1,
 										slidesToScroll: 1,
-										infinite: true
-									}
-								}
+										infinite: true,
+									},
+								},
 							]}
 						>
 							<div size={6} container className={styles.carouselCard}>
 								<Grid size={12} className={styles.testimonial}>
-									We've partnered with Glocal for years on immigration paperwork. Their team is reliable, efficient, and helps us focus more on our clients. A solid support system we truly value.
+									We've partnered with Glocal for years on immigration
+									paperwork. Their team is reliable, efficient, and helps us
+									focus more on our clients. A solid support system we truly
+									value.
 								</Grid>
-								<Grid
-									container
-									size={12}
-									spacing={1}
-									alignItems="center"
-								>
+								<Grid container size={12} spacing={1} alignItems="center">
 									<div className={styles.clientInfoWrapper}>
-										<div className={styles.clientName}>Immigration Law Firm</div>
-										<div className={styles.designation}>Licensed in New York</div>
+										<div className={styles.clientName}>
+											Immigration Law Firm
+										</div>
+										<div className={styles.designation}>
+											Licensed in New York
+										</div>
 									</div>
 								</Grid>
 							</div>
 							<div size={6} container className={styles.carouselCard}>
 								<Grid size={12} className={styles.testimonial}>
-									Glocal's support has been outstanding—skilled, reliable, and a true asset to our employment law practice. Their paralegal's drafting and research are top-notch, and working with them has been an absolute pleasure.
+									Glocal's support has been outstanding—skilled, reliable, and a
+									true asset to our employment law practice. Their paralegal's
+									drafting and research are top-notch, and working with them has
+									been an absolute pleasure.
 								</Grid>
-								<Grid
-									container
-									size={12}
-									spacing={1}
-									alignItems="center"
-								>
+								<Grid container size={12} spacing={1} alignItems="center">
 									<div className={styles.clientInfoWrapper}>
 										<div className={styles.clientName}>Employment Law Firm</div>
-										<div className={styles.designation}>Licensed Missouri & Texas</div>
+										<div className={styles.designation}>
+											Licensed Missouri & Texas
+										</div>
 									</div>
 								</Grid>
 							</div>
 							<div size={6} container className={styles.carouselCard}>
 								<Grid size={12} className={styles.testimonial}>
-									We are very happy with both of them. They are doing a great job so far, and the hours and shifts they are working are exactly what we need.
+									We are very happy with both of them. They are doing a great
+									job so far, and the hours and shifts they are working are
+									exactly what we need.
 								</Grid>
-								<Grid
-									container
-									size={12}
-									spacing={1}
-									alignItems="center"
-								>
+								<Grid container size={12} spacing={1} alignItems="center">
 									<div className={styles.clientInfoWrapper}>
 										<div className={styles.clientName}>E-Filing Company</div>
 										<div className={styles.designation}>California</div>
@@ -305,145 +292,157 @@ const ContactUs = () => {
 							</div>
 							<div size={6} container className={styles.carouselCard}>
 								<Grid size={12} className={styles.testimonial}>
-									Glocal's paralegals are diligent, dependable, and a joy to work with. While the process naturally evolves, their quality and commitment leave little to improve. We're very happy with their support.
+									Glocal's paralegals are diligent, dependable, and a joy to
+									work with. While the process naturally evolves, their quality
+									and commitment leave little to improve. We're very happy with
+									their support.
 								</Grid>
-								<Grid
-									container
-									size={12}
-									spacing={1}
-									alignItems="center"
-								>
+								<Grid container size={12} spacing={1} alignItems="center">
 									<div className={styles.clientInfoWrapper}>
-										<div className={styles.clientName}>Personal Injury & Workers' Comp Firm</div>
-										<div className={styles.designation}>Licensed in New Jersey</div>
+										<div className={styles.clientName}>
+											Personal Injury & Workers' Comp Firm
+										</div>
+										<div className={styles.designation}>
+											Licensed in New Jersey
+										</div>
 									</div>
 								</Grid>
 							</div>
 							<div size={6} container className={styles.carouselCard}>
 								<Grid size={12} className={styles.testimonial}>
-									The paralegal's speed and enthusiasm are great. With a bit more review and clarity, she's clearly on the right track and improving fast.
+									The paralegal's speed and enthusiasm are great. With a bit
+									more review and clarity, she's clearly on the right track and
+									improving fast.
 								</Grid>
-								<Grid
-									container
-									size={12}
-									spacing={1}
-									alignItems="center"
-								>
+								<Grid container size={12} spacing={1} alignItems="center">
 									<div className={styles.clientInfoWrapper}>
-										<div className={styles.clientName}>Personal Injury Law Firm</div>
-										<div className={styles.designation}>Licensed in New York</div>
+										<div className={styles.clientName}>
+											Personal Injury Law Firm
+										</div>
+										<div className={styles.designation}>
+											Licensed in New York
+										</div>
 									</div>
 								</Grid>
 							</div>
 							<div size={6} container className={styles.carouselCard}>
 								<Grid size={12} className={styles.testimonial}>
-									The paralegal's patience, professionalism, and dedication have been a huge help in closing legacy matters and easing our caseload. We're grateful for his contributions and wish him the best ahead.
+									The paralegal's patience, professionalism, and dedication have
+									been a huge help in closing legacy matters and easing our
+									caseload. We're grateful for his contributions and wish him
+									the best ahead.
 								</Grid>
-								<Grid
-									container
-									size={12}
-									spacing={1}
-									alignItems="center"
-								>
+								<Grid container size={12} spacing={1} alignItems="center">
 									<div className={styles.clientInfoWrapper}>
-										<div className={styles.clientName}>Real Estate & Estate Planning Firm</div>
-										<div className={styles.designation}>Licensed in California</div>
+										<div className={styles.clientName}>
+											Real Estate & Estate Planning Firm
+										</div>
+										<div className={styles.designation}>
+											Licensed in California
+										</div>
 									</div>
 								</Grid>
 							</div>
 							<div size={6} container className={styles.carouselCard}>
 								<Grid size={12} className={styles.testimonial}>
-									The paralegal's dedication and steady support helped us clear legacy matters and lighten our caseload. We're truly grateful for his work.
+									The paralegal's dedication and steady support helped us clear
+									legacy matters and lighten our caseload. We're truly grateful
+									for his work.
 								</Grid>
-								<Grid
-									container
-									size={12}
-									spacing={1}
-									alignItems="center"
-								>
+								<Grid container size={12} spacing={1} alignItems="center">
 									<div className={styles.clientInfoWrapper}>
-										<div className={styles.clientName}>Real Estate & Estate Planning Firm</div>
-										<div className={styles.designation}>Licensed in California</div>
+										<div className={styles.clientName}>
+											Real Estate & Estate Planning Firm
+										</div>
+										<div className={styles.designation}>
+											Licensed in California
+										</div>
 									</div>
 								</Grid>
 							</div>
 							<div size={6} container className={styles.carouselCard}>
 								<Grid size={12} className={styles.testimonial}>
-									Our Glocal paralegal has been a true asset—sharp, skilled, and dependable in labor and employment matters. Her drafting and research are top-notch, and her kind, professional attitude makes her a joy to work with.
+									Our Glocal paralegal has been a true asset—sharp, skilled, and
+									dependable in labor and employment matters. Her drafting and
+									research are top-notch, and her kind, professional attitude
+									makes her a joy to work with.
 								</Grid>
-								<Grid
-									container
-									size={12}
-									spacing={1}
-									alignItems="center"
-								>
+								<Grid container size={12} spacing={1} alignItems="center">
 									<div className={styles.clientInfoWrapper}>
 										<div className={styles.clientName}>Employment Law Firm</div>
-										<div className={styles.designation}>Licensed in Illinois</div>
+										<div className={styles.designation}>
+											Licensed in Illinois
+										</div>
 									</div>
 								</Grid>
 							</div>
 							<div size={6} container className={styles.carouselCard}>
 								<Grid size={12} className={styles.testimonial}>
-									The paralegal's dedication, sharp legal mind, and care for clients truly stand out. His work on our case has already made a strong impression, and I've even recommended Glocal to colleagues.
+									The paralegal's dedication, sharp legal mind, and care for
+									clients truly stand out. His work on our case has already made
+									a strong impression, and I've even recommended Glocal to
+									colleagues.
 								</Grid>
-								<Grid
-									container
-									size={12}
-									spacing={1}
-									alignItems="center"
-								>
+								<Grid container size={12} spacing={1} alignItems="center">
 									<div className={styles.clientInfoWrapper}>
-										<div className={styles.clientName}>Civil Litigation Law Firm</div>
-										<div className={styles.designation}>Licensed in Florida</div>
+										<div className={styles.clientName}>
+											Civil Litigation Law Firm
+										</div>
+										<div className={styles.designation}>
+											Licensed in Florida
+										</div>
 									</div>
 								</Grid>
 							</div>
 							<div size={6} container className={styles.carouselCard}>
 								<Grid size={12} className={styles.testimonial}>
-									I've hired six Glocal paralegals—each one diligent, attentive, and reliable. Their work consistently meets high standards, and I'd gladly request them again.
+									I've hired six Glocal paralegals—each one diligent, attentive,
+									and reliable. Their work consistently meets high standards,
+									and I'd gladly request them again.
 								</Grid>
-								<Grid
-									container
-									size={12}
-									spacing={1}
-									alignItems="center"
-								>
+								<Grid container size={12} spacing={1} alignItems="center">
 									<div className={styles.clientInfoWrapper}>
-										<div className={styles.clientName}>Civil Litigation Law Firm</div>
-										<div className={styles.designation}>Licensed in New Jersey</div>
+										<div className={styles.clientName}>
+											Civil Litigation Law Firm
+										</div>
+										<div className={styles.designation}>
+											Licensed in New Jersey
+										</div>
 									</div>
 								</Grid>
 							</div>
 							<div size={6} container className={styles.carouselCard}>
 								<Grid size={12} className={styles.testimonial}>
-									The paralegal was professional, responsive, and a joy to work with. If we need support again, we'll definitely request her by name.
+									The paralegal was professional, responsive, and a joy to work
+									with. If we need support again, we'll definitely request her
+									by name.
 								</Grid>
-								<Grid
-									container
-									size={12}
-									spacing={1}
-									alignItems="center"
-								>
+								<Grid container size={12} spacing={1} alignItems="center">
 									<div className={styles.clientInfoWrapper}>
-										<div className={styles.clientName}>Personal Injury and Workers' Compensation Law Firm</div>
-										<div className={styles.designation}>Licensed in Chicago</div>
+										<div className={styles.clientName}>
+											Personal Injury and Workers' Compensation Law Firm
+										</div>
+										<div className={styles.designation}>
+											Licensed in Chicago
+										</div>
 									</div>
 								</Grid>
 							</div>
 							<div size={6} container className={styles.carouselCard}>
 								<Grid size={12} className={styles.testimonial}>
-									The paralegal's dedication and support have been invaluable. While we're suspending services for now due to a lighter workload, we'll definitely reach out again if our needs change.
+									The paralegal's dedication and support have been invaluable.
+									While we're suspending services for now due to a lighter
+									workload, we'll definitely reach out again if our needs
+									change.
 								</Grid>
-								<Grid
-									container
-									size={12}
-									spacing={1}
-									alignItems="center"
-								>
+								<Grid container size={12} spacing={1} alignItems="center">
 									<div className={styles.clientInfoWrapper}>
-										<div className={styles.clientName}>Personal Injury & Civil Litigation Firm</div>
-										<div className={styles.designation}>Licensed in Florida</div>
+										<div className={styles.clientName}>
+											Personal Injury & Civil Litigation Firm
+										</div>
+										<div className={styles.designation}>
+											Licensed in Florida
+										</div>
 									</div>
 								</Grid>
 							</div>
@@ -457,7 +456,7 @@ const ContactUs = () => {
 				slide={lightboxController.slide}
 			/>
 		</>
-  );
+	);
 };
 
 export default ContactUs;
