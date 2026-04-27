@@ -33,7 +33,7 @@ const NotFound = loadable(() => import('./containers/NotFound'));
 // Register the ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
-const App = () => {
+const App = ({ helmetContext }) => {
 	const backToTopRef = useRef(null);
 
 	const { pathname } = useLocation();
@@ -82,7 +82,7 @@ const App = () => {
   }, [pathname]);
 
   return (  
-		<HelmetProvider>
+		<HelmetProvider context={helmetContext}>
 			{/* 1. Header is hidden if on landing page */}
             {!isLandingPage && <Header />}
 			<Routes>

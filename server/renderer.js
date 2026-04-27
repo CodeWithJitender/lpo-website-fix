@@ -29,13 +29,15 @@ export default (req, res) => {
 	const statsFile = path.resolve(process.cwd(), 'build/public/loadable-stats.json');
 	const extractor = new ChunkExtractor({ statsFile, entrypoints: ['client'] });
 
+	const helmetContext = {};
+
   const jsx = extractor.collectChunks(
 		<DeviceProvider value={deviceInfo}>
 			<CacheProvider value={cache}>
 				<ThemeProvider theme={theme}>
 					<StaticRouter location={req.url}>
 						<CssBaseline />
-						<App  />
+						<App helmetContext={helmetContext} />
 					</StaticRouter>
 				</ThemeProvider>
 			</CacheProvider>
@@ -43,6 +45,7 @@ export default (req, res) => {
   );
 
 	const content = renderToString(jsx);
+	const { helmet } = helmetContext;
 
 	// Grab the CSS from emotion
   const emotionChunks = extractCriticalToChunks(content);
@@ -50,7 +53,7 @@ export default (req, res) => {
 
   const html = `
     <!DOCTYPE html>
-    <html lang="en">
+    <html lang="en" ${helmet.htmlAttributes.toString()}>
       <head>
         <meta charset="utf-8">
 		<meta name="google-site-verification" content="MfZYqA6YszOfmYIq5RiiniJOur7YksOt05bEORUhX_c" />
@@ -87,7 +90,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 					type="text/css"
 					href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
 				/>
-				<title>Glocal LPO</title>
+				${helmet.title.toString() || '<title>Glocal LPO</title>'}
+				${helmet.meta.toString()}
+				${helmet.link.toString()}
+				${helmet.script.toString()}
 				${extractor.getLinkTags()}
 				${extractor.getStyleTags()}
 				${emotionCss}
