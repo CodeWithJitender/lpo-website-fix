@@ -67,7 +67,7 @@ const ContactUs = () => {
 						<ul className={styles.breadcrumb}>
 							<li>CONTACT US</li>
 						</ul>
-						<Heading className={styles.lpoTitle}>
+						<Heading className={styles.lpoTitle} component="h1">
 							Let’s Power Your Legal Success
 						</Heading>
 						<Heading variant="secondary">

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import {
 	Grid2 as Grid,
 	AppBar,
-	Menu as MenuDesktop
+	Popover
 } from '@mui/material';
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
@@ -37,6 +37,7 @@ const Header = () => {
 	const scrollTriggerRef = useRef(null);
 
 	const [menuOpen, setMenuOpen] = useState(false);
+	const hoverTimeout = useRef(null);
 
 	useEffect(() => {
 		const nav = navBar.current;
@@ -84,14 +85,16 @@ const Header = () => {
 		setMenuOpen(false);
 	}, [pathname]);
 
-	const handleMenuOpen = (e) => {
+	const handleMenuOpen = () => {
+		if (hoverTimeout.current) clearTimeout(hoverTimeout.current);
 		setMenuOpen(true);
-		e.preventDefault();
 	};
 
 	const handleMenuClose = () => {
-		setMenuOpen(false);
-	}
+		hoverTimeout.current = setTimeout(() => {
+			setMenuOpen(false);
+		}, 150);
+	};
 
 	const handleLogoClick = () => {
 		navigate("/");
@@ -159,7 +162,8 @@ const Header = () => {
 										to={routes.services.href}
 										data-replace={routes.services.label}
 										className={styles.headerLink}
-										onClick={handleMenuOpen}
+										onMouseEnter={handleMenuOpen}
+										onMouseLeave={handleMenuClose}
 										ref={anchorEl}
 									>
 										<span>{routes.services.label}</span>
@@ -200,13 +204,18 @@ const Header = () => {
 									+1 (650) 407 2112
 								</a>
 							</Grid>
-							<MenuDesktop
+							<Popover
 								id="simple-menu"
 								anchorEl={anchorEl.current}
 								open={menuOpen}
 								onClose={handleMenuClose}
+								disableScrollLock={true}
+								disableRestoreFocus={true}
+								sx={{ pointerEvents: 'none' }}
 								PaperProps={{
-									onClick: handleMenuClose
+									sx: { pointerEvents: 'auto' },
+									onMouseEnter: handleMenuOpen,
+									onMouseLeave: handleMenuClose,
 								}}
 								anchorOrigin={{
 									vertical: "bottom",
@@ -216,13 +225,13 @@ const Header = () => {
 									vertical: "top",
 									horizontal: "center",
 								}}
-								PopoverClasses={{
+								classes={{
 									paper: styles.menuPopover,
 									root: styles.menuRoot
 								}}
 							>
 								<MegaMenu />
-							</MenuDesktop>
+							</Popover>
 						</>
 					)
 				}

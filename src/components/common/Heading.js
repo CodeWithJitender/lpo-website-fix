@@ -9,17 +9,19 @@ const Heading = (props) => {
 		variant = "primary",
 		className = "",
 		direction = "up",
+		component = "h2",
 		children
 	} = props;
 
 	if (variant === "primary") {
+		const Component = component;
 		return (
 			<Animate.FadeUp direction={direction}>
-				<h1
+				<Component
 					className={`${styles.primaryHeading} ${className}`}
 				>
 					{children}
-				</h1>
+				</Component>
 			</Animate.FadeUp>
 		)
 	}

@@ -56,10 +56,7 @@ const Home = () => {
 								<Heading variant="secondary" direction="down">
 									Your Trusted Legal Ally
 								</Heading>
-								<Heading className={styles.lpoTitleBig} direction="up">
-									{/* The Power <br/>
-									Behind your <br/>
-									Legal Prowess. */}
+								<Heading className={styles.lpoTitleBig} direction="up" component="h1">
 									Fueling Your Legal <br /> Prowess with <br /> Expert Legal{' '}
 									<br /> Process <br /> Outsourcing
 								</Heading>

@@ -110,7 +110,7 @@ const Service = () => {
 						<Heading variant="secondary">
 							{serviceDetails.title} Cases
 						</Heading>
-						<Heading className={styles.lpoTitle}>
+						<Heading className={styles.lpoTitle} component="h1">
 							{serviceDetails.heading}
 						</Heading>
 					</Grid>

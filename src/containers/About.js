@@ -71,7 +71,7 @@ const About = () => {
 						<ul className={styles.breadcrumb}>
 							<li>ABOUT US</li>
 						</ul>
-						<Heading className={styles.lpoTitle}>
+						<Heading className={styles.lpoTitle} component="h1">
 							{isMobile ? (
 								'Offshore Paralegal Support for Top Law Firms'
 							) : (

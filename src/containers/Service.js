@@ -39,7 +39,7 @@ const Service = () => {
 						<ul className={styles.breadcrumb}>
 							<li>OUR SERVICES</li>
 						</ul>
-						<Heading className={styles.lpoTitle}>
+						<Heading className={styles.lpoTitle} component="h1">
 							{isMobile ? (
 								'Your Legal Ally in Every Step of the Journey.'
 							) : (

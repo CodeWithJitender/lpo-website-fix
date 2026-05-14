@@ -24,7 +24,7 @@ const PrivacyPolicy = () => {
 						<Heading variant="secondary" direction="down">
 							Legal Notice
 						</Heading>
-						<Heading direction="up">Privacy Policy</Heading>
+						<Heading direction="up" component="h1">Privacy Policy</Heading>
 						{/* <p className={styles.lastUpdated}>Last Updated: March 6, 2026</p> */}
 					</div>
 
