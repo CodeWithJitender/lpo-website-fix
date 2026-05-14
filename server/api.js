@@ -3,18 +3,18 @@ const brevo = require('@getbrevo/brevo');
 
 const apiInstance = new brevo.TransactionalEmailsApi();
 
-apiInstance.setApiKey(
-	brevo.TransactionalEmailsApiApiKeys.apiKey,
-	process.env.BREVO_API_KEY
-);
+// apiInstance.setApiKey(
+// 	brevo.TransactionalEmailsApiApiKeys.apiKey,
+// 	process.env.BREVO_API_KEY
+// );
 
-const verifyEndpoint = 'https://challenges.cloudflare.com/turnstile/v0/siteverify'
-const secret = process.env.TURNSTILE_SECRET;
+// const verifyEndpoint = 'https://challenges.cloudflare.com/turnstile/v0/siteverify'
+// const secret = process.env.TURNSTILE_SECRET;
 
 const apiRouter = express.Router();
 
 const getClientEmailContent = (name) => {
-	return `
+  return `
 		<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office" lang="en">
  <head>
@@ -275,21 +275,21 @@ a[x-apple-data-detectors] {
 };
 
 const handleSendEmail = (formData, res) => {
-	const {
-		first_name,
-		last_name,
-		email,
-		company,
-		job_title,
-		phone,
-		service_info,
-		page_url
-	} = formData;
+  const {
+    first_name,
+    last_name,
+    email,
+    company,
+    job_title,
+    phone,
+    service_info,
+    page_url
+  } = formData;
 
-	const sendAdminEmail = new brevo.SendSmtpEmail();
+  const sendAdminEmail = new brevo.SendSmtpEmail();
 
-	sendAdminEmail.subject = 'New Contact Query Received!';
-	sendAdminEmail.htmlContent = `
+  sendAdminEmail.subject = 'New Contact Query Received!';
+  sendAdminEmail.htmlContent = `
 		<html>
 		<body>
 			Dear Admin,<br /><br />
@@ -306,57 +306,57 @@ const handleSendEmail = (formData, res) => {
 			Thank You.
 		</body>
 		</html>`;
-	sendAdminEmail.sender = {
-		email: 'info@glocallpo.com',
-		name: 'Glocal LPO'
-	};
-	sendAdminEmail.to = [{
-		email: "info@glocallpo.com",
-		name: "Glocal LPO"
-	}];
-	sendAdminEmail.replyTo = {
-		"email": email,
-		"name": `${first_name} ${last_name}`,
-	};
+  sendAdminEmail.sender = {
+    email: 'info@glocallpo.com',
+    name: 'Glocal LPO'
+  };
+  sendAdminEmail.to = [{
+    email: "info@glocallpo.com",
+    name: "Glocal LPO"
+  }];
+  sendAdminEmail.replyTo = {
+    "email": email,
+    "name": `${first_name} ${last_name}`,
+  };
 
-	const sendClientEmail = new brevo.SendSmtpEmail();
+  const sendClientEmail = new brevo.SendSmtpEmail();
 
-	sendClientEmail.subject = "Thanks for Reaching Out - We'll Get Back to You Soon!";
-	sendClientEmail.htmlContent = getClientEmailContent(`${first_name} ${last_name}`);
-	sendClientEmail.sender = {
-		email: 'info@glocallpo.com',
-		name: 'Glocal LPO'
-	};
-	sendClientEmail.to = [{
-		email,
-		name: `${first_name} ${last_name}`
-	}];
-	sendClientEmail.replyTo = {
-		"email": 'info@glocallpo.com',
-		"name": 'Glocal LPO'
-	};
+  sendClientEmail.subject = "Thanks for Reaching Out - We'll Get Back to You Soon!";
+  sendClientEmail.htmlContent = getClientEmailContent(`${first_name} ${last_name}`);
+  sendClientEmail.sender = {
+    email: 'info@glocallpo.com',
+    name: 'Glocal LPO'
+  };
+  sendClientEmail.to = [{
+    email,
+    name: `${first_name} ${last_name}`
+  }];
+  sendClientEmail.replyTo = {
+    "email": 'info@glocallpo.com',
+    "name": 'Glocal LPO'
+  };
 
-	Promise.all([
-		apiInstance.sendTransacEmail(sendAdminEmail),
-		apiInstance.sendTransacEmail(sendClientEmail)
-	]).then(() => {
-		res.send({
-			success: true,
-			message: "Thanks for Reaching Out - We'll Get Back to You Soon!",
-		});
-	}).catch(() => {
-		res.status(500);
-		res.send({
-			success: false,
-			message: "Sorry! Something went wrong."
-		});
-	});
+  Promise.all([
+    apiInstance.sendTransacEmail(sendAdminEmail),
+    apiInstance.sendTransacEmail(sendClientEmail)
+  ]).then(() => {
+    res.send({
+      success: true,
+      message: "Thanks for Reaching Out - We'll Get Back to You Soon!",
+    });
+  }).catch(() => {
+    res.status(500);
+    res.send({
+      success: false,
+      message: "Sorry! Something went wrong."
+    });
+  });
 }
 
 apiRouter.post('/submit-form', (req, res) => {
   const { captchaToken } = req.body;
 
-	fetch(verifyEndpoint, {
+  fetch(verifyEndpoint, {
     method: 'POST',
     body: JSON.stringify({
       secret: secret,
@@ -366,26 +366,26 @@ apiRouter.post('/submit-form', (req, res) => {
       'Content-Type': 'application/json'
     }
   })
-		.then((res) => res.json())
-		.then(() => {
-			handleSendEmail(req.body, res);
-		})
-		.catch(() => {
-			res.status(500);
-			res.send({
-				success: false,
-				message: "Recaptcha verification failed. Please try again."
-			});
-		});
+    .then((res) => res.json())
+    .then(() => {
+      handleSendEmail(req.body, res);
+    })
+    .catch(() => {
+      res.status(500);
+      res.send({
+        success: false,
+        message: "Recaptcha verification failed. Please try again."
+      });
+    });
 });
 
 apiRouter.post('/submit-small-form', (req, res) => {
   const { name, email, time, timezone, platform } = req.body;
-  
-	const sendAdminEmail = new brevo.SendSmtpEmail();
 
-	sendAdminEmail.subject = 'New Contact Query Received!';
-	sendAdminEmail.htmlContent = `
+  const sendAdminEmail = new brevo.SendSmtpEmail();
+
+  sendAdminEmail.subject = 'New Contact Query Received!';
+  sendAdminEmail.htmlContent = `
 		<html>
 		<body>
 			Dear Admin,<br /><br />
@@ -399,51 +399,51 @@ apiRouter.post('/submit-small-form', (req, res) => {
 			Thank You.
 		</body>
 		</html>`;
-	sendAdminEmail.sender = {
-		email: 'info@glocallpo.com',
-		name: 'Glocal LPO'
-	};
-	sendAdminEmail.to = [{
-		email: "info@glocallpo.com",
-		name: "Glocal LPO"
-	}];
-	sendAdminEmail.replyTo = {
-		email,
-		name
-	};
+  sendAdminEmail.sender = {
+    email: 'info@glocallpo.com',
+    name: 'Glocal LPO'
+  };
+  sendAdminEmail.to = [{
+    email: "info@glocallpo.com",
+    name: "Glocal LPO"
+  }];
+  sendAdminEmail.replyTo = {
+    email,
+    name
+  };
 
-	const sendClientEmail = new brevo.SendSmtpEmail();
+  const sendClientEmail = new brevo.SendSmtpEmail();
 
-	sendClientEmail.subject = "Thanks for Reaching Out - We'll Get Back to You Soon!";
-	sendClientEmail.htmlContent = getClientEmailContent(name);
-	sendClientEmail.sender = {
-		email: 'info@glocallpo.com',
-		name: 'Glocal LPO'
-	};
-	sendClientEmail.to = [{
-		email,
-		name
-	}];
-	sendClientEmail.replyTo = {
-		"email": 'info@glocallpo.com',
-		"name": 'Glocal LPO'
-	};
+  sendClientEmail.subject = "Thanks for Reaching Out - We'll Get Back to You Soon!";
+  sendClientEmail.htmlContent = getClientEmailContent(name);
+  sendClientEmail.sender = {
+    email: 'info@glocallpo.com',
+    name: 'Glocal LPO'
+  };
+  sendClientEmail.to = [{
+    email,
+    name
+  }];
+  sendClientEmail.replyTo = {
+    "email": 'info@glocallpo.com',
+    "name": 'Glocal LPO'
+  };
 
-	Promise.all([
-		apiInstance.sendTransacEmail(sendAdminEmail),
-		apiInstance.sendTransacEmail(sendClientEmail)
-	]).then(() => {
-		res.send({
-			success: true,
-			message: "Thanks for Reaching Out - We'll Get Back to You Soon!",
-		});
-	}).catch(() => {
-		res.status(500);
-		res.send({
-			success: false,
-			message: "Sorry! Something went wrong."
-		});
-	});
+  Promise.all([
+    apiInstance.sendTransacEmail(sendAdminEmail),
+    apiInstance.sendTransacEmail(sendClientEmail)
+  ]).then(() => {
+    res.send({
+      success: true,
+      message: "Thanks for Reaching Out - We'll Get Back to You Soon!",
+    });
+  }).catch(() => {
+    res.status(500);
+    res.send({
+      success: false,
+      message: "Sorry! Something went wrong."
+    });
+  });
 });
 
 export default apiRouter;
