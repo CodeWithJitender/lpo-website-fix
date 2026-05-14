@@ -2,7 +2,6 @@
   "version": 2,
 	"buildCommand": "npm run build",
 	"installCommand": "npm ci",
-	"outputDirectory": "build",
   "builds": [
     {
       "src": "build/public/server.js",
